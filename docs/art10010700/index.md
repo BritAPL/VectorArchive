@@ -1,0 +1,287 @@
+---
+vid: '10010700'
+title: The Common Mean, Non-negative Definite Matrices, and APL
+authors:
+- Dietrich Trenkler
+- Götz Trenkler
+volume: '12'
+issue: '1'
+page: '107'
+transcribed: from page images of VOL.12-NO.1-JULY-1995.pdf, pages 109–114 (printed 107–112); Claude, 2026-10-09
+review: draft
+tags:
+- mathematics and statistics
+queries:
+- 'Printed byline: “by Dietrich Trenkler (University of Osnabrück) and Götz Trenkler (University of Dortmund)”, followed by an e-mail address, which is left out here. The index names only Dietrich Trenkler.'
+- The formulas are set in TeX, typeset by MathJax, following the printed layout (matrix names bold as printed; = signs aligned in the two-column recurrences as printed).
+- The SIMDIAGMAT header separates its locals with colons (`B:R:C:Q:QI:D:E:I`), and the text says “C = (aᵢⱼ) is the common mean” where cᵢⱼ is presumably meant. Both printed so.
+- “most modern APL2 systems” and “the first row of VALVEC are the eigenvalues MAT” are printed so.
+- 'The example was checked in Python: X0 times Y0 is the identity; the common matrix mean, computed as P diag(c(λ, 1/λ)) P′ from a Jacobi eigendecomposition of X0, agrees with the printed 4⍕ table to every digit; and the AMEANMAT table agrees.'
+status: transcribed
+issue_tab: n1-july-1995
+---
+
+*Transcribed from the printed issue; not yet reviewed. [Read it in the PDF of the issue, page 107](../12/1/VOL.12-NO.1-JULY-1995.pdf#page=109)*
+{ .transcribed }
+
+*by Dietrich Trenkler (University of Osnabrück) and Götz Trenkler (University of Dortmund)*
+{ .byline }
+
+## Introduction
+
+In a recent contribution to *Education Vector* De Kerf [3] advocated the use of the common mean as an alternative to the geometric mean and the arithmetic mean. If \(x_0\) is the smaller of two positive numbers \(x_0\) and \(y_0\), the geometric mean of these numbers is \(x_1 = \sqrt{x_0y_0}\) while their arithmetic mean is \(y_1 = (x_0+y_0)/2\). If the procedure of forming geometric and arithmetic means is repeated indefinitely so that
+
+\begin{equation*}
+x_{i+1} = \sqrt{x_iy_i} \quad\text{and}\quad y_{i+1} = (x_i+y_i)/2,
+\end{equation*}
+
+where \(i = 1,2,\ldots\), one obtains
+
+\begin{equation*}
+x_0 \le x_1 \le x_2 \le \cdots \le x_i \le \cdots \le y_i \le \cdots \le y_2 \le y_1 \le y_0,
+\end{equation*}
+
+and there is convergence to a common mean \(c(x_0,y_0)\) of \(x_0\) and \(y_0\).
+
+In the following it will be shown that this notion of a mean can be generalized to nonnegative definite (n.n.d.) matrices, provided some assumptions are met. Note that the arithmetic, harmonic and geometric mean of nonnegative definite (n.n.d.) matrices has already been discussed in the literature, e.g. Anderson and Duffin [1].
+
+## Theory
+
+Consider two n.n.d. matrices \(\mathbf{X}_0\) and \(\mathbf{Y}_0\) of type \(n \times n\) such that \(\mathbf{X}_0\) and \(\mathbf{Y}_0\) commute, i.e. \(\mathbf{X}_0\mathbf{Y}_0 = \mathbf{Y}_0\mathbf{X}_0\). Since both matrices are also symmetric, there exists a simultaneous diagonalization of \(\mathbf{X}_0\) and \(\mathbf{Y}_0\) by an orthogonal matrix \(\mathbf{P}\), that is
+
+\begin{equation*}
+\mathbf{X}_0 = \mathbf{P}\Lambda\mathbf{P}', \quad \mathbf{Y}_0 = \mathbf{P}\Omega\mathbf{P}', \tag{1}
+\end{equation*}
+
+where \(\Lambda = \operatorname{diag}(\lambda_j(\mathbf{X}_0))\) and \(\Omega = \operatorname{diag}(\omega_j(\mathbf{Y}_0))\) is the diagonal matrix of eigenvalues of \(\mathbf{X}_0\) and \(\mathbf{Y}_0\), respectively. This will be demonstrated in the section "Algorithm and Programs". Furthermore, we assume that
+
+\begin{equation*}
+\lambda_1(\mathbf{X}_0) \le \cdots \le \lambda_n(\mathbf{X}_0) \quad\text{and}\quad \omega_1(\mathbf{Y}_0) \le \cdots \le \omega_n(\mathbf{Y}_0).
+\end{equation*}
+
+Consider now the following sequence of matrices
+
+\begin{equation*}
+\begin{aligned}
+\mathbf{X}_1 &= (\mathbf{X}_0\mathbf{Y}_0)^{\frac{1}{2}} & \qquad \mathbf{Y}_1 &= (\mathbf{X}_0+\mathbf{Y}_0)/2 \\
+\mathbf{X}_{i+1} &= (\mathbf{X}_i\mathbf{Y}_i)^{\frac{1}{2}} & \qquad \mathbf{Y}_{i+1} &= (\mathbf{X}_i+\mathbf{Y}_i)/2
+\end{aligned}
+\qquad i = 1,2,\ldots.
+\end{equation*}
+
+Observe that since \(\mathbf{X}_0\) and \(\mathbf{Y}_0\) commute, \(\mathbf{X}_0\mathbf{Y}_0\) is an n.n.d. matrix, and the square root \(\mathbf{X}_1\) of \(\mathbf{X}_0\mathbf{Y}_0\) is given by
+
+\begin{equation*}
+\mathbf{X}_1 = \mathbf{P}(\Lambda\Omega)^{\frac{1}{2}}\mathbf{P}' = \mathbf{P}\operatorname{diag}\Bigl(\sqrt{\lambda_j(\mathbf{X}_0)\omega_j(\mathbf{Y}_0)}\Bigr)\mathbf{P}'.
+\end{equation*}
+
+By induction it is readily shown that the \(\mathbf{X}_i\) and \(\mathbf{Y}_i\) are well defined and n.n.d. Furthermore \(\mathbf{X}_i\) and \(\mathbf{Y}_i\) commute, and
+
+\begin{equation*}
+\mathbf{X}_i = \mathbf{P}\Lambda_i\mathbf{P}', \quad \mathbf{Y}_i = \mathbf{P}\Omega_i\mathbf{P}',
+\end{equation*}
+
+where \(\Lambda_i = \operatorname{diag}(\lambda_j(\mathbf{X}_i))\) and \(\Omega_i = \operatorname{diag}(\omega_j(\mathbf{Y}_i))\). If \(\lambda_{ij}\) and \(\omega_{ij}\) denotes the \(j\)-th diagonal element of \(\Lambda_i\) and \(\Omega_i\), respectively, it can be readily seen that
+
+\begin{equation*}
+\begin{aligned}
+\lambda_{1j} &= \sqrt{\lambda_j(\mathbf{X}_0)\omega_j(\mathbf{Y}_0)} & \qquad \omega_{1j} &= (\lambda_j(\mathbf{X}_0)+\omega_j(\mathbf{Y}_0))/2 \\[1ex]
+\lambda_{i+1\,j} &= \sqrt{\lambda_{ij}\omega_{ij}} & \qquad \omega_{i+1\,j} &= (\lambda_{ij}+\omega_{ij})/2
+\end{aligned}
+\end{equation*}
+
+for \(i = 1,2,\ldots\) and \(j = 1,\ldots,n\). Let now \(c(\lambda_j(\mathbf{X}_0),\omega_j(\mathbf{Y}_0))\) denote the common mean of \(\lambda_j(\mathbf{X}_0)\) and \(\omega_j(\mathbf{Y}_0)\). Then obviously the sequence of matrices \((\mathbf{X}_i,\mathbf{Y}_i)\) converges to a *common matrix mean* \(\mathbf{C}(\mathbf{X}_0,\mathbf{Y}_0)\) given by
+
+\begin{equation*}
+\mathbf{C}(\mathbf{X}_0,\mathbf{Y}_0) = \mathbf{P}\operatorname{diag}(c(\lambda_j(\mathbf{X}_0),\omega_j(\mathbf{Y}_0)))\mathbf{P}',
+\end{equation*}
+
+which might be considered as a competitor to the geometric mean \(\mathbf{X}_1 = (\mathbf{X}_0\mathbf{Y}_0)^{\frac{1}{2}}\) and the arithmetic mean \(\mathbf{Y}_1 = (\mathbf{X}_0+\mathbf{Y}_0)/2\) of the matrices \(\mathbf{X}_0\) and \(\mathbf{Y}_0\).
+
+## Algorithm and Programs
+
+In the following (assuming `⎕IO←1` throughout) we give a program that yields the orthogonal \(\mathbf{P}\) mentioned in (1). It is based on the following:
+
+*Let \(\mathbf{A}\) and \(\mathbf{B}\) be \(k \times k\) symmetric matrices. A necessary and sufficient condition that an orthogonal matrix \(\mathbf{P}\) exists such that \(\mathbf{P}'\mathbf{A}\mathbf{P}\) and \(\mathbf{P}'\mathbf{B}\mathbf{P}\) are each diagonal is that \(\mathbf{A}\mathbf{B} = \mathbf{B}\mathbf{A}\) (or \(\mathbf{A}\mathbf{B}\) is symmetric).*
+
+cf. Graybill [4], pp. 406–7. The following algorithm is extracted from the proof of this theorem.
+
+(i) Compute an orthogonal matrix \(\mathbf{R}\) such that \(\mathbf{R}'\mathbf{A}\mathbf{R} = \mathbf{D}\) where \(\mathbf{D}\) is diagonal.
+
+(ii) Assume that \(\mathbf{D}\) can be written as
+
+\begin{equation*}
+\mathbf{D} = \begin{pmatrix}
+\lambda_1\mathbf{I}_1 & \mathbf{0} & \cdots & \mathbf{0} \\
+\mathbf{0} & \lambda_2\mathbf{I}_2 & \cdots & \mathbf{0} \\
+\vdots & \vdots & \ddots & \vdots \\
+\mathbf{0} & \mathbf{0} & \cdots & \lambda_m\mathbf{I}_m
+\end{pmatrix}
+\end{equation*}
+
+(iii) Set \(\mathbf{C} = \mathbf{R}\mathbf{B}\mathbf{R}'\). It follows that \(\mathbf{C}\) is of the form
+
+\begin{equation*}
+\mathbf{C} = \begin{pmatrix}
+\mathbf{C}_{11} & \mathbf{0} & \cdots & \mathbf{0} \\
+\mathbf{0} & \mathbf{C}_{22} & \cdots & \mathbf{0} \\
+\vdots & \vdots & \ddots & \vdots \\
+\mathbf{0} & \mathbf{0} & \cdots & \mathbf{C}_{mm}
+\end{pmatrix}
+\end{equation*}
+
+where \(\mathbf{C}_{ii}\) is \(k \times k\) whenever \(\mathbf{I}_i\) is \(k \times k\). If each \(\mathbf{C}_{ii}\) consists of exactly one element \(\mathbf{C}\) is diagonal and the algorithm stops by setting \(\mathbf{P}=\mathbf{R}\). Otherwise, we have to obey (iv)–(vi).
+
+(iv) Find orthogonal matrices \(\mathbf{Q}_j\) for \(j = 1,2,\ldots,m\) such that \(\mathbf{Q}'_j\mathbf{C}_{ii}\mathbf{Q}_j\) is diagonal.
+
+(v) Set
+
+\begin{equation*}
+\mathbf{Q} = \begin{pmatrix}
+\mathbf{Q}_1 & \mathbf{0} & \cdots & \mathbf{0} \\
+\mathbf{0} & \mathbf{Q}_2 & \cdots & \mathbf{0} \\
+\vdots & \vdots & \ddots & \vdots \\
+\mathbf{0} & \mathbf{0} & \cdots & \mathbf{Q}_m
+\end{pmatrix} \tag{2}
+\end{equation*}
+
+(vi) Finally, \(\mathbf{P} = \mathbf{R}\mathbf{Q}\) is such that \(\mathbf{P}'\mathbf{A}\mathbf{P}\) and \(\mathbf{P}'\mathbf{B}\mathbf{P}\) are each diagonal.
+
+It is readily seen that there are two instances ((i) and (iv)) where we need the spectral decomposition of an n.n.d. matrix. This calls for the computation of eigenvalues and eigenvectors and since most modern *APL2* systems offer workspaces with programs to find them we resort to them. For instance, *APL\*PLUS II* provides a workspace *EIGENVAL* from which we took the program *SYMEIG* to compute the spectral decomposition of a matrix. This is done by `VALVEC←SPECDEC MAT`, where the first row of *VALVEC* are the eigenvalues *MAT* in ascending order and `1 0↓VALVEC` is an orthogonal matrix \(\mathbf{P}\) of eigenvectors. It uses the function *STANDARDIZE* to convert the columns \(\mathbf{x}\) of a matrix to
+
+\begin{equation*}
+\mathbf{y} = \mathbf{x}/\sqrt{\mathbf{x}'\mathbf{x}} \quad\text{such that}\quad \mathbf{y}'\mathbf{y} = 1.
+\end{equation*}
+
+```apl
+    ∇R←SPECDEC M
+[1] R←R[1;],[1]STANDARDIZE 1 0↓R←1 SYMEIG M
+[2] R←R[;⍋R[1;]]
+    ∇
+
+    ∇R←STANDARDIZE M
+[1] R←M×((⍴M)⍴+/[1]M×M)*¯0.5
+    ∇
+```
+
+*SIMDIAGMAT* can be used to compute the orthogonal matrix \(\mathbf{P}\) that diagonalizes \(\mathbf{X}_0\) and \(\mathbf{Y}_0\) simultaneously, cf. equation (1). It uses the function *FREQUENCIES* to find the frequencies of distinct elements in a vector and *DIAGMATFROM* to construct the block diagonal matrix \(\mathbf{Q}\) given in (2).
+
+```apl
+    ∇P←A SIMDIAGMAT B:R:C:Q:QI:D:E:I
+[1] Q←⍳0 ⋄ I←1
+[2] C←(⍉R)+.×B+.×R←1 0↓SPECDEC A
+[3] E←0,+\D←,1 0↓FREQUENCIES 1 1⍉(⍉R)+.×A+.×R
+[4] LOOP:Q←Q,⊂1 0↓SD (2⍴D[I])↑(2⍴E[I])↓C
+[5] →((⍴D)≥I←I+1)/LOOP
+[6] P←R+.×DIAGMATFROM Q
+    ∇
+
+    ∇R←FREQUENCIES X;A
+[1] A←A-¯1↓0,A←(R←(¯1↓X≠1⌽X←X[⍋X]),1)/⍳⍴X←,X
+[2] R←(R/X),[0.1]A
+    ∇
+
+    ∇R←DIAGMATFROM M;I;A;B;C
+[1] I←1
+[2] M←(¯2↑¨(⊂1 1),¨⍴¨M)⍴¨M
+[3] R←(R,R←+/A←,1 0↓⊃[1]⍴¨M)⍴0
+[4] B←0,+\A
+[5] LOOP:R[C;C←B[I]+⍳A[I]]←I⊃M
+[6] →((⍴M)≥I←I+1)/LOOP
+    ∇
+```
+
+`X0 CMEANMAT Y0` computes the common matrix mean \(\mathbf{C}(\mathbf{X}_0,\mathbf{Y}_0)\) of matrices \(\mathbf{X}_0,\mathbf{Y}_0\) ↔ `X0 Y0`. It is based on the function *CMEAN* taken from De Kerf [3].
+
+```apl
+    ∇R←X CMEANMAT Y;P;L;O
+[1] P←X SIMDIAGMAT Y
+[2] L←1 1⍉(⍉P)+.×X+.×P
+[3] O←1 1⍉(⍉P)+.×Y+.×P
+[4] R←P+.×(DIAGMATFROM L CMEAN¨O)+.×⍉P
+    ∇
+```
+
+Finally, to compute the arithmetic matrix mean and the geometric matrix mean we have
+
+```apl
+    ∇R←A AMEANMAT B
+[1] R←0.5×A+B
+    ∇
+
+    ∇R←A GMEANMAT B;P;L;O
+[1] P←A SIMDIAGMAT B
+[2] L←(⍉P)+.×A+.×P ⋄  O←(⍉P)+.×B+.×P
+[3] R←P+.×(( |L×O)*0.5)+.×⍉P
+    ∇
+```
+
+## Example
+
+What is the common matrix mean of a matrix \(\mathbf{X}_0\) and its inverse \(\mathbf{Y}_0 = \mathbf{X}_0^{-1}\)? For instance, let `X0 Y0` ↔ \(\mathbf{X}_0\mathbf{Y}_0\) where
+
+\begin{equation*}
+\mathbf{X}_0 = \left(\begin{array}{rrrrr}
+2 & 0 & 1 & -1 & -2 \\
+0 & 2 & -2 & -1 & -1 \\
+1 & -2 & 4 & -1 & -1 \\
+-1 & -1 & -1 & 3 & 2 \\
+-2 & -1 & -1 & 2 & 4
+\end{array}\right)
+\quad
+\mathbf{Y}_0 = \left(\begin{array}{rrrrr}
+2 & 5 & 3 & 2 & 2 \\
+5 & 27 & 17 & 11 & 8 \\
+3 & 17 & 11 & 7 & 5 \\
+2 & 11 & 7 & 5 & 3 \\
+2 & 8 & 5 & 3 & 3
+\end{array}\right).
+\end{equation*}
+
+\(\mathbf{X}_0\) and hence \(\mathbf{Y}_0\) are p.d. and \(\mathbf{X}_0\mathbf{Y}_0 = \mathbf{I}\) which is the geometric mean of \(\mathbf{X}_0\) and \(\mathbf{Y}_0\). Accordingly they can be used to exemplify the new concept of a common matrix mean of two n.n.d. matrices. We get
+
+```apl
+      4⍕X0 CMEANMAT Y0
+ 1.3767   0.7982   0.6784   0.1113  ¯0.0731
+ 0.7982   5.3691   2.3040   1.5550   1.0720
+ 0.6784   2.3040   3.2190   0.9224   0.5988
+ 0.1113   1.5550   0.9224   2.0441   0.8833
+¯0.0731   1.0720   0.5988   0.8833   1.9346
+```
+
+One is inclined to speculate on a relation like \(a_{ij} < c_{ij} < g_{ij}\) where \(\mathbf{A} = (a_{ij})\) is the arithmetic mean, \(\mathbf{C} = (a_{ij})\) is the common mean and \(\mathbf{G} = (g_{ij})\) is the geometric mean. However, for the example above we have
+
+```apl
+      5 1⍕X0 AMEANMAT Y0
+2.0  2.5  2.0  0.5  0.0
+2.5 14.5  7.5  5.0  3.5
+2.0  7.5  7.5  3.0  2.0
+0.5  5.0  3.0  4.0  2.5
+0.0  3.5  2.0  2.5  3.5
+```
+
+so that \(a_{15} = g_{15} = 0\) and \(c_{15} = -0.0731\).
+
+## Concluding Remarks
+
+In this paper we introduced a matrix generalization of the common mean, originally defined only for real numbers. Like the other means which already exist it might prove useful in statistics and matrix theory. Further research should focus on algebraic properties related to the common mean of n.n.d. matrices (cf. Anderson and Trapp [2]). From the construction of the sequences \(\mathbf{X}_i\) and \(\mathbf{Y}_i\) it has become clear that
+
+\begin{equation*}
+\mathbf{X}_0 \le \mathbf{X}_1 \le \mathbf{X}_2 \le \cdots \le \mathbf{X}_i \le \cdots \le \mathbf{Y}_i \le \cdots \le \mathbf{Y}_2 \le \mathbf{Y}_1 \le \mathbf{Y}_0
+\end{equation*}
+
+and \(\mathbf{X}_0 \le \mathbf{C}(\mathbf{X}_1,\mathbf{Y}_0) \le \mathbf{Y}_0\), where \(\mathbf{A} \le \mathbf{B}\) for matrices \(\mathbf{A}\) and \(\mathbf{B}\) means that \(\mathbf{B} - \mathbf{A}\) is n.n.d. It has also been investigated under which conditions the order relation "\(\le\)" can be substituted by "\(<\)", i.e. the corresponding differences are positive definite.
+
+## Acknowledgements
+
+We would like to thank Adrian Smith and Bernhard Strohmeier who helped in preparing this paper. Furthermore, thanks to Jon Sandles for several useful hints.
+
+## References
+
+[1] Anderson, W.N. and Duffin, R.J. (1969). "Series and Parallel Addition of Matrices", *Journal of Mathematical Analysis and Applications* 26, 576–594.
+
+[2] Anderson, W.N. and Trapp, G.E. (1986). "Inverse Problems for Means of Matrices", *SIAM Journal of Algebraic Discrete Methods*, 7, 188–192.
+
+[3] De Kerf, J. (1995). "The Common Mean and APL", *Vector* 11.3, 21–23.
+
+[4] Graybill, F.A. (1983). *Introduction to Matrices with Applications in Statistics*, Second Edition, Wadsworth Publishing Co., Belmont, California.

@@ -1,0 +1,296 @@
+---
+vid: '10010670'
+title: Densities Well Suited for Statistics Problems
+authors:
+- Dr Dietrich Trenkler
+volume: '7'
+issue: '2'
+page: '118'
+transcribed: 'from page images of VOL.9-NO.2-OCTOBER-1990.pdf (misnamed: Vol.7 No.2), pages 120–126 (printed 118–124); Claude, 2026-10-08'
+review: draft
+tags:
+- mathematics and statistics
+- education
+queries:
+- Printed heading “Densities Well Suited For Statistics Problems”, by Dietrich Trenkler, University of Osnabrück, West-Germany. The article is typeset in TeX.
+- 'The formulas are set in TeX, typeset by MathJax, following the printed layout: the case definitions of f, F and F⁻¹ with their braces, = signs aligned as printed in (4) and for b₃ … b₀, and equation numbers at the right.'
+- 'Slips transcribed as printed: “continous distributions”; “the coeffients”.'
+status: transcribed
+issue_tab: n2-october-1990
+---
+
+*Transcribed from the printed issue; not yet reviewed. [Read it in the PDF of the issue, page 118](../7/2/VOL.9-NO.2-OCTOBER-1990.pdf#page=120)*
+{ .transcribed }
+
+*by Dietrich Trenkler, University of Osnabrück, West-Germany*
+{ .byline }
+
+## Introduction
+
+Devising examinations in Statistics is a tedious thing to do. For instance, understanding the meaning of the Central Limit Theorem definitely is a goal, but finding continous distributions for which the student can easily compute expectations and variances is hard to do by trial and error. So why not let the computer do the job. In this paper we introduce several *APL* programs written in *APL\*PLUS/PC* to help in these circumstances. We hold that this is a further step in the direction of generating examinations which at the same time cover a broad range of topics, are less prone to errors and minimize the efforts on behalf of the instructor.
+
+## The Problem
+
+Let us be given a function \(f\) defined by
+
+\begin{equation*}
+f(x) = \left\{ \begin{array}{cc} a_2x^2 + a_1x + a_0, & \alpha \le x \le \beta, \\ 0 & \text{else.} \end{array} \right.
+\end{equation*}
+
+Our aim is to give some guidelines for choosing the coefficients \(a_i\) such that
+
+- \(f\) is a probability density function (p.d.f) and
+- they are sufficiently smooth to ease further computations.
+
+There are two sufficient and necessary conditions for \(f\) to be a p.d.f.:
+
+(i) \(f(x) \ge 0\) for all \(x\), and<br>
+(ii) \(\int_\alpha^\beta f(t)dt = 1\).
+
+Condition (ii) is equivalent to
+
+\begin{equation*}
+2a_2(\beta^3 - \alpha^3) + 3a_1(\beta^2 - \alpha^2) + 6a_0(\beta - \alpha) = 6. \tag{1}
+\end{equation*}
+
+To guarantee that \(f\) meets condition (i) it is necessary that
+
+\begin{equation*}
+f(\alpha) \ge 0 \quad\text{and}\quad f(\beta) \ge 0. \tag{2}
+\end{equation*}
+
+But this is not sufficient if \(f\) has a minimum in \((\alpha,\beta)\). It is easy to see that \(f\) has a global minimum (maximum) in \(x_0 = -\frac{a_1}{2a_2}\) if \(a_2 > 0\) \((a_2 < 0)\). So we impose the restriction \(f(x_0) \ge 0\) which is equivalent to
+
+\begin{equation*}
+4a_0a_2 \ge a_1^2 \tag{3}
+\end{equation*}
+
+whenever \(a_2 > 0\) and \(-2a_2\beta < a_1 < -2a_2\alpha\).
+
+Having chosen \(\alpha\), \(\beta\), \(a_2\), \(a_1\) and \(a_0\) one can compute expectations associated with the distribution given by \(f\) from
+
+\begin{equation*}
+\begin{aligned}
+E[X^n] &= \frac{a_2}{n+3}(\beta^{n+3} - \alpha^{n+3}) + \frac{a_1}{n+2}(\beta^{n+2} - \alpha^{n+2}) + \frac{a_0}{n+1}(\beta^{n+1} - \alpha^{n+1}) \\
+&= \frac{A}{(n+3)(n+2)(n+1)}
+\end{aligned}
+\tag{4}
+\end{equation*}
+
+where
+
+\begin{multline*}
+A = a_2(n+2)(n+1)(\beta^{n+3} - \alpha^{n+3}) + a_1(n+3)(n+1)(\beta^{n+2} - \alpha^{n+2}) \\
++ a_0(n+3)(n+2)(\beta^{n+1} - \alpha^{n+1}).
+\end{multline*}
+
+The distribution function \(F\) is given by
+
+\begin{equation*}
+F(x) = \left\{ \begin{array}{cr} 0, & x < \alpha, \\ \frac{a_2}{3}(x^3 - \alpha^3) + \frac{a_1}{2}(x^2 - \alpha^2) + a_0(x - \alpha), & \alpha \le x \le \beta, \\ 1, & \beta < x. \end{array} \right.
+\end{equation*}
+
+These formulas can be used to compute variances and percentiles. However, computing percentiles is hard unless \(a_2 \ne 0\) and \(a_1 = a_0 = 0\) or \(a_2 = 0\). Then we get for \(0 \le p \le 1\)
+
+\begin{equation*}
+F^{-1}(p) = \left\{ \begin{array}{cc} \sqrt[3]{\alpha^3 + \frac{3p}{a_2}}, & a_2 \ne 0, a_1 = a_0 = 0, \\ -\frac{a_0}{a_1} \pm \sqrt{(\frac{a_0}{a_1} + \alpha)^2 + \frac{2p}{a_1}}, & a_2 = 0, a_1 \ne 0, \\ \alpha + \frac{p}{a_0}, & a_2 = a_1 = 0. \end{array} \right. \tag{5}
+\end{equation*}
+
+## The Programs
+
+Starting point in program `GENERDENSITY` is criterion (1). Using `SUMUP2` we first find a matrix of integers \(z_2 \le z_1 \le z_0\) such that \(z \le z_i\) for some integer \(z\) fixed in advance and \(z_2 + z_1 + z_0 = 6\). This number \(z\) has been set to ¯24 since experience has shown that in this way `WS FULL` problems can be avoided on the author’s PC. Then using `PERM` all \(3! = 6\) permutations of its columns are generated. This way, there may be some redundancy but `DEDOUBLEROWS` at the end of the program truncates all duplicate lines. The numbers
+
+\begin{equation*}
+a_2 = \frac{z_2}{2(\beta^3 - \alpha^3)}, \quad a_1 = \frac{z_1}{3(\beta^2 - \alpha^2)}, \quad a_0 = \frac{z_0}{6(\beta - \alpha)}
+\end{equation*}
+
+are potential coefficients. To guarantee smooth numbers it is checked if \(ma_i\) is integer for some positive integer \(m\). Thus, setting \(m = 4\) yields numbers like \(-2.25\), 3.5 or \(-3\) for instance. Finally, those rows of the matrix are extracted which fulfill criteria (2) and (3).
+
+Programs `EXPECTATION` and `DISTRIBUTION` can be used to determine \(E[X^n]\) and \(F\).
+
+## An Example
+
+Suppose we wish to determine smooth densities based on a polynomial in \([0,1]\) such that \(a_2\), \(a_1\) and \(a_0\) are integers. Then
+
+```apl
+      ⎕←A←GENERDENSITY 1 0 1
+¯3  2  1
+ 0  0  1
+ 6 ¯8  3
+ 3 ¯6  3
+ 6 ¯6  2
+ 3 ¯4  2
+ 0 ¯2  2
+ 3 ¯2  1
+¯6  6  0
+¯3  4  0
+ 0  2  0
+ 9 ¯8  2
+ 9 ¯6  1
+ 6 ¯4  1
+ 3  0  0
+```
+
+The right argument of `GENERDENSITY` consists of the numbers \(m\), \(\alpha\) and \(\beta\). For instance, the third line of this matrix consisting of the numbers 6, ¯8 and 3 indicates that
+
+\begin{equation*}
+f(x) = \left\{ \begin{array}{cc} 6x^2 - 8x + 3, & 0 \le x \le 1, \\ 0 & \text{else} \end{array} \right.
+\end{equation*}
+
+is a p.d.f.
+
+Using \(\alpha\) as the right argument the first four columns of the following expression show the coeffients
+
+\begin{align*}
+b_3 &= \frac{a_2}{3}, \\
+b_2 &= \frac{a_1}{2}, \\
+b_1 &= a_0, \quad\text{and} \\
+b_0 &= -\alpha(\frac{a_2}{3}\alpha^2 + \frac{a_1}{2}\alpha + a_0)
+\end{align*}
+
+of \(F\) in \([\alpha,\beta]\):
+
+```apl
+      0 DISTRIBUTION A
+¯1  1  1  0  0
+ 0  0  1  0  3
+ 2 ¯4  3  0  0
+ 1 ¯3  3  0  0
+ 2 ¯3  2  0  0
+ 1 ¯2  2  0  0
+ 0 ¯1  2  0  2
+ 1 ¯1  1  0  0
+¯2  3  0  0  0
+¯1  2  0  0  0
+ 0  1  0  0  2
+ 3 ¯4  2  0  0
+ 3 ¯3  1  0  0
+ 2 ¯2  1  0  0
+ 1  0  0  0  1
+```
+
+The fifth column tells which of the formulas in (5) can be used to determine percentiles.
+
+Finally, to compute \(E[X^n]\) we can use the program `EXPECTATION`. There are two ways to specify its left argument. If it consists of four entries the first must be 0 or 1. If it is equal to 1 all numbers are displayed to compute the numerator \(A\) and denominator in (4). In this way we can gain insight into the complexity of the computations involved. If it is equal to 0, these numbers are truncated and only the expectations are computed. If only three numbers are used then this is equivalent to using four with the first equal to 0. The other numbers are \(\alpha\), \(\beta\) and \(n\), respectively. To compute \(E[X]\) we get
+
+```apl
+      1 0 1 1 EXPECTATION A
+¯18  16 12 10 24 0.4167
+  0   0 12 12 24 0.5000
+ 36 ¯64 36  8 24 0.3333
+ 18 ¯48 36  6 24 0.2500
+ 36 ¯48 24 12 24 0.5000
+ 18 ¯32 24 10 24 0.4167
+  0 ¯16 24  8 24 0.3333
+ 18 ¯16 12 14 24 0.5833
+¯36  48  0 12 24 0.5000
+¯18  32  0 14 24 0.5833
+  0  16  0 16 24 0.6667
+ 54 ¯64 24 14 24 0.5833
+ 54 ¯48 12 18 24 0.7500
+ 36 ¯32 12 16 24 0.6667
+ 18   0  0 18 24 0.7500
+```
+
+For instance to compute \(E[X]\) of the distribution determined by the p.d.f. mentioned above we find that
+
+\begin{equation*}
+E[X] = \frac{36 - 64 + 36}{24} = \frac{8}{24} = 0.3333.
+\end{equation*}
+
+Finally, to compute the variances \(E[X^2] - E^2[X]\) the following expressions can be used.
+
+```apl
+      E2←0 1 2 EXPECTATION A
+      E1←0 1 1 EXPECTATION A
+      A,E1,E2,E2-E1*2
+¯3  2 1 0.4167 0.2333 0.0597
+ 0  0 1 0.5000 0.3333 0.0833
+ 6 ¯8 3 0.3333 0.2000 0.0889
+ 3 ¯6 3 0.2500 0.1000 0.0375
+ 6 ¯6 2 0.5000 0.3667 0.1167
+ 3 ¯4 2 0.4167 0.2667 0.0931
+ 0 ¯2 2 0.3333 0.1667 0.0556
+ 3 ¯2 1 0.5833 0.4333 0.0931
+¯6  6 0 0.5000 0.3000 0.0500
+¯3  4 0 0.5833 0.4000 0.0597
+ 0  2 0 0.6667 0.5000 0.0556
+ 9 ¯8 2 0.5833 0.4667 0.1264
+ 9 ¯6 1 0.7500 0.6333 0.0708
+ 6 ¯4 1 0.6667 0.5333 0.0889
+ 3  0 0 0.7500 0.6000 0.0375
+```
+
+## The Programs
+
+```apl
+    ∇ R←DEDOUBLEROWS MAT;A;B
+[1]   R←,B←⍎((82=⎕DR MAT)/'⎕AV⍳'),'MAT'
+[2]   R←(1,1↓R≠¯1⌽R)/R←R[⍋R]
+[3]   R←(1+⌈/,R)⊥⍉R←R⍳B
+[4]   R←(1,1↓R≠¯1⌽R←R[A])/A←⍋R
+[5]   R←((⍳1↑⍴B)∊R)⌿MAT
+[6] ⍝   Removes all duplicate rows of MAT.
+[7] ⍝   Considerably faster and less WS FULL prone than
+[8] ⍝   Finn-APL idioms 70, 206 and 208.
+    ∇
+
+    ∇ R←ALPHA DISTRIBUTION A;B
+[1]   R←(A[;1]÷3),(0.5×A[;2]),A[;,3]
+[2]   R←R,-R+.×ALPHA∘.* 3 2 1
+[3]   B←⍳1↑⍴R←R,0
+[4]   R[((A[;1]≠0)∧(A[;2]=0)∧A[;3]=0)/B;5]←1
+[5]   R[((A[;1]=0)∧A[;2]≠0)/B;5]←2
+[6]   R[((A[;1]=0)∧A[;2]=0)/B;5]←3
+    ∇
+
+    ∇ R←ABN EXPECTATION C;A;B;C;D;E;N
+[1]   ABN←¯4↑ABN
+[2]   A←ABN[2] ⋄ B←ABN[3] ⋄ N←ABN[4]
+[3]   R←C[;1]×(N+2)×(N+1)×(B*N+3)-A*N+3
+[4]   R←R,C[;,2]×(N+3)×(N+1)×(B*N+2)-A*N+2
+[5]   R←R,C[;3]×(N+3)×(N+2)×(B*N+1)-A*N+1
+[6]   R←(((⍴R)×1,ABN[1])⍴R←R,A,[1.1]B),(A←+/R)÷B←(N+3)×(N+2)×N+1
+    ∇
+
+    ∇ R←SUMUP2 abc;A;I;a;b;c
+[1]   a←abc[1] ⋄ b←abc[2] ⋄ c←abc[3]
+[2]   R←c ⋄ →0×⍳b=1
+[3]   R←(0,b)⍴I←a
+[4]  M1:→0×⍳c<+/b⍴I
+[5]   A←I,SUMUP2 I,(b-1),c-I
+[6]   R←R⍪A
+[7]   I←I+1 ⋄ →M1
+[8] ⍝   All integers x(1)≤x(2)≤...≤x(n) with x(1)+...+x(n)=S, a≤x(1).
+[9] ⍝   abc[1] ←→ a, abc[2] ←→ n, abc ←→ S.
+    ∇
+
+    ∇ R←PERM N;I;J;A;B;C;M
+[1]   M←I←2 ⋄ R← 1 1 ⍴1 ⋄ B←0
+[2]  OLOOP:B←1,B ⋄ C←(0,1+1↓⍴R)⍴J←0
+[3]  ILOOP:A←(J⌽B)\R
+[4]   A[;M-J]←I ⋄ C←C⍪A
+[5]   →(I>J←J+1)/ILOOP
+[6]   M←1+1↓⍴R←C
+[7]   →(N≥I←I+1)/OLOOP
+[8] ⍝   All permutations of ⍳N.
+    ∇
+
+    ∇ R←GENERDENSITY MAB;A;B;C;D;E;I;S;M;N;V
+[1]   M←MAB[1] ⋄ A←MAB[2] ⋄ B←MAB[3]
+[2]   C←(E←C≠0)/C←(2×(B*3)-A*3),(3×(B×B)-A×A),6×B-A
+[3]   S←SUMUP2 ¯24,(⍴C),6
+[4]   D←PERM⍴C
+[5]   R←(0,1↓⍴D)⍴I←1
+[6]  LOOP:R←R⍪S[;D[I;]]
+[7]   →((1↑⍴D)≥I←I+1)/LOOP
+[8]   R←(∧/0=1|M×R)⌿R←R÷(⍴R)⍴C
+[9]   R←(0≤R+.×E/(A×A),A,1)⌿R
+[10]  R←(0≤R+.×E/(B×B),B,1)⌿R
+[11]  R←(1,(2≠1↓⍴R),1)\R
+[12]  E←R[;1]>0
+[13]  E←E∧(R[;2]>-R[;1]×B+B)∧R[;2]<-R[;1]×A+A
+[14]  E←~E∧(4××/R[; 1 3])<R[;2]*2
+[15]  R←DEDOUBLEROWS E⌿R
+    ∇
+```

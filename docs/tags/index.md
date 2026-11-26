@@ -1,0 +1,4774 @@
+---
+title: Tags
+---
+
+
+The articles by subject. An article may carry more than one tag.
+
+[language design](#tag-language-design) (275) · [standards](#tag-standards) (40) · [programming techniques](#tag-programming-techniques) (525) · [performance](#tag-performance) (86) · [system interfaces](#tag-system-interfaces) (196) · [implementations](#tag-implementations) (504) · [applications](#tag-applications) (236) · [data and files](#tag-data-and-files) (87) · [graphics](#tag-graphics) (107) · [user interfaces](#tag-user-interfaces) (155) · [expert systems and AI](#tag-expert-systems-and-AI) (20) · [mathematics and statistics](#tag-mathematics-and-statistics) (376) · [education](#tag-education) (294) · [development practice](#tag-development-practice) (156) · [APL in perspective](#tag-APL-in-perspective) (169) · [conference reports](#tag-conference-reports) (260) · [APL community](#tag-APL-community) (830) · [competitions and puzzles](#tag-competitions-and-puzzles) (142) · [humour](#tag-humour) (62) · [reviews](#tag-reviews) (146)
+
+## language design { #tag-language-design }
+
+*APL as a language: its design, extensions (nested arrays, operators, direct definition), notation and dialects*
+
+- 1:1 [Letters to the Editor](../v1n1-p5-letters-to-the-editor/), Richard Bowman, Alan Hawkes, Anthony Camacho
+- 1:1 [FGL: Fifth Generation Language](../art10001010/), Robert Bittlestone
+- 1:3 [Guest Editorial: The Evolution of APL](../v1n3-p3-guest-editorial-the-evolution-of-apl/), Adrian Smith
+- 1:3 [General Correspondence](../v1n3-p5-general-correspondence/), J. Sullivan, John Garland, Bob Pullman
+- 2:1 [Nested Arrays Workshop, April 26th 1985 (meeting notes)](../v2n1-p46-nested-arrays-workshop/), Adrian Smith
+- 2:1 [The Importance of being Nested](../art10002640/), David Crossley
+- 2:1 [APL for the Teacher](../art10003350/), Dick Gray
+- 2:1 [Guide to APL2 Nested Arrays](../art10009930/), Norman Thomson
+- 2:1 [Operators & Nested Arrays](../art10007700/), John Scholes
+- 2:3 [Technical Editorial: More on APL2](../v2n3-p93-technical-editorial/), Jonathan Barman, David Ziemann
+- 2:3 [Using Operators in APL2](../art10009940/), Norman Thomson
+- 2:4 [APL Trivia: Life, the Universe and Everything?; Remarks on “Towards a Better APL”](../v2n4-p115-apl-trivia/), David Ziemann, Claude Henriod
+- 3:2 [The Split in APL](../art10003970/), Ken Iverson
+- 3:2 [CORE APL (Opening Plenary by Ken Iverson)](../v3n2-p59-core-apl-opening-plenary/), Adrian Smith
+- 3:2 [Report on the Plenary Panel Session at APL 86](../v3n2-p81-plenary-panel-session/), Anthony Camacho
+- 3:2 [Thoughts on APL design](../v3n2-p87-thoughts-on-apl-design/), Bob Pullman
+- 3:2 [Development of APL through Standardization](../art10005110/), David Livingstone
+- 3:2 [Comparison Tolerance](../art10003370/), Dick Gray
+- 3:3 [Idioms and Problem Solving in APL2 (talk at APL86)](../v3n3-p77-idioms-and-problem-solving-in-apl2/), Alan Graham, John Sullivan
+- 3:3 [Future Directions of APL](../art10006320/), Graham Parkhouse
+- 4:2 [MetaAPL: an APL Preprocessor](../v4n2-p72-metaapl-an-apl-preprocessor/), Glen Tickner, Norval R Oswald
+- 4:3 [Origins](../art10006330/), Graham Parkhouse
+- 4:3 [A Demonstration of Direct Defn](../art10001480/), Anthony Camacho
+- 4:3 [Technical Editorial – Direct Definition](../v4n3-p102-technical-editorial-direct-definition/), Jonathan Barman, Dave Ziemann
+- 4:4 [PL/PC “APL for All”](../v4n4-p52-pl-pc-apl-for-all/), N.J. Small
+- 4:4 [Technical Correspondence (Sullivan; Piper; Hayward; Bykerk; Donnelly; Prys-Williams)](../v4n4-p92-technical-correspondence/)
+- 5:1 [A Commentary on APL Development](../art10003980/), Ken Iverson
+- 5:2 [Editorial: OOPS and WIMPS and the Way Ahead](../v5n2-p3-editorial/), Adrian Smith
+- 5:3 [Generic Local Objects](../art10004100/), Zdenek Jizba
+- 5:3 [Technical Editorial: Second Generation APL on Personal Computers](../v5n3-p108-technical-editorial/), Jonathan Barman, Dave Ziemann
+- 5:4 [Editorial: In which Piglet meets a Heffalump](../v5n4-p3-editorial/), Adrian Smith
+- 5:4 [SAX](../v5n4-p67-sax/), Michael J.A. Berry
+- 5:4 [An Ambivalent Operator](../v5n4-p96-an-ambivalent-operator/), David Piper
+- 5:4 [Logic & the Algebra of Propositions](../art10004360/), Joseph De Kerf
+- 5:4 [Parallel Computing and APL](../art10006810/), David Piper
+- 6:1 [A Direct Definition Handler](../art10011130/), David Ziemann
+- 6:1 [Semantic Class and Arrays of Functions](../art10006820/), David Piper
+- 6:2 [Second Generation APLs - Comment on Items in Vector 5.4](../v6n2-p7-second-generation-apls-comment/), N.J. Small
+- 6:2 [Notes on the Papers](../v6n2-p70-notes-on-the-papers/), Maurice Jordan, Chris Brady, Anthony Camacho, John Searle, Sylvia Camacho, Paul Chapman, David Ziemann
+- 6:2 [Ambivalent Operators...](../v6n2-p117-ambivalent-operators/), Phil Last
+- 6:2 [APL Standard Update](../v6n2-p118-apl-standards-update/), David Ziemann
+- 6:2 [Punctuation in APL](../art10004370/), Joseph De Kerf
+- 6:3 [More on Ambivalent Operators](../v6n3-p93-more-on-ambivalent-operators/), Dave Piper
+- 6:3 [Concern: a possible feedback](../v6n3-p94-concern-a-possible-feedback/), Claude Henriod
+- 6:3 [Yet More on that Ambivalent Operator ...](../v6n3-p97-yet-more-on-that-ambivalent-operator/), Norman Thomson
+- 6:3 [A Note on Quad and Quote-quad](../art10004380/), Joseph De Kerf
+- 6:4 [More on ‘A’ by Arthur Whitney](../v6n4-p62-arthur-whitney-on-a/), Ed Shaw
+- 6:4 [Workshop on Defined Operators](../art10007710/), John Scholes
+- 6:4 [Is Function Ambivalence a Good Thing?](../v6n4-p96-is-function-ambivalence-a-good-thing/), David Piper
+- 6:4 [Error Trapping or Event Handling?](../v6n4-p98-error-trapping-or-event-handling/), Richard Nabavi
+- 7:1 [J: An Informal Introduction](../art10003990/), Kenneth E. Iverson
+- 7:1 [How to Kill More Cats ...](../v7n1-p115-how-to-kill-more-cats/), Norman Thomson
+- 7:1 [The INVERSE operator in APL2.5](../v7n1-p117-inverse-operator-in-apl2-5/), I. Phelfritt (née Leigh)
+- 7:1 [The power operator](../v7n1-p117-power-operator/), John Scholes
+- 7:1 [A Survey of ⎕NC](../art10004390/), Joseph L.F. de Kerf
+- 7:2 [Editorial: Namespaces](../v7n2-p3-editorial-namespaces/), Jonathan Barman
+- 7:2 [Reports on the Presentations](../v7n2-p83-reports-on-the-presentations/), Sylvia Camacho, Anthony Camacho, Ray Cannon
+- 7:2 [A Dictionary of J](../art10004000/), Ken Iverson
+- 7:2 [Comparison Tolerance Explained](../art10009970/), Norman Thomson
+- 7:3 [Object Oriented Programming and APL](../art10004130/), Zdenek V Jizba
+- 8:2 [Guest Editorial: Wanted: Programmer Support](../v8n2-p3-guest-editorial/), Gregg W Taylor
+- 8:2 [Tuesday 6 August](../v8n2-p70-tuesday-6th-aug/), Anthony Camacho, Sylvia Camacho, Jonathan Barman, Ray Cannon
+- 8:2 [Panel “Is J a Dialect of APL?”](../art10000590/), Jonathan Barman, Anthony Camacho
+- 8:2 [The Legacy of the Typewriter](../art10006120/), Richard Nabavi
+- 8:3 [Editorial: J is for January](../v8n3-p3-editorial-j-is-for-january/), Jonathan Barman
+- 8:3 [Differences in Second Generation APLs](../art10004230/), Maurice Jordan
+- 8:3 [J Questionnaire](../v8n3-p90-j-questionnaire/), Jonathan Barman
+- 8:3 [J Questions and Answers](../art10003760/), Jonathan Barman, Roger Hui, Ken Iverson
+- 8:3 [Hooks and Forks and the Teaching of Elementary Arithmetic](../art10005810/), Donald B. McIntyre
+- 8:4 [Pass Me Another Diagonal Slice, Please!](../art10005270/), Alan Mayer
+- 8:4 [J (section introduction)](../v8n4-p81-j-section-introduction/)
+- 8:4 [Typesetting J: some Comments](../v8n4-p82-typesetting-j-some-comments/), R.H. Oates
+- 8:4 [Comments on J Questionnaire](../v8n4-p83-comments-on-j-questionnaire/), Roger Hui, Ken Iverson
+- 8:4 [Verb Tables](../art10003770/), Roger K.W. Hui
+- 8:4 [Writing Operators for Dyalog APL](../art10004890/), Phil Last
+- 9:1 [STSC’s Double Whammy](../art10006850/), David Piper
+- 9:1 [Making a Calendar in J](../art10008010/), Keith Smillie
+- 9:1 [Using J’s Boxed Arrays](../art10005830/), Donald B. McIntyre
+- 9:1 [More on Strands in PLUS II](../art10006860/), David Piper
+- 9:2 [Editorial: APL, Windows and GUIs](../art10000620/), Jonathan Barman
+- 9:2 [Some Notes on Direct Definition](../art10005280/), Alan Mayer
+- 9:2 [Iverson’s Introduction to J](../art10008020/), Keith Smillie
+- 9:2 [Smalltalk, APL and J: an Exercise in Comparative Programming](../art10011150/), Dave Ziemann
+- 9:2 [Object Oriented Extensions to APL and J](../art10003220/), Robert J. Frey
+- 9:3 [Editorial: Commercial APL](../art10000630/), Jonathan Barman
+- 9:3 [Meeting at Morgan Stanley, 23 October](../art10000640/), Jonathan Barman
+- 9:3 [A Little J Horner](../art10006550/), Howard A. Peelle
+- 9:3 [Jacobi’s Method for Eigenvalues an Illustration of J](../art10005840/), Donald McIntyre
+- 9:3 [AMENDMENT: “A Change for the Better”](../art10005850/), Donald B. McIntyre
+- 9:4 [Roger Hui on “An Implementation of J”](../art10003790/), Roger K.W. Hui
+- 9:4 [An Exchange on Primes](../art10003800/), Roger K.W. Hui
+- 9:4 [Span Representation: Improving the Display of J Verbs](../art10006200/), Richard Oates
+- 10:1 [Review: SHARP APL Reference Manual](../art10000670/), Jonathan Barman
+- 10:1 [K](../art10010830/), Arthur Whitney
+- 10:2 [J-ottings](../art10010000/), Norman Thomson
+- 10:2 [David Steinbrook and Eugene McDonnell ‘From Trees into Boxes’](../v10n2-p91-from-trees-into-boxes/), Anthony Camacho
+- 10:2 [At Play with J: MIMD Machines](../art10005370/), Eugene McDonnell
+- 10:3 [Editorial Comment](../v10n3-p19-editorial-comment/), Alan Mayer
+- 10:3 [Letter](../v10n3-p19-iverson-letter/), Kenneth E. Iverson
+- 10:3 [J-ottings 2](../art10010010/), Norman Thomson
+- 10:3 [At Play with J: Tacit Definition](../art10005390/), Eugene McDonnell
+- 10:3 [Loops in APL2](../art10003480/), H. Haussmann
+- 10:3 [A Control Operator](../art10007480/), Denis Samson
+- 10:4 [J: A First Lesson](../art10005860/), Donald McIntyre
+- 10:4 [AMORTIZE: a Windows Application in J](../art10006290/), Thomas M. Olsen
+- 10:4 [Technical Editorial: in Search of Contexts](../art10008520/), Adrian Smith
+- 10:4 [Defined Operator Simulation for APL\*PLUS II](../art10003310/), Allan Gay
+- 11:1 [J: A Second Lesson](../art10005870/), Donald McIntyre
+- 11:1 [Review: APL\*PLUS III Control Structures](../art10008540/), Adrian Smith
+- 11:1 [Meeting: AnOOPL– An Object-Oriented Programming Language](../art10012910/), David Piper
+- 11:1 [Meeting: Dyalog APL Namespaces](../art10007730/), John Scholes
+- 11:1 [Letter: Adverb/Conjunction Combinations in J](../art10009480/), Gordon Sutcliffe
+- 11:1 [At Play with J: Control Structures](../art10005410/), Eugene McDonnell
+- 11:2 [J-ottings 3: Atop and Agenda](../art10010020/), Norman Thomson
+- 11:2 [J: Bibliography](../v11n2-p28-j-bibliography/), Donald B. McIntyre
+- 11:2 [J Compositions](../art10010030/), Norman Thomson
+- 11:2 [J Compositions](../art10003810/), Roger Hui
+- 11:3 [Guest Editorial: Namespaces](../art10006460/), Duncan Pearson
+- 11:3 [J-ottings 4](../art10010040/), Norman Thomson
+- 11:3 [Namespaces Special Feature](../v11n3-p65-namespaces-special-feature/)
+- 11:3 [The Use of Namespaces for Encapsulation — a Practical Introduction](../art10002890/), Peter Donnelly
+- 11:3 [Namespaces](../art10005000/), Eric Lescasse
+- 11:3 [Namespaces: Just another Means to Multiply your Chaos?](../art10004310/), Kimmo Kekäläinen
+- 11:3 [Coast-to-Coast revisited](../v11n3-p96-coast-to-coast-revisited/), Adrian Smith
+- 11:4 [Editorial:](../art10013240/), Anthony Camacho
+- 11:4 [J-ottings 5: Append Items](../art10010050/), Norman Thomson
+- 11:4 [Locales in J](../art10001310/), Chris Burke
+- 11:4 [Teaching with an Executable Notation](../art10004010/), Ken Iverson
+- 11:4 [Perils of Subtraction: a New Language for an Old Algorithm](../art10005880/), Donald B. McIntyre
+- 11:4 [More on APL 2.5](../v11n4-p120-more-on-apl-2-5/), I Phelphritt (nee Leigh)
+- 11:4 [The Common Mean and APL](../art10003820/), Roger Hui
+- 11:4 [ASCII Representation of APL Characters](../art10004020/), Kenneth E. Iverson
+- 11:4 [Functional Programming in J for Operations Research](../art10001290/), Richard L.W. Brown
+- 12:1 [J-ottings 6: Indexing Arrays in J](../art10010070/), Norman Thomson
+- 12:1 [Teaching with an Executable Notation (Part 2)](../art10004030/), Kenneth E. Iverson
+- 12:1 [A Quite Different New Primitive](../art10004730/), Gérard Langlet
+- 12:2 [Some Comments](../v12n2-p9-some-comments/), Adrian Smith
+- 12:2 [J-ottings 7: Control Structures](../art10010080/), Norman Thomson
+- 12:2 [Elegant Programming](../art10001320/), Chris Burke
+- 12:2 [A Fractal Verb in J](../art10006220/), Richard Oates
+- 12:2 [Tilting at Windmills: a New Attack on Nested Arrays](../art10001050/), Douglas Bohrer
+- 12:2 [J Locales](../v12n2-p141-j-locales/), Richard Oates
+- 12:3 [J-ottings 8: Transcribing from APL to J](../art10010110/), Norman Thomson
+- 12:3 [A Note on Programming Style](../art10003840/), Roger Hui, Kenneth E. Iverson
+- 12:4 [J-ottings 9: The Power Conjunction](../art10010130/), Norman Thomson
+- 13:1 [Functional Programming in J (Part 1)](../art10006580/), Howard Peelle
+- 13:1 [APL and J (1) - Function Rank](../art10001330/), Chris Burke
+- 13:1 [APL Operators and J](../art10010180/), Norman Thomson
+- 13:1 [The J DLL and Extended Integers](../art10001340/), Chris Burke
+- 13:2 [Functional Programming in J (Part 2)](../art10006600/), Howard Peelle
+- 13:2 [J-ottings 11](../art10010190/), Norman Thomson
+- 13:2 [Nested Arrays with Phil Benkard](../v13n2-p68-nested-arrays-with-phil-benkard/), Jon Sandles
+- 13:2 [Dynamic Functions in Dyalog APL](../art10007740/), John Scholes
+- 13:2 [APL2 and J (2) - Indexing](../art10001350/), Chris Burke
+- 13:2 [Extended Integers in J](../art10003860/), Roger Hui
+- 13:3 [Functional Programming in J (Part 3)](../art10006620/), Howard Peelle
+- 13:3 [Import/Export and the Wealth of Namespaces](../art10001060/), Douglas Bohrer
+- 13:3 [J and APL Operators](../art10010220/), Norman Thomson
+- 13:3 [APL and J (3): Operators Reduce, Scan, Outer Product](../art10001360/), Chris Burke
+- 13:4 [Functional Programming in J (Part 4)](../art10006630/), Howard Peelle
+- 13:4 [APL and J (4): Function Application and Axis](../art10001380/), Chris Burke
+- 14:1 [APL and the rank operator](../v14n1-p7-apl-and-the-rank-operator/), Norman Thomson
+- 14:1 [The Enclose of an Empty Array](../v14n1-p8-enclose-of-an-empty-array/), Joseph De Kerf
+- 14:1 [Do APL2 and J Come up to Scratch?](../art10010240/), Norman Thomson
+- 14:1 [The IML Matrix Language: A Belated Introduction](../art10006910/), Donald B. Pittenger
+- 14:1 [Object Oriented Programming with APL+Win (Part I)](../art10005030/), Eric Lescasse
+- 14:1 [APL and J (5): Operators – Inner Product, Each, Commute, Compose](../art10001390/), Chris Burke
+- 14:1 [The API Problem as a Particular Recurrence Problem](../art10001420/), Andrei Buzin
+- 14:2 [A Little Hook for Understanding](../art10002610/), Nicholas Cox
+- 14:2 [J-ottings 14](../art10010260/), Norman Thomson
+- 14:3 [APL Null](../v14n3-p12-apl-null/), Ajay Askoolum
+- 14:3 [Object Oriented Programming with APL+Win (Part II)](../art10005040/), Eric Lescasse
+- 14:4 [J-ottings 16: A Composition on Composition](../art10010290/), Norman Thomson
+- 14:4 [J4 and OOP](../art10001400/), Chris Burke
+- 15:2 [J-ottings 18: Transposition](../art10010310/), Norman Thomson
+- 15:2 [Threads - an Introduction to Multithreading](../art10007760/), John Scholes
+- 15:3 [Some Basic Functions for Composite Arithmetic](../art10003700/), Neville Holmes
+- 15:4 [J-ottings 20: A Case of Taken Identity](../art10010330/), Norman Thomson
+- 15:4 [At Play with J: New Model Computer](../art10005570/), Gene McDonnell
+- 16:1 [What Use Are User-Defined Operators?](../art10002390/), Ian Clark
+- 16:1 [Namespaces: New Gem From Old Roots](../art10000530/), Alexander Balako
+- 16:2 [SHARP APL vs APL2 Coding Style](../art10000760/), Dan Baronet
+- 16:2 [Data Domains](../art10002170/), Phil Chastney
+- 16:3 [SHARP APL Operators](../art10000770/), Dan Baronet
+- 16:4 [SHARP APL Tasks](../art10000780/), Dan Baronet
+- 17:3 [What about a solution in K?](../v17n3-p34-what-about-a-solution-in-k/), Stefano Lanzavecchia
+- 17:3 [J-ottings 27: Obverse to Adverse :.:: a Trip along the Brailleway](../art10010410/), Norman Thomson
+- 17:3 [Reflexive Data Domains](../art10002190/), Phil Chastney
+- 17:4 [D: a functional subset of Dyalog APL](../art10007770/), John Scholes
+- 17:4 [A New Life For ∇: Structure Control](../art10000900/), F.H.D. van Batenburg
+- 18:1 [Localising the effects of system functions in D.](../art10014450/), John Scholes
+- 18:2 [An Elementary Tutorial on Conjunctions](../art10005890/), Donald B. McIntyre
+- 18:2 [Persistence and Shadows](../art10009740/), Stephen Taylor
+- 18:2 [Function Models](../art10002210/), Phil Chastney
+- 18:3 [Review of “J: the Natural Language for Analytic Computing”](../art10007240/), Cliff Reiter
+- 18:3 [Polyadic MORTGAGE as an APL2 operator](../v18n3-p46-polyadic-mortgage-as-an-apl2-operator/), Claude Henriod
+- 18:3 [MORTGAGE with a companion operator](../v18n3-p47-mortgage-with-a-companion-operator/), Gianluigi Quario
+- 18:3 [Hacker’s Corner: Ghost variables](../art10002020/), Ray Cannon
+- 18:3 [Extending the Domains](../art10002220/), Phil Chastney
+- 18:4 [Editorial: Vector 18:4](../art10013570/), Stefano Lanzavecchia
+- 18:4 [Dynamic Functions in Practice](../art10004070/), Veli-Matti Jantunen
+- 18:4 [The Abstraction Mechanisms of Vector Pascal](../art10002570/), Paul Cockshott
+- 18:4 [Technical Correspondence](../art10014400/), Norman Thomson
+- 19:1 [Technical Correspondence](../art10014380/)
+- 19:2 [A Gui-quad for Graphical User Interaction](../art10000920/), Eke van Batenburg, Jasper van Dijk, Dirk-Jan van Leeuwen
+- 19:2 [Rank and Occam’s razor](../v19n2-p94-rank-and-occams-razor/), Norman Thomson
+- 19:2 [A Girl’s Best Friend](../art10002230/), Phil Chastney
+- 19:3 [J-ottings 35: How to Do Things with Words](../art10010490/), Norman Thomson
+- 19:3 [Trip: One Way from APL to J and K](../art10006180/), David Ness
+- 19:3 [Paritons and Cognitons: Towards a New Theory of Information](../art10004770/), Gérard A. Langlet
+- 19:4 [Hidden Meaning inside APL](../art10007110/), Gianluigi Quario
+- 19:4 [Getting to the Bottom of Things](../art10002240/), Phil Chastney
+- 20:1 [dfns@dyalog.com](../art10007780/), John Scholes
+- 20:1 [New Foundations](../art10007380/), Graeme D. Robertson
+- 20:2 [J-ottings 38: Decline and Rise: A Matter of Rank](../art10010520/), Norman Thomson
+- 20:2 [R.Net: A Reverse Polish Interpreter for .Net](../art10009230/), Richard Smith
+- 20:3 [J-ottings 39: All Verbs are Monadic](../art10010530/), Norman Thomson
+- 20:3 [A Conversation between Stevan Apter and Manfred von Thun](../art10000350/), Stevan Apter
+- 20:3 [Erratum noted by Graeme Robertson](../v20n3-p115-erratum-noted-by-graeme-robertson/), Graeme Robertson
+- 20:4 [J-ottings 40: Parallel Joins](../art10010540/), Norman Thomson
+- 20:4 [Dyalog Next Generation: Un-named Window Refs](../art10003440/), Peter-Michael Hager
+- 20:4 [An APL to C++ Translator](../art10001250/), James A. Brown
+- 21:2 [Review: The Solid Form of Language (Robert Bringhurst)](../art10009840/), Stephen Taylor
+- 21:2 [Rowan.net: An APL-like Interpreter for .Net](../art10009240/), Richard Smith
+- 21:3 [How to Write Computer Programs](../art10007810/), John Scholes
+- 21:3 [Industrial FP: a Case Study](../art10009880/), Stephen Taylor
+- 21:4 [Functional Programming in Joy and K](../art10000360/), Stevan Apter
+- 21:4 [Function Arrays in APL](../art10007120/), Gianluigi Quario
+- 22:1 [Editorial: The Wind from Denmark](../art10009890/), Stephen Taylor
+- 22:1 [OO for APLers (part 1)](../art10004600/), Morten Kromberg
+- 22:1 [Lucidity Through Infix Notation](../art10004920/), Phil Last
+- 22:1 [J-ottings 45: A bit of OUTReach (or do I mean outrEACH?)](../art10010590/), Norman Thomson
+- 22:2 [Editorial: Winter in Naples](../art10009910/), Stephen Taylor
+- 22:2 [Object Oriented Programming in APL+Win](../art10007450/), Bill Rutiser
+- 22:2 [Static Exception Handling for APL+Win](../art10007460/), Bill Rutiser
+- 22:2 [OO for APLers (part 2)](../art10004610/), Morten Kromberg
+- 22:2 [J-ottings 47: RU14 txt msgs? pls 1!:1 on](../art10010600/), Norman Thomson
+- 22:3 [APL in the New Millenium](../art10004040/), Ken Iverson
+- 22:3 [At Play with J: Token Counting: APL versus J](../art10005790/), Eugene McDonnell
+- 22:3 [The Language, the Mind and the Man](../art10001240/), Fred Brooks
+- 22:3 [A Lifetime of Working with Ken](../art10003920/), Roger Hui
+- 22:4 [Objects for APLers: Part 3 of 3](../art10011350/), Morten Kromberg
+- 23:1 [Building OO applications in Dyalog version 11](../art10011510/), Stephen Taylor
+- 23:1 [New Tricks for Old Dogs: making sense of classes and namespaces](../art10011620/), Adrian Smith
+- 23:3 [Tacit J and I](../art10011800/), Neville Holmes
+- 23:3 [Functional Calculation 0: Numerical Aperitif](../art10011810/), Neville Holmes
+- 23:3 [Tutorial: User-Defined Classes in APLX Version 4](../art10011820/), Simon Marsden
+- 23:3 [J-ottings 49: Are You Thinking What I'm Thinking?](../art10011830/), Norman Thomson
+- 23:4 [Fire from Heaven (Review: Q for Mortals, by Jeffry Borror)](../art10011980/), Adrian Smith
+- 23:4 [Parallel Each](../art10012000/), David Liebtag
+- 23:4 [Classes as a tool of thought](../art10012010/), Simon Marsden
+- 23:4 [Functional calculation 1: numerical ingredients](../art10012060/), Neville Holmes
+- 24:1 [Unicode support for APL](../art10500090/), Morten Kromberg
+- 24:2 [Array languages for Lisp programmers](../art10500180/), Slobodan Blazeski
+- 24:2 [In Session: On average](../art10500270/), Roger Hui
+- 24:4 [Bring something beautiful](../art10500390/), Roger Hui
+- 24:4 [A commentary on the formulator](../art10500510/), Neville Holmes
+- 24:4 [J-ottings 53: Punctuation and rank](../art10500410/), Norman Thomson
+- 25:1 [Functional Calculation 5: Operations](../art10500630/), Neville Holmes
+- 25:3 [NARS2000](../v25n3-p10-nars2000/), Bob Smith
+- 25:3 [What is an array?](../art10500690/), Roger Hui
+- 25:3 [Co-operators](../art10500740/), Phil Last
+- 25:3 [5 – a stack-based array language](../art10500710/), Bernd Ulmann
+- 26:1 [A Question of character by Brian Becker](../art10501190/), Brian Becker
+- 26:1 [My favourite APL symbol](../art10501040/), Roger Hui
+- 26:1 [Semantic arrays](../art10501130/), Stephen Taylor
+- 26:1 [Compiling APL to JavaScript](../art10501160/), Nick Nickolov
+- 26:1 [ELI: a simple system for array programming](../art10501180/), Hanfeng Chen, Wai-Mee Ching
+- 26:4 [A Notation for APL array Embedding and Serialization](../art10501450/), Phil Last (phil.last@4xtra.com)
+- 26:4 [Reading new code](../art10501520/), Dan Baronet
+- 26:4 [Sixteen APL Amuse-Bouches](../art10501480/), Roger K.W. Hui
+- 27:1 [AntLang – A modern APL system](../art10501730/), Anthony Cipriano
+- 27:1 [Conquering recursion](../art10501740/), John Earnest
+- 27:1 [Taming statistics with limited-domain operators](../art10501700/), Stephen Mansour
+- online [TAO Axioms](../art10501840/), Adám Brudzewsky, Jay Foad, Roger Hui
+
+## standards { #tag-standards }
+
+*the ISO and ANSI standards for APL, and other standards (GKS)*
+
+- 1:1 [International APL standard](../art10011050/), David Ziemann
+- 1:2 [APL and Graphics Standards](../art10001080/), Dick Bowman
+- 1:2 [GKS – Opportunity for APL](../art10006080/), Richard Nabavi
+- 1:2 [APL ISO Standard Meeting (photographs)](../v1n2-p124-apl-iso-standard-meeting-photographs/)
+- 1:2 [ISO Standards update](../art10011060/), David Ziemann
+- 1:4 [APL and GKS](../art10006090/), Richard Nabavi
+- 2:3 [Why GKS is Unsuitable ...](../art10000020/), Martyn Adams
+- 3:2 [APL86 Standards Report](../art10011080/), David Ziemann
+- 3:2 [Development of APL through Standardization](../art10005110/), David Livingstone
+- 3:3 [General Correspondence](../v3n3-p9-general-correspondence/), Paul Barnetson, Peter Branson, Simon Barker
+- 3:3 [I-APL Technical Specification](../art10011100/), David Ziemann
+- 5:1 [A Commentary on APL Development](../art10003980/), Ken Iverson
+- 6:2 [APL Standard Update](../v6n2-p118-apl-standards-update/), David Ziemann
+- 6:2 [Punctuation in APL](../art10004370/), Joseph De Kerf
+- 7:1 [APL Standards Update](../v7n1-p124-apl-standards-update/), Dave Ziemann
+- 7:1 [A Survey of ⎕NC](../art10004390/), Joseph L.F. de Kerf
+- 8:2 [Tuesday 6 August](../v8n2-p70-tuesday-6th-aug/), Anthony Camacho, Sylvia Camacho, Jonathan Barman, Ray Cannon
+- 8:2 [Suggested Standards for a Component File System at a Commercial APL Site](../art10001780/), Ray Cannon
+- 8:2 [ASWI Programming Standards](../art10000870/), FHD v.Batenburg, TRC Bonnema, L v.Geldrop, H v.Loon, B Smoor
+- 8:3 [ASL Standards](../art10003070/), David Eastwood
+- 8:3 [Differences in Second Generation APLs](../art10004230/), Maurice Jordan
+- 8:3 [A Note on CPU Time Monitoring](../v8n3-p136-cpu-time-monitoring/), Joseph L.F. De Kerf
+- 8:4 [Comments on “ASWI Programming Standards”](../v8n4-p7-comments-on-aswi-programming-standards/), Ray Cannon
+- 9:3 [ASWI Programming Standards; some Whys.](../art10000880/), F.H.D. van Batenburg
+- 10:2 [Workshop — A GUI Standard for APL — Facilitator: David Crossley](../v10n2-p87-workshop-a-gui-standard-for-apl/), Anthony Camacho, Jonathan Barman
+- 10:4 [Standardisation Beyond the Language](../art10003340/), Martin Gfeller, Morten Kromberg
+- 11:2 [One Font to Rule Them All](../art10008570/), Adrian Smith
+- 12:1 [Too Much Diversity in APL?](../v12n1-p7-too-much-diversity-in-apl/), Joseph De Kerf
+- 12:1 [Portability Workshop](../v12n1-p56-portability-workshop/), Eke van Batenburg, Adrian Smith
+- 12:2 [Proposed common APL coding](../art10002100/), Bill Chang
+- 12:2 [Some Comments](../v12n2-p9-some-comments/), Adrian Smith
+- 12:3 [Font for the Future](../art10000890/), Eke van Batenburg
+- 13:4 [APL Characters on the World Wide Web](../art10001910/), Ray Cannon
+- 15:3 [Some Basic Functions for Composite Arithmetic](../art10003700/), Neville Holmes
+- 16:1 [An APL Unicode font](../art10002160/), Phil Chastney
+- 17:3 [APL Unicode Font – extended](../art10002200/), Phil Chastney
+- 18:4 [Editorial: Vector 18:4](../art10013570/), Stefano Lanzavecchia
+- 19:3 [Guest Editorial: Unicode Revisited](../art10013610/), Adrian Smith
+- 19:3 [Provisional Unicode Reference](../art10009000/), Adrian Smith
+- 21:3 [Conformity of APL to ISO APL Standard Extended](../art10000930/), F.H.D. van Batenburg
+
+## programming techniques { #tag-programming-techniques }
+
+*idioms, algorithms and utility functions; better ways to write APL*
+
+- 1:1 [Letters to the Editor](../v1n1-p5-letters-to-the-editor/), Richard Bowman, Alan Hawkes, Anthony Camacho
+- 1:1 [Complex numbers in APL](../art10003490/), Alan Hawkes
+- 1:1 [APL and Partitioned Data](../art10000550/), Jonathan Barman
+- 1:2 [Technical Correspondence](../v1n2-p101-technical-correspondence/), Norman Thomson, D.J. Horton
+- 1:3 [Technical Correspondence](../v1n3-p116-technical-correspondence/), Andrew Tarr, Adrian Smith, Mark Bassett
+- 1:3 [Surely There Must Be a Better Way](../v1n3-p120-surely-there-must-be-a-better-way/), Dave Ziemann
+- 1:3 [Generic Read & Replace in IPSA](../art10007060/), Bob Pullman
+- 1:3 [Quotition Jottings](../art10002070/), Michael Carmichael
+- 1:4 [Technical Correspondence](../v1n4-p107-technical-correspondence/), Peter Donnelly, Dan Wimbock
+- 1:4 [Surely There Must Be a Better Way: A Pot-Pourri of Improveable Code](../v1n4-p112-better-way-pot-pourri/), Dick Bowman
+- 2:1 [Technical Correspondence (Smith, Wiggins, Bassett)](../v2n1-p95-technical-correspondence/), Adrian Smith, Andrew Wiggins, Mark Bassett
+- 2:1 [Surely There Must Be a Better Way](../v2n1-p97-surely-there-must-be-a-better-way/), David Ziemann
+- 2:1 [Guide to APL2 Nested Arrays](../art10009930/), Norman Thomson
+- 2:3 [Technical Correspondence (Sullivan, Buckland, Horton, Last)](../v2n3-p95-technical-correspondence/), John Sullivan, John Buckland, D.J. Horton, Phil Last
+- 2:3 [Surely there must be a Better Way](../v2n3-p107-surely-there-must-be-a-better-way/), David Ziemann
+- 2:3 [Using Operators in APL2](../art10009940/), Norman Thomson
+- 2:4 [Technical Editorial: Utility functions](../v2n4-p102-technical-editorial/), Jonathan Barman, Dave Ziemann
+- 2:4 [Technical Correspondence (Henriod, Vesperoni, Sullivan)](../v2n4-p103-technical-correspondence/), Claude Henriod, Eduardo Vesperoni, John Sullivan
+- 2:4 [Surely there must be a better way (Fuzzy Look-Ups; Phonetic Searching)](../v2n4-p111-surely-there-must-be-a-better-way/), David Ziemann
+- 3:1 [Book reviews](../v3n1-p39-book-reviews/), Paul Chapman
+- 3:1 [Sharper Focus on APL](../art10001620/), Sylvia Camacho
+- 3:1 [Technical Correspondence (Bowman)](../v3n1-p99-technical-correspondence/), Dick Bowman
+- 3:1 [Surely There Must Be A Better Way; Hacker’s Corner (1)](../v3n1-p101-surely-there-must-be-a-better-way/), Dave Ziemann, Adrian Smith
+- 3:1 [Quick & Dirty Apportionment](../art10007070/), Bob Pullman
+- 3:1 [Fast Fibbing](../art10009340/), John Sullivan
+- 3:1 [APL Trivia – Loopy, Quine & Turing](../art10000840/), Mark Bassett
+- 3:2 [Technical Correspondence (McDonnell)](../v3n2-p94-technical-correspondence/), Eugene McDonnell
+- 3:2 [Using quad-FX with Aux Processors](../art10006770/), David Piper
+- 3:3 [Idioms and Problem Solving in APL2 (talk at APL86)](../v3n3-p77-idioms-and-problem-solving-in-apl2/), Alan Graham, John Sullivan
+- 3:3 [Technical Correspondence (Mitchison, Piper, Jackson)](../v3n3-p104-technical-correspondence/), Neil Mitchison, David Piper, Colin Jackson
+- 3:3 [Surely there must be a better way: Ambi-valent Functions](../v3n3-p111-surely-there-must-be-a-better-way/), David Ziemann
+- 3:3 [APL Trivia – Funny Dates](../art10011090/), David Ziemann
+- 4:1 [Tree-processing Algorithms](../art10010930/), Anne Wilson
+- 4:1 [Text Inequalities](../art10007090/), Bob Pullman
+- 4:1 [IBM’s Logic Algorithms in Dyalog APL](../art10007030/), Allan Prys-Williams
+- 4:2 [Book Review: APL - Advanced Techniques and Utilities](../v4n2-p49-bergquist-advanced-techniques/), Dick Bowman
+- 4:2 [Technical Correspondence (Sullivan, Barker, Branson)](../v4n2-p93-technical-correspondence/), John Sullivan, Simon Barker, Peter Branson
+- 4:2 [Workspace Management](../art10001160/), Peter Branson
+- 4:2 [Go Pack your Knapsack](../art10009950/), Norman Thomson
+- 4:3 [Technical Correspondence (Small, Yet More Benchmarks; Thomson, trees in APL2)](../v4n3-p104-technical-correspondence/), Nicholas Small, Norman Thomson
+- 4:3 [Sweet Combinations (Result)](../art10010980/), Derek Wilson
+- 4:4 [Dissembling](../art10003240/), Allan Gay
+- 4:4 [Efficiency in APL](../art10011110/), David Ziemann
+- 5:1 [Hacker’s Corner: a little bit of C](../v5n1-p102-hackers-corner-a-little-bit-of-c/), Adrian Smith
+- 5:1 [Duplicate rows idiom](../v5n1-p103-duplicate-rows-idiom/), Peter Branson
+- 5:2 [Counting in APL](../v5n2-p27-counting-in-apl/), Alan Sykes
+- 5:2 [Reading the TSO Session Screen](../art10008250/), Adrian Smith
+- 5:2 [The Limits of Forward Chaining](../art10007040/), Allan Prys-Williams
+- 5:2 [Missembling](../art10003260/), Allan Gay
+- 5:3 [Humble-pie Corner](../v5n3-p19-humble-pie-corner/)
+- 5:3 [Counting in APL - Part Two](../v5n3-p26-counting-in-apl-part-two/), Alan Sykes
+- 5:3 [A Character Scatterplot in APL](../art10009560/), Alan Sykes
+- 5:4 [Understanding Randomness Using APL](../v5n4-p34-understanding-randomness-using-apl/), Alan Sykes
+- 5:4 [DOS Environment Variables](../art10008260/), Adrian Smith
+- 5:4 [An Ambivalent Operator](../v5n4-p96-an-ambivalent-operator/), David Piper
+- 6:1 [The Education Vector](../v6n1-p23-the-education-vector/), Alan Sykes
+- 6:1 [Numbers and Bases](../art10009570/), Alan Sykes
+- 6:1 [The CIPS APL Toolkit (review)](../art10000560/), Jonathan Barman
+- 6:1 [Printing APL Matrices](../art10001200/), Jerry Brennan, Jennifer E. Daly, Lawrence H. Nitz
+- 6:1 [Hacker's Corner: Where to Zap APL\*PLUS Version-8](../v6n1-p90-hackers-corner/), Adrian Smith
+- 6:1 [Error Trapping Tutorial for APL\*PLUS](../art10011120/), David Ziemann
+- 6:1 [Error Trapping Tutorial for APL.68000](../art10003050/), David Eastwood
+- 6:1 [Error Trapping Tutorial in Dyalog APL](../art10001150/), Pauline Brand
+- 6:1 [A Direct Definition Handler](../art10011130/), David Ziemann
+- 6:2 [The Education Vector](../v6n2-p17-the-education-vector/), Anthony Camacho
+- 6:2 [Start Building your own Utilities](../v6n2-p25-start-building-your-own-utilities/), Peter Branson
+- 6:2 [Hackers' Corner: DOS Environment Variables](../v6n2-p115-hackers-corner-dos-environment-variables/), John Sullivan
+- 6:2 [More on Finding the Location of that PSP...](../v6n2-p115-more-on-finding-the-psp/), Dave Phillips
+- 6:2 [Ambivalent Operators...](../v6n2-p117-ambivalent-operators/), Phil Last
+- 6:2 [APL "RISC Programming Style"](../art10012110/), Gérard Langlet
+- 6:3 [Puzzle/Problem Corner](../v6n3-p20-puzzle-problem-corner/), Alan Sykes
+- 6:3 [Symbolic Computation and Recursion](../art10006230/), Tony O’Hagan
+- 6:3 [Is it APL2, or is it me?](../v6n3-p91-is-it-apl2-or-is-it-me/), Peter Branson
+- 6:3 [More on Ambivalent Operators](../v6n3-p93-more-on-ambivalent-operators/), Dave Piper
+- 6:3 [Concern: a possible feedback](../v6n3-p94-concern-a-possible-feedback/), Claude Henriod
+- 6:3 [Yet More on that Ambivalent Operator ...](../v6n3-p97-yet-more-on-that-ambivalent-operator/), Norman Thomson
+- 6:3 [VCAT: A Response](../v6n3-p100-vcat-a-response/), Norman Thomson
+- 6:3 [Error Trapping Tutorial for IPSA APL](../art10000990/), Peter Biddlecombe
+- 6:4 [Communications](../v6n4-p19-communications/), Alan Sykes
+- 6:4 [The Card Collecting Problem](../v6n4-p22-card-collecting-problem/), Norman Thomson
+- 6:4 [Doing Useful Things with Strings](../art10009590/), Alan Sykes
+- 6:4 [Workshop on Defined Operators](../art10007710/), John Scholes
+- 6:4 [Yet more VCAT ...](../v6n4-p95-yet-more-vcat/), Peter Branson
+- 6:4 [Tutorial on Error Trapping in APL2/PC](../art10009960/), Norman Thomson
+- 6:4 [A note on Comparison Tolerance](../art10010880/), R.G. Williams, R.A. Green
+- 7:1 [Communications](../v7n1-p19-communications/), Alan Sykes
+- 7:1 [More String Manipulations](../art10009600/), Alan Sykes
+- 7:1 [Hackers Corner: Lots More VGA Colours](../v7n1-p110-hackers-corner-lots-more-vga-colours/), Adrian Smith
+- 7:1 [The Dangers of APL RISC programming ...](../v7n1-p112-dangers-of-apl-risc-programming/), Bob Bykerk
+- 7:1 [VCAT in Sharp APL](../v7n1-p113-vcat-in-sharp-apl/), E.E. McDonnell
+- 7:1 [How to Kill More Cats ...](../v7n1-p115-how-to-kill-more-cats/), Norman Thomson
+- 7:1 [Surely There Must Be a Better Way ...](../v7n1-p120-surely-there-must-be-a-better-way/), Adrian Smith
+- 7:1 [Speculations on Fermat Equations ...](../v7n1-p121-speculations-on-fermat-equations/), Anne D Wilson
+- 7:2 [‘DAYOFWEEK’: Education Vector 7.1](../v7n2-p20-dayofweek-education-vector-7-1/), C.E. Williams
+- 7:2 [Reading ASCII files into I-APL](../v7n2-p21-reading-ascii-files-into-i-apl/), J.C. Hines
+- 7:2 [Dbase and Lotus files into I-APL](../v7n2-p24-dbase-and-lotus-files-into-i-apl/), W J Smith
+- 7:2 [Searching for Strings in Strings](../art10009610/), Alan Sykes
+- 7:2 [What’s Wrong with Parentheses?](../art10004400/), Joseph De Kerf
+- 7:2 [Teaching nested arrays](../v7n2-p133-teaching-nested-arrays/), Dave Piper
+- 7:3 [Letters on String Manipulations in APL](../v7n3-p19-letters-on-string-manipulations-in-apl/), Alan Sykes
+- 7:3 [An APL SCRIPT Function](../art10009620/), Alan Sykes
+- 7:3 [A to B or not A to B?](../art10009630/), Alan Sykes
+- 7:3 [Object Oriented Programming and APL](../art10004130/), Zdenek V Jizba
+- 7:3 [Hackers Corner: Check that Disk!](../v7n3-p125-hackers-corner-check-that-disk/), Adrian Smith
+- 7:3 [Workspace search function](../v7n3-p126-workspace-search-function/), Peter Branson
+- 7:3 [Problems for APL Buffs (III)](../art10004140/), Zdenek V Jizba
+- 7:4 [The Steam Hammer and the Fly](../art10004640/), Gérard Langlet
+- 8:1 [Labelling](../art10009670/), Alan Sykes
+- 8:1 [Beaton’s Recipe for Least Squares](../art10000090/), Jake Ansell, Alan Sykes
+- 8:1 [Hackers Corner: Proportional Tables in PostScript](../art10008380/), Adrian Smith
+- 8:1 [Stirling numbers by recursion](../v8n1-p95-stirling-numbers-by-recursion/), Norman Thomson
+- 8:2 [IF-THEN-ELSE (Education Vector, April 1991, p.27)](../v8n2-p19-if-then-else/), Robert L. Briechle
+- 8:2 [Labelling (Education Vector, July 1991, p.30)](../v8n2-p20-labelling/), Andy Pole
+- 8:2 [More String Manipulations (Education Vector, July 1990)](../v8n2-p21-more-string-manipulations/), Peter Branson
+- 8:2 [Recreation with Transcendental Numbers](../art10004650/), Gérard Langlet
+- 8:2 [Local Variables and the State Indicator](../art10005250/), Alan Mayer
+- 8:2 [Stirling Numbers – a Case Study](../art10000320/), David Appleton
+- 8:3 [The Education Vector](../v8n3-p17-the-education-vector/), Alan Mayer
+- 8:3 [Curve Fitting in APL](../art10000330/), David Appleton
+- 8:3 [Cross-clocks in J](../art10002140/), Paul Chapman
+- 8:3 [Horner’s Method](../v8n3-p138-horners-method/), Walter G Spunde
+- 8:3 [Arrays with Style](../art10008410/), Adrian Smith
+- 8:4 [The Education Vector](../v8n4-p17-the-education-vector/), Alan Mayer
+- 8:4 [How Much Water Under the Bridge?](../art10005260/), Alan Mayer
+- 8:4 [Comments on Power Reduction and Stirling Numbers](../v8n4-p84-power-reduction-and-stirling-numbers/), Ken Iverson
+- 8:4 [Using J with External Data](../art10005820/), Donald B. McIntyre
+- 8:4 [Hackers’ Corner: Reshaping your Mouse](../v8n4-p112-hackers-corner-reshaping-your-mouse/), Adrian Smith
+- 8:4 [Writing Operators for Dyalog APL](../art10004890/), Phil Last
+- 9:1 [Workspace Listing in I-APL](../art10002830/), Alain Delmotte
+- 9:1 [Making a Calendar in J](../art10008010/), Keith Smillie
+- 9:1 [Non-linear Regression Modelling in APL](../art10003590/), Peter Hingley
+- 9:1 [Non-linear Curve Fitting](../art10009980/), Norman Thomson
+- 9:1 [Stirling Numbers](../v9n1-p129-stirling-numbers/), David Appleton
+- 9:1 [Cloning After Dark in APL](../art10006390/), Duncan Pearson
+- 9:1 [DOIF Considered Harmful](../art10006870/), Dave Piper
+- 9:2 [Six Months in the Life of Vector (letter)](../v9n2-p7-six-months-in-the-life-of-vector-letter/), John Searle
+- 9:2 [Exploring MAGIC](../art10011140/), Dave Ziemann
+- 9:2 [Corrections to Known Bugs in ASLGREG (September 1992)](../v9n2-p35-corrections-to-known-bugs-in-aslgreg/), Alan Sykes
+- 9:2 [Smalltalk, APL and J: an Exercise in Comparative Programming](../art10011150/), Dave Ziemann
+- 9:2 [Three Combinatoric Puzzles](../art10003780/), Roger K.W. Hui
+- 9:3 [Hero vs Orc – A Battle Sequence in APL](../art10009280/), Walter G. Spunde
+- 9:3 [Speeding Up Your APL](../art10003080/), David Eastwood
+- 9:3 [Genetic Algorithms: their APLication](../art10007500/), Jon Sandles
+- 9:3 [A Little J Horner](../art10006550/), Howard A. Peelle
+- 9:3 [From the Vital Execute to Fractals and 5-fold Symmetry](../art10004660/), Gérard Langlet
+- 9:3 [Integrating with Insight](../art10009990/), Norman Thomson
+- 9:3 [Some J Verbs for Orthogonal Factorial Experiments](../art10008030/), Keith Smillie
+- 9:4 [More on APL Packages](../v9n4-p122-more-on-apl-packages/), A.J. Brown
+- 9:4 [Sharing the Spoils or Circling the Square](../art10002790/), Mike Day
+- 9:4 [An Exchange on Primes](../art10003800/), Roger K.W. Hui
+- 10:1 [Backtracking, Queens and Permutations](../art10003110/), Ted Emms
+- 10:2 [Cows and Bulls: A Solution](../art10003120/), Ted Emms
+- 10:2 [Mineswooper – GOTO Considered Futile](../art10008480/), Adrian Smith
+- 10:2 [J Solution to Enigma 685](../art10011160/), Dave Ziemann
+- 10:2 [At Play with J: MIMD Machines](../art10005370/), Eugene McDonnell
+- 10:2 [An Improvement to LOGGAMMA](../art10012490/), Norman Thomson
+- 10:3 [APL-Defined Functions for the Calculation of Determinants](../art10004420/), Joseph De Kerf
+- 10:3 [When is Easter?](../art10001830/), Ray Cannon
+- 10:3 [Date of Easter in J](../art10005380/), Eugene McDonnell
+- 10:3 [A Note on the Easter Algorithm in J](../art10008040/), Keith Smillie
+- 10:3 [ASLGREG: Predictions with Confidence Limits](../art10006030/), Ellis Morgan
+- 10:3 [The N-Queens Problem in One Line](../art10007880/), R.G. Selfridge
+- 10:3 [At Play with J: Tacit Definition](../art10005390/), Eugene McDonnell
+- 10:3 [Loops in APL2](../art10003480/), H. Haussmann
+- 10:3 [The Ultimate Turing Proof](../art10004680/), Gérard Langlet
+- 10:4 [A Note on Primes](../art10003130/), Ted Emms
+- 10:4 [Meeting: The Toronto Toolkit](../art10003100/), David Eastwood
+- 10:4 [What’s in a Name?](../art10001650/), Sylvia Camacho
+- 10:4 [Inner Products for Range Tests](../art10000710/), Jonathan Barman
+- 10:4 [Another Use of Not-Equals-Scan](../art10001520/), Anthony Camacho
+- 11:1 [Jot-Dot-Floor: Working with Large Integers](../art10002310/), Ian Clark
+- 11:1 [To Be or Not To Be – That Is The Gazodenplatz](../art10005990/), Peter Merritt
+- 11:1 [A Windows-Driven Menu Driver](../art10004280/), Jan Karman
+- 11:2 [Cows and Bulls – A Solution](../art10010940/), Anne Wilson
+- 11:2 [Hacker's Corner: Making Noises in APL](../art10013080/), Adrian Smith
+- 11:2 [Bracket Axis Simulation for APL\*PLUS II/386](../art10003320/), Allan Gay
+- 11:3 [Word-search Squares in I-APL](../art10005940/), Bill McLean, Ian Clark
+- 11:3 [Coast-to-Coast revisited](../v11n3-p96-coast-to-coast-revisited/), Adrian Smith
+- 11:3 [At Play with J: Jacobi's Method](../art10013180/), Eugene McDonnell
+- 11:3 [Bodyguard of Lies](../art10006000/), Peter Merritt
+- 11:3 [J Inscription](../art10006210/), Richard Oates
+- 11:4 [Primes, Spirals and Coffee Tables](../art10008070/), Keith Smillie
+- 11:4 [Stereograms in J](../art10002490/), E.A. Clough
+- 11:4 [At Work and Play with J: Cribbage 15s](../art10005430/), Eugene McDonnell
+- 11:4 [Functional Programming in J for Operations Research](../art10001290/), Richard L.W. Brown
+- 11:4 [Jot-Dot-Min: an outer-product of rock-bottom APL matters](../art10013250/), Ian Clark
+- 12:1 [J – Where Have All the Variables Gone?](../art10009310/), Walter Spunde
+- 12:1 [Voyages in Dragon Country](../art10001670/), Sylvia Camacho
+- 12:1 [Multiprecision Arithmetic – Part I](../art10009390/), John Sullivan
+- 12:1 [Probabilities for Elementary Distributions](../art10009710/), Alan Sykes
+- 12:1 [At Work and Play with J:](../art10005440/), Gene McDonnell
+- 12:1 [“Correct” Windows File Behaviour](../art10006470/), Duncan Pearson
+- 12:2 [Matrix Decomposition](../art10010090/), Norman Thomson
+- 12:2 [The Ball Clock Problem](../art10003830/), Roger Hui
+- 12:2 [Multiprecision Arithmetic – Part II](../art10009400/), John Sullivan
+- 12:2 [Calculating Probabilities](../art10010100/), Norman Thomson
+- 12:2 [At Work and Play with J: The Bauer-Mengelberg Problem](../art10005450/), Gene McDonnell
+- 12:2 [Elegant Programming](../art10001320/), Chris Burke
+- 12:2 [A Fractal Verb in J](../art10006220/), Richard Oates
+- 12:2 [J Locales](../v12n2-p141-j-locales/), Richard Oates
+- 12:3 [Counting Problem](../v12n3-p21-counting-problem/), Tony Goddard
+- 12:3 [Towers of Hanoi, Simplified in J](../art10006570/), Howard Peelle
+- 12:3 [Multiprecision Arithmetic – Part III](../art10009410/), John Sullivan
+- 12:3 [Turtle Graphics in J](../art10000940/), David Benn
+- 12:3 [A Note on Programming Style](../art10003840/), Roger Hui, Kenneth E. Iverson
+- 12:3 [The Incomplete Elliptic Integrals and APL - an Extension](../v12n3-p122-incomplete-elliptic-integrals-extension/), Joseph De Kerf
+- 12:3 [Hacker’s Corner: Oh \*\*\*\* !! I Hadn’t Saved That!](../v12n3-p127-hackers-corner-oh-i-hadnt-saved-that/), Dave Phillips
+- 12:3 [At Work and Play with J: Heron’s Rule & Integer-Area Triangles](../art10005460/), Gene McDonnell
+- 12:4 [Jot-Dot-Min: Weaving Patterns and Cellular Automata](../art10002370/), Ian Clark
+- 12:4 [Towers of Hanoi from 15 Years Ago](../v12n4-p32-towers-of-hanoi/), Adrian Smith
+- 12:4 [Multiprecision Arithmetic Part IV](../art10009420/), John Sullivan
+- 12:4 [Polynomial Multiplication with Circulant Matrices: Insights Using APL](../art10007400/), Lew Robinson
+- 12:4 [Confidence Limits](../art10010140/), Norman Thomson
+- 12:4 [Divided Differences: Reply to Hui & Iverson](../art10010150/), Norman Thomson
+- 12:4 [Linear Recurrences and Matrix Powers](../art10003850/), Roger Hui
+- 12:4 [At Work and Play with J: Year’s Digits for 1996](../art10005470/), Gene McDonnell
+- 12:4 [Roger and the Amazing Technicolor Ballclock](../art10010160/), Norman Thomson
+- 13:1 [Functional Programming in J (Part 1)](../art10006580/), Howard Peelle
+- 13:1 [Parallel Processing with J](../art10001230/), Gabriel F. Brisson, Clifford A. Reiter
+- 13:1 [APL and J (1) - Function Rank](../art10001330/), Chris Burke
+- 13:1 [Solving Nonogram Puzzles with APL](../art10010900/), Alan J Wilson
+- 13:1 [APL Operators and J](../art10010180/), Norman Thomson
+- 13:1 [At Play with J: Riding a Unicycle](../art10005480/), Gene McDonnell
+- 13:2 [While in J...](../v13n2-p10-while-in-j/), Nick Cox
+- 13:2 [Sylvester’s Algorithm](../art10006590/), Howard Peelle
+- 13:2 [The Hidden Variable Approach?](../art10009320/), Walter Spunde
+- 13:2 [Functional Programming in J (Part 2)](../art10006600/), Howard Peelle
+- 13:2 [Dynamic Functions in Dyalog APL](../art10007740/), John Scholes
+- 13:2 [Perfect Shuffles in J](../art10006610/), Howard Peelle
+- 13:2 [Calendar Calculations in J](../art10008080/), Keith Smillie
+- 13:2 [A Word (or Two) from our Spenser](../art10010200/), Norman Thomson
+- 13:2 [APL2 and J (2) - Indexing](../art10001350/), Chris Burke
+- 13:2 [At Play with J: Volutes](../art10005490/), Eugene McDonnell
+- 13:3 [Antecedent Precipitation Index](../art10009330/), Roger Stokes
+- 13:3 [While still in J ...](../v13n3-p12-while-still-in-j/), Norman Thomson
+- 13:3 [Leaving the Nest](../art10001280/), Robert G. Brown
+- 13:3 [Functional Programming in J (Part 3)](../art10006620/), Howard Peelle
+- 13:3 [How to Ride a “BiCypher”](../art10001900/), Ray Cannon
+- 13:3 [Hacker’s Corner: Clipboarding APL Arrays](../art10008710/), Adrian Smith
+- 13:3 [APL and J (3): Operators Reduce, Scan, Outer Product](../art10001360/), Chris Burke
+- 13:3 [At Play with J: Extended Integers](../art10005500/), Eugene McDonnell
+- 13:3 [Using a Defined Adverb to Trace Execution in Tacit Programs in J](../art10000060/), David Alis
+- 13:4 [Functional Programming in J (Part 4)](../art10006630/), Howard Peelle
+- 13:4 [C Source Code Modification using APL](../art10010780/), Adam Weber
+- 13:4 [HTML Basics in APL+Win](../art10008720/), Adrian Smith
+- 13:4 [Errata](../v13n4-p110-errata/), Norman Thomson
+- 13:4 [Errata: Cyphers and At Play with J](../v13n4-p110-errata-cyphers-and-at-play-with-j/)
+- 13:4 [APL and J (4): Function Application and Axis](../art10001380/), Chris Burke
+- 13:4 [At Play with J: Stumping the Rocket Scientist](../art10005510/), Eugene McDonnell
+- 13:4 [Bookbinders’ Fun](../art10004300/), Jan Karman
+- 14:1 [Optimizing the Antecedent Precipitation Index](../v14n1-p7-optimizing-the-antecedent-precipitation-index/), Norman Thomson
+- 14:1 [Year 2000 — why the Consternation?](../v14n1-p8-year-2000-why-the-consternation/), Bob Brown
+- 14:1 [J-ottings 13](../art10010230/), Norman Thomson
+- 14:1 [Do APL2 and J Come up to Scratch?](../art10010240/), Norman Thomson
+- 14:1 [HTML Basics for APLers — Tables](../art10008740/), Adrian Smith
+- 14:1 [Namespaces in Causeway](../art10006510/), Duncan Pearson
+- 14:1 [Object Oriented Programming with APL+Win (Part I)](../art10005030/), Eric Lescasse
+- 14:1 [At Play with J: Oh, No, Not Eigenvalues Again!](../art10005520/), Eugene McDonnell
+- 14:2 [Heron’s Rule and Integer-Area Triangles](../art10004190/), William R. Jones
+- 14:2 [Enumerating and Generating Combinations](../art10010250/), Norman Thomson
+- 14:2 [The Josephus Problem Generalized in J](../art10006640/), Howard A. Peelle
+- 14:2 [J-ottings 14](../art10010260/), Norman Thomson
+- 14:2 [APL and Nested Arrays — a Dream for Statistical Computation](../art10009730/), Alan Sykes, Tom Stroud
+- 14:2 [A PostScript Type 1 Font Downloader](../art10009440/), John Sullivan
+- 14:2 [A Note on Cholesky Decomposition](../art10006190/), Tapio Nummi
+- 14:3 [J-ottings 15](../art10010270/), Norman Thomson
+- 14:3 [The Computer Construction of Weaving Designs](../art10008100/), Keith Smillie
+- 14:3 [HTML Basics for APLers – Lists](../art10008760/), Adrian Smith
+- 14:3 [Hackers’ Corner: Dyalog APL and the Windows 95 Registry](../art10009450/), John Sullivan
+- 14:3 [Technical Correspondence](../art10006900/), David Piper
+- 14:3 [Object Oriented Programming with APL+Win (Part II)](../art10005040/), Eric Lescasse
+- 14:4 [Correspondence](../art10010280/), Norman Thomson, Eddie Clough, Claude Henriod, Jan Karman, Phil Last, R.G. Selfridge
+- 14:4 [Zark Newsletter Extracts](../art10007610/), Jon Sandles
+- 14:4 [J-ottings 16: A Composition on Composition](../art10010290/), Norman Thomson
+- 14:4 [Volutes – a Survey of Algorithms](../art10006650/), Howard Peelle
+- 14:4 [J4 and OOP](../art10001400/), Chris Burke
+- 14:4 [Working with Compressed Data](../art10001940/), Ray Cannon
+- 14:4 [More on Niven Numbers](../art10003540/), Claude Henriod
+- 14:4 [At Play With J: A Newer Random Link Generator](../art10005530/), Eugene McDonnell
+- 15:1 [Zark Newsletter Extracts](../art10007620/), Jon Sandles
+- 15:1 [J-ottings 17: Auto-stereograms and the Data Craftsman](../art10010300/), Norman Thomson
+- 15:1 [Hacker’s Corner: How Big Is That Picture?](../art10008790/), Adrian Smith
+- 15:1 [At Play with J: to Summarise](../art10005540/), Eugene McDonnell
+- 15:2 [Zark News: Utility Corner and Crossword-4](../art10007630/), Gary Bergquist
+- 15:2 [APL98 Workshop - Threads in Dyalog APL](../art10007750/), Dyadic Systems
+- 15:2 [At Play with J: Maximum Infix Sums](../art10005550/), Eugene McDonnell
+- 15:3 [Bordering in the Dyalog 8.2 review](../v15n3-p7-bordering-in-the-dyalog-82-review/), Eugene McDonnell
+- 15:3 [Zark News: Utility Corner and Crossword-5](../art10007650/), Gary Bergquist
+- 15:3 [J-ottings 19: Getting to the Root of the Matter](../art10010320/), Norman Thomson
+- 15:3 [Towers of Hanoi Generalized in J](../art10006660/), Howard A. Peelle
+- 15:3 [At Play With J: Crosswords and Life](../art10005560/), Eugene McDonnell
+- 15:4 [Vector’s APL Nested Arrays Idiom Library](../v15n4-p7-nested-array-idiom-library/), Ajay Askoolum
+- 15:4 [Zark News: Utility Corner and Crossword-6](../art10007670/), Gary Bergquist
+- 15:4 [Challenge: A Namespace-aware Function Tree](../art10013900/), Ray Cannon
+- 15:4 [J-ottings 20: A Case of Taken Identity](../art10010330/), Norman Thomson
+- 15:4 [The Subset Sum Problem](../art10010920/), Alan J Wilson
+- 15:4 [A Technical Note on Counting Moves for Generalized Towers of Hanoi](../art10010340/), Norman Thomson
+- 15:4 [Drag and Drop in Dyalog APL](../art10007690/), Jon Sandles
+- 16:1 [Do I Have to Use Recursion?](../art10013950/), Anne Wilson
+- 16:1 [Zark Newsletter Extracts](../v16n1-p42-zark-newsletter-extracts/), Jon Sandles
+- 16:1 [Comment by Jonathan Barman](../v16n1-p52-comment-by-jonathan-barman/), Jonathan Barman
+- 16:1 [J-ottings 21: Time for amendment of data ...](../art10010350/), Norman Thomson
+- 16:1 [What Use Are User-Defined Operators?](../art10002390/), Ian Clark
+- 16:1 [Namespaces: New Gem From Old Roots](../art10000530/), Alexander Balako
+- 16:1 [Windows BMP Files and J](../v16n1-p95-windows-bmp-files-and-j/), Brook Anthony Schofield
+- 16:1 [Fibonacci for negative n](../v16n1-p110-fibonacci-for-negative-n/), Joseph De Kerf
+- 16:1 [At Play With J: New Big Deal](../art10005580/), Eugene McDonnell
+- 16:1 [Purging Name Pollution in APL+Win](../art10000440/), Ajay Askoolum
+- 16:1 [Exact Horadam Numbers with a Chebyshevish Accent](../art10007190/), Clifford A. Reiter
+- 16:2 [Zark Newsletter Extracts](../v16n2-p33-zark-newsletter-extracts/), Jon Sandles
+- 16:2 [J-ottings 22: ... and now something for our very youngest readers](../art10010360/), Norman Thomson
+- 16:2 [Array Based Naïve Bayesian Machine Learning Program: A J Implementation](../art10002150/), Andrew Charman-Williams
+- 16:2 [Hacker’s Corner: Making Waves in Win32](../art10008850/), Adrian Smith
+- 16:2 [A Very Simple Structure Compiler for J](../art10006140/), Martin Neitzel
+- 16:3 [Zark Newsletter Extracts](../v16n3-p27-zark-newsletter-extracts/), Jon Sandles
+- 16:3 [J-ottings 23: Just what do they sell at C. and A.?](../art10010370/), Norman Thomson
+- 16:3 [Puzzle: Funny Cube](../art10004960/), Bernard Legrand
+- 16:3 [Functional Implementation of Moments Based Region Descriptors in J](../art10002090/), C. Anne Chamley
+- 16:3 [Hacker’s Corner: Making Compressed GIFs in APL+Win and Dyalog APL](../art10008870/), Adrian Smith
+- 16:3 [Letter: PROPER Capitals](../art10004530/), Adam Kertesz
+- 16:3 [At Play With J: We’ll Cross that Bridge when we Come to it](../art10005590/), Eugene McDonnell
+- 16:3 [Sending MIDI Messages to a Sound-Card with J](../art10006150/), Martin Neitzel
+- 16:4 [Hacker's Corner: Using and Abusing Watchpoints in APL+Win 3.6](../art10013480/), Adrian Smith
+- 16:4 [At Play with J: An Open and Shut Case](../art10005600/), Eugene McDonnell
+- 17:1 [Zark Newsletter Extracts](../v17n1-p30-zark-newsletter-extracts/), Jon Sandles
+- 17:1 [J-ottings 25: The I-spy book of J](../art10010390/), Norman Thomson
+- 17:1 [Introduction to Tree Searching in APL: Using the Tic Tac Toe Game in 3D](../art10000790/), Dan Baronet
+- 17:1 [Technical Correspondence: Vector Jan 2000: Utility Corner (pp. 27-35)](../v17n1-p106-technical-correspondence/), H.J. Veenendaal
+- 17:1 [At Play With J: Blists in OLEIS](../art10005610/), Eugene McDonnell
+- 17:1 [OOF: Getting a better Grip on OLE Objects](../art10004570/), Morten Kromberg
+- 17:2 [From Stephen Jaffe (ExxonMobil Research)](../v17n2-p25-from-stephen-jaffe/), Stephen Jaffe
+- 17:2 [Utility Corner: Matrix Searching](../v17n2-p25-utility-corner-matrix-searching/), Gary A. Bergquist
+- 17:2 [Limbering Up: Comma-Delimited Data](../v17n2-p31-limbering-up-comma-delimited-data/), Gary A. Bergquist
+- 17:2 [The Funny Cube: Some Solutions](../art10004820/), Stefano Lanzavecchia, Adrian Smith
+- 17:2 [J-ottings 26: Here we go round ... and round and round ...](../art10010400/), Norman Thomson
+- 17:2 [R.I.P. OOF](../art10004580/), Morten Kromberg
+- 17:2 [Hacker’s Corner: How Big is that Doggie in the Window?](../art10006300/), William Parke
+- 17:2 [At Play with J: Someone Just Moved! Who Was It? or, Apter’s Puzzle](../art10005620/), Eugene McDonnell
+- 17:3 [Corrections and Clarifications](../v17n3-p27-corrections-and-clarifications/), Jon Sandles, Stephen Jaffe
+- 17:3 [Utility Corner: Comma-Delimited Data](../v17n3-p28-utility-corner-comma-delimited-data/), Gary A. Bergquist
+- 17:3 [Vector Update](../v17n3-p32-vector-update/), Morten Kromberg
+- 17:3 [What about a solution in K?](../v17n3-p34-what-about-a-solution-in-k/), Stefano Lanzavecchia
+- 17:3 [J-ottings 27: Obverse to Adverse :.:: a Trip along the Brailleway](../art10010410/), Norman Thomson
+- 17:3 [Dragging and Dropping with Lists, Trees and Graphs](../art10008900/), Adrian Smith
+- 17:3 [At Play With J: Four Cubes Redux](../art10005640/), Eugene McDonnell
+- 17:3 [Translate your Dyalog GUIs without touching MAKE\_-code](../art10004320/), Kimmo Kekäläinen
+- 17:4 [Zark Newsletter Extracts: Limbering Up: Combinations](../v17n4-p26-zark-newsletter-extracts/), Jon Sandles
+- 17:4 [J-ottings 28: Just say it in J](../art10010420/), Norman Thomson
+- 17:4 [The Puzzle Corner: the vier-neun puzzle](../art10004830/), Stefano Lanzavecchia
+- 17:4 [D: a functional subset of Dyalog APL](../art10007770/), John Scholes
+- 17:4 [Over and Under, Over and Under: Celtic Knotwork Patterns](../art10010960/), Anne D. Wilson
+- 17:4 [Distributed rounding of a trial balance](../v17n4-p112-distributed-rounding-of-a-trial-balance/), Jonathan Barman
+- 17:4 [Side effects in the Zark extracts](../v17n4-p112-side-effects-in-the-zark-extracts/), Jonathan Barman
+- 17:4 [At Play With J: Erdös Numbers and Pierce and Engel Expansions](../art10005650/), Eugene McDonnell
+- 17:4 [J Rational Number Utilities & Verification of Knuth’s Constants](../art10009490/), Gordon Sutcliffe
+- 18:1 [Utility Corner: Combinations](../art10014440/), Gary A. Bergquist
+- 18:1 [Limbering Up: Polyadic Functions](../v18n1-p37-limbering-up-polyadic-functions/), Gary A. Bergquist
+- 18:1 [J-ottings 29: Power Steering Extra](../art10010430/), Norman Thomson
+- 18:1 [Locally defined niladic functions](../art10004900/), Phil Last
+- 18:1 [Localising the effects of system functions in D.](../art10014450/), John Scholes
+- 18:1 [At Play With J: Boggle](../art10005660/), Eugene McDonnell
+- 18:1 [J is for JPEG: Windows Bitmap to JPEG Baseline Compression](../art10002810/), Richard Dazeley
+- 18:2 [Utility Corner: Polyadic Functions](../art10014430/), Gary A. Bergquist
+- 18:2 [Limbering Up: Killing Comments](../v18n2-p43-limbering-up-killing-comments/), Gary A. Bergquist
+- 18:2 [Primitive Pointers](../v18n2-p44-primitive-pointers/), Gary A. Bergquist
+- 18:2 [Editor’s Note: COMBIN Timings](../v18n2-p45-combin-timings/)
+- 18:2 [J-ottings 30: Jaesthetics](../art10010440/), Norman Thomson
+- 18:2 [An Elementary Tutorial on Conjunctions](../art10005890/), Donald B. McIntyre
+- 18:2 [Formatting Dates in Dyalog APL and APL+Win](../art10008940/), Adrian Smith
+- 18:2 [Conditional Idioms](../art10004910/), Phil Last
+- 18:2 [Matrix inversion modulo p](../art10009470/), John Sullivan
+- 18:2 [MUCIPHER: a New Short Cipher that Escapes Cryptanalysis](../art10002970/), Michel Dumontier
+- 18:3 [Killing Comments](../art10014410/), Gary A. Bergquist
+- 18:3 [Limbering Up: Generalised Searching](../v18n3-p42-limbering-up-generalised-searching/), Gary A. Bergquist
+- 18:3 [Polyadic MORTGAGE as an APL2 operator](../v18n3-p46-polyadic-mortgage-as-an-apl2-operator/), Claude Henriod
+- 18:3 [MORTGAGE with a companion operator](../v18n3-p47-mortgage-with-a-companion-operator/), Gianluigi Quario
+- 18:3 [J-ottings 31: Symphony in J minor, op.31](../art10010450/), Norman Thomson
+- 18:3 [Strategies for Dealing with Multiple Arguments: the Case for Names](../art10004620/), Eric Landau
+- 18:3 [Hacker’s Corner: Ghost variables](../art10002020/), Ray Cannon
+- 18:3 [At Play with J: The Counterfeit Coin Problem](../art10005670/), Eugene McDonnell
+- 18:4 [Generalised Searching](../art10014390/), Gary A. Bergquist
+- 18:4 [Limbering Up: Generalised Searching](../v18n4-p35-limbering-up-generalised-searching/), Gary A. Bergquist
+- 18:4 [J-ottings 32: the Stylish Part of Vector](../art10010460/), Norman Thomson
+- 18:4 [Dynamic Functions in Practice](../art10004070/), Veli-Matti Jantunen
+- 18:4 [Three Principles of Coding Clarity](../art10009750/), Stephen Taylor
+- 18:4 [Hacker’s Corner: Packages in Dyalog APL](../art10002040/), Ray Cannon
+- 19:1 [Editorial: Vector 19:1](../art10013580/), Stefano Lanzavecchia
+- 19:1 [Cross Tabulations](../art10014370/), Gary A. Bergquist
+- 19:1 [Limbering Up: Elvis Elbows](../v19n1-p36-limbering-up-elvis-elbows/), Gary A. Bergquist
+- 19:1 [J-ottings 33: How to Tell a Fib in lots of Different Ways](../art10010470/), Norman Thomson
+- 19:1 [A Creative Use of ⎕WATCHPOINTS to Investigate Large Heritage ws in APL+Win](../art10002420/), Ian Clark
+- 19:2 [Internal Rate of Return](../art10014350/), Gary A. Bergquist
+- 19:2 [J-ottings 34: Greed – Patterns for the Imminent Collapse of Western Capitalism](../art10010480/), Norman Thomson
+- 19:2 [Second-order Josephus](../art10014360/), Howard A. Peelle
+- 19:3 [Effective Date Searching](../art10014330/), Gary A. Bergquist
+- 19:3 [A Tutorial in J Programming: The Second-Order Josephus Sequence](../art10006670/), Howard A. Peelle
+- 19:3 [Nim and DFns](../art10014340/), John R. Clark
+- 19:4 [An APL Library](../art10004850/), Stefano Lanzavecchia
+- 19:4 [Zark Newsletter Extracts](../art10014320/), Jon Sandles
+- 19:4 [Numberword in D](../art10014310/), Jonathan Barman
+- 19:4 [J-ottings 36: A Partial Solution to a Partial Problem](../art10010500/), Norman Thomson
+- 19:4 [Hacker’s Corner: from APL 2 APL2C](../art10009030/), Adrian Smith
+- 19:4 [At Play with J: Pick a Card, Any Card](../art10005710/), Eugene McDonnell, Richard Smith
+- 19:4 [Tools, Part 1. Basics](../art10000800/), Dan Baronet
+- 20:1 [Numbers to Words](../art10014300/), Gary A. Bergquist
+- 20:1 [J-ottings 37: How many obtuse-angled triangles are there?](../art10010510/), Norman Thomson
+- 20:1 [dfns@dyalog.com](../art10007780/), John Scholes
+- 20:1 [Hungarian Method Cost Assignment](../art10007790/), John Scholes
+- 20:1 [At Play with J: Greed](../art10005720/), Eugene McDonnell
+- 20:1 [Tools, Part 2. Basics too.](../art10000810/), Dan Baronet
+- 20:2 [Utility Corner: Numbers to Words](../v20n2-p26-utility-corner-numbers-to-words/), Gary A. Bergquist
+- 20:2 [Limbering Up: Comparing Functions](../v20n2-p33-limbering-up-comparing-functions/), Gary A. Bergquist
+- 20:2 [J-ottings 38: Decline and Rise: A Matter of Rank](../art10010520/), Norman Thomson
+- 20:2 [Using Namespaces to Manage a CD Database](../art10002780/), John Daintree
+- 20:2 [Solving the “Now I Know” Problem in J](../art10006680/), Howard Peelle
+- 20:2 [Data Compression with Dfns](../art10004080/), Veli-Matti Jantunen
+- 20:2 [At Play with J: The Magical Matrix](../art10005730/), Eugene McDonnell
+- 20:2 [Taking the RTF Challenge](../art10009070/), Adrian Smith
+- 20:3 [Utility Corner: Execute Inverse](../art10014290/), Gary A. Bergquist
+- 20:3 [Notes about Execute Inverse Functions](../art10002710/), David Crossley
+- 20:3 [Execute Inverse with quadTF](../art10007980/), Nicholas Small
+- 20:3 [J-ottings 39: All Verbs are Monadic](../art10010530/), Norman Thomson
+- 20:3 [Regular Expressions and the PCRE Library](../art10007420/), Bill Rutiser
+- 20:3 [Technical Correspondence](../v20n3-p116-technical-correspondence/), Roger Hui
+- 20:3 [At Play with J: Giddyap](../art10005740/), Eugene McDonnell
+- 20:3 [Elliptic Curves and Factoring (I)](../art10007270/), Cliff Reiter
+- 20:4 [J-ottings 40: Parallel Joins](../art10010540/), Norman Thomson
+- 20:4 [A Note on Graphs](../art10007800/), John Scholes
+- 20:4 [At Play with J: Jacob’s Ladder](../art10005750/), Eugene McDonnell
+- 20:4 [Elliptic Curves and Factoring II](../art10007280/), Cliff Reiter
+- 21:1 [Utility Corner: Word Wrap](../art10014280/), Gary A. Bergquist
+- 21:1 [J-ottings 41: Shortest Paths and Related Algorithms](../art10010550/), Norman Thomson
+- 21:1 [The Tower of Hanoi](../art10003890/), Roger Hui
+- 21:1 [Celtic Knotwork in J](../art10003740/), Michael Horton
+- 21:1 [ACROSS and DOWN](../art10007830/), Brian Schott
+- 21:1 [At Play with J: The Google Test](../art10005760/), Eugene McDonnell
+- 21:1 [Tools, Part 3: Object Comparison](../art10000820/), Dan Baronet
+- 21:1 [More on Execute Inverse](../art10002730/), David Crossley
+- 21:2 [Utility Corner: Permutations and Anagrams](../art10014260/), Gary A. Bergquist
+- 21:2 [J-ottings 42: I (continue to) Spy with very little J ...](../art10010560/), Norman Thomson
+- 21:2 [Arithmetic Boundary Checking](../art10005220/), Stephen M. Mansour
+- 21:2 [Tools, Part 4. Regular Expressions](../art10000830/), Dan Baronet
+- 21:3 [Zark Newsletter Extracts](../art10013670/), Gary Bergquist
+- 21:3 [J-ottings 43: A Rippling Good Yarn](../art10010570/), Norman Thomson
+- 21:3 [How to Write Computer Programs](../art10007810/), John Scholes
+- 21:3 [Industrial FP: a Case Study](../art10009880/), Stephen Taylor
+- 21:3 [Queens and Knights](../art10003900/), Roger Hui
+- 21:3 [Time(r) for the Game of Life](../art10007290/), Cliff Reiter
+- 21:4 [CRCOMPARE in J](../art10003010/), Adam Dunne
+- 21:4 [At Play with J: Metlov’s Triumph](../art10005770/), Eugene McDonnell
+- 21:4 [Function Arrays in APL](../art10007120/), Gianluigi Quario
+- 21:4 [A Sudoku Solver in J](../art10003910/), Roger Hui
+- 21:4 [Sudoku with Dyalog APL](../art10002470/), John Clark
+- 21:4 [APL Idioms](../art10000470/), Ajay Askoolum
+- 21:4 [J-ottings 44: So Easy a Child of Ten ...](../art10010580/), Norman Thomson
+- 21:4 [Zark Newsletter Extracts](../art10013680/), Gary Bergquist
+- 22:1 [Lucidity Through Infix Notation](../art10004920/), Phil Last
+- 22:1 [At Play with J: Belgian Numbers](../art10005780/), Eugene McDonnell
+- 22:1 [J-ottings 45: A bit of OUTReach (or do I mean outrEACH?)](../art10010590/), Norman Thomson
+- 22:1 [Statistical Methods Discovered by the Power of APL](../art10003450/), Peter-Michael Hager
+- 22:2 [Letter: Ajay Askoolum’s APL Idioms](../art10005230/), Steve Mansour
+- 22:2 [Letter: More Solutions](../art10007130/), Gianluigi Quario
+- 22:2 [Letter: More Solutions](../art10003550/), Claude Henriod
+- 22:2 [Letter: Sudoku Madness](../art10003710/), Neville Holmes
+- 22:3 [J-ottings 46: Musical J-ers](../art10010610/), Norman Thomson
+- 22:3 [At Play with J: Token Counting: APL versus J](../art10005790/), Eugene McDonnell
+- 22:4 [J-ottings 48: Perming and combing](../art10011360/), Norman Thomson
+- 23:1 [The Ruler's Edge](../art10011630/), Stephen Taylor
+- 23:1 [Cumulative Normal Distributions, Black-Scholes and Error Functions](../art10011660/), Ralph Selfridge
+- 23:3 [In Session: "Under the Table"](../art10011860/), Stephen Taylor
+- 23:4 [In Session: The ruler’s edge revisited](../art10012030/), Ray Polivka
+- 23:4 [J-ottings 50; If you think J is complex, try j](../art10012070/), Norman Thomson
+- 23:4 [Partitions of numbers: an efficient algorithm in J](../art10012080/), R.E. Boss
+- 23:4 [About polynomials: Part 1](../art10012090/), Gianluigi Quario
+- 24:1 [Rain flips its q](../art10500130/), Adrian Smith
+- 24:1 [In Session: Congratulations not in order?](../art10500070/), Stephen Taylor
+- 24:1 [J-ottings 51: Suffer the little children…](../art10500080/), Norman Thomson
+- 24:1 [About polynomials: Part 2](../art10500120/), Gianluigi Quario
+- 24:1 [Quick calculation of Kendall’s Rank Correlation Distribution](../art10500140/), Gordon Sutcliffe
+- 24:2 [Inner product – an old/new problem](../art10500200/), Roger Hui
+- 24:2 [Generating combinations in J efficiently](../art10500220/), R.E. Boss
+- 24:2 [Ten divisions to Easter](../art10500230/), Ray Polivka
+- 24:2 [J-ottings 52: All but one](../art10500240/), Norman Thomson
+- 24:2 [Coding for a shared world](../art10500260/), A. Reader
+- 24:2 [In Session: On average](../art10500270/), Roger Hui
+- 24:2 [Backgammon tools in J](../art10500280/), Howard A. Peelle
+- 24:2 [A genetic algorithm primer in APL](../art10500290/), Romilly Cocking
+- 24:4 [The APL Phrasebook Project](../art10500480/), Phil Last
+- 24:4 [Treetable: a case-study in q](../art10500340/), Stevan Apter
+- 24:4 [J-ottings 53: Punctuation and rank](../art10500410/), Norman Thomson
+- 24:4 [Backgammon tools in J: 2. Wastage](../v24n4-p106-backgammon-tools-in-j-2-wastage/), Howard A. Peelle
+- 24:4 [Simulating the Enigma](../art10500460/), Keith Smillie
+- 25:1 [Cryptography in Dyalog APL and .Net](../art10500590/), Dan Baronet
+- 25:1 [Tables with calculated columns](../art10500650/), Stevan Apter
+- 25:1 [J-ottings 54: j Complex? You bet!](../art10500530/), Norman Thomson
+- 25:1 [Odd-order magic squares expressed in J](../art10500540/), John C. McInturff
+- 25:3 [Eight-way street: handling high-rank arrays](../art10500720/), Stephen Taylor
+- 25:3 [Co-operators](../art10500740/), Phil Last
+- 25:3 [A way to write functions](../art10500750/), Phil Last
+- 25:3 [Letter: The ruler’s edge](../art10500560/), Norman Thomson
+- 25:3 [Combination Lists](../art10500820/), Norman Thomson
+- 25:4 [⎕S and ⎕R](../art10500870/), Dan Baronet
+- 25:4 [Function design](../art10500950/), Kai Jaeger
+- 26:1 [2^64](../art10501090/), Roger Hui
+- 26:1 [Semantic arrays](../art10501130/), Stephen Taylor
+- 26:1 [Boolean Reductions](../art10501140/), Phil Last
+- 26:1 [NFL Passer Rating by Brian Becker](../art10501200/), Brian Becker
+- 26:1 [Dyalog’s parser - a new parser in town](../art10501210/), Dan Baronet
+- 26:1 [J-ottings 56 Trig Time](../art10500880/), Norman Thomson
+- 26:1 [L-systems in J](../art10501080/), R.E. Boss
+- 26:1 [Backgammon Tools in J: Ace-point Bearoffs](../art10501070/), Howard A. Peelle
+- 26:2 [One reason that APL is so cool](../art10501270/), Brian Becker
+- 26:2 [Notation as a tool of proof](../art10501240/), Robert Pullman
+- 26:2 [A Tool of Thought](../art10501380/), Dan Baronet
+- 26:2 [Table Diff](../art10501400/), Dhrusham Patel
+- 26:2 [J-ottings 57 Heavens above!](../art10501390/), Norman Thompson
+- 26:2 [All Integer Partitions: J Programs Compared](../art10501280/), Howard Peelle
+- 26:4 [Reading new code](../art10501520/), Dan Baronet
+- 26:4 [Sixteen APL Amuse-Bouches](../art10501480/), Roger K.W. Hui
+- 26:4 [APL and partitioned data](../art10501640/), Jonathan Barman
+- 26:4 [Q Tips: Fast, Scalable and Maintainable Kdb+](../art10501500/), Yang Guo
+- 27:1 [Conquering recursion](../art10501740/), John Earnest
+- 27:1 [Hacker’s Corner: JPEG\_Comments](../art10501890/), Nicholas Small
+- 27:1 [Writing a utility function](../art10501710/), Dan Baronet
+- online [Finding text in files](../art10501800/), Dan Baronet
+
+## performance { #tag-performance }
+
+*making APL programs run faster or use less space*
+
+- 1:2 [Software Review — APAT: First Impressions](../v1n2-p44-software-review-apat/), Bernard King
+- 1:4 [Software Reviews: IBM PC/APL, APL\*PLUS/PC and PC/AT, M68000.APL on Sage IV](../v1n4-p54-software-review/), Adrian Smith
+- 3:1 [Benchmarks Updated](../v3n1-p44-pc-benchmarks-updated/), Adrian Smith
+- 3:2 [Technical Correspondence (McDonnell)](../v3n2-p94-technical-correspondence/), Eugene McDonnell
+- 4:1 [Faster File Input in TSO](../art10009350/), John Sullivan
+- 4:2 [Hardware Review: the NEC V20 Processor](../v4n2-p51-the-nec-v20-processor/), Adrian Smith
+- 4:2 [Interfacing to PC Assembler (I)](../art10011000/), P. Wortham
+- 4:3 [APL\*PLUS/PC Version 7.0](../v4n3-p43-apl-plus-pc-version-7/), Adrian Smith
+- 4:3 [Technical Correspondence (Small, Yet More Benchmarks; Thomson, trees in APL2)](../v4n3-p104-technical-correspondence/), Nicholas Small, Norman Thomson
+- 4:3 [PC Assembler (II)](../art10011010/), P. Wortham
+- 4:4 [Efficiency in APL](../art10011110/), David Ziemann
+- 5:1 [Interfacing APL to C](../art10002550/), Romilly Cocking
+- 5:1 [PC to Mainframe Communications](../art10010630/), David Toop
+- 5:1 [Duplicate rows idiom](../v5n1-p103-duplicate-rows-idiom/), Peter Branson
+- 5:3 [APL at the Leading Edge: Nov 18th at the Royal Over-Seas League](../v5n3-p56-apl-at-the-leading-edge/), Adrian Smith
+- 5:4 [Parallel Computing and APL](../art10006810/), David Piper
+- 6:1 [Reviews Section (introduction)](../v6n1-p49-reviews-section/), Adrian Smith
+- 6:2 [APL "RISC Programming Style"](../art10012110/), Gérard Langlet
+- 6:3 [Is APL\*PLUS Getting Overweight?](../v6n3-p49-is-apl-plus-getting-overweight/), Adrian Smith
+- 6:3 [Concern: a possible feedback](../v6n3-p94-concern-a-possible-feedback/), Claude Henriod
+- 6:3 [VCAT: A Response](../v6n3-p100-vcat-a-response/), Norman Thomson
+- 6:4 [Review: APL\*PLUS/PC Release 9](../art10008300/), Adrian Smith
+- 6:4 [More on ‘A’ by Arthur Whitney](../v6n4-p62-arthur-whitney-on-a/), Ed Shaw
+- 7:1 [VCAT in Sharp APL](../v7n1-p113-vcat-in-sharp-apl/), E.E. McDonnell
+- 7:2 [Searching for Strings in Strings](../art10009610/), Alan Sykes
+- 7:3 [First Catch your Function: the STSC Compiler](../art10001740/), Ray Cannon
+- 7:3 [APL\*PLUS/PC Release 10](../art10000580/), Jonathan Barman
+- 7:4 [The Steam Hammer and the Fly](../art10004640/), Gérard Langlet
+- 8:2 [Hackers’ Corner: Fast Filing with ∆pack](../art10008390/), Adrian Smith
+- 8:3 [APL and J: Some Benchmarks](../art10007340/), Malcolm Rigg
+- 8:3 [A Note on CPU Time Monitoring](../v8n3-p136-cpu-time-monitoring/), Joseph L.F. De Kerf
+- 9:1 [The Hungarian Naming Convention](../v9n1-p9-hungarian-naming-convention/), Ray Cannon
+- 9:3 [Speeding Up Your APL](../art10003080/), David Eastwood
+- 9:3 [Compiled APL for Supercomputers](../art10007840/), Walter Schwarz
+- 9:4 [An Exchange on Primes](../art10003800/), Roger K.W. Hui
+- 10:2 [Robert Bernecky ‘Array Morphology’](../v10n2-p92-array-morphology/), Anthony Camacho
+- 10:4 [Meeting: The Toronto Toolkit](../art10003100/), David Eastwood
+- 10:4 [Finding the 10 to the 10th Prime](../art10005400/), Eugene McDonnell
+- 11:2 [No SX please – we’re APLers](../art10013040/), Ray Cannon
+- 12:4 [Dyalog-8 Control Structures and Native Files: some Timings](../art10008660/), Adrian Smith
+- 13:1 [Parallel Processing with J](../art10001230/), Gabriel F. Brisson, Clifford A. Reiter
+- 13:2 [While in J...](../v13n2-p10-while-in-j/), Nick Cox
+- 13:3 [Antecedent Precipitation Index](../art10009330/), Roger Stokes
+- 13:3 [While still in J ...](../v13n3-p12-while-still-in-j/), Norman Thomson
+- 13:4 [Strategies for Optimising the API Problem](../art10000960/), Robert Bernecky, Norman Thomson, A J Wilson, Stefano Lanzavecchia
+- 14:1 [The API Problem as a Particular Recurrence Problem](../art10001420/), Andrei Buzin
+- 14:2 [Niven Numbers and APL](../art10004470/), Joseph De Kerf
+- 14:3 [Technical Correspondence](../art10006900/), David Piper
+- 14:3 [Armstrong Numbers and APL](../art10004480/), Joseph De Kerf
+- 14:4 [Niven Number Computing Speed](../art10002500/), Eddie Clough
+- 15:1 [A Response to the Responses in Vector...](../v15n1-p7-response-to-the-responses/), David Piper
+- 15:2 [Measures of Programming Language Efficiency](../v15n2-p7-measures-of-programming-language-efficiency/), Joseph De Kerf
+- 15:2 [At Play with J: Maximum Infix Sums](../art10005550/), Eugene McDonnell
+- 15:3 [Bordering in the Dyalog 8.2 review](../v15n3-p7-bordering-in-the-dyalog-82-review/), Eugene McDonnell
+- 15:3 [From Fibonacci to Horadam](../art10004490/), Joseph De Kerf
+- 16:2 [Time Space Tradeoffs in Vector Algorithms for APL Functions](../art10001300/), Timothy A. Budd
+- 16:2 [From Horadam to Atanassov](../art10004500/), Joseph De Kerf
+- 16:3 [Editorial 16.2](../art10013440/), Stefano Lanzavecchia
+- 16:4 [Unix APL Power Shootout (Part 1)](../art10003650/), Bob Hoekstra
+- 17:1 [Zark Newsletter Extracts](../v17n1-p30-zark-newsletter-extracts/), Jon Sandles
+- 17:1 [Unix APL Power Shootout (Part 2)](../art10003660/), Bob Hoekstra
+- 17:1 [Bell Numbers and APL](../art10004510/), Joseph De Kerf
+- 17:2 [Utility Corner: Matrix Searching](../v17n2-p25-utility-corner-matrix-searching/), Gary A. Bergquist
+- 17:2 [The Generalized Tribonacci Sequence](../art10004520/), Joseph De Kerf
+- 17:2 [Timings for CMIOTA](../art10014130/), Gary Bergquist
+- 17:3 [Vector Update](../v17n3-p32-vector-update/), Morten Kromberg
+- 18:1 [Utility Corner: Combinations](../art10014440/), Gary A. Bergquist
+- 18:2 [Editor’s Note: COMBIN Timings](../v18n2-p45-combin-timings/)
+- 18:3 [Limbering Up: Generalised Searching](../v18n3-p42-limbering-up-generalised-searching/), Gary A. Bergquist
+- 18:4 [Generalised Searching](../art10014390/), Gary A. Bergquist
+- 19:2 [Internal Rate of Return](../art10014350/), Gary A. Bergquist
+- 20:4 [A Strategy for Compiling APL for the .Net Framework](../art10009120/), Adrian Smith
+- 21:3 [Time(r) for the Game of Life](../art10007290/), Cliff Reiter
+- 21:3 [Notes on Virtual Memory and the APL Workspace](../art10007430/), Bill Rutiser
+- 21:3 [A Skeleton Key to Windows Performance Monitoring](../art10007440/), Bill Rutiser
+- 23:1 [New A Team research on low latency architectures](../art10011460/), Kx Systems
+- 23:4 [Parallel Each](../art10012000/), David Liebtag
+- 23:4 [Partitions of numbers: an efficient algorithm in J](../art10012080/), R.E. Boss
+- 24:2 [Inner product – an old/new problem](../art10500200/), Roger Hui
+- 24:2 [Generating combinations in J efficiently](../art10500220/), R.E. Boss
+- 24:4 [A personal view of APL2010](../art10500450/), Graeme Robertson
+- 26:1 [Boolean Reductions](../art10501140/), Phil Last
+- 26:2 [All Integer Partitions: J Programs Compared](../art10501280/), Howard Peelle
+- 26:4 [APL and partitioned data](../art10501640/), Jonathan Barman
+- 27:1 [Conquering recursion](../art10501740/), John Earnest
+- 27:1 [Powerful CSV processing with kdb+](../art10501860/), Ferenc Bodon
+
+## system interfaces { #tag-system-interfaces }
+
+*auxiliary processors, ⎕NA, assembler, the host operating system, communications*
+
+- 1:1 [The Global Information Centre](../art10006690/), Fred Perkins
+- 1:1 [Communicating with APL](../v1n1-p48-communicating-with-apl-introduction/), Adrian Smith
+- 1:1 [Networking APL micros](../art10006070/), Richard Nabavi
+- 1:1 [Interfacing Viewdata & APL](../art10007100/), John Pym
+- 1:1 [IBM-based APL communications](../art10006710/), Tim Perry
+- 1:3 [A Lifestyle under VM/CMS VSAPL (meeting notes)](../v1n3-p60-lifestyle-under-vm-cms-vsapl/)
+- 1:4 [Moving data from 1-2-3 to APL](../art10002080/), Michael Carmichael
+- 1:4 [DIF-file interface](../art10002530/), Romilly Cocking
+- 2:1 [Mainframes, Micros and Co-existence, May 28th 1985 (meeting notes)](../v2n1-p59-mainframes-micros-co-existence/), Adrian Smith
+- 2:1 [My first date with IRMA](../art10003160/), Graham Fieldsend
+- 2:3 [GDDM and AP126](../art10006740/), David Piper
+- 2:4 [Using VSAPL under TSO](../art10006750/), David Piper
+- 3:1 [Case Study: VSPC – The Last Rites](../v3n1-p68-case-study-vspc-last-rites/), Adrian Smith
+- 3:1 [Surely There Must Be A Better Way; Hacker’s Corner (1)](../v3n1-p101-surely-there-must-be-a-better-way/), Dave Ziemann, Adrian Smith
+- 3:1 [Correcting the UK APL\*PLUS/PC Kbd](../art10008190/), Adrian Smith
+- 3:1 [Quad-WIN in APL\*PLUS/PC Vn.5](../art10006760/), David Piper
+- 3:2 [APL/PC2 with Auxiliary Processors](../art10000040/), Manuel Alfonseca
+- 3:2 [Using quad-FX with Aux Processors](../art10006770/), David Piper
+- 3:3 [Technical Correspondence (Mitchison, Piper, Jackson)](../v3n3-p104-technical-correspondence/), Neil Mitchison, David Piper, Colin Jackson
+- 3:3 [Command-driven Interface for BDAM & QSAM](../art10006780/), David Piper
+- 4:1 [Faster File Input in TSO](../art10009350/), John Sullivan
+- 4:2 [Poking the DOS Keyboard Buffer](../art10008210/), Adrian Smith
+- 4:2 [Technical Correspondence (Sullivan, Barker, Branson)](../v4n2-p93-technical-correspondence/), John Sullivan, Simon Barker, Peter Branson
+- 4:2 [Interfacing to PC Assembler (I)](../art10011000/), P. Wortham
+- 4:3 [Custom Banners in APL\*PLUS/PC](../art10008220/), Adrian Smith
+- 4:3 [PC Assembler (II)](../art10011010/), P. Wortham
+- 4:4 [Using quad-NA to Eliminate WS FULL](../art10006800/), David Piper
+- 5:1 [Editorial: Don’t Lose Touch](../v5n1-p3-editorial/), Adrian Smith
+- 5:1 [Interfacing APL to C](../art10002550/), Romilly Cocking
+- 5:1 [Through IRMA to IMS](../art10000050/), David Alis
+- 5:1 [Controlling Real-time Processes in a Brewery (with APL)](../v5n1-p64-real-time-processes-in-a-brewery/), Robert Poate
+- 5:1 [PC to Mainframe Communications](../art10010630/), David Toop
+- 5:1 [Icon Design for EGA and VGA](../art10008230/), Adrian Smith
+- 5:1 [AP127: An Interface from APL to DB2](../art10003250/), Allan Gay
+- 5:1 [Hacker’s Corner: a little bit of C](../v5n1-p102-hackers-corner-a-little-bit-of-c/), Adrian Smith
+- 5:1 [VSAM Processing in APL](../art10009360/), John Sullivan
+- 5:1 [Vax-Oracle to APL\*PLUS/PC](../art10008240/), Adrian Smith
+- 5:2 [APL Conference on CIX](../v5n2-p7-apl-conference-on-cix/), Craig Lomas
+- 5:2 [Notes on Given Papers](../v5n2-p62-notes-on-given-papers/), Adrian Smith
+- 5:2 [Reading the TSO Session Screen](../art10008250/), Adrian Smith
+- 5:2 [Gizz a Font](../v5n2-p86-gizz-a-font/), Iain Hayward
+- 5:2 [Sharing GDDM pages between APL2 and Fortran](../v5n2-p86-sharing-gddm-pages-between-apl2-and-fortran/), John Sullivan
+- 5:2 [Missembling](../art10003260/), Allan Gay
+- 5:3 [An Undocumented APL2 AP](../art10009370/), John Sullivan
+- 5:4 [DOS Environment Variables](../art10008260/), Adrian Smith
+- 5:4 [An IBM Bug to watch for, when moving to APL2](../v5n4-p96-ibm-bug-when-moving-to-apl2/), John Warden
+- 5:4 [Setting PF keys and Other Initialization](../v5n4-p97-setting-pf-keys-and-other-initialization/), Nicholas Small
+- 6:1 [APL Printing from APL.68000](../art10003520/), Iain Hayward
+- 6:2 [Hacker's Corner: Getting Another 128 Colours on your EGA](../v6n2-p114-hackers-corner-256-vga-colours/), Adrian Smith
+- 6:2 [Hackers' Corner: DOS Environment Variables](../v6n2-p115-hackers-corner-dos-environment-variables/), John Sullivan
+- 6:2 [More on Finding the Location of that PSP...](../v6n2-p115-more-on-finding-the-psp/), Dave Phillips
+- 6:3 [Using the GEM file selector in APL.68000](../art10009380/), John Sullivan
+- 6:4 [APL and MS Word for HP LaserJet](../v6n4-p99-apl-and-ms-word-for-hp-laserjet/), Rex Swain
+- 7:1 [Hackers Corner: Lots More VGA Colours](../v7n1-p110-hackers-corner-lots-more-vga-colours/), Adrian Smith
+- 7:2 [Packaged Workspaces in APL2](../art10007950/), Nick Small
+- 7:2 [Hackers’ Corner: Unlocking Functions in Dyalog APL for MS DOS](../v7n2-p132-hackers-corner-unlocking-in-dyalog-apl/), Ray Cannon
+- 7:2 [Namespace Play](../art10000570/), Jonathan Barman
+- 7:3 [Windows 3: the Implications for APL](../v7n3-p61-windows-3-the-implications-for-apl/), Adrian Smith
+- 7:3 [PostScript Graphics in APL](../art10008360/), Adrian Smith
+- 7:3 [Hackers Corner: Check that Disk!](../v7n3-p125-hackers-corner-check-that-disk/), Adrian Smith
+- 7:3 [Mice do it on the Mat](../art10001760/), Ray Cannon
+- 8:1 [Programming for Events in Dyalog](../art10002880/), Peter Donnelly
+- 8:1 [An Interface Between APL2 and the X Window System](../art10004090/), JR Jensen, KA Beaty
+- 8:2 [X-Windows interfaces from APL](../v8n2-p11-x-windows-interfaces-from-apl/), Richard Nabavi
+- 8:2 [Desk Top Publishing on the Cheap](../art10003560/), Richard Hill
+- 8:2 [Training the Mouse (in APL\*PLUS/PC)](../art10002820/), Alain Delmotte
+- 8:3 [APL Printing on some Star Printers with I-APL](../art10001510/), Anthony Camacho, Tom Goodman
+- 8:3 [Panel Design: An APL Programmer’s Toolkit](../art10002650/), David Crossley
+- 8:3 [Hackers’ Corner: More about VGA Colours](../art10008400/), Adrian Smith
+- 9:1 [Hacker’s Corner: Using DOS File Functions](../art10006380/), Duncan Pearson
+- 9:2 [Shared Variables and Windows DDE](../art10008430/), Adrian Smith
+- 9:3 [Windows Programming with APL\*PLUS II](../art10001810/), Ray Cannon
+- 9:3 [Hackers Corner: Talking to PROGMAN](../art10008440/), Adrian Smith
+- 9:4 [Hooking up to the Internet](../art10001140/), Dick Bowman
+- 10:1 [A Windows GOTCHER for APLIWIN](../v10n1-p114-windows-gotcher-for-apliwin/), Anthony Camacho
+- 10:1 [A standard font dialogue box using ⎕NA](../art10012320/), Duncan Pearson
+- 10:2 [Review: GDDME – A First Look](../art10008470/), Adrian Smith
+- 10:2 [Hacker's Corner: A Windows Task Killer](../art10012420/), Duncan Pearson
+- 10:2 [A GDDM Simulation for APL\*PLUS II](../art10003290/), Allan Gay
+- 10:3 [GDDME by Lingo Allegro — Update](../art10008490/), Adrian Smith
+- 10:3 [Hacker's Corner: Minding Your .INIs](../art10012660/), Adrian Smith
+- 10:4 [Hacker's Corner: Flying Windows](../art10012700/), Jonathan Barman
+- 10:4 [APL - a Client-Server Language?](../art10004560/), Morten Kromberg
+- 11:1 [Hacker's Corner: Native Files in Dyalog APL (Without Tears)](../art10012940/), Adrian Smith
+- 11:2 [Duncan Pearson’s DDE and DLL Workshop](../v11n2-p48-dde-and-dll-workshop/), Ray Cannon
+- 11:2 [Hacker's Corner: Making Noises in APL](../art10013080/), Adrian Smith
+- 11:4 [News from Sustaining Members](../v11n4-p14-news-from-sustaining-members/), Gill Smith
+- 11:4 [APL in a Client-Server Environment BAA Workshop report](../art10007530/), Jon Sandles
+- 12:1 [Hacker’s Corner: Driving the MS Daisy-wheel](../art10001860/), Ray Cannon
+- 12:2 [DDE Workshop Notes](../art10006480/), Duncan Pearson
+- 12:2 [Hacker’s Corner: Gremlins, Pixels and Brownie Points](../art10001870/), Ray Cannon
+- 12:2 [APL-Fortran calls using quadNA](../art10007890/), R.G. Selfridge
+- 12:4 [AP119/W - a First Look](../art10004930/), Timo Laurmaa
+- 12:4 [A Different DDE Application](../art10009430/), John Sullivan
+- 12:4 [An Internet Extension to 3D Noughts and Crosses](../art10004940/), Timo Laurmaa
+- 13:1 [Eric Iverson at the BAA](../art10008690/), Adrian Smith
+- 13:1 [Advanced Windows Programming with APL and Delphi](../art10005010/), Eric Lescasse
+- 13:1 [The J DLL and Extended Integers](../art10001340/), Chris Burke
+- 13:2 [Editorial](../art10013370/), Duncan Pearson
+- 13:2 [TCP/IP with Timo Laurmaa](../v13n2-p60-tcp-ip-with-timo-laurmaa/), Jon Sandles
+- 13:2 [OLE Automation with Dyalog APL](../art10002900/), Peter Donnelly
+- 13:2 [Hacker’s Corner: APLPLUS/PC & Windows 95](../art10010770/), Adam Weber
+- 13:3 [APL+Win and VBXs](../art10005020/), Eric Lescasse
+- 13:4 [Advanced Windows Programming (Lescasse)](../art10000720/), Jonathan Barman
+- 13:4 [On First Encountering OLE](../art10008730/), Adrian Smith
+- 14:1 [OpenGL Graphics and J](../art10001370/), Chris Burke
+- 14:1 [Emulation of IBM APL2 Auxiliary Processor AP207 in Dyalog APL](../art10007920/), Alexander Skomorokhov, Alexander Kornilovsky
+- 14:2 [A PostScript Type 1 Font Downloader](../art10009440/), John Sullivan
+- 14:3 [Dyalog APL for Motif Version 8.1 Release 2 for Sun Solaris 2.5](../art10003600/), Bob Hoekstra
+- 14:3 [Hackers’ Corner: Dyalog APL and the Windows 95 Registry](../art10009450/), John Sullivan
+- 14:3 [An ODBC Browser Using SQL and Dyalog APL](../art10009220/), Richard Smith
+- 14:4 [Internet Programming with the Internet Server Auxiliary Processor](../art10004540/), Andrei Kondrashev
+- 14:4 [HTML Basics for APLers (IV): Forms and Servers](../art10008770/), Adrian Smith
+- 14:4 [Hackers’ Corner: Six Megabytes in 640K?](../art10001560/), Anthony Camacho
+- 14:4 [Using OpenGL Graphics in Dyalog APL](../art10007930/), Alexander Skomorokhov, Alexei Zalivine
+- 15:1 [Writing ActiveX Controls in Dyalog APL/W](../art10002910/), Adrian Smith, Dyadic Systems
+- 15:1 [HTML Basics for APLers (V): Servers](../art10008780/), Adrian Smith
+- 15:1 [Hacker’s Corner: How Big Is That Picture?](../art10008790/), Adrian Smith
+- 15:2 [HTML Basics for APLers (VI): Pictures and ImageMaps](../art10008820/), Adrian Smith
+- 15:2 [Hackers’ Corner: Context Sensitive Help and COM in APL+Win](../art10000420/), Ajay Askoolum
+- 15:2 [Data Conversion Between APL Versions](../art10002680/), David Crossley
+- 15:3 [Hacker’s Corner: APL Meets MAPI](../art10005190/), Jonathan Manktelow
+- 15:3 [Using VideoSoft FlexGrid Pro with APL+Win](../art10000730/), Jonathan Barman
+- 15:3 [VideoSoft FlexGrid Pro with Dyalog APL](../art10007660/), Jon Sandles
+- 15:3 [DDE in APL+Win](../art10000430/), Ajay Askoolum
+- 15:4 [Property Names in APL+Win](../v15n4-p77-property-names-in-apl-win/), David Siegel
+- 15:4 [Working with Formula One in APL+Win](../v15n4-p80-working-with-formula-one-in-apl-win/), Ajay Askoolum
+- 15:4 [Using Flexgrid with Dyalog APL (Update)](../art10007680/), Jon Sandles
+- 16:1 [Guest Editorial: The Walls are Closing In…](../art10008840/), Adrian Smith
+- 16:1 [An APL Unicode font](../art10002160/), Phil Chastney
+- 16:1 [Hacker’s Corner: A Special Locator in Dyalog APL/W](../art10003680/), Joachim Hoffmann
+- 16:1 [Knowledge, Age and Experience are no Substitute for Good Fortune or How, in the end, Bill wins — you lose](../v16n1-p111-knowledge-age-and-experience/), Peter Donnelly
+- 16:1 [J/LAPACK Interface Makes Econometric Analysis Fly!](../art10007010/), Richard J. Procter, Richard L.W. Brown
+- 16:2 [Hacker’s Corner: Making Waves in Win32](../art10008850/), Adrian Smith
+- 16:2 [APL+Internet Explorer](../art10000540/), Alexandr Balako
+- 16:2 [A Very Simple Structure Compiler for J](../art10006140/), Martin Neitzel
+- 16:3 [Hacker’s Corner: Making Compressed GIFs in APL+Win and Dyalog APL](../art10008870/), Adrian Smith
+- 16:3 [Setting up a www-server with Dyalog APL, IIS, ISAP and NT](../art10005180/), Janne Mäenpää
+- 16:3 [Sending MIDI Messages to a Sound-Card with J](../art10006150/), Martin Neitzel
+- 16:4 [VML– Vector Graphics on the Internet](../art10013490/), Adrian Smith
+- 17:1 [OOF: Getting a better Grip on OLE Objects](../art10004570/), Morten Kromberg
+- 17:2 [Driving the Windows GUI and COM from Dyalog APL Version 9.0](../art10002920/), Peter Donnelly
+- 17:2 [R.I.P. OOF](../art10004580/), Morten Kromberg
+- 17:2 [Hacker’s Corner: How Big is that Doggie in the Window?](../art10006300/), William Parke
+- 17:4 [XML in Dyalog APL Version 9](../art10000740/), Jonathan Barman
+- 18:1 [Hacker’s Corner: Compressing with GZIP](../art10008910/), Adrian Smith
+- 18:2 [Editorial: Vector 18:2](../art10013550/), Stefano Lanzavecchia
+- 18:2 [Formatting Dates in Dyalog APL and APL+Win](../art10008940/), Adrian Smith
+- 18:3 [Editorial: Vector 18:3](../art10013560/), Stefano Lanzavecchia
+- 18:3 [The Image2 Addon](../art10007250/), Cliff Reiter, Cliff Zachary
+- 18:3 [Bach’s Endlessly Rising Canon](../art10002030/), Ray Cannon
+- 18:4 [Using OLE with Dyalog APL and Excel](../art10003670/), Conrad Hoesle-Kienzlen
+- 18:4 [A PDF Primer for APLers](../art10008970/), Adrian Smith
+- 19:1 [Dyalog.NET – First Impressions](../art10002050/), Ray Cannon
+- 19:1 [Dyalog.Net: An Introduction and Overview](../art10002750/), John Daintree
+- 19:1 [Bitmaps in Dyalog APL/W](../art10002690/), David Crossley
+- 19:2 [Vol 19.1: Bitmaps in Dyalog APL/W](../v19n2-p90-bitmaps-in-dyalog-apl-w/), David Crossley
+- 19:2 [Perfect Printing](../art10009770/), Stephen Taylor
+- 19:2 [Dyalog.Net: APLScript and Things Textual](../art10002760/), John Daintree
+- 19:3 [APL and Web Services](../art10010740/), F. Milton Waid
+- 19:3 [Rain-graphs to PowerPoint-land via OLE](../art10004250/), Jouko Kangasniemi
+- 19:4 [Editorial: Cyberspace](../art10004840/), Stefano Lanzavecchia
+- 19:4 [Experiences with the Dyalog .NET Compiler](../art10009020/), Adrian Smith
+- 19:4 [Web Services with Dyalog.NET](../art10002770/), John Daintree
+- 20:1 [RE: R and APL](../v20n1-p115-re-r-and-apl/), Mike Day, Alexander Skomorokhov
+- 20:3 [Regular Expressions and the PCRE Library](../art10007420/), Bill Rutiser
+- 20:3 [Getting Through to APL+Win from C#: A Layman’s Tour of .Net](../art10009090/), Adrian Smith
+- 20:4 [Googling with APL+Win](../art10006310/), William R. Parke
+- 20:4 [The APL2 Java Interface](../art10005090/), David Liebtag
+- 20:4 [A Strategy for Compiling APL for the .Net Framework](../art10009120/), Adrian Smith
+- 21:1 [Using J in Excel](../art10003570/), Richard Hill
+- 21:2 [Hackers’ Corner: Hack My Exe](../art10000510/), Michael Baas
+- 21:2 [Tools, Part 4. Regular Expressions](../art10000830/), Dan Baronet
+- 21:2 [APL to Unicode Transcoding in Java](../art10010850/), Mark Wickens
+- 21:3 [APL2000 + Web Component (Part 1 of 2)](../art10005060/), Eric Lescasse
+- 21:3 [Master and Slave: Dyalog APL Directs Excel!](../art10004060/), Kai Jaeger
+- 21:3 [A Skeleton Key to Windows Performance Monitoring](../art10007440/), Bill Rutiser
+- 21:4 [APL+WebComponent (Part 2): Deploy your APL+Win Application on the Web](../art10005070/), Eric Lescasse
+- 22:1 [Using Delegates in an Interpreted Language](../art10009250/), Richard Smith
+- 22:1 [Using DyalogAPL based .NET Extensions \[Kalliojärvi\]](../art10013690/), Pertti Kallioj�rvi
+- 22:1 [Using DyalogAPL based .NET extensions in ASP.NET applications](../art10004240/), Pertti Kalliojärvi
+- 22:2 [In Search of a Cool Smooth at Naples 2005](../art10009190/), Adrian Smith
+- 22:4 [Letter: SAGE: a new web server for APLers](../art10011260/), Woody Butler
+- 22:4 [APL and Bloomberg Data Control](../art10011310/), Antti Korpela
+- 23:1 [Review: System Building with APL+Win, by Ajay Askoolum](../art10011560/), Ian Clark
+- 23:1 [Image Files with Dyalog](../art10011580/), Klaus Klug Christiansen
+- 23:1 [Building C# COM DLLs for APL](../art10011590/), Ajay Askoolum
+- 23:1 [Zipping and unzipping files in APL+Win](../art10011600/), Ajay Askoolum
+- 23:3 [Using the .NET Dataset Class with Dyalog 12](../art10011840/), Adrian Smith
+- 24:1 [Structured Storage and Monitor Expressions](../art10500100/), David Liebtag
+- 24:2 [APLX interface to R statistics](../art10500190/), Simon Marsden
+- 24:2 [Coding for a shared world](../art10500260/), A. Reader
+- 24:4 [Understanding font embedding](../art10500400/), Kai Jaeger
+- 25:1 [Cryptography in Dyalog APL and .Net](../art10500590/), Dan Baronet
+- 26:1 [Using email services from APL](../art10500970/), Chris Hogan
+- 26:4 [Pi, Pin and Ping](../art10501470/), Ray Cannon
+
+## implementations { #tag-implementations }
+
+*APL interpreters and machines: how they work, and what each offers*
+
+- 1:1 [News from Sustaining Members](../v1n1-p23-news-from-sustaining-members/), David Preedy
+- 1:1 [APL Product Guide](../v1n1-p25-apl-product-guide/), David Preedy
+- 1:2 [News from Sustaining Members](../v1n2-p25-news-from-sustaining-members/), David Preedy
+- 1:2 [APL Product Guide](../v1n2-p29-apl-product-guide/), David Preedy
+- 1:2 [APL84 in Focus (meeting notes)](../v1n2-p52-apl84-in-focus/), Adrian Smith, Dick Bowman
+- 1:3 [News from Sustaining Members](../v1n3-p22-news-from-sustaining-members/), David Preedy
+- 1:3 [APL Product Guide](../v1n3-p27-apl-product-guide/), David Preedy
+- 1:3 [What’s New for 1985? (organiser’s report and selected highlights)](../v1n3-p62-whats-new-for-1985/), Dick Bowman, Adrian Smith
+- 1:4 [Free APL Computer](../v1n4-p8-free-apl-computer/), David Ziemann
+- 1:4 [News from Sustaining Members](../v1n4-p33-news-from-sustaining-members/), David Preedy
+- 1:4 [APL Product Guide](../v1n4-p37-apl-product-guide/), David Preedy
+- 1:4 [Software Reviews: IBM PC/APL, APL\*PLUS/PC and PC/AT, M68000.APL on Sage IV](../v1n4-p54-software-review/), Adrian Smith
+- 1:4 [QL/APL – popularising APL](../art10003020/), David Eastwood
+- 1:4 [Keyword QL/APL - An (Occasionally) Technical Review](../v1n4-p121-keyword-ql-apl-review/), David Ziemann
+- 2:1 [News from Sustaining Members](../v2n1-p19-news-from-sustaining-members/), Steve Lyus
+- 2:1 [APL Product Guide](../v2n1-p24-apl-product-guide/), Steve Lyus
+- 2:1 [Mainframes, Micros and Co-existence, May 28th 1985 (meeting notes)](../v2n1-p59-mainframes-micros-co-existence/), Adrian Smith
+- 2:1 [Japanese APL on IBM 5550](../v2n1-p69-japanese-apl-on-ibm-5550/), David Ziemann
+- 2:3 [News From Sustaining Members](../v2n3-p13-news-from-sustaining-members/), Steve Lyus
+- 2:3 [APL Product Guide](../v2n3-p23-apl-product-guide/), Steve Lyus
+- 2:3 [Introductory Notes; APL Systems on Micros, October 18th 1985 (meeting notes)](../v2n3-p50-apl-systems-on-micros/), Adrian Smith, Eileen Dyson
+- 2:3 [Technical Editorial: More on APL2](../v2n3-p93-technical-editorial/), Jonathan Barman, David Ziemann
+- 2:4 [News from Sustaining Members](../v2n4-p11-news-from-sustaining-members/), Steve Lyus
+- 2:4 [APL Product Guide](../v2n4-p31-apl-product-guide/), Steve Lyus
+- 2:4 [Migration to APL2](../art10004970/), Mark Lenihan
+- 3:1 [News from sustaining members](../v3n1-p17-news-from-sustaining-members/), David Preedy
+- 3:1 [APL Product Guide](../v3n1-p29-apl-product-guide/), Steve Lyus
+- 3:1 [Benchmarks Updated](../v3n1-p44-pc-benchmarks-updated/), Adrian Smith
+- 3:1 [Product Review: PortaAPL for the Macintosh](../v3n1-p45-product-review-portaapl/), Normand R. Montour
+- 3:2 [News from Sustaining Members](../v3n2-p17-news-from-sustaining-members/), Steve Lyus
+- 3:2 [APL Product Guide](../v3n2-p27-apl-product-guide/), Steve Lyus
+- 3:2 [APL86 – the product forums](../v3n2-p61-apl86-product-forums/)
+- 3:2 [APL86 Exhibition Report](../v3n2-p71-apl86-exhibition-report/), Martin Malin
+- 3:2 [APL/PC2 with Auxiliary Processors](../art10000040/), Manuel Alfonseca
+- 3:2 [Public Domain Interpreter (Proposal)](../art10001460/), Anthony Camacho
+- 3:3 [News from Sustaining members](../v3n3-p14-news-from-sustaining-members/)
+- 3:3 [APL Product Guide](../v3n3-p23-apl-product-guide/), Steve Lyus
+- 3:3 [The Education VECTOR](../v3n3-p33-the-education-vector/), Norman Thomson
+- 3:3 [APL.68000 for the Atari ST](../v3n3-p47-apl68000-on-the-atari-st/), Paul Chapman
+- 3:3 [STSC APL\*PLUS/PC release 6](../v3n3-p51-apl-plus-pc-release-6/), Martyn Adams
+- 3:3 [APL.68000 for the Apple Macintosh](../v3n3-p54-apl68000-for-the-apple-macintosh/), M.S. Bassett
+- 3:3 [British APL Association Meeting – I-APL, 17 October 1986](../v3n3-p60-i-apl-meeting/), Anthony Camacho
+- 3:3 [Technical Editorial: Interpreters for Debuggers](../v3n3-p102-technical-editorial/), David Ziemann
+- 3:3 [I-APL Technical Specification](../art10011100/), David Ziemann
+- 4:1 [News from Sustaining Members](../v4n1-p13-news-from-sustaining-members/), Cathy Dargue
+- 4:1 [APL Product Guide](../v4n1-p37-apl-product-guide/), Cathy Dargue
+- 4:1 [CGI Graphics in Dyalog APL](../art10002860/), Peter Donnelly
+- 4:1 [GDDM / AP126 on APL.68000](../art10003030/), David Eastwood
+- 4:1 [WIMPS and Bach on the Amiga](../art10006100/), Richard Nabavi
+- 4:2 [News from Sustaining Members](../v4n2-p25-news-from-sustaining-members/), Cathy Dargue
+- 4:2 [APL Product Guide](../v4n2-p37-apl-product-guide/), Cathy Dargue
+- 4:2 [Dyalog APL on the IBM 6150](../v4n2-p53-dyalog-apl-on-the-ibm-6150/), Adrian Smith
+- 4:3 [News from Sustaining Members](../v4n3-p11-news-from-sustaining-members/), Cathy Dargue
+- 4:3 [APL Product Guide](../v4n3-p21-apl-product-guide/), Cathy Dargue
+- 4:3 [I-APL for the IBM PC](../v4n3-p37-i-apl-for-the-ibm-pc/), Dave Weatherby
+- 4:3 [APL\*PLUS/PC Version 7.0](../v4n3-p43-apl-plus-pc-version-7/), Adrian Smith
+- 4:3 [I-APL: Under the bonnet](../art10002130/), Paul Chapman
+- 4:3 [From Mainframes to Smaller Machines](../art10009210/), Paul Smith
+- 4:3 [I-APL: History & Achievements](../art10001470/), Anthony Camacho
+- 4:4 [APL2 over JANET](../v4n4-p10-apl2-over-janet/), Paul Barnetson
+- 4:4 [News from Sustaining Members](../v4n4-p15-news-from-sustaining-members/), Cathy Dargue
+- 4:4 [APL Product Guide](../v4n4-p35-apl-product-guide/), Cathy Dargue
+- 4:4 [PL/PC “APL for All”](../v4n4-p52-pl-pc-apl-for-all/), N.J. Small
+- 5:1 [Public Letter to P Chapman](../v5n1-p14-public-letter-to-p-chapman/), F.H.D. van Batenburg
+- 5:1 [News from Sustaining Members](../v5n1-p28-news-from-sustaining-members/), Cathy Dargue
+- 5:1 [APL Product Guide](../v5n1-p39-apl-product-guide/), Cathy Dargue
+- 5:1 [Interfacing to the Apple Macintosh](../art10006110/), Richard Nabavi
+- 5:2 [I-APL and the APL Keyboard](../v5n2-p8-i-apl-and-the-apl-keyboard/), Anthony Camacho
+- 5:2 [I-APL Newsletter No 7, October 1988](../v5n2-p23-the-latest-on-i-apl/), Anthony Camacho
+- 5:2 [News from Sustaining Members](../v5n2-p33-news-from-sustaining-members/), Cathy Dargue
+- 5:2 [APL Product Guide](../v5n2-p36-apl-product-guide/), Cathy Dargue
+- 5:2 [New Product Announcements](../v5n2-p46-new-product-announcements/)
+- 5:2 [APL\*PLUS II](../v5n2-p74-apl-plus-ii/), James Wheeler
+- 5:2 [IBM's APL2/PC](../v5n2-p76-ibms-apl2-pc/), Adrian Smith
+- 5:2 [Security? What Security?](../v5n2-p85-security-what-security/), John Sullivan
+- 5:2 [Gizz a Font](../v5n2-p86-gizz-a-font/), Iain Hayward
+- 5:3 [News from Sustaining Members](../v5n3-p13-news-from-sustaining-members/), Cathy Dargue
+- 5:3 [I-APL News](../v5n3-p22-i-apl-news/), Anthony Camacho
+- 5:3 [APL Product Guide](../v5n3-p39-apl-product-guide/), Cathy Dargue
+- 5:3 [Product Catalogue](../v5n3-p41-product-catalogue/)
+- 5:3 [February 17th: APL: Future Plans](../v5n3-p84-apl-future-plans/), Adrian Smith
+- 5:3 [Technical Editorial: Second Generation APL on Personal Computers](../v5n3-p108-technical-editorial/), Jonathan Barman, Dave Ziemann
+- 5:3 [Font for APL.68000](../v5n3-p110-font-for-apl68000/), Iain Hayward
+- 5:4 [Printer Support from QL-APL](../v5n4-p10-printer-support-from-ql-apl/), Alan Angus
+- 5:4 [News from Sustaining Members](../v5n4-p24-news-from-sustaining-members/), Alison Chatterton
+- 5:4 [I-APL News: The State of the Project](../v5n4-p31-i-apl-news-state-of-the-project/), Anthony Camacho
+- 5:4 [APL Product Guide](../v5n4-p43-apl-product-guide/), Alison Chatterton
+- 5:4 [Second Generation APLs on the PC](../v5n4-p54-second-generation-apls-on-the-pc/), Adrian Smith
+- 5:4 [APL\*PLUS II: STSC’s Second Generation APL System for 80386 Machines](../v5n4-p55-apl-plus-ii-technical/), Peter Cyriax
+- 5:4 [APL\*PLUS II for 80386 PCs](../v5n4-p61-apl-plus-ii-applications/), Ajay Askoolum
+- 5:4 [SAX](../v5n4-p67-sax/), Michael J.A. Berry
+- 5:4 [Future Plans for Dyalog APL](../art10002870/), Peter Donnelly
+- 5:4 [Future Plans: APL2 for the PC](../art10007870/), David Selby
+- 6:1 [News from Sustaining Members](../v6n1-p18-news-from-sustaining-members/), Alison Chatterton
+- 6:1 [The I-APL News](../v6n1-p29-the-i-apl-news/), Anthony Camacho
+- 6:1 [APL Product Guide](../v6n1-p39-apl-product-guide/), Alison Chatterton
+- 6:1 [Experience of Using IBM's APL2/PC](../v6n1-p57-using-ibms-apl2-on-the-pc/), Anthony Camacho
+- 6:1 [Dyalog APL for 386 DOS PC's](../v6n1-p61-impressions-dyalog-apl-for-ms-dos/), Jonathan Martin
+- 6:1 [Hacker's Corner: Where to Zap APL\*PLUS Version-8](../v6n1-p90-hackers-corner/), Adrian Smith
+- 6:1 [APL Printing from APL.68000](../art10003520/), Iain Hayward
+- 6:2 [Second Generation APLs - Comment on Items in Vector 5.4](../v6n2-p7-second-generation-apls-comment/), N.J. Small
+- 6:2 [News from Sustaining Members](../v6n2-p13-news-from-sustaining-members/), Alison Chatterton
+- 6:2 [APL Product Guide](../v6n2-p33-apl-product-guide/), Alison Chatterton
+- 6:2 [Software Received for Review](../v6n2-p44-new-product-announcements/), Adrian Smith
+- 6:2 [Review: IBM’s APL2 on the PC (16-bit)](../art10001120/), Dick Bowman
+- 6:2 [Review: IBM’s APL2 on the PC (32-bit)](../art10007940/), Nicholas Small
+- 6:3 [News from Sustaining Members](../v6n3-p12-news-from-sustaining-members/), Alison Chatterton
+- 6:3 [I-APL News - December 1989](../v6n3-p31-i-apl-news-december-1989/), Anthony Camacho
+- 6:3 [APL Product Guide](../v6n3-p37-apl-product-guide/), Alison Chatterton
+- 6:3 [Is APL\*PLUS Getting Overweight?](../v6n3-p49-is-apl-plus-getting-overweight/), Adrian Smith
+- 6:3 [Hacker's Corner: Beware the M61](../v6n3-p90-hackers-corner-beware-the-m61/), Adrian Smith
+- 6:3 [Is it APL2, or is it me?](../v6n3-p91-is-it-apl2-or-is-it-me/), Peter Branson
+- 6:4 [News from Sustaining Members](../v6n4-p11-news-from-sustaining-members/), Alison Chatterton
+- 6:4 [A Selection of Affordable APL Systems](../v6n4-p30-selection-of-affordable-apl-systems/)
+- 6:4 [APL Product Guide](../v6n4-p44-apl-product-guide/), Alison Chatterton
+- 6:4 [Review: APL\*PLUS/PC Release 9](../art10008300/), Adrian Smith
+- 6:4 [More on ‘A’ by Arthur Whitney](../v6n4-p62-arthur-whitney-on-a/), Ed Shaw
+- 6:4 [The M61 Problem: a Partial Resolution](../v6n4-p94-m61-problem-partial-resolution/)
+- 6:4 [Error Trapping or Event Handling?](../v6n4-p98-error-trapping-or-event-handling/), Richard Nabavi
+- 6:4 [APL and MS Word for HP LaserJet](../v6n4-p99-apl-and-ms-word-for-hp-laserjet/), Rex Swain
+- 6:4 [A New Development Environment in Dyalog APL](../art10007720/), John Scholes
+- 6:4 [A note on Comparison Tolerance](../art10010880/), R.G. Williams, R.A. Green
+- 7:1 [News from Sustaining Members](../v7n1-p12-news-from-sustaining-members/), Alison Chatterton
+- 7:1 [APL Product Guide](../v7n1-p38-apl-product-guide/), Alison Chatterton
+- 7:1 [Review: Dyalog APL for MS DOS](../art10008330/), Adrian Smith
+- 7:1 [Vendor Forum: 20th April 1990](../v7n1-p60-vendor-forum-20th-april-1990/), Adrian Smith
+- 7:1 [VCAT in Sharp APL](../v7n1-p113-vcat-in-sharp-apl/), E.E. McDonnell
+- 7:1 [The APL\*PLUS ‘dead key’ Problem ...](../v7n1-p118-apl-plus-dead-key-problem/), Cedric Heddle
+- 7:1 [A Survey of ⎕NC](../art10004390/), Joseph L.F. de Kerf
+- 7:2 [Editorial: Namespaces](../v7n2-p3-editorial-namespaces/), Jonathan Barman
+- 7:2 [News from Sustaining Members](../v7n2-p11-news-from-sustaining-members/), Alison Chatterton
+- 7:2 [I-APL Constraints](../v7n2-p25-i-apl-constraints/), Walter G Spunde
+- 7:2 [APL Product Guide](../v7n2-p33-apl-product-guide/), Alison Chatterton
+- 7:2 [Packaged Workspaces in APL2](../art10007950/), Nick Small
+- 7:2 [Packaged Workspaces and their Implications for Application Design](../art10006840/), Dave Piper
+- 7:2 [Hackers’ Corner: Unlocking Functions in Dyalog APL for MS DOS](../v7n2-p132-hackers-corner-unlocking-in-dyalog-apl/), Ray Cannon
+- 7:2 [Comparison Tolerance Explained](../art10009970/), Norman Thomson
+- 7:2 [Namespace Play](../art10000570/), Jonathan Barman
+- 7:3 [News from Sustaining Members](../v7n3-p13-news-from-sustaining-members/), Alison Chatterton
+- 7:3 [APL Product Guide](../v7n3-p50-apl-product-guide/), Alison Chatterton
+- 7:3 [Windows 3: the Implications for APL](../v7n3-p61-windows-3-the-implications-for-apl/), Adrian Smith
+- 7:3 [First Catch your Function: the STSC Compiler](../art10001740/), Ray Cannon
+- 7:3 [APL\*PLUS/PC Release 10](../art10000580/), Jonathan Barman
+- 7:3 [Soviet APL: a Historical Outline](../art10006010/), Alexei I. Miroshnikov
+- 7:3 [Packaged Workspaces in APL2/370](../v7n3-p127-packaged-workspaces-in-apl2-370/), Nicholas Small
+- 8:1 [Editorial: Windows and APL](../v8n1-p3-editorial/), Jonathan Barman
+- 8:1 [“APL Under Windows”](../v8n1-p7-apl-under-windows/), Adrian Smith
+- 8:1 [News from Sustaining Members](../v8n1-p11-news-from-sustaining-members/), Alison Chatterton
+- 8:1 [I-APL News for Education Vector 8.1](../v8n1-p20-i-apl-news-for-education-vector-8-1/), Anthony Camacho
+- 8:1 [APL Product Guide](../v8n1-p49-apl-product-guide/), Alison Chatterton
+- 8:1 [IBM Announces APL2 for the RISC System/6000](../v8n1-p59-ibm-announces-apl2-for-the-risc-system-6000/)
+- 8:1 [Dyalog APL/X](../art10007860/), John Searle
+- 8:1 [APL\*PLUS II Release 3](../art10006370/), Duncan Pearson
+- 8:1 [Working with Windows](../art10003060/), David Eastwood
+- 8:1 [Programming for Events in Dyalog](../art10002880/), Peter Donnelly
+- 8:1 [An Interface Between APL2 and the X Window System](../art10004090/), JR Jensen, KA Beaty
+- 8:2 [News from Sustaining Members](../v8n2-p13-news-from-sustaining-members/), Alison Chatterton
+- 8:2 [Monday 5 August](../v8n2-p65-monday-5th-aug/), Jonathan Barman, Adrian Smith, Sylvia Camacho, Anthony Camacho, Ray Cannon, John Searle
+- 8:2 [Hackers’ Corner: Fast Filing with ∆pack](../art10008390/), Adrian Smith
+- 8:2 [How STSC’s ⎕MF can help in testing APL workspaces](../art10001790/), Ray Cannon
+- 8:3 [News from Sustaining Members](../v8n3-p12-news-from-sustaining-members/), Alison Chatterton
+- 8:3 [APL Printing on some Star Printers with I-APL](../art10001510/), Anthony Camacho, Tom Goodman
+- 8:3 [Differences in Second Generation APLs](../art10004230/), Maurice Jordan
+- 8:3 [APL Product Guide](../v8n3-p57-apl-product-guide/), Alison Chatterton
+- 8:3 [APL and J: Some Benchmarks](../art10007340/), Malcolm Rigg
+- 8:3 [J Questions and Answers](../art10003760/), Jonathan Barman, Roger Hui, Ken Iverson
+- 8:3 [Hackers’ Corner: More about VGA Colours](../art10008400/), Adrian Smith
+- 8:3 [A Note on CPU Time Monitoring](../v8n3-p136-cpu-time-monitoring/), Joseph L.F. De Kerf
+- 8:4 [News from Sustaining Members](../v8n4-p11-news-from-sustaining-members/), Gill Smith
+- 8:4 [Review of I-APL for the Macintosh](../v8n4-p23-review-of-i-apl-for-the-macintosh/), Bill McLean
+- 8:4 [APL Product Guide](../v8n4-p61-apl-product-guide/), Gill Smith
+- 8:4 [Comments on J Questionnaire](../v8n4-p83-comments-on-j-questionnaire/), Roger Hui, Ken Iverson
+- 8:4 [Graph Plotting in I-APL/Mac 1.2](../art10002290/), Ian Clark
+- 9:1 [STSC’s Double Whammy](../art10006850/), David Piper
+- 9:1 [News from Sustaining Members](../v9n1-p19-news-from-sustaining-members/), Gill Smith
+- 9:1 [APL Product Guide](../v9n1-p39-apl-product-guide/), Gill Smith
+- 9:1 [APL\*PLUS II/386 Version 4](../art10002660/), David Crossley
+- 9:1 [More on Strands in PLUS II](../art10006860/), David Piper
+- 9:2 [Six Months in the Life of Vector (letter)](../v9n2-p7-six-months-in-the-life-of-vector-letter/), John Searle
+- 9:2 [News from Sustaining Members](../v9n2-p8-news-from-sustaining-members/), Gill Smith
+- 9:2 [APL Product Guide](../v9n2-p41-apl-product-guide/), Gill Smith
+- 9:2 [Dyalog APL/W](../art10006400/), Duncan Pearson
+- 9:2 [Shared Variables and Windows DDE](../art10008430/), Adrian Smith
+- 9:3 [News from Sustaining Members](../v9n3-p12-news-from-sustaining-members/), Gill Smith
+- 9:3 [The Education Vector](../v9n3-p17-the-education-vector/), Alan Mayer
+- 9:3 [APL Product Guide](../v9n3-p33-apl-product-guide/), Gill Smith
+- 9:3 [Meeting at Morgan Stanley, 23 October](../art10000640/), Jonathan Barman
+- 9:3 [Compiled APL for Supercomputers](../art10007840/), Walter Schwarz
+- 9:3 [APL\*PLUS II Keyboard Configuration](../art10000370/), Ajay Askoolum
+- 9:4 [News from Sustaining Members](../v9n4-p22-news-from-sustaining-members/), Gill Smith
+- 9:4 [The Education Vector](../v9n4-p27-the-education-vector/), Alan Mayer
+- 9:4 [A Beginner’s Guide to Low Cost APLs](../art10003720/), Dick Holt
+- 9:4 [APL Product Guide](../v9n4-p43-apl-product-guide/), Gill Smith
+- 9:4 [APL\*Plus II/386 Version 5.0](../art10006880/), Dave Piper
+- 9:4 [A First Look at the ISI APL/Windows (APLIWIN) Beta Release](../art10003330/), Martin Gfeller
+- 9:4 [ISI APL: Programming for Windows](../art10000660/), Jonathan Barman
+- 9:4 [Roger Hui on “An Implementation of J”](../art10003790/), Roger K.W. Hui
+- 9:4 [An APL Truetype Font](../art10008450/), Adrian Smith
+- 10:1 [Review of APL\*PLUS II v4.0](../v10n1-p9-review-of-apl-plus-ii-v4/), James G Wheeler
+- 10:1 [News from Sustaining Members](../v10n1-p19-news-from-sustaining-members/), Gill Smith
+- 10:1 [APL Product Guide](../v10n1-p41-apl-product-guide/), Gill Smith
+- 10:1 [Review: SHARP APL Reference Manual](../art10000670/), Jonathan Barman
+- 10:1 [Update on APLIWIN](../art10000680/), Jonathan Barman
+- 10:1 [Review: Dyalog APL Version 6.3](../art10000690/), Jonathan Barman
+- 10:1 [K](../art10010830/), Arthur Whitney
+- 10:1 [A Windows GOTCHER for APLIWIN](../v10n1-p114-windows-gotcher-for-apliwin/), Anthony Camacho
+- 10:2 [News from Sustaining Members](../v10n2-p13-news-from-sustaining-members/), Gill Smith
+- 10:2 [APL Product Guide](../v10n2-p33-apl-product-guide/), Gill Smith
+- 10:2 [APL93: Using the ISIAPL GUI](../art10003960/), Eric Iverson
+- 10:2 [Robert Bernecky ‘Array Morphology’](../v10n2-p92-array-morphology/), Anthony Camacho
+- 10:2 [Migrating Mainframe Applications to APL\*PLUS II](../art10003280/), Allan Gay
+- 10:3 [News from Sustaining Members](../v10n3-p9-news-from-sustaining-members/), Gill Smith
+- 10:3 [APL Product Guide — Updates](../v10n3-p33-apl-product-guide-updates/), Gill Smith
+- 10:3 [APLomb: The View through Quad-Shaped Spectacles](../art10002300/), Ian Clark
+- 10:3 [Workshop: Dyalog APL Sessions](../art10012510/)
+- 10:3 [Workshop: APL\*PLUS II Sessions](../art10012520/)
+- 10:3 [A First Look at APL\*PLUS III](../art10010800/), Adrian Smith
+- 10:4 [News from Sustaining Members](../v10n4-p11-news-from-sustaining-members/), Gill Smith
+- 10:4 [APL Product Guide: Updates](../v10n4-p33-apl-product-guide-updates/), Gill Smith
+- 10:4 [Standardisation Beyond the Language](../art10003340/), Martin Gfeller, Morten Kromberg
+- 11:1 [News from Sustaining Members](../v11n1-p21-news-from-sustaining-members/), Gill Smith
+- 11:1 [APL Product Guide](../v11n1-p45-apl-product-guide/), Gill Smith
+- 11:1 [Review: APL\*PLUS/PC Version 11](../art10010760/), Adam Weber
+- 11:1 [Review: J Release 2](../art10011170/), Dave Ziemann
+- 11:1 [Review: the APL\*PLUS III GUI](../art10006440/), Duncan Pearson
+- 11:1 [Review: APL\*PLUS III Control Structures](../art10008540/), Adrian Smith
+- 11:1 [Meeting: Presentation of APL\*PLUS III](../art10010810/), James Wheeler
+- 11:1 [Meeting: Dyalog APL Namespaces](../art10007730/), John Scholes
+- 11:1 [Windows Development with APL\*PLUS III](../art10004980/), Eric Lescasse
+- 11:1 [Hacker's Corner: Native Files in Dyalog APL (Without Tears)](../art10012940/), Adrian Smith
+- 11:1 [At Play with J: Control Structures](../art10005410/), Eugene McDonnell
+- 11:2 [News from Sustaining Members](../v11n2-p13-news-from-sustaining-members/), Gill Smith
+- 11:2 [APL Product Guide — Updates](../v11n2-p33-apl-product-guide-updates/), Gill Smith
+- 11:2 [Windows Development with APL\*PLUS III (Part II)](../art10004990/), Eric Lescasse
+- 11:2 [No SX please – we’re APLers](../art10013040/), Ray Cannon
+- 11:2 [Bracket Axis Simulation for APL\*PLUS II/386](../art10003320/), Allan Gay
+- 11:3 [Guest Editorial: Namespaces](../art10006460/), Duncan Pearson
+- 11:3 [News from Sustaining Members](../v11n3-p7-news-from-sustaining-members/), Gill Smith
+- 11:3 [APL Product Guide — Complete](../v11n3-p27-apl-product-guide-complete/), Gill Smith
+- 11:3 [APL at Corona/Nordstern](../art10003000/), Dieter Düren
+- 11:4 [News from Sustaining Members](../v11n4-p14-news-from-sustaining-members/), Gill Smith
+- 11:4 [APL Product Guide — Complete](../v11n4-p34-apl-product-guide-complete/), Gill Smith
+- 11:4 [J 2.05 for Windows](../art10011180/), David Ziemann
+- 11:4 [Perils of Subtraction: a New Language for an Old Algorithm](../art10005880/), Donald B. McIntyre
+- 11:4 [Namespaces and ⎕SE](../v11n4-p119-namespaces-and-se/)
+- 11:4 [Understanding your File Timestamps](../art10001850/), Ray Cannon
+- 11:4 [IBM pre-announces the Pentium … in 1977!](../v11n4-p124-ibm-pre-announces-the-pentium/), Bob Hoekstra
+- 12:1 [Too Much Diversity in APL?](../v12n1-p7-too-much-diversity-in-apl/), Joseph De Kerf
+- 12:1 [News from Sustaining Members](../v12n1-p13-news-from-sustaining-members/), Gill Smith
+- 12:1 [APL Product Guide — Updates](../v12n1-p33-apl-product-guide-updates/), Gill Smith
+- 12:1 [Production Manager’s Observation](../v12n1-p106-production-managers-observation/)
+- 12:2 [News from Sustaining Members](../v12n2-p11-news-from-sustaining-members/), Gill Smith
+- 12:2 [APL Product Guide — Full](../v12n2-p33-apl-product-guide-full/), Gill Smith
+- 12:2 [Dyalog APL/W for Windows 95 — First Impressions](../art10008640/), Adrian Smith
+- 12:2 [Floating-Point Precision](../v12n2-p111-floating-point-precision/), Joseph De Kerf
+- 12:3 [News from Sustaining Members](../v12n3-p11-news-from-sustaining-members/), Gill Smith
+- 12:3 [APL Product Guide](../v12n3-p33-apl-product-guide/), Gill Smith
+- 12:4 [News from Sustaining Members](../v12n4-p12-news-from-sustaining-members/), Gill Smith
+- 12:4 [APL Product Guide — Updates](../v12n4-p33-apl-product-guide-updates/), Gill Smith
+- 12:4 [Migration From APL2 to APL/W](../art10009530/), Rex Swain
+- 12:4 [Hacker’s Corner: A New Frock for IRMA](../art10008670/), Adrian Smith
+- 13:1 [News from Sustaining Members](../v13n1-p12-news-from-sustaining-members/), Gill Smith
+- 13:1 [APL Product Guide](../v13n1-p33-apl-product-guide/), Gill Smith
+- 13:1 [J3 - J Grows Up!](../art10000520/), John Baker, Martin Neitzel
+- 13:1 [Dyalog APL/W 7.2 and 8.0](../art10001430/), Bob Byers
+- 13:1 [IBM GSE and APL Club Germany](../art10008680/), Adrian Smith
+- 13:1 [Eric Iverson at the BAA](../art10008690/), Adrian Smith
+- 13:1 [BAA Vendor Forum](../art10007570/), Jon Sandles
+- 13:2 [re Vector Vol.12 No.3, January 1996, pp 133 - 142](../v13n2-p9-re-vector-12-3-pp-133-142/), Eddie Clough
+- 13:2 [News from Sustaining Members](../v13n2-p20-news-from-sustaining-members/), Gill Smith
+- 13:2 [APL Product Guide - Updates](../v13n2-p41-apl-product-guide-updates/), Gill Smith
+- 13:2 [Dynamic Functions in Dyalog APL](../art10007740/), John Scholes
+- 13:2 [OLE Automation with Dyalog APL](../art10002900/), Peter Donnelly
+- 13:2 [Hacker’s Corner: APLPLUS/PC & Windows 95](../art10010770/), Adam Weber
+- 13:2 [The Last Great Empty-Array Joke](../v13n2-p158-last-great-empty-array-joke/), Adrian Smith
+- 13:3 [News from Sustaining Members](../v13n3-p18-news-from-sustaining-members/), Gill Smith
+- 13:3 [APL Product Guide](../v13n3-p37-apl-product-guide/), Gill Smith
+- 13:3 [New Trace Facilities in J 3.03](../art10003870/), Roger Hui
+- 13:3 [APL2000 at Orlando](../art10008700/), Adrian Smith
+- 13:3 [Hacker’s Corner: Clipboarding APL Arrays](../art10008710/), Adrian Smith
+- 13:4 [News from Sustaining Members](../v13n4-p17-news-from-sustaining-members/), Gill Smith
+- 13:4 [APL Product Guide: Fully Revised](../v13n4-p37-apl-product-guide/), Gill Smith
+- 13:4 [Hacker’s Corner: Dynamic ⎕PW in Dyalog APL](../art10001920/), Ray Cannon
+- 13:4 [On First Encountering OLE](../art10008730/), Adrian Smith
+- 14:1 [News from Sustaining Members](../v14n1-p15-news-from-sustaining-members/), Gill Smith
+- 14:1 [APL Product Guide](../v14n1-p19-apl-product-guide/), Gill Smith
+- 14:1 [OpenGL Graphics and J](../art10001370/), Chris Burke
+- 14:1 [Emulation of IBM APL2 Auxiliary Processor AP207 in Dyalog APL](../art10007920/), Alexander Skomorokhov, Alexander Kornilovsky
+- 14:1 [Namespaces in Causeway](../art10006510/), Duncan Pearson
+- 14:2 [APL Product Guide](../v14n2-p19-apl-product-guide/), Gill Smith
+- 14:3 [Editorial: What is APL?](../art10000400/), Ajay Askoolum
+- 14:3 [News from Sustaining Members](../v14n3-p13-news-from-sustaining-members/)
+- 14:3 [APL Product Guide](../v14n3-p16-apl-product-guide/), Gill Smith
+- 14:3 [Dyalog APL for Motif Version 8.1 Release 2 for Sun Solaris 2.5](../art10003600/), Bob Hoekstra
+- 14:4 [News from Sustaining Members](../v14n4-p17-news-from-sustaining-members/)
+- 14:4 [APL Product Guide](../v14n4-p19-apl-product-guide/), Gill Smith
+- 14:4 [Hackers’ Corner: Six Megabytes in 640K?](../art10001560/), Anthony Camacho
+- 14:4 [Using OpenGL Graphics in Dyalog APL](../art10007930/), Alexander Skomorokhov, Alexei Zalivine
+- 15:1 [News from Sustaining Members](../art10013860/)
+- 15:1 [APL Product Guide](../v15n1-p22-apl-product-guide/), Gill Smith
+- 15:1 [K-Lite: First Impressions](../art10005140/), Jim Lucas
+- 15:1 [Book Review – It’s APL, but not as we know it](../art10000410/), Ajay Askoolum
+- 15:1 [Writing ActiveX Controls in Dyalog APL/W](../art10002910/), Adrian Smith, Dyadic Systems
+- 15:1 [Utilities for Dyalog Developers](../art10001960/), Ray Cannon
+- 15:2 [World APL News](../art10013890/)
+- 15:2 [The Vector Product Guide](../v15n2-p12-apl-product-guide/), Gill Smith
+- 15:2 [Dyalog APL/W 8.2: First Impressions](../art10008800/), Adrian Smith
+- 15:2 [Meeting: BAA Vendors’ Forum](../art10007640/), Jon Sandles
+- 15:2 [APL98 Workshop - Threads in Dyalog APL](../art10007750/), Dyadic Systems
+- 15:2 [Threads - an Introduction to Multithreading](../art10007760/), John Scholes
+- 15:2 [Data Conversion Between APL Versions](../art10002680/), David Crossley
+- 15:3 [The Vector Product Guide](../v15n3-p8-apl-product-guide/), Gill Smith
+- 15:3 [VideoSoft FlexGrid Pro with Dyalog APL](../art10007660/), Jon Sandles
+- 15:3 [Utilities for the Dyalog Session (part 2)](../art10001970/), Ray Cannon
+- 15:4 [News from Sustaining Members](../v15n4-p9-news-from-sustaining-members/)
+- 15:4 [The Vector Product Guide](../v15n4-p11-apl-product-guide/), Gill Smith
+- 15:4 [Hacker’s Corner: Don’t Clip My Children](../art10008830/), Adrian Smith
+- 15:4 [Using Flexgrid with Dyalog APL (Update)](../art10007680/), Jon Sandles
+- 15:4 [Memory Mapped Files in J](../art10001410/), Chris Burke
+- 15:4 [At Play with J: New Model Computer](../art10005570/), Gene McDonnell
+- 15:4 [Utilities for Dyalog APL/W developers: UCMD Take 2](../art10001980/), Ray Cannon
+- 16:1 [APLs for Linux](../art10003630/), Bob Hoekstra
+- 16:1 [APL Product Guide](../v16n1-p25-apl-product-guide/), Gill Smith
+- 16:1 [Meeting: BAA Vendor Forum, May 21st 1999](../art10004810/), Stefano Lanzavecchia
+- 16:1 [At Play With J: New Big Deal](../art10005580/), Eugene McDonnell
+- 16:2 [Editorial: “Linux, the choice of a GNU generation”](../art10013960/), Stefano Lanzavecchia
+- 16:2 [News from Sustaining Members](../art10013970/)
+- 16:2 [APL Product Guide](../v16n2-p19-apl-product-guide/), Gill Smith
+- 16:2 [SHARP APL vs APL2 Coding Style](../art10000760/), Dan Baronet
+- 16:2 [Time Space Tradeoffs in Vector Algorithms for APL Functions](../art10001300/), Timothy A. Budd
+- 16:3 [News from Sustaining Members](../art10013980/)
+- 16:3 [APL Product Guide](../v16n3-p12-apl-product-guide/), Gill Smith
+- 16:3 [My SAX Experience – SHARP APL for Linux, Beta 5.1.0](../art10003640/), Bob Hoekstra
+- 16:3 [SHARP APL Operators](../art10000770/), Dan Baronet
+- 16:4 [News from Sustaining Members](../art10013990/)
+- 16:4 [Unix APL Power Shootout (Part 1)](../art10003650/), Bob Hoekstra
+- 16:4 [SHARP APL Tasks](../art10000780/), Dan Baronet
+- 16:4 [Hacker's Corner: Using and Abusing Watchpoints in APL+Win 3.6](../art10013480/), Adrian Smith
+- 17:1 [Report: Vendor forum 19th May 2000](../art10005200/), Jonathan Manktelow
+- 17:1 [News from Sustaining Members](../art10014000/)
+- 17:1 [APL Product Guide](../v17n1-p16-apl-product-guide/), Gill Smith
+- 17:1 [Unix APL Power Shootout (Part 2)](../art10003660/), Bob Hoekstra
+- 17:1 [Taking the \*Migraine\* out of \*Migration\*](../art10003170/), Walter G. Fil
+- 17:2 [News from Sustaining Members](../art10014040/)
+- 17:2 [APL Product Guide](../v17n2-p10-apl-product-guide/), Gill Smith
+- 17:3 [News from Sustaining Members](../art10014050/)
+- 17:3 [The Vector Product Guide](../v17n3-p12-apl-product-guide/), Gill Smith
+- 17:3 [APL2000 (Orlando) Conference Report: APL 2000 User’s Meeting in Orlando](../art10000260/)
+- 17:3 [A Grid Object for APL+Win](../art10005050/), Eric Lescasse
+- 17:3 [Working with Existing Ascii Files Using J Memory Mapping](../art10006950/), Donald Pittenger
+- 17:4 [News from Sustaining Members](../art10014080/)
+- 17:4 [The Vector Product Guide](../v17n4-p11-apl-product-guide/), Gill Smith
+- 18:1 [News from Sustaining Members](../art10014090/), Causeway Graphical Systems Ltd, HMW Computing Ltd, Insight Systems ApS
+- 18:1 [The Vector Product Guide](../v18n1-p16-apl-product-guide/), Gill Smith
+- 18:2 [An Implementation of A](../art10008920/), Adrian Smith
+- 18:2 [News from Sustaining Members](../art10014100/), MicroAPL Ltd, APL2000 Inc., Causeway Graphical Systems Ltd
+- 18:2 [The Vector Product Guide](../v18n2-p23-apl-product-guide/), Gill Smith
+- 18:2 [Getting Started with A](../art10008930/), Adrian Smith
+- 18:3 [Update on A+](../art10008950/), Adrian Smith
+- 18:3 [News from Sustaining Members](../art10014110/), Dyadic Systems Ltd, MicroAPL Ltd, APL2000 Inc., Causeway Graphical Systems Ltd
+- 18:3 [The Vector Product Guide](../v18n3-p15-apl-product-guide/), Gill Smith
+- 18:3 [Report: APL2000 User Conference at Naples, Florida](../art10002010/), Ray Cannon
+- 18:4 [News from Sustaining Members](../art10014120/), MicroAPL Ltd, Causeway Graphical Systems Ltd
+- 18:4 [The Vector Product Guide](../v18n4-p14-apl-product-guide/), Gill Smith
+- 18:4 [Report: APL Germany in Munich](../art10008980/), Adrian Smith
+- 18:4 [The Abstraction Mechanisms of Vector Pascal](../art10002570/), Paul Cockshott
+- 18:4 [Hacker’s Corner: Packages in Dyalog APL](../art10002040/), Ray Cannon
+- 19:1 [Vendor Presentations](../v19n1-p13-vendor-presentations/), Adrian Smith
+- 19:1 [The Vector Product Guide](../v19n1-p14-apl-product-guide/), Gill Smith
+- 19:1 [APLX, the Awakening of the Sleeping Beauty](../art10000910/), Eke van Batenburg
+- 19:1 [APL+Win Version 4.0](../art10003750/), Michael Hughes
+- 19:1 [J 5.01 Linux Beta h](../art10007310/), Zach Reiter
+- 19:1 [Dyalog.Net: An Introduction and Overview](../art10002750/), John Daintree
+- 19:2 [Editorial: Vector 19:2](../art10013590/), Stefano Lanzavecchia
+- 19:2 [News from Sustaining Members](../art10014150/), MicroAPL Ltd, Causeway Graphical Systems Ltd
+- 19:2 [The Vector Product Guide](../v19n2-p12-apl-product-guide/), Gill Smith
+- 19:2 [Review: Dyalog APL CE (beta) – first impressions](../art10002060/), Ray Cannon
+- 19:2 [Review: First Experiences with PocketAPL](../art10008990/), Adrian Smith
+- 19:2 [Dyalog.Net: APLScript and Things Textual](../art10002760/), John Daintree
+- 19:3 [Guest Editorial: Unicode Revisited](../art10013610/), Adrian Smith
+- 19:3 [News from Sustaining Members](../art10014160/), MicroAPL Ltd, HMW Systems, Dyadic Ltd, Insight Systems ApS
+- 19:3 [The Vector Product Guide](../v19n3-p14-apl-product-guide/), Gill Smith
+- 19:4 [APL and the Pocket PC](../v19n4-p14-apl-and-the-pocket-pc/), Philip Bath
+- 19:4 [News from Sustaining Members](../art10014170/), Dyalog Ltd, Causeway Graphical Systems Ltd
+- 19:4 [The Vector Product Guide](../v19n4-p17-apl-product-guide/), Gill Smith
+- 19:4 [Report: K Watch: Arthur Whitney in London](../art10004170/), Steph Johnson
+- 19:4 [Experiences with the Dyalog .NET Compiler](../art10009020/), Adrian Smith
+- 19:4 [Hacker’s Corner: from APL 2 APL2C](../art10009030/), Adrian Smith
+- 19:4 [Web Services with Dyalog.NET](../art10002770/), John Daintree
+- 20:1 [The Vector Product Guide](../v20n1-p10-apl-product-guide/), Gill Smith
+- 20:1 [BAA AGM Meeting – Vendor Presentation](../art10013630/), Adrian Smith
+- 20:1 [Matrikx Reloaded](../art10003230/), Simon Garland
+- 20:1 [Report: Kx Systems Celebrates 10 Years](../art10004180/), Steph Johnson
+- 20:2 [News from Sustaining Members](../art10014200/), Dyalog Ltd, Causeway Graphical Systems Ltd, MicroAPL Ltd
+- 20:2 [The Vector Product Guide](../v20n2-p11-apl-product-guide/), Gill Smith
+- 20:2 [R.Net: A Reverse Polish Interpreter for .Net](../art10009230/), Richard Smith
+- 20:3 [News from Sustaining Members](../v20n3-p8-news-from-sustaining-members/)
+- 20:3 [The Vector Product Guide](../v20n3-p10-apl-product-guide/), Gill Smith
+- 20:4 [News from Sustaining Members](../v20n4-p13-news-from-sustaining-members/)
+- 20:4 [The Vector Product Guide](../v20n4-p14-apl-product-guide/), Gill Smith
+- 20:4 [The APL2 Java Interface](../art10005090/), David Liebtag
+- 20:4 [An APL to C++ Translator](../art10001250/), James A. Brown
+- 20:4 [A Strategy for Compiling APL for the .Net Framework](../art10009120/), Adrian Smith
+- 21:1 [The Vector Product Guide](../v21n1-p7-apl-product-guide/), Gill Smith
+- 21:1 [Review: APLX Beta 2.0.1 for Windows](../art10000460/), Ajay Askoolum
+- 21:2 [News from Sustaining Members](../art10014220/), Dyalog Ltd
+- 21:2 [News from Sustaining Members](../art10014230/), MicroAPL Ltd
+- 21:2 [News from Sustaining Members](../art10014210/), Causeway Graphical Systems Ltd
+- 21:2 [The Vector Product Guide](../v21n2-p12-apl-product-guide/), Gill Smith
+- 21:2 [Review: Kx Systems Users’ Meeting](../art10009850/), Stephen Taylor
+- 21:2 [Rowan.net: An APL-like Interpreter for .Net](../art10009240/), Richard Smith
+- 21:2 [Technical Correspondence](../art10014270/), Y. Nakano, K. Yamashita, T. Nishikawa
+- 21:3 [News from Sustaining Members](../v21n3-p8-news-from-sustaining-members/)
+- 21:3 [The Vector Product Guide](../v21n3-p12-apl-product-guide/), Gill Smith
+- 21:3 [Review: Built-in Charting in APLX Version3](../art10009160/), Adrian Smith
+- 21:3 [Notes on Virtual Memory and the APL Workspace](../art10007430/), Bill Rutiser
+- 21:3 [Conformity of APL to ISO APL Standard Extended](../art10000930/), F.H.D. van Batenburg
+- 21:4 [News from Sustaining Members](../v21n4-p10-news-from-sustaining-members/)
+- 21:4 [The Vector Product Guide](../v21n4-p13-product-guide/), Gill Smith
+- 21:4 [Developer Productivity with APLX v3 and SQL](../art10000480/), Ajay Askoolum
+- 22:1 [News from Dyalog](../art10013740/), Dyalog
+- 22:1 [MicroAPL News 22:1](../art10013730/), MicroAPL
+- 22:1 [News from Causeway Graphical Systems](../art10013745/), Causeway Graphical Systems Ltd
+- 22:1 [The Vector Product Guide](../v22n1-p8-product-guide/), Gill Smith
+- 22:1 [A First Look at the Causeway APL to C# Translator](../art10003180/), Walter Fil
+- 22:1 [Using Delegates in an Interpreted Language](../art10009250/), Richard Smith
+- 22:1 [OO for APLers (part 1)](../art10004600/), Morten Kromberg
+- 22:2 [The Vector Product Guide](../v22n2-p20-product-guide/), Gill Smith
+- 22:2 [APL+Santa Fe previewed at the APL2000 Conference](../art10005080/), Eric Lescasse
+- 22:2 [Object Oriented Programming in APL+Win](../art10007450/), Bill Rutiser
+- 22:2 [Static Exception Handling for APL+Win](../art10007460/), Bill Rutiser
+- 22:2 [Up, Down and Sideways: Extending the Reach of APL](../art10006130/), Richard Nabavi
+- 22:2 [OO for APLers (part 2)](../art10004610/), Morten Kromberg
+- 22:3 [How We Got To APL\\1130](../art10001190/), Larry Breed
+- 22:4 [Letter: SAGE: a new web server for APLers](../art10011260/), Woody Butler
+- 22:4 [news from Causeway](../art10011410/), Causeway Graphical Systems
+- 22:4 [news from Dyalog](../art10011400/), Dyalog Ltd
+- 22:4 [news from Kx Systems, Inc.](../art10011390/), Kx Systems
+- 22:4 [news from MicroAPL](../art10011380/), MicroAPL
+- 22:4 [The Vector Product Guide](../v22n4-p18-product-guide/), Gill Smith
+- 22:4 [Objects for APLers: Part 3 of 3](../art10011350/), Morten Kromberg
+- 23:1 [Dyalog acquires APR from Causeway Graphical Systems](../art10011430/), Dyalog
+- 23:1 [Kx welcomes new customers](../art10011440/), Kx Systems
+- 23:1 [Mac OSX support for Kdb+](../art10011450/), Kx Systems
+- 23:1 [New A Team research on low latency architectures](../art10011460/), Kx Systems
+- 23:1 [Kx Systems User Meeting](../art10011530/), Stephen Taylor
+- 23:1 [Design decisions in APLX64](../art10011570/), Richard Nabavi
+- 23:1 [Analysing CONTINUE workspaces](../art10011610/), Ray Cannon
+- 23:3 [Dyalog 2008](../art10011720/), Dyalog Ltd
+- 23:3 [News from Kx](../art10011730/), Kx Systems
+- 23:3 [News from MicroAPL](../art10011740/), >MicroAPL Ltd
+- 23:3 [The Vector Product Guide](../art10011750/), Gill Smith
+- 23:3 [Minnowbrook, 2007](../art10011770/), Adrian Smith
+- 23:3 [Review: APLX Version 4, from the viewpoint of an experimental physicist](../art10011790/), Beau Webber
+- 23:3 [Tutorial: User-Defined Classes in APLX Version 4](../art10011820/), Simon Marsden
+- 23:4 [Sustaining Members’ News](../art10011950/), APL2000
+- 23:4 [Sustaining Members’ News](../art10011960/), Dyalog
+- 23:4 [Sustaining Members’ News](../art10011970/), Kx Systems
+- 23:4 [First experiences with Unicode in Dyalog 12](../art10011990/), Adrian Smith
+- 23:4 [Parallel Each](../art10012000/), David Liebtag
+- 23:4.1 [First Quarter](../art10013780/), Gitte Christensen
+- 23:4.1 [How we got here](../art10013790/), Stephen Taylor
+- 23:4.1 [Versions](../art10013810/), Dyalog
+- 23:4.1 [Next Quarter](../art10013820/), Gitte Christensen
+- 23:4.1 [Technical Overview, 1981](../art10013830/), Dyalog
+- 24:1 [Industry news](../art10500110/), APL2000 Inc., Dyalog Ltd, Kx Systems Inc., MicroAPL Ltd, Optima Systems Ltd
+- 24:1 [Structured Storage and Monitor Expressions](../art10500100/), David Liebtag
+- 24:1 [Unicode support for APL](../art10500090/), Morten Kromberg
+- 24:1 [Spice for beginners](../art10500020/), Daniel Baronet
+- 24:2 [Inner product – an old/new problem](../art10500200/), Roger Hui
+- 24:2 [APL: The next generation](../art10500310/), Ajay Askoolum
+- 24:4 [Industry news: Dyalog, Kx Systems, Optima, IBM](../v24n4-p10-industry-news/)
+- 24:4 [Notes from APL2010](../art10500430/), Devon McCormick
+- 25:1 [Dyalog](../v25n1-p17-dyalog/)
+- 25:1 [A lightweight look at Minnowbrook](../art10500610/), Roy Sykes
+- 25:1 [Unicode and related subjects in APL2](../art10500670/), Kyosuke Saigusa
+- 25:3 [APL2000](../v25n3-p5-apl2000/)
+- 25:3 [Dyalog](../v25n3-p7-dyalog/)
+- 25:3 [NARS2000](../v25n3-p10-nars2000/), Bob Smith
+- 25:3 [TryAPL](../v25n3-p12-tryapl/)
+- 25:3 [5 – a stack-based array language](../art10500710/), Bernd Ulmann
+- 25:4 [Dyalog](../v25n4-p5-dyalog/)
+- 25:4 [Kx](../v25n4-p10-kx/)
+- 25:4 [User commands in Dyalog](../art10500900/), Dan Baronet
+- 25:4 [Public user commands in Dyalog APL](../art10500930/), Dan Baronet
+- 25:4 [⎕S and ⎕R](../art10500870/), Dan Baronet
+- 26:1 [Dyalog Ltd industry news](../art10501212/), Morten Kromberg
+- 26:1 [Optima Systems Ltd](../art10501211/), Paul Grosvenor
+- 26:1 [APL2000 Industry News](../art10501221/), APL2000
+- 26:1 [Compiling APL to JavaScript](../art10501160/), Nick Nickolov
+- 26:1 [ELI: a simple system for array programming](../art10501180/), Hanfeng Chen, Wai-Mee Ching
+- 26:2 [Dyalog Ltd - Corporate News](../art10501410/), Morten Kromberg
+- 26:2 [Optima Systems Ltd – Industry News August 2014](../art10501340/), Paul Grosvenor
+- 26:2 [4xtra Alliance - News](../art10501290/), Chris Hogan
+- 26:2 [APL2000 User Conference 2014](../art10501430/), APL2000
+- 26:2 [Impending kOS](../art10501320/), Stephen Taylor
+- 26:4 [Dyalog Ltd industry news](../art10501540/), Morten Kromberg
+- 26:4 [Optima Systems Ltd - Industry News](../art10501660/), Paul Grosvenor
+- 26:4 [APL2000 Update](../art10501670/)
+- 26:4 [4xTra Alliance industry news](../art10501530/), Chris Hogan
+- 26:4 [Kx Systems 2015 News](../art10501620/), Abby Gruen
+- 26:4 [A graphical sandbox for K](../art10501610/), John Earnest
+- 27:1 [AntLang – A modern APL system](../art10501730/), Anthony Cipriano
+- online [APLX is out, long live APL](../art10501830/), Dan Baronet
+
+## applications { #tag-applications }
+
+*systems built in APL, case studies, and APL in the information centre*
+
+- 1:1 [APL Product Guide](../v1n1-p25-apl-product-guide/), David Preedy
+- 1:1 [APL in the Information Centre](../v1n1-p41-information-centre-introduction/), Adrian Smith
+- 1:1 [Setting up a Company I.C.](../art10002520/), Romilly Cocking
+- 1:1 [The Global Information Centre](../art10006690/), Fred Perkins
+- 1:1 [Panel Discussion on Information Centres](../v1n1-p46-panel-discussion-information-centres/), Adrian Smith
+- 1:1 [Interfacing Viewdata & APL](../art10007100/), John Pym
+- 1:1 [Case Studies: an Invitation](../v1n1-p79-case-studies-invitation/), Adrian Smith
+- 1:1 [“Matchmakers” Simulation](../art10008130/), Adrian Smith
+- 1:1 [SCREENIO: A full-screen manager](../art10002840/), David Doherty
+- 1:2 [APL Product Guide](../v1n2-p29-apl-product-guide/), David Preedy
+- 1:2 [Graphics for Decision-makers](../art10006980/), David Preedy
+- 1:2 [Imperial Group Graphics](../art10008140/), Adrian Smith
+- 1:2 [APLpip](../art10005120/), L. Llewellyn-Jones
+- 1:3 [APL Product Guide](../v1n3-p27-apl-product-guide/), David Preedy
+- 1:3 [The Information Centre and Changing Technologies (IPSA 1984 Users’ Meeting notes)](../v1n3-p67-ipsa-1984-users-meeting/), Adrian Smith
+- 1:3 [PATTIE: a Practical Expert System(1)](../art10003460/), Christopher Harvey
+- 1:4 [News from Sustaining Members](../v1n4-p33-news-from-sustaining-members/), David Preedy
+- 1:4 [APL Product Guide](../v1n4-p37-apl-product-guide/), David Preedy
+- 1:4 [Information Centre as Strategy](../art10006700/), Fred Perkins
+- 1:4 [PATTIE: a Practical Expert System(2)](../art10003470/), Christopher Harvey
+- 2:1 [APL Product Guide](../v2n1-p24-apl-product-guide/), Steve Lyus
+- 2:1 [My first date with IRMA](../art10003160/), Graham Fieldsend
+- 2:1 [Case Study: DBASE-II at Bedford School](../v2n1-p84-case-study-dbase-ii-at-bedford-school/), Adrian Smith
+- 2:3 [APL Product Guide](../v2n3-p23-apl-product-guide/), Steve Lyus
+- 2:3 [Introductory Notes; APL Systems on Micros, October 18th 1985 (meeting notes)](../v2n3-p50-apl-systems-on-micros/), Adrian Smith, Eileen Dyson
+- 2:3 [APL in Practice – Commercial Applications, 15th November 1985 (meeting introduction)](../v2n3-p60-apl-in-practice-introduction/)
+- 2:3 [Sales Forecasting System](../art10007470/), Patrick Rushton
+- 2:3 [Large Commercial Database](../art10001210/), Christine Brewster
+- 2:3 [OR-85 (Durham): Notes on Major Sessions](../v2n3-p65-or-85-durham/), Adrian Smith
+- 2:3 [External Databases](../art10010890/), Katie Williamson, Geoff Wells
+- 2:4 [APL Product Guide](../v2n4-p31-apl-product-guide/), Steve Lyus
+- 2:4 [Whitbread: Large Scale Database](../art10001220/), Christine Brewster
+- 2:4 [Financial Planning at Imperial](../art10005170/), Steve Lyus
+- 3:1 [APL Product Guide](../v3n1-p29-apl-product-guide/), Steve Lyus
+- 3:1 [Introductory Notes; APL and Operational Research, January 17th 1986 (meeting notes)](../v3n1-p59-apl-and-or-meeting/), Adrian Smith
+- 3:1 [Computing Environments for OR](../art10002590/), Tony Cooper
+- 3:1 [An APL Banking Application](../art10003950/), Per Hultin
+- 3:1 [Case Study: VSPC – The Last Rites](../v3n1-p68-case-study-vspc-last-rites/), Adrian Smith
+- 3:2 [APL Product Guide](../v3n2-p27-apl-product-guide/), Steve Lyus
+- 3:3 [APL Product Guide](../v3n3-p23-apl-product-guide/), Steve Lyus
+- 4:1 [APL Product Guide](../v4n1-p37-apl-product-guide/), Cathy Dargue
+- 4:1 [Graphics in the Boardroom](../art10007000/), David Preedy
+- 4:1 [The Charlton Chase Package](../art10000750/), Paul Barnetson
+- 4:2 [APL Product Guide](../v4n2-p37-apl-product-guide/), Cathy Dargue
+- 4:2 [Finished Goods Inventory Control](../art10010790/), Barrie Webster
+- 4:2 [Expcheck: Intelligent Diagnostics](../art10010860/), Mike Williams
+- 4:3 [APL Product Guide](../v4n3-p21-apl-product-guide/), Cathy Dargue
+- 4:4 [APL Product Guide](../v4n4-p35-apl-product-guide/), Cathy Dargue
+- 5:1 [APL Product Guide](../v5n1-p39-apl-product-guide/), Cathy Dargue
+- 5:1 [Through IRMA to IMS](../art10000050/), David Alis
+- 5:1 [Controlling Real-time Processes in a Brewery (with APL)](../v5n1-p64-real-time-processes-in-a-brewery/), Robert Poate
+- 5:1 [Developing Business Systems](../art10002540/), Romilly Cocking
+- 5:1 [Supporting APL in a Large Organisation](../art10004200/), Maurice Jordan
+- 5:2 [APL Product Guide](../v5n2-p36-apl-product-guide/), Cathy Dargue
+- 5:2 [Computers in the Boardroom](../v5n2-p77-computers-in-the-boardroom/), David Preedy
+- 5:3 [1989 British Design Award to 'Resolve' from Metapraxis](../v5n3-p35-1989-design-award-to-metapraxis/), David Preedy
+- 5:3 [New Product Announcements](../v5n3-p40-new-product-announcements/)
+- 5:3 [Product Catalogue](../v5n3-p41-product-catalogue/)
+- 5:3 [APL and Relational Databases](../art10005130/), Brian Lochran
+- 5:3 [Assurance Quotation Services](../art10006720/), Harry Phillips
+- 5:3 [How Expensive is APL?](../art10000860/), F.H.D. van Batenburg, J.W. Kijne
+- 5:4 [APL Product Guide](../v5n4-p43-apl-product-guide/), Alison Chatterton
+- 5:4 [SCORE: An APL Program for the Scoring of Tests](../v5n4-p86-score-scoring-of-tests/), Jerry M. Brennan, Jennifer E. Daly
+- 6:1 [The British APL Association Special Achievement Award for 1989](../v6n1-p14-special-achievement-award-to-ba/)
+- 6:1 [APL Product Guide](../v6n1-p39-apl-product-guide/), Alison Chatterton
+- 6:1 [Printing APL Matrices](../art10001200/), Jerry Brennan, Jennifer E. Daly, Lawrence H. Nitz
+- 6:2 [APL Product Guide](../v6n2-p33-apl-product-guide/), Alison Chatterton
+- 6:3 [APL Product Guide](../v6n3-p37-apl-product-guide/), Alison Chatterton
+- 6:3 [Field Trip to British Airways: 27 October 1989](../v6n3-p70-the-bapla-at-british-airways/), Sylvia Camacho
+- 6:3 [Managing Multi-currency Accounting](../art10001170/), Peter Branson
+- 6:3 [APL for Financial Calculations](../art10003200/), D.O. Forfar
+- 6:4 [APL Product Guide](../v6n4-p44-apl-product-guide/), Alison Chatterton
+- 6:4 [A Hypertext Interface to the Oracle](../art10008310/), Adrian Smith
+- 7:1 [APL Product Guide](../v7n1-p38-apl-product-guide/), Alison Chatterton
+- 7:2 [1990 Outstanding Achievement Award](../v7n2-p9-outstanding-achievement-award/), David Eastwood
+- 7:2 [APL Product Guide](../v7n2-p33-apl-product-guide/), Alison Chatterton
+- 7:3 [APL Product Guide](../v7n3-p50-apl-product-guide/), Alison Chatterton
+- 7:3 [Field Trip to Rowntree Mackintosh](../v7n3-p93-field-trip-to-rowntree-mackintosh/), Sylvia Camacho, Jonathan Martin
+- 8:1 [APL Product Guide](../v8n1-p49-apl-product-guide/), Alison Chatterton
+- 8:1 [The Art of Amazement](../v8n1-p60-the-art-of-amazement/)
+- 8:1 [Integrated System for Demographic Investigations](../art10006970/), Victor V. Ponomaryov
+- 8:1 [Experimental Design](../art10011020/), Stephen Wynn
+- 8:2 [ASL: A Basic Statistics Volume Tutorial](../art10000110/), Jake Ansell
+- 8:2 [Panel “APL as an Entrepreneurial Tool”](../art10000600/), Jonathan Barman
+- 8:2 [A Case Story about Moving an APL Application](../art10011040/), Allan Zenth
+- 8:3 [APL Product Guide](../v8n3-p57-apl-product-guide/), Alison Chatterton
+- 8:4 [BATS](../v8n4-p36-bats/), David Eastwood
+- 8:4 [APL Product Guide](../v8n4-p61-apl-product-guide/), Gill Smith
+- 9:1 [News from Sustaining Members](../v9n1-p19-news-from-sustaining-members/), Gill Smith
+- 9:1 [APL Product Guide](../v9n1-p39-apl-product-guide/), Gill Smith
+- 9:2 [Reliability Data Analysis](../art10000120/), Jake Ansell, Mulhim Al-Doori
+- 9:2 [APL Product Guide](../v9n2-p41-apl-product-guide/), Gill Smith
+- 9:3 [APL Product Guide](../v9n3-p33-apl-product-guide/), Gill Smith
+- 9:3 [An Application of APL in The Roofing Trade](../art10011190/), Michael Zippel
+- 9:4 [APL Product Guide](../v9n4-p43-apl-product-guide/), Gill Smith
+- 10:1 [“APL in Business” Conference Prospectus](../v10n1-p12-apl-in-business-conference-prospectus/)
+- 10:1 [APL Product Guide](../v10n1-p41-apl-product-guide/), Gill Smith
+- 10:1 [Meeting: Business Graphics– A Second Look](../art10012290/), George MacLeod
+- 10:2 [APL Product Guide](../v10n2-p33-apl-product-guide/), Gill Smith
+- 10:2 [Review: Helm – A Company-oriented DSS](../art10007510/), Jon Sandles
+- 10:2 [APL93: APL in Satellite Surveillance](../art10007410/), Jack Rudd
+- 10:3 [APL Product Guide — Updates](../v10n3-p33-apl-product-guide-updates/), Gill Smith
+- 10:4 [APL Product Guide: Updates](../v10n4-p33-apl-product-guide-updates/), Gill Smith
+- 10:4 [Visit To APL Centres in Russia November 1993](../art10005100/), Gary Littlejohn
+- 10:4 [What’s in a Name?](../art10001650/), Sylvia Camacho
+- 10:4 [AMORTIZE: a Windows Application in J](../art10006290/), Thomas M. Olsen
+- 11:1 [APL Product Guide](../v11n1-p45-apl-product-guide/), Gill Smith
+- 11:1 [The BAA Membership Database](../art10007960/), Nicholas Small
+- 11:2 [APL Product Guide — Updates](../v11n2-p33-apl-product-guide-updates/), Gill Smith
+- 11:2 [Gareth Brentnall’s Logol Workshop](../v11n2-p47-logol-workshop/), Jon Sandles
+- 11:3 [APL Product Guide — Complete](../v11n3-p27-apl-product-guide-complete/), Gill Smith
+- 11:3 [APL at Corona/Nordstern](../art10003000/), Dieter Düren
+- 11:4 [APL Product Guide — Complete](../v11n4-p34-apl-product-guide-complete/), Gill Smith
+- 12:1 [APL Product Guide — Updates](../v12n1-p33-apl-product-guide-updates/), Gill Smith
+- 12:2 [APL Product Guide — Full](../v12n2-p33-apl-product-guide-full/), Gill Smith
+- 12:2 [Is APL a Team Sport?](../art10001040/), Douglas Bohrer
+- 12:3 [APL Product Guide](../v12n3-p33-apl-product-guide/), Gill Smith
+- 12:3 [KPS: Beyond the Spreadsheet](../art10002360/), Ian Clark
+- 12:4 [APL Product Guide — Updates](../v12n4-p33-apl-product-guide-updates/), Gill Smith
+- 13:1 [APL Product Guide](../v13n1-p33-apl-product-guide/), Gill Smith
+- 13:2 [News from Sustaining Members](../v13n2-p20-news-from-sustaining-members/), Gill Smith
+- 13:2 [APL Product Guide - Updates](../v13n2-p41-apl-product-guide-updates/), Gill Smith
+- 13:2 [The First International J User Conference (Toronto, June 24th — 25th 1996)](../art10004050/), Duncan Pearson
+- 13:2 [A Word (or Two) from our Spenser](../art10010200/), Norman Thomson
+- 13:3 [APL Product Guide](../v13n3-p37-apl-product-guide/), Gill Smith
+- 13:4 [APL Product Guide: Fully Revised](../v13n4-p37-apl-product-guide/), Gill Smith
+- 13:4 [Controlling APL Software Releases](../art10003400/), Marc Griffiths, Chris Hogan, John Jacob, Phil Last
+- 13:4 [C Source Code Modification using APL](../art10010780/), Adam Weber
+- 13:4 [At Play with J: Stumping the Rocket Scientist](../art10005510/), Eugene McDonnell
+- 13:4 [Bookbinders’ Fun](../art10004300/), Jan Karman
+- 14:1 [APL Product Guide](../v14n1-p19-apl-product-guide/), Gill Smith
+- 14:1 [DNA Fingerprinting in APL](../art10002380/), Ian Clark
+- 14:1 [The UK National Lottery](../art10010910/), Alan Wilson
+- 14:1 [The IML Matrix Language: A Belated Introduction](../art10006910/), Donald B. Pittenger
+- 14:1 [HTML Basics for APLers — Tables](../art10008740/), Adrian Smith
+- 14:2 [Re: Year 2000](../v14n2-p11-re-year-2000/), M.E. Martin
+- 14:2 [APL Product Guide](../v14n2-p19-apl-product-guide/), Gill Smith
+- 14:2 [Interactive Design of Structures: A Program for Everyone](../art10007330/), Johann Riebenbauer, Joachim Hoffmann
+- 14:2 [The Logical Piano of W. S. Jevons](../art10008090/), Keith Smillie
+- 14:2 [Use of Multivariate Techniques for the Grouping Together of Districts. Application in the City of Granada](../art10003410/), R.A. Cano Guervós, J. Chica Olmo, J.A. Hermoso Gutiérrez
+- 14:3 [APL Product Guide](../v14n3-p16-apl-product-guide/), Gill Smith
+- 14:3 [APL Shareware Review: ComLog Comic Logger](../art10007590/), Jon Sandles
+- 14:3 [The Computer Construction of Weaving Designs](../art10008100/), Keith Smillie
+- 14:3 [An ODBC Browser Using SQL and Dyalog APL](../art10009220/), Richard Smith
+- 14:4 [APL Product Guide](../v14n4-p19-apl-product-guide/), Gill Smith
+- 14:4 [APL and J: Working Together, Yet Separately](../art10006940/), Donald B. Pittenger
+- 14:4 [Internet Programming with the Internet Server Auxiliary Processor](../art10004540/), Andrei Kondrashev
+- 14:4 [HTML Basics for APLers (IV): Forms and Servers](../art10008770/), Adrian Smith
+- 15:1 [APL Product Guide](../v15n1-p22-apl-product-guide/), Gill Smith
+- 15:1 [HTML Basics for APLers (V): Servers](../art10008780/), Adrian Smith
+- 15:1 [APL and the Mountain](../art10010950/), Anne Wilson
+- 15:2 [The Vector Product Guide](../v15n2-p12-apl-product-guide/), Gill Smith
+- 15:2 [HTML Basics for APLers (VI): Pictures and ImageMaps](../art10008820/), Adrian Smith
+- 15:2 [Hackers’ Corner: Context Sensitive Help and COM in APL+Win](../art10000420/), Ajay Askoolum
+- 15:3 [The Vector Product Guide](../v15n3-p8-apl-product-guide/), Gill Smith
+- 15:3 [Hacker’s Corner: APL Meets MAPI](../art10005190/), Jonathan Manktelow
+- 15:4 [The Vector Product Guide](../v15n4-p11-apl-product-guide/), Gill Smith
+- 15:4 [The Investment Models of a Finnish Pension Company](../art10007150/), Antero Ranne
+- 16:1 [APL Product Guide](../v16n1-p25-apl-product-guide/), Gill Smith
+- 16:1 [J/LAPACK Interface Makes Econometric Analysis Fly!](../art10007010/), Richard J. Procter, Richard L.W. Brown
+- 16:2 [APL Product Guide](../v16n2-p19-apl-product-guide/), Gill Smith
+- 16:3 [APL Product Guide](../v16n3-p12-apl-product-guide/), Gill Smith
+- 16:3 [Functional Implementation of Moments Based Region Descriptors in J](../art10002090/), C. Anne Chamley
+- 16:3 [Setting up a www-server with Dyalog APL, IIS, ISAP and NT](../art10005180/), Janne Mäenpää
+- 16:4 [Analysing Blackjack with APL (Finnish Forests Seminar)](../art10002400/), Ian Clark
+- 17:1 [APL Product Guide](../v17n1-p16-apl-product-guide/), Gill Smith
+- 17:2 [APL Product Guide](../v17n2-p10-apl-product-guide/), Gill Smith
+- 17:3 [The Vector Product Guide](../v17n3-p12-apl-product-guide/), Gill Smith
+- 17:3 [Letter: DNA Analysis in APL – Charles Brenner](../art10005630/), Charles Brenner
+- 17:4 [The Vector Product Guide](../v17n4-p11-apl-product-guide/), Gill Smith
+- 17:4 [Distributed rounding of a trial balance](../v17n4-p112-distributed-rounding-of-a-trial-balance/), Jonathan Barman
+- 18:1 [The Vector Product Guide](../v18n1-p16-apl-product-guide/), Gill Smith
+- 18:1 [NavSim – a Shipping Simulator: Part I](../art10003420/), Tomas Gustafsson
+- 18:1 [Web Image Galleries Made Routine](../art10007230/), Cliff Reiter
+- 18:2 [The Vector Product Guide](../v18n2-p23-apl-product-guide/), Gill Smith
+- 18:2 [Can Anyone Tell Me Where I’m Wrong?](../art10001700/), Sylvia Camacho
+- 18:3 [The Vector Product Guide](../v18n3-p15-apl-product-guide/), Gill Smith
+- 18:3 [Bach’s Endlessly Rising Canon](../art10002030/), Ray Cannon
+- 18:4 [The Vector Product Guide](../v18n4-p14-apl-product-guide/), Gill Smith
+- 18:4 [Using OLE with Dyalog APL and Excel](../art10003670/), Conrad Hoesle-Kienzlen
+- 19:1 [The Vector Product Guide](../v19n1-p14-apl-product-guide/), Gill Smith
+- 19:1 [APL in Commercial Systems Development: a Survey](../art10009760/), Stephen Taylor
+- 19:2 [The Vector Product Guide](../v19n2-p12-apl-product-guide/), Gill Smith
+- 19:2 [Perfect Printing](../art10009770/), Stephen Taylor
+- 19:3 [The Vector Product Guide](../v19n3-p14-apl-product-guide/), Gill Smith
+- 19:3 [APL and Web Services](../art10010740/), F. Milton Waid
+- 19:3 [At Play with J: Beware Scholes](../art10005700/), Eugene McDonnell
+- 19:4 [The Vector Product Guide](../v19n4-p17-apl-product-guide/), Gill Smith
+- 20:1 [The Vector Product Guide](../v20n1-p10-apl-product-guide/), Gill Smith
+- 20:2 [The Vector Product Guide](../v20n2-p11-apl-product-guide/), Gill Smith
+- 20:2 [The \*Take Care\* System](../art10006730/), Peter Pichler
+- 20:2 [\*ZIMMERER\* - Roof Design with APL](../art10011200/), Michael Zippel
+- 20:2 [Towards a General Theory of Formula Inversion](../art10002440/), Ian A. Clark
+- 20:3 [The Vector Product Guide](../v20n3-p10-apl-product-guide/), Gill Smith
+- 20:3 [Bell’s Theorem and Matrix Mechanics](../art10007390/), Graeme Robertson
+- 20:4 [The Vector Product Guide](../v20n4-p14-apl-product-guide/), Gill Smith
+- 20:4 [TABULA: a Scientific Calculator for the 21st Century](../art10002450/), Ian Clark
+- 21:1 [The Vector Product Guide](../v21n1-p7-apl-product-guide/), Gill Smith
+- 21:1 [Using J in Excel](../art10003570/), Richard Hill
+- 21:2 [The Vector Product Guide](../v21n2-p12-apl-product-guide/), Gill Smith
+- 21:2 [Review: Kx Systems Users’ Meeting](../art10009850/), Stephen Taylor
+- 21:2 [Bayesian Financial Dynamic Linear Modelling in APL](../art10005340/), Devon McCormick
+- 21:3 [News from Sustaining Members](../v21n3-p8-news-from-sustaining-members/)
+- 21:3 [Industrial FP: a Case Study](../art10009880/), Stephen Taylor
+- 21:3 [How to Rig an Election](../art10002460/), Ian Clark
+- 21:4 [The Vector Product Guide](../v21n4-p13-product-guide/), Gill Smith
+- 22:1 [The Vector Product Guide](../v22n1-p8-product-guide/), Gill Smith
+- 22:1 [Using DyalogAPL based .NET Extensions \[Kalliojärvi\]](../art10013690/), Pertti Kallioj�rvi
+- 22:1 [Using DyalogAPL based .NET extensions in ASP.NET applications](../art10004240/), Pertti Kalliojärvi
+- 22:1 [ARQUE – An insight into its methodology](../art10009720/), Alan Sykes
+- 22:2 [The Vector Product Guide](../v22n2-p20-product-guide/), Gill Smith
+- 22:4 [Editorial: Profiting from Iverson’s work](../art10011300/), Stephen Taylor
+- 22:4 [Letter: APL Starmap](../art10011210/), John R. Thorstensen
+- 22:4 [The Vector Product Guide](../v22n4-p18-product-guide/), Gill Smith
+- 23:1 [Building OO applications in Dyalog version 11](../art10011510/), Stephen Taylor
+- 23:3 [A J Simulator for a Meccano Differential Analyser](../art10011870/), Keith Smillie
+- 23:3 [GPS and J Propel an Adirondack Hiking Guide](../art10011880/), Cliff Reiter
+- 23:4.1 [Dyadic Systems Prospectus, 1976](../art10013840/), Dyalog
+- 24:1 [Consultants](../v24n1-p137-consultants/)
+- 24:2 [Financial math in q, Part 1: Graduation of mortality](../art10500210/), Jan Karman
+- 24:2 [DNA Identification Technology and APL](../art10500300/), Charles Brenner
+- 24:4 [Treetable: a case-study in q](../art10500340/), Stevan Apter
+- 24:4 [Financial math in q, 2: The price of bonds](../art10500420/), Jan Karman
+- 24:4 [Simulating the Enigma](../art10500460/), Keith Smillie
+- 25:1 [Financial Math in q, 3: The annuity](../art10500660/), Jan Karman
+- 25:1 [OOStats – A statistics facility for users of Dyalog APL](../art10500580/), Alan Sykes
+- 25:4 [Optima](../v25n4-p12-optima/)
+- 25:4 [Bayesian financial dynamic linear modeling in APL](../art10500940/), Devon McCormick
+- 25:4 [Backgammon tools in J: Two-sided bearoff probabilities](../art10500790/), Howard A. Peelle
+- 26:1 [Reflections on a long life](../art10501060/), Sam Sexton
+- 26:2 [Japanese Dentist Office System](../art10501350/), Kyosuke Saigusa
+- 26:4 [Second childhood](../art10500550/), Stephen Taylor
+- 26:4 [J-ottings 58 – Internal Rate of Return and related topics](../art10501460/), Norman Thomson
+- 26:4 [Using J for Actuarial Applications Part 1: The Chain-Ladder Method](../art10501580/), Jeremy Smith
+- 26:4 [What makes a good tennis match?](../art10501600/), Matthew Doherty, Paul Loughran
+- 27:1 [J-ottings 59 Love Actuarily...](../art10501720/), Norman Thomson
+
+## data and files { #tag-data-and-files }
+
+*files, databases and moving data in and out of APL*
+
+- 1:1 [APL and Partitioned Data](../art10000550/), Jonathan Barman
+- 1:3 [Generic Read & Replace in IPSA](../art10007060/), Bob Pullman
+- 1:4 [Moving data from 1-2-3 to APL](../art10002080/), Michael Carmichael
+- 1:4 [DIF-file interface](../art10002530/), Romilly Cocking
+- 2:3 [Large Commercial Database](../art10001210/), Christine Brewster
+- 2:3 [External Databases](../art10010890/), Katie Williamson, Geoff Wells
+- 2:4 [Whitbread: Large Scale Database](../art10001220/), Christine Brewster
+- 3:1 [Software Review: AFM](../v3n1-p41-software-review-afm/), Adrian Smith
+- 3:1 [An APL Banking Application](../art10003950/), Per Hultin
+- 3:2 [APL and Relational Database, May 23rd 1986 (meeting notes)](../v3n2-p45-apl-and-relational-database/), Adrian Smith
+- 3:3 [Command-driven Interface for BDAM & QSAM](../art10006780/), David Piper
+- 4:1 [Faster File Input in TSO](../art10009350/), John Sullivan
+- 4:2 [Dyalog APL on the IBM 6150](../v4n2-p53-dyalog-apl-on-the-ibm-6150/), Adrian Smith
+- 5:1 [Editorial: Don’t Lose Touch](../v5n1-p3-editorial/), Adrian Smith
+- 5:1 [PC to Mainframe Communications](../art10010630/), David Toop
+- 5:1 [AP127: An Interface from APL to DB2](../art10003250/), Allan Gay
+- 5:1 [VSAM Processing in APL](../art10009360/), John Sullivan
+- 5:1 [Vax-Oracle to APL\*PLUS/PC](../art10008240/), Adrian Smith
+- 5:2 [New Product Announcements](../v5n2-p46-new-product-announcements/)
+- 5:3 [APL and Relational Databases](../art10005130/), Brian Lochran
+- 6:2 [Software Received for Review](../v6n2-p44-new-product-announcements/), Adrian Smith
+- 6:2 [APL89 - Tutorial Sessions](../v6n2-p101-tutorial-sessions/), Jonathan Martin
+- 6:3 [Reviews of Myriade (APL\*PLUS/PC) & AFM for APL2/PC](../art10008280/), Adrian Smith
+- 6:3 [A Note on Quad and Quote-quad](../art10004380/), Joseph De Kerf
+- 6:4 [A Hypertext Interface to the Oracle](../art10008310/), Adrian Smith
+- 7:2 [Reading ASCII files into I-APL](../v7n2-p21-reading-ascii-files-into-i-apl/), J.C. Hines
+- 7:2 [Dbase and Lotus files into I-APL](../v7n2-p24-dbase-and-lotus-files-into-i-apl/), W J Smith
+- 8:2 [Suggested Standards for a Component File System at a Commercial APL Site](../art10001780/), Ray Cannon
+- 8:2 [Hackers’ Corner: Fast Filing with ∆pack](../art10008390/), Adrian Smith
+- 8:4 [Using J with External Data](../art10005820/), Donald B. McIntyre
+- 9:1 [Using J’s Boxed Arrays](../art10005830/), Donald B. McIntyre
+- 9:1 [Hacker’s Corner: Using DOS File Functions](../art10006380/), Duncan Pearson
+- 10:1 [Windows BMP Files and APL](../art10001820/), Ray Cannon
+- 10:3 [Hacker's Corner: Minding Your .INIs](../art10012660/), Adrian Smith
+- 10:3 [A VSAM Simulation for APL\*PLUS II](../art10003300/), Allan Gay
+- 10:4 [APL - a Client-Server Language?](../art10004560/), Morten Kromberg
+- 10:4 [Another Use of Not-Equals-Scan](../art10001520/), Anthony Camacho
+- 11:1 [The BAA Membership Database](../art10007960/), Nicholas Small
+- 11:1 [Hacker's Corner: Native Files in Dyalog APL (Without Tears)](../art10012940/), Adrian Smith
+- 11:3 [News from Sustaining Members](../v11n3-p7-news-from-sustaining-members/), Gill Smith
+- 11:4 [Understanding your File Timestamps](../art10001850/), Ray Cannon
+- 12:4 [Dyalog-8 Control Structures and Native Files: some Timings](../art10008660/), Adrian Smith
+- 13:2 [ODBC Client-Server with Morten Kromberg](../v13n2-p65-odbc-client-server-with-morten-kromberg/), Bronwen Tuffen
+- 13:2 [Gui Programming and Multi-dimensional DBs](../v13n2-p70-gui-programming-and-multi-dimensional-dbs/), Marc Griffiths
+- 14:4 [Working with Compressed Data](../art10001940/), Ray Cannon
+- 15:2 [Meeting: Eric Iverson at the BAA](../art10008810/), Adrian Smith
+- 15:2 [Data Conversion Between APL Versions](../art10002680/), David Crossley
+- 15:3 [DDE in APL+Win](../art10000430/), Ajay Askoolum
+- 15:4 [Working with Formula One in APL+Win](../v15n4-p80-working-with-formula-one-in-apl-win/), Ajay Askoolum
+- 15:4 [Memory Mapped Files in J](../art10001410/), Chris Burke
+- 15:4 [Filecheck: Another Utility for the Dyalog Session](../art10003620/), Bob Hoekstra
+- 16:1 [Windows BMP Files and J](../v16n1-p95-windows-bmp-files-and-j/), Brook Anthony Schofield
+- 17:2 [Limbering Up: Comma-Delimited Data](../v17n2-p31-limbering-up-comma-delimited-data/), Gary A. Bergquist
+- 17:3 [Utility Corner: Comma-Delimited Data](../v17n3-p28-utility-corner-comma-delimited-data/), Gary A. Bergquist
+- 17:3 [What about a solution in K?](../v17n3-p34-what-about-a-solution-in-k/), Stefano Lanzavecchia
+- 17:3 [Working with Existing Ascii Files Using J Memory Mapping](../art10006950/), Donald Pittenger
+- 17:4 [XML in Dyalog APL Version 9](../art10000740/), Jonathan Barman
+- 18:1 [Hacker’s Corner: Compressing with GZIP](../art10008910/), Adrian Smith
+- 18:2 [Using Structures between GUI and Relational Databases](../art10003430/), Tomas Gustafsson
+- 18:3 [Editorial: Vector 18:3](../art10013560/), Stefano Lanzavecchia
+- 18:4 [Limbering Up: Generalised Searching](../v18n4-p35-limbering-up-generalised-searching/), Gary A. Bergquist
+- 18:4 [A PDF Primer for APLers](../art10008970/), Adrian Smith
+- 19:1 [Cross Tabulations](../art10014370/), Gary A. Bergquist
+- 19:1 [Limbering Up: Elvis Elbows](../v19n1-p36-limbering-up-elvis-elbows/), Gary A. Bergquist
+- 19:2 [Vol 19.1: Bitmaps in Dyalog APL/W](../v19n2-p90-bitmaps-in-dyalog-apl-w/), David Crossley
+- 19:3 [Effective Date Searching](../art10014330/), Gary A. Bergquist
+- 19:4 [Zark Newsletter Extracts](../art10014320/), Jon Sandles
+- 20:1 [Report: Kx Systems Celebrates 10 Years](../art10004180/), Steph Johnson
+- 20:2 [Using Namespaces to Manage a CD Database](../art10002780/), John Daintree
+- 20:2 [Data Compression with Dfns](../art10004080/), Veli-Matti Jantunen
+- 20:2 [Taking the RTF Challenge](../art10009070/), Adrian Smith
+- 20:4 [Googling with APL+Win](../art10006310/), William R. Parke
+- 21:2 [APL to Unicode Transcoding in Java](../art10010850/), Mark Wickens
+- 21:4 [Developer Productivity with APLX v3 and SQL](../art10000480/), Ajay Askoolum
+- 22:4 [APL and Bloomberg Data Control](../art10011310/), Antti Korpela
+- 23:1 [Zipping and unzipping files in APL+Win](../art10011600/), Ajay Askoolum
+- 23:1 [Digitalising the Vector Archive](../art10011670/), Ian Clark
+- 23:3 [Using the .NET Dataset Class with Dyalog 12](../art10011840/), Adrian Smith
+- 23:3 [SALT: A Simple APL Library Toolkit](../art10011850/), Dan Baronet
+- 23:4 [SALT II](../art10012050/), Dan Baronet
+- 24:1 [Rain flips its q](../art10500130/), Adrian Smith
+- 25:1 [Tables with calculated columns](../art10500650/), Stevan Apter
+- 25:4 [Kx](../v25n4-p10-kx/)
+- 26:4 [A Notation for APL array Embedding and Serialization](../art10501450/), Phil Last (phil.last@4xtra.com)
+- 27:1 [Hacker’s Corner: JPEG\_Comments](../art10501890/), Nicholas Small
+- 27:1 [Powerful CSV processing with kdb+](../art10501860/), Ferenc Bodon
+- online [Finding text in files](../art10501800/), Dan Baronet
+
+## graphics { #tag-graphics }
+
+*charts, plotting, graphics systems and standards*
+
+- 1:1 [APL and Graphics](../v1n1-p35-apl-and-graphics/), Adrian Smith
+- 1:1 [A Graphic Vision of APL](../art10007350/), Graeme Robertson
+- 1:2 [APL and Graphics Standards](../art10001080/), Dick Bowman
+- 1:2 [GKS – Opportunity for APL](../art10006080/), Richard Nabavi
+- 1:2 [Graphics for Decision-makers](../art10006980/), David Preedy
+- 1:2 [Imperial Group Graphics](../art10008140/), Adrian Smith
+- 1:4 [APL and GKS](../art10006090/), Richard Nabavi
+- 1:4 [Duck a la Carte](../art10002850/), Peter Donnelly
+- 1:4 [Getting the Best out of GDDM](../art10008160/), Adrian Smith
+- 2:1 [Product Reviews](../v2n1-p40-product-reviews/), David Preedy
+- 2:3 [Book Reviews](../v2n3-p33-book-reviews/), David Preedy
+- 2:3 [Why GKS is Unsuitable ...](../art10000020/), Martyn Adams
+- 2:3 [GDDM and AP126](../art10006740/), David Piper
+- 2:4 [Computer Graphics ’85 (conference review)](../v2n4-p69-computer-graphics-85/), Bruce Hollamby, Katie Williamson
+- 3:1 [PCs, Graphics & APL](../v3n1-p51-pc-graphics-cards/), Martyn Adams
+- 4:1 [CGI Graphics in Dyalog APL](../art10002860/), Peter Donnelly
+- 4:1 [GDDM / AP126 on APL.68000](../art10003030/), David Eastwood
+- 4:1 [Graphics, 20th March 1987 at the Royal Over-Seas League (introduction)](../v4n1-p59-graphics-meeting/), Adrian Smith
+- 4:1 [3D Facial Animation](../art10010750/), Keith Waters
+- 4:1 [Graphics in the Boardroom](../art10007000/), David Preedy
+- 4:4 [APL in a Japanese High School](../v4n4-p26-apl-in-a-japanese-high-school/), Makoto Kikkawa
+- 5:2 [Statgraphics](../v5n2-p49-statgraphics/), Gavin Schwarzenbach
+- 5:2 [Sharing GDDM pages between APL2 and Fortran](../v5n2-p86-sharing-gddm-pages-between-apl2-and-fortran/), John Sullivan
+- 5:3 [A Character Scatterplot in APL](../art10009560/), Alan Sykes
+- 6:2 [Editorial: We are not Alone!](../v6n2-p3-editorial/), Adrian Smith
+- 6:2 [APL89 - Tutorial Sessions](../v6n2-p101-tutorial-sessions/), Jonathan Martin
+- 7:1 [Function Sampling with I-APL](../art10009260/), Walter Spunde
+- 7:1 [APL-2741](../art10008350/), Adrian Smith
+- 7:1 [Hackers Corner: Lots More VGA Colours](../v7n1-p110-hackers-corner-lots-more-vga-colours/), Adrian Smith
+- 7:3 [WAGS: a Graphics Specification Language for ASL](../art10006260/), Tony O’Hagan
+- 7:3 [PostScript Graphics in APL](../art10008360/), Adrian Smith
+- 8:1 [Hackers Corner: Proportional Tables in PostScript](../art10008380/), Adrian Smith
+- 8:1 [An Interface Between APL2 and the X Window System](../art10004090/), JR Jensen, KA Beaty
+- 8:2 [Desk Top Publishing on the Cheap](../art10003560/), Richard Hill
+- 8:3 [Hackers’ Corner: More about VGA Colours](../art10008400/), Adrian Smith
+- 8:4 [Graph Plotting in I-APL/Mac 1.2](../art10002290/), Ian Clark
+- 9:1 [Cloning After Dark in APL](../art10006390/), Duncan Pearson
+- 9:3 [An Application of APL in The Roofing Trade](../art10011190/), Michael Zippel
+- 10:1 [Meeting: Business Graphics– A Second Look](../art10012290/), George MacLeod
+- 10:1 [Windows BMP Files and APL](../art10001820/), Ray Cannon
+- 10:2 [Review: GDDME – A First Look](../art10008470/), Adrian Smith
+- 10:4 [Drawing the Line](../art10005970/), George MacLeod
+- 11:2 [Fractals RYIJ](../art10007160/), Clifford A. Reiter
+- 11:4 [Stereograms in J](../art10002490/), E.A. Clough
+- 12:1 [Jot-Dot-Min: Stereo Vision](../art10002350/), Ian Clark
+- 12:1 [Business Graphics Workshop](../art10008620/), Adrian Smith
+- 12:3 [General Articles (section introduction)](../v12n3-p63-general-articles/)
+- 12:3 [Turtle Graphics in J](../art10000940/), David Benn
+- 12:3 [3-Dimensional Noughts and Crosses](../art10006490/), Duncan Pearson
+- 12:3 [Rain - Extending to 3D](../art10008650/), Adrian Smith
+- 12:4 [Jot-Dot-Min: Weaving Patterns and Cellular Automata](../art10002370/), Ian Clark
+- 13:1 [Fractals, Visualization, and J](../art10002600/), Nicholas Cox
+- 13:4 [Turtlegraphics with APL2](../art10007140/), Hendrik Rama, Martin Barghoorn
+- 14:1 [OpenGL Graphics and J](../art10001370/), Chris Burke
+- 14:1 [Emulation of IBM APL2 Auxiliary Processor AP207 in Dyalog APL](../art10007920/), Alexander Skomorokhov, Alexander Kornilovsky
+- 14:2 [APL97 at Toronto: Mostly on OpenGL; A Flavour of APL97](../art10006530/), Adrian Smith
+- 14:2 [Interactive Design of Structures: A Program for Everyone](../art10007330/), Johann Riebenbauer, Joachim Hoffmann
+- 14:3 [The Computer Construction of Weaving Designs](../art10008100/), Keith Smillie
+- 14:4 [Review: RainPro Publication Graphics](../art10001450/), Robert Byers
+- 14:4 [Using OpenGL Graphics in Dyalog APL](../art10007930/), Alexander Skomorokhov, Alexei Zalivine
+- 15:1 [J-ottings 17: Auto-stereograms and the Data Craftsman](../art10010300/), Norman Thomson
+- 15:1 [APL and the Mountain](../art10010950/), Anne Wilson
+- 15:1 [Hacker’s Corner: How Big Is That Picture?](../art10008790/), Adrian Smith
+- 15:2 [HTML Basics for APLers (VI): Pictures and ImageMaps](../art10008820/), Adrian Smith
+- 15:2 [Word of Words from Iterated Function Systems](../art10007180/), Benjamin J. Reiter, Clifford A. Reiter, Zachary X. Reiter
+- 15:4 [An Approximation of the N-body Gravitation Problem in J](../art10010660/), Andrew Towers
+- 15:4 [Iterated Function Systems](../v15n4-p78-iterated-function-systems/), Norman Thomson
+- 15:4 [Functional Extensions to the Fibonacci Sequence](../art10009460/), John Sullivan
+- 16:1 [Windows BMP Files and J](../v16n1-p95-windows-bmp-files-and-j/), Brook Anthony Schofield
+- 16:1 [Exact Horadam Numbers with a Chebyshevish Accent](../art10007190/), Clifford A. Reiter
+- 16:3 [Fast Fourier Transforms, Diffraction Patterns and J](../art10007200/), Cliff Reiter
+- 16:3 [Hacker’s Corner: Making Compressed GIFs in APL+Win and Dyalog APL](../art10008870/), Adrian Smith
+- 16:4 [VML– Vector Graphics on the Internet](../art10013490/), Adrian Smith
+- 17:2 [CD Labels and More](../art10007210/), Cliff Reiter
+- 17:2 [Hacker’s Corner: How Big is that Doggie in the Window?](../art10006300/), William Parke
+- 17:3 [Hyperbolic Symmetry is a Breeze](../art10007220/), Cliff Reiter
+- 17:3 [APL Unicode Font – extended](../art10002200/), Phil Chastney
+- 17:4 [Over and Under, Over and Under: Celtic Knotwork Patterns](../art10010960/), Anne D. Wilson
+- 18:1 [NavSim – a Shipping Simulator: Part I](../art10003420/), Tomas Gustafsson
+- 18:1 [Web Image Galleries Made Routine](../art10007230/), Cliff Reiter
+- 18:1 [J is for JPEG: Windows Bitmap to JPEG Baseline Compression](../art10002810/), Richard Dazeley
+- 18:3 [The Image2 Addon](../art10007250/), Cliff Reiter, Cliff Zachary
+- 19:1 [Bitmaps in Dyalog APL/W](../art10002690/), David Crossley
+- 19:2 [Inner Product Fractals from Fuzzy Logics](../art10002620/), Angela Coxe
+- 19:2 [Vol 19.1: Bitmaps in Dyalog APL/W](../v19n2-p90-bitmaps-in-dyalog-apl-w/), David Crossley
+- 19:3 [Boolean Hexagonal Automata](../art10002630/), Angela Coxe, Cliff Reiter
+- 19:3 [Provisional Unicode Reference](../art10009000/), Adrian Smith
+- 19:3 [Rain-graphs to PowerPoint-land via OLE](../art10004250/), Jouko Kangasniemi
+- 20:1 [Taming Barrel and Tilt Distortion](../art10007260/), Cliff Reiter
+- 20:1 [Graphical Simulation of Rearview Mirrors](../art10007820/), Brian Schott
+- 20:1 [Hackers’ Corner: Square Me Up](../art10009050/), Adrian Smith
+- 20:2 [\*ZIMMERER\* - Roof Design with APL](../art10011200/), Michael Zippel
+- 21:1 [Celtic Knotwork in J](../art10003740/), Michael Horton
+- 21:3 [Review: Built-in Charting in APLX Version3](../art10009160/), Adrian Smith
+- 22:1 [Fun with Pascal's Triangle by Howard Peelle](../art10005355/), Devon McCormick
+- 22:4 [Integer Apollonian circle packings in J](../art10011370/), Cliff Reiter
+- 23:1 [Image Files with Dyalog](../art10011580/), Klaus Klug Christiansen
+- 23:1 [3D Cellular Automata and the Game of Life](../art10011650/), Timothy Zirkel
+- 23:3 [GPS and J Propel an Adirondack Hiking Guide](../art10011880/), Cliff Reiter
+- 24:1 [Cauchy Curves](../art10500060/), William R. Jones, Cliff Reiter
+- 25:3 [Bicubic Interpolation in J](../art10500830/), Cliff Reiter
+- 25:4 [Savitzky-Golay interpolation for smoothing values and derivatives](../art10500860/), David Porter, Cliff Reiter
+- 26:1 [Fibonacci and golden spirals](../art10501110/), Cliff Reiter
+- 26:4 [A graphical sandbox for K](../art10501610/), John Earnest
+- 27:1 [A Vendor-Agnostic Logo for APL](../art10501880/), Adám Brudzewsky
+- 27:1 [Larger than life automata](../art10501760/), Cliff Reiter
+- online [Making images and videos of the Buddhabrot](../art10501820/), Nicolas Delcros
+
+## user interfaces { #tag-user-interfaces }
+
+*screens, menus, windows, keyboards and dialogue design*
+
+- 1:1 [SCREENIO: A full-screen manager](../art10002840/), David Doherty
+- 1:3 [Menu-oriented Dialogue](../art10006280/), Gosta Olavi
+- 1:3 [Towards a Teachable Interface](../art10008150/), Adrian Smith
+- 3:1 [Correcting the UK APL\*PLUS/PC Kbd](../art10008190/), Adrian Smith
+- 3:1 [Quad-WIN in APL\*PLUS/PC Vn.5](../art10006760/), David Piper
+- 4:1 [Book Review: APL et GDDM; travail en plein ecran (B Legrand)](../v4n1-p27-apl-et-gddm/), Adrian Smith
+- 4:1 [Hardware Review: The XT-286, ForteGraph, and the IBM Enhanced Keyboard](../v4n1-p31-xt-286-fortegraph-enhanced-keyboard/), Adrian Smith
+- 4:1 [Hardware Review: Hercules-Plus Monochrome Graphics Card](../v4n1-p34-hercules-plus/), Adrian Smith
+- 4:1 [WIMPS and Bach on the Amiga](../art10006100/), Richard Nabavi
+- 4:2 [Windows and Pop-up Menus](../art10008200/), Adrian Smith
+- 5:1 [Public Letter to P Chapman](../v5n1-p14-public-letter-to-p-chapman/), F.H.D. van Batenburg
+- 5:1 [Icon Design for EGA and VGA](../art10008230/), Adrian Smith
+- 5:1 [Interfacing to the Apple Macintosh](../art10006110/), Richard Nabavi
+- 5:2 [I-APL and the APL Keyboard](../v5n2-p8-i-apl-and-the-apl-keyboard/), Anthony Camacho
+- 5:2 [Notes on Given Papers](../v5n2-p62-notes-on-given-papers/), Adrian Smith
+- 5:4 [Letter: I-APL keyboard and beginners](../v5n4-p30-letter-i-apl-keyboard-and-beginners/), Les May
+- 5:4 [Future Plans for Dyalog APL](../art10002870/), Peter Donnelly
+- 6:2 [Hacker's Corner: Getting Another 128 Colours on your EGA](../v6n2-p114-hackers-corner-256-vga-colours/), Adrian Smith
+- 6:2 [Typesetting APL](../art10008270/), Adrian Smith
+- 6:3 [A Vector Construction Kit](../art10008290/), Adrian Smith
+- 6:4 [A Hypertext Interface to the Oracle](../art10008310/), Adrian Smith
+- 6:4 [The Falkoff Dual Keyboard](../art10008320/), Adrian Smith
+- 6:4 [The M61 Problem: a Partial Resolution](../v6n4-p94-m61-problem-partial-resolution/)
+- 6:4 [A New Development Environment in Dyalog APL](../art10007720/), John Scholes
+- 6:4 [Comments on the APL2741 Typeface](../art10003150/), Adin Falkoff
+- 7:1 [Powertools/CUA](../art10008340/), Adrian Smith
+- 7:1 [APL-2741](../art10008350/), Adrian Smith
+- 7:1 [The APL\*PLUS ‘dead key’ Problem ...](../v7n1-p118-apl-plus-dead-key-problem/), Cedric Heddle
+- 7:1 [The Falkoff Keyboard: a Franco-Belgian Response!](../v7n1-p119-falkoff-keyboard-franco-belgian-response/), Alain Delmotte
+- 7:3 [Windows 3: the Implications for APL](../v7n3-p61-windows-3-the-implications-for-apl/), Adrian Smith
+- 7:3 [PostScript Support for APL under Windows](../v7n3-p128-postscript-support-for-apl-under-windows/), George MacLeod
+- 7:3 [Mice do it on the Mat](../art10001760/), Ray Cannon
+- 8:1 [Editorial: Windows and APL](../v8n1-p3-editorial/), Jonathan Barman
+- 8:1 [“APL Under Windows”](../v8n1-p7-apl-under-windows/), Adrian Smith
+- 8:1 [Dyalog APL/X](../art10007860/), John Searle
+- 8:1 [Why I like MS Windows](../art10008370/), Richard Smith, Adrian Smith
+- 8:1 [Working with Windows](../art10003060/), David Eastwood
+- 8:1 [Programming for Events in Dyalog](../art10002880/), Peter Donnelly
+- 8:2 [X-Windows interfaces from APL](../v8n2-p11-x-windows-interfaces-from-apl/), Richard Nabavi
+- 8:2 [IF-THEN-ELSE (Education Vector, April 1991, p.27)](../v8n2-p19-if-then-else/), Robert L. Briechle
+- 8:2 [The Legacy of the Typewriter](../art10006120/), Richard Nabavi
+- 8:2 [Training the Mouse (in APL\*PLUS/PC)](../art10002820/), Alain Delmotte
+- 8:3 [Panel Design: An APL Programmer’s Toolkit](../art10002650/), David Crossley
+- 8:4 [Guest Editorial: Now is the Time for APL](../v8n4-p3-guest-editorial-now-is-the-time-for-apl/), Peter Donnelly
+- 8:4 [News from Sustaining Members](../v8n4-p11-news-from-sustaining-members/), Gill Smith
+- 8:4 [Hackers’ Corner: Reshaping your Mouse](../v8n4-p112-hackers-corner-reshaping-your-mouse/), Adrian Smith
+- 9:1 [The \]HELP Command](../art10001800/), Ray Cannon
+- 9:2 [Editorial: APL, Windows and GUIs](../art10000620/), Jonathan Barman
+- 9:2 [Dyalog APL/W](../art10006400/), Duncan Pearson
+- 9:3 [Windows Programming with APL\*PLUS II](../art10001810/), Ray Cannon
+- 9:3 [Hackers Corner: Talking to PROGMAN](../art10008440/), Adrian Smith
+- 9:3 [APL\*PLUS II Keyboard Configuration](../art10000370/), Ajay Askoolum
+- 9:4 [ISI APL: Programming for Windows](../art10000660/), Jonathan Barman
+- 9:4 [APL Experiences and MicroSoft’s Visual Basic for Windows](../art10000030/), Martyn Adams
+- 9:4 [The Challenge of the New](../art10006410/), Duncan Pearson
+- 9:4 [Span Representation: Improving the Display of J Verbs](../art10006200/), Richard Oates
+- 10:1 [BAA-GUI Workshop: November 26th 1993](../v10n1-p11-baa-gui-workshop/), Duncan Pearson
+- 10:1 [Update on APLIWIN](../art10000680/), Jonathan Barman
+- 10:1 [Review: Dyalog APL Version 6.3](../art10000690/), Jonathan Barman
+- 10:1 [Coast to Coast – Designing with Objects](../art10008460/), Adrian Smith
+- 10:1 [A standard font dialogue box using ⎕NA](../art10012320/), Duncan Pearson
+- 10:2 [APL93: Using the ISIAPL GUI](../art10003960/), Eric Iverson
+- 10:2 [Workshop — A GUI Standard for APL — Facilitator: David Crossley](../v10n2-p87-workshop-a-gui-standard-for-apl/), Anthony Camacho, Jonathan Barman
+- 10:2 [Mineswooper – GOTO Considered Futile](../art10008480/), Adrian Smith
+- 10:2 [A GDDM Simulation for APL\*PLUS II](../art10003290/), Allan Gay
+- 10:3 [APLomb: The View through Quad-Shaped Spectacles](../art10002300/), Ian Clark
+- 10:3 [Workshop: Dyalog APL Sessions](../art10012510/)
+- 10:3 [Workshop: APL\*PLUS II Sessions](../art10012520/)
+- 10:3 [A First Look at APL\*PLUS III](../art10010800/), Adrian Smith
+- 10:4 [A Common Approach to the Windows GUI (Dyalog APL/W and APL\*PLUS III)](../art10008510/), Adrian Smith, Duncan Pearson
+- 10:4 [Drawing the Line](../art10005970/), George MacLeod
+- 10:4 [AMORTIZE: a Windows Application in J](../art10006290/), Thomas M. Olsen
+- 10:4 [Hacker's Corner: Flying Windows](../art10012700/), Jonathan Barman
+- 10:4 [Vectype: Preparing APL Code for Publication](../art10008530/), Adrian Smith
+- 11:1 [Review: the APL\*PLUS III GUI](../art10006440/), Duncan Pearson
+- 11:1 [Meeting: Presentation of APL\*PLUS III](../art10010810/), James Wheeler
+- 11:1 [Windows Development with APL\*PLUS III](../art10004980/), Eric Lescasse
+- 11:1 [↑ It or Leave It in Dyalog APL/W](../art10004270/), Jan Karman
+- 11:1 [A Windows-Driven Menu Driver](../art10004280/), Jan Karman
+- 11:2 [Opening Plenary](../art10007520/), Jon Sandles
+- 11:2 [Windows Development with APL\*PLUS III (Part II)](../art10004990/), Eric Lescasse
+- 11:2 [One Font to Rule Them All](../art10008570/), Adrian Smith
+- 11:2 [Causeway: a Technical Architecture](../art10006450/), Duncan Pearson
+- 11:3 [Germany: Die Programmiersprache APL](../v11n3-p52-die-programmiersprache-apl/), Adrian Smith
+- 11:3 [Helsinki: Causeway Workshop](../art10008600/), Adrian Smith
+- 11:3 [The Use of Namespaces for Encapsulation — a Practical Introduction](../art10002890/), Peter Donnelly
+- 11:3 [Namespaces](../art10005000/), Eric Lescasse
+- 11:3 [Coast-to-Coast revisited](../v11n3-p96-coast-to-coast-revisited/), Adrian Smith
+- 11:3 [Causeway: Making Menus](../art10008610/), Adrian Smith
+- 11:3 [Nice One, Microsoft!](../v11n3-p142-nice-one-microsoft/), Adrian Smith, Gérard Langlet
+- 11:4 [Cut and Paste from Winword to APL](../v11n4-p124-cut-and-paste-from-winword-to-apl/), Jan Karman
+- 12:1 [Hacker’s Corner: Driving the MS Daisy-wheel](../art10001860/), Ray Cannon
+- 12:1 [“Correct” Windows File Behaviour](../art10006470/), Duncan Pearson
+- 12:2 [Proposed common APL coding](../art10002100/), Bill Chang
+- 12:2 [News from Sustaining Members](../v12n2-p11-news-from-sustaining-members/), Gill Smith
+- 12:2 [Dyalog APL/W for Windows 95 — First Impressions](../art10008640/), Adrian Smith
+- 12:2 [DDE Workshop Notes](../art10006480/), Duncan Pearson
+- 12:2 [Hacker’s Corner: Gremlins, Pixels and Brownie Points](../art10001870/), Ray Cannon
+- 12:3 [Experiences with the Use of Causeway](../art10004290/), Jan Karman
+- 12:3 [Managing Objects in Causeway](../art10007550/), Jon Sandles
+- 12:3 [Putting a GUI Interface on Legacy Systems](../art10001260/), Jim Brown
+- 12:3 [Font for the Future](../art10000890/), Eke van Batenburg
+- 12:3 [Hacker’s Corner: Oh \*\*\*\* !! I Hadn’t Saved That!](../v12n3-p127-hackers-corner-oh-i-hadnt-saved-that/), Dave Phillips
+- 12:4 [Causeway at the Toronto APL/SIG](../art10003390/), Marc Griffiths
+- 12:4 [Hacker’s Corner: A New Frock for IRMA](../art10008670/), Adrian Smith
+- 13:1 [Editorial: Interesting Times](../art10006500/), Duncan Pearson
+- 13:1 [Hacker’s Corner: A Word6 APL Keyboard](../art10000390/), Ajay Askoolum
+- 13:1 [Advanced Windows Programming with APL and Delphi](../art10005010/), Eric Lescasse
+- 13:2 [Vector on the Web](../art10001880/), Ray Cannon
+- 13:2 [Gui Programming and Multi-dimensional DBs](../v13n2-p70-gui-programming-and-multi-dimensional-dbs/), Marc Griffiths
+- 13:3 [J-ottings 12](../art10010210/), Norman Thomson
+- 13:3 [APL+Win and VBXs](../art10005020/), Eric Lescasse
+- 13:4 [\*NewLeaf\* Page Layout Tools](../art10001440/), Bob Byers
+- 13:4 [HTML Basics in APL+Win](../art10008720/), Adrian Smith
+- 13:4 [Hacker’s Corner: Dynamic ⎕PW in Dyalog APL](../art10001920/), Ray Cannon
+- 14:1 [Namespaces in Causeway](../art10006510/), Duncan Pearson
+- 14:1 [Object Oriented Programming with APL+Win (Part I)](../art10005030/), Eric Lescasse
+- 14:2 [Interactive Design of Structures: A Program for Everyone](../art10007330/), Johann Riebenbauer, Joachim Hoffmann
+- 14:3 [An ODBC Browser Using SQL and Dyalog APL](../art10009220/), Richard Smith
+- 14:3 [Object Oriented Programming with APL+Win (Part II)](../art10005040/), Eric Lescasse
+- 14:4 [HTML Basics for APLers (IV): Forms and Servers](../art10008770/), Adrian Smith
+- 14:4 [J4 and OOP](../art10001400/), Chris Burke
+- 15:1 [Writing ActiveX Controls in Dyalog APL/W](../art10002910/), Adrian Smith, Dyadic Systems
+- 15:1 [HTML Basics for APLers (V): Servers](../art10008780/), Adrian Smith
+- 15:3 [Using VideoSoft FlexGrid Pro with APL+Win](../art10000730/), Jonathan Barman
+- 15:3 [VideoSoft FlexGrid Pro with Dyalog APL](../art10007660/), Jon Sandles
+- 15:4 [Hacker’s Corner: Don’t Clip My Children](../art10008830/), Adrian Smith
+- 15:4 [Property Names in APL+Win](../v15n4-p77-property-names-in-apl-win/), David Siegel
+- 15:4 [Using Flexgrid with Dyalog APL (Update)](../art10007680/), Jon Sandles
+- 15:4 [Drag and Drop in Dyalog APL](../art10007690/), Jon Sandles
+- 16:1 [APL Keyboards for VECTOR Subscribers!](../v16n1-p17-apl-keyboards-for-vector-subscribers/), Ian Clark
+- 16:1 [GUI and Closed Systems](../art10001570/), Anthony Camacho
+- 16:1 [Hacker’s Corner: A Special Locator in Dyalog APL/W](../art10003680/), Joachim Hoffmann
+- 16:2 [APL+Internet Explorer](../art10000540/), Alexandr Balako
+- 16:4 [Hacker's Corner: Using and Abusing Watchpoints in APL+Win 3.6](../art10013480/), Adrian Smith
+- 17:1 [Magic Squares](../art10002410/), Ian Clark
+- 17:1 [ZarkWin: Windows Programming without ⎕WI](../art10000950/), Gary A. Bergquist
+- 17:1 [Taking the \*Migraine\* out of \*Migration\*](../art10003170/), Walter G. Fil
+- 17:2 [Driving the Windows GUI and COM from Dyalog APL Version 9.0](../art10002920/), Peter Donnelly
+- 17:3 [Dragging and Dropping with Lists, Trees and Graphs](../art10008900/), Adrian Smith
+- 17:3 [A Grid Object for APL+Win](../art10005050/), Eric Lescasse
+- 17:3 [Translate your Dyalog GUIs without touching MAKE\_-code](../art10004320/), Kimmo Kekäläinen
+- 18:2 [Using Structures between GUI and Relational Databases](../art10003430/), Tomas Gustafsson
+- 19:2 [A Gui-quad for Graphical User Interaction](../art10000920/), Eke van Batenburg, Jasper van Dijk, Dirk-Jan van Leeuwen
+- 19:4 [Editorial: Cyberspace](../art10004840/), Stefano Lanzavecchia
+- 20:2 [A Variable Editor](../art10002700/), David Crossley
+- 20:3 [Show and Hide with Splitters](../art10005210/), Paul Mansour
+- 20:4 [TABULA: a Scientific Calculator for the 21st Century](../art10002450/), Ian Clark
+- 20:4 [Dyalog Next Generation: Un-named Window Refs](../art10003440/), Peter-Michael Hager
+- 21:3 [APL2000 + Web Component (Part 1 of 2)](../art10005060/), Eric Lescasse
+- 21:4 [APL+WebComponent (Part 2): Deploy your APL+Win Application on the Web](../art10005070/), Eric Lescasse
+- 23:1 [Review: System Building with APL+Win, by Ajay Askoolum](../art10011560/), Ian Clark
+- 24:4 [Understanding font embedding](../art10500400/), Kai Jaeger
+- 25:1 [Unicode and related subjects in APL2](../art10500670/), Kyosuke Saigusa
+- 26:4 [A graphical sandbox for K](../art10501610/), John Earnest
+
+## expert systems and AI { #tag-expert-systems-and-AI }
+
+*expert systems, logic programming and artificial intelligence*
+
+- 1:3 [Book Reviews - General](../v1n3-p41-book-reviews-general/), Robert Bittlestone
+- 1:3 [Expert Systems](../art10010990/), M.J. Winfield
+- 1:3 [PATTIE: a Practical Expert System(1)](../art10003460/), Christopher Harvey
+- 1:4 [PATTIE: a Practical Expert System(2)](../art10003470/), Christopher Harvey
+- 2:4 [Expert Systems ’85 (conference review)](../v2n4-p77-expert-systems-85/), Peter S. Davies
+- 3:2 [A.I. at APL86](../v3n2-p65-ai-at-apl86/), Neil Mitchison
+- 4:1 [Introductory Notes; Successful Expert Systems, Royal Station Hotel, York, February 17th 1987](../v4n1-p50-successful-expert-systems/), Adrian Smith
+- 4:1 [IBM’s Logic Algorithms in Dyalog APL](../art10007030/), Allan Prys-Williams
+- 4:2 [Expcheck: Intelligent Diagnostics](../art10010860/), Mike Williams
+- 5:2 [Appropriate use of APL for Artificial Intelligence](../art10000010/), John Adams
+- 5:2 [The Limits of Forward Chaining](../art10007040/), Allan Prys-Williams
+- 5:3 [Using APL to Front-end Existing Software](../art10007050/), Allan Prys-Williams
+- 5:3 [Generic Local Objects](../art10004100/), Zdenek Jizba
+- 6:1 [Personal Construct Analysis in APL](../art10010870/), Mike Williams
+- 7:3 [Object Oriented Programming and APL](../art10004130/), Zdenek V Jizba
+- 9:3 [Genetic Algorithms: their APLication](../art10007500/), Jon Sandles
+- 12:1 [Machine Learning Algorithms](../art10007540/), Jon Sandles
+- 16:2 [Array Based Naïve Bayesian Machine Learning Program: A J Implementation](../art10002150/), Andrew Charman-Williams
+- 17:4 [Array-based Logic](../art10002280/), Klaus Klug Christiansen
+- 24:2 [A genetic algorithm primer in APL](../art10500290/), Romilly Cocking
+
+## mathematics and statistics { #tag-mathematics-and-statistics }
+
+*APL for mathematics, statistics, numerical methods and science*
+
+- 1:1 [Complex numbers in APL](../art10003490/), Alan Hawkes
+- 1:2 [Mr Babbage’s Secret](../art10003210/), Ole Franksen
+- 1:2 [Statistical Computing with APL](../art10003500/), Alan Hawkes
+- 1:2 [Numeric Integration & Probability](../art10003510/), Alan Hawkes
+- 1:3 [Software Review: U-REG (User-friendly Regression)](../v1n3-p45-software-review-ureg/), Teresa Jones
+- 1:3 [Quotition Jottings](../art10002070/), Michael Carmichael
+- 1:3 [Random Contingency Tables](../art10007020/), Allan Prys-Williams
+- 1:4 [When Domino is not Sufficient](../art10009540/), Alan Sykes, Alan Ansell
+- 2:1 [APL Statistics User Group (meeting report)](../v2n1-p63-apl-statistics-user-group/)
+- 2:3 [APL Statistics Users Group, Meeting 5th June 1985 (meeting report)](../v2n3-p63-apl-statistics-users-group/), Jake Ansell
+- 3:1 [Sharper Focus on APL](../art10001620/), Sylvia Camacho
+- 3:1 [Technical Correspondence (Bowman)](../v3n1-p99-technical-correspondence/), Dick Bowman
+- 3:1 [Quick & Dirty Apportionment](../art10007070/), Bob Pullman
+- 3:1 [Fast Fibbing](../art10009340/), John Sullivan
+- 3:2 [Comparison Tolerance](../art10003370/), Dick Gray
+- 3:3 [Applied Mathematics for Programmers and Mathematics and Programming – Ken Iverson](../v3n3-p36-iverson-mathematics-books-review/), Simon Garland
+- 4:1 [Bell’s Inequality](../art10001640/), Sylvia Camacho
+- 4:2 [Go Pack your Knapsack](../art10009950/), Norman Thomson
+- 4:3 [Guest Editorial: Computers in Mathematics](../v4n3-p3-editorial-computers-in-mathematics/), Norman Thomson
+- 4:3 [The (Nested) Education Vector](../v4n3-p18-the-education-vector/), Norman Thomson
+- 4:3 [Teaching Stats in Univ. Coll. Swansea](../art10005240/), Alan Mayer, Alan Sykes
+- 4:3 [A Note on Weighted Least Squares](../art10004330/), Peter Kelly, Norman Thomson
+- 4:4 [APL in a Japanese High School](../v4n4-p26-apl-in-a-japanese-high-school/), Makoto Kikkawa
+- 5:2 [Counting in APL](../v5n2-p27-counting-in-apl/), Alan Sykes
+- 5:2 [Statgraphics](../v5n2-p49-statgraphics/), Gavin Schwarzenbach
+- 5:3 [Counting in APL - Part Two](../v5n3-p26-counting-in-apl-part-two/), Alan Sykes
+- 5:3 [How Expensive is APL?](../art10000860/), F.H.D. van Batenburg, J.W. Kijne
+- 5:4 [APL in Statistics Conference](../v5n4-p11-apl-in-statistics-conference/), Alan Sykes
+- 5:4 [The Education Vector](../v5n4-p27-the-education-vector/), Alan Sykes
+- 5:4 [Puzzle/Problem Corner](../v5n4-p29-puzzle-problem-corner/), Alan Sykes
+- 5:4 [Understanding Randomness Using APL](../v5n4-p34-understanding-randomness-using-apl/), Alan Sykes
+- 5:4 [SCORE: An APL Program for the Scoring of Tests](../v5n4-p86-score-scoring-of-tests/), Jerry M. Brennan, Jennifer E. Daly
+- 5:4 [Logic & the Algebra of Propositions](../art10004360/), Joseph De Kerf
+- 6:1 [Puzzle Corner](../v6n1-p25-puzzle-corner/), Alan Sykes
+- 6:1 [Personal Construct Analysis in APL](../art10010870/), Mike Williams
+- 6:2 [The Statistics Tutorial Day](../v6n2-p65-statistics-tutorial-day/), Chris Brady
+- 6:3 [From Coin-tossing to the Weather](../art10009580/), Alan Sykes
+- 6:3 [The APL Statistics Library Conference at Greg-y-nog](../v6n3-p59-the-apl-statistics-library-conference-at-greg-y-nog/), Alan Sykes, Tony O'Hagan
+- 6:3 [APL for Financial Calculations](../art10003200/), D.O. Forfar
+- 6:3 [Symbolic Computation and Recursion](../art10006230/), Tony O’Hagan
+- 6:3 [Problems for APL Buffs (I)](../art10004110/), Zdenek Jizba
+- 6:4 [The Card Collecting Problem](../v6n4-p22-card-collecting-problem/), Norman Thomson
+- 6:4 [Problems for APL Buffs (II)](../art10004120/), Zdenek Jizba
+- 7:1 [Function Sampling with I-APL](../art10009260/), Walter Spunde
+- 7:1 [Book Announcement: APL with a Mathematical Accent](../v7n1-p57-apl-with-a-mathematical-accent/), Norman Thomson
+- 7:1 [The APL Statistics Library Project](../art10006240/), The ASL Team
+- 7:1 [Some Questions of Programming Style for the APL Statistical Library](../art10000310/), David Appleton
+- 7:1 [Speculations on Fermat Equations ...](../v7n1-p121-speculations-on-fermat-equations/), Anne D Wilson
+- 7:2 [Densities Well Suited for Statistics Problems](../art10010670/), Dr Dietrich Trenkler
+- 7:3 [The Random Vector](../v7n3-p33-the-random-vector/), David Eastwood
+- 7:3 [ASL News and Status - December 1990](../v7n3-p35-asl-news-and-status-december-1990/), David Eastwood
+- 7:3 [The Genesis of ASL](../art10006250/), Tony O’Hagan
+- 7:3 [Within ASL - Basic Statistics](../v7n3-p38-within-asl-basic-statistics/)
+- 7:3 [WAGS: a Graphics Specification Language for ASL](../art10006260/), Tony O’Hagan
+- 7:3 [Problems for APL Buffs (III)](../art10004140/), Zdenek V Jizba
+- 7:4 [Shape, Ravel and Roll](../art10009270/), Walter Spunde
+- 8:1 [Multiple Curve Fitting](../v8n1-p20-multiple-curve-fitting/), C.E. Williams
+- 8:1 [Let’s Integrate – Using APL](../art10009660/), Alan Sykes
+- 8:1 [The Random Vector](../v8n1-p33-the-random-vector/), David Eastwood
+- 8:1 [Beaton’s Recipe for Least Squares](../art10000090/), Jake Ansell, Alan Sykes
+- 8:1 [ASL: The Basic Statistics Volume](../art10000100/), Jake Ansell
+- 8:1 [Integrated System for Demographic Investigations](../art10006970/), Victor V. Ponomaryov
+- 8:1 [Experimental Design](../art10011020/), Stephen Wynn
+- 8:1 [Stirling numbers by recursion](../v8n1-p95-stirling-numbers-by-recursion/), Norman Thomson
+- 8:2 [Let's Integrate - Using APL (Education Vector, July 1991, p.22)](../v8n2-p20-lets-integrate-using-apl/), Tony O'Hagan
+- 8:2 [The Random Vector](../v8n2-p33-the-random-vector/), David Eastwood
+- 8:2 [ASL at APL91](../v8n2-p35-asl-at-apl91/)
+- 8:2 [ASL: A Basic Statistics Volume Tutorial](../art10000110/), Jake Ansell
+- 8:2 [Stirling Numbers – a Case Study](../art10000320/), David Appleton
+- 8:2 [ASL - where have we got to and where do we go from here?](../v8n2-p49-asl-where-have-we-got-to/), Tony O'Hagan
+- 8:2 [Gregynog 91](../v8n2-p49-gregynog-91/)
+- 8:2 [Power Reduction](../art10006350/), Graham Parkhouse
+- 8:2 [A Look at Residues](../art10011030/), Stephen Wynn
+- 8:3 [Simpson’s rule](../v8n3-p19-simpsons-rule/), Neil Sheldon
+- 8:3 [Curve Fitting in APL](../art10000330/), David Appleton
+- 8:3 [The Random Vector](../v8n3-p33-the-random-vector/), David Eastwood
+- 8:3 [The 3rd APL Statistics Library Conference Held at Gregynog 30 September to 2 October 1991](../v8n3-p35-asl-conference-gregynog-1991/), Anthony Camacho
+- 8:3 [ASL Standards](../art10003070/), David Eastwood
+- 8:3 [Hooks and Forks and the Teaching of Elementary Arithmetic](../art10005810/), Donald B. McIntyre
+- 8:3 [Cross-clocks in J](../art10002140/), Paul Chapman
+- 8:3 [Horner’s Method](../v8n3-p138-horners-method/), Walter G Spunde
+- 8:4 [APL and the Birthday Problem](../art10009680/), Alan Sykes
+- 8:4 [The Random Vector](../v8n4-p33-the-random-vector/), David Eastwood
+- 8:4 [ASL Status Report](../v8n4-p35-asl-status-report/), David Eastwood
+- 8:4 [BATS](../v8n4-p36-bats/), David Eastwood
+- 8:4 [Simulating Sampling Distributions](../art10010680/), Dietrich Trenkler
+- 8:4 [Implementing Cardano’s Rule](../art10010690/), Dietrich Trenkler
+- 8:4 [APL Goes Fuzzy](../v8n4-p77-apl-goes-fuzzy/), Oleg Pöhl
+- 8:4 [Comments on Power Reduction and Stirling Numbers](../v8n4-p84-power-reduction-and-stirling-numbers/), Ken Iverson
+- 8:4 [Verb Tables](../art10003770/), Roger K.W. Hui
+- 9:1 [Two Mathematical Functions](../v9n1-p30-two-mathematical-functions/), C.E. Williams
+- 9:1 [The Random Vector: Editorial](../v9n1-p107-random-vector-editorial/), David Eastwood
+- 9:1 [Non-linear Regression Modelling in APL](../art10003590/), Peter Hingley
+- 9:1 [Non-linear Curve Fitting](../art10009980/), Norman Thomson
+- 9:1 [Stirling Numbers](../v9n1-p129-stirling-numbers/), David Appleton
+- 9:2 [The Random Vector](../v9n2-p29-the-random-vector/), David Eastwood
+- 9:2 [ASL - The Future](../v9n2-p31-asl-the-future/), Jake Ansell
+- 9:2 [ASLGREG reviewed](../art10007490/), Jon Sandles
+- 9:2 [Comments on the ASLGREG Review](../v9n2-p34-comments-on-aslgreg-review/), Alan Sykes
+- 9:2 [Corrections to Known Bugs in ASLGREG (September 1992)](../v9n2-p35-corrections-to-known-bugs-in-aslgreg/), Alan Sykes
+- 9:2 [Reliability Data Analysis](../art10000120/), Jake Ansell, Mulhim Al-Doori
+- 9:2 [Three Combinatoric Puzzles](../art10003780/), Roger K.W. Hui
+- 9:3 [Genetic Algorithms: their APLication](../art10007500/), Jon Sandles
+- 9:3 [From the Vital Execute to Fractals and 5-fold Symmetry](../art10004660/), Gérard Langlet
+- 9:3 [Integrating with Insight](../art10009990/), Norman Thomson
+- 9:3 [Some J Verbs for Orthogonal Factorial Experiments](../art10008030/), Keith Smillie
+- 9:3 [Jacobi’s Method for Eigenvalues an Illustration of J](../art10005840/), Donald McIntyre
+- 9:3 [An Example of Intransitivity in Probability](../art10006360/), Graham Parkhouse
+- 9:4 [Workshop: Learning Maths with APL](../art10006560/), Howard Peelle
+- 9:4 [Sharing the Spoils or Circling the Square](../art10002790/), Mike Day
+- 10:1 [Step by Step Analysis of Variance](../art10005290/), Alan Mayer
+- 10:1 [Errors in “Integrating with Insight”](../v10n1-p116-errors-in-integrating-with-insight/), John R. Clark
+- 10:1 [The MAGIC Goes Away – Opening the Boxes](../art10002800/), Mike Day
+- 10:1 [The Fractal MAGIC Universe](../art10004670/), Gérard Langlet
+- 10:2 [Norman Thomson ‘Understanding ANOVA the APL Way’](../v10n2-p93-understanding-anova-the-apl-way/), Sylvia Camacho
+- 10:2 [An Improvement to LOGGAMMA](../art10012490/), Norman Thomson
+- 10:3 [APL-Defined Functions for the Calculation of Determinants](../art10004420/), Joseph De Kerf
+- 10:3 [Taylor Arithmetic](../art10009290/), Walter Spunde
+- 10:3 [When is Easter?](../art10001830/), Ray Cannon
+- 10:3 [Date of Easter in J](../art10005380/), Eugene McDonnell
+- 10:3 [A Note on the Easter Algorithm in J](../art10008040/), Keith Smillie
+- 10:3 [ASLGREG: Predictions with Confidence Limits](../art10006030/), Ellis Morgan
+- 10:3 [The Ultimate Turing Proof](../art10004680/), Gérard Langlet
+- 10:4 [A Note on Primes](../art10003130/), Ted Emms
+- 10:4 [Review: "Calculus" by Ken Iverson](../art10012800/), Keith Smillie
+- 10:4 [Finding the 10 to the 10th Prime](../art10005400/), Eugene McDonnell
+- 10:4 [A Note on Probabilities in the F-Distribution](../art10008060/), Keith Smillie
+- 11:1 [Jot-Dot-Floor: Working with Large Integers](../art10002310/), Ian Clark
+- 11:1 [J: A Second Lesson](../art10005870/), Donald McIntyre
+- 11:2 [Editorial: Monsieur Langlet's Enterprise](../art10013030/), Anthony Camacho
+- 11:2 [Jot-Dot-Floor: Domino](../art10002320/), Ian Clark
+- 11:2 [More about Fractional Series](../art10009500/), J.R. Sutton
+- 11:2 [APL94: Binary Algebra Workshop](../art10004690/), Gérard Langlet
+- 11:2 [Chaotic behaviour revisited](../art10004700/), Gérard Langlet
+- 11:2 [Fractals RYIJ](../art10007160/), Clifford A. Reiter
+- 11:2 [Understanding Statistical Theory through Simulation](../art10000340/), David Appleton
+- 11:3 [The Common Mean and APL](../art10004430/), Joseph De Kerf
+- 11:3 [The APL Theory of Human Vision](../art10004710/), Gérard Langlet
+- 11:3 [The Axiom Waltz – or When 1+1 make Zero](../art10004720/), Gérard Langlet
+- 11:3 [At Play with J: Jacobi's Method](../art10013180/), Eugene McDonnell
+- 11:4 [Fractnomials?](../art10009510/), J.R. Sutton
+- 11:4 [Here be Dragons](../art10001660/), Sylvia Camacho
+- 11:4 [Teaching with an Executable Notation](../art10004010/), Ken Iverson
+- 11:4 [Perils of Subtraction: a New Language for an Old Algorithm](../art10005880/), Donald B. McIntyre
+- 11:4 [Primes, Spirals and Coffee Tables](../art10008070/), Keith Smillie
+- 11:4 [The Common Mean and APL](../art10003820/), Roger Hui
+- 11:4 [Chaos – Computer Error not to Blame](../art10007970/), Nicholas Small
+- 11:4 [Answers to J Problems from Vector 11.3](../art10010060/), Norman Thomson
+- 11:4 [Functional Programming in J for Operations Research](../art10001290/), Richard L.W. Brown
+- 12:1 [Voyages in Dragon Country](../art10001670/), Sylvia Camacho
+- 12:1 [Teaching with an Executable Notation (Part 2)](../art10004030/), Kenneth E. Iverson
+- 12:1 [Multiprecision Arithmetic – Part I](../art10009390/), John Sullivan
+- 12:1 [Probabilities for Elementary Distributions](../art10009710/), Alan Sykes
+- 12:1 [The Complete Elliptic Integrals and APL](../art10004440/), Joseph De Kerf
+- 12:1 [Production Manager’s Observation](../v12n1-p106-production-managers-observation/)
+- 12:1 [The Common Mean, Non-negative Definite Matrices, and APL](../art10010700/), Dietrich Trenkler, Götz Trenkler
+- 12:1 [Letter: More Thoughts on Dragons](../art10004740/), Gérard Langlet
+- 12:1 [Letter: Non-syllogistic mathematical proof](../art10013290/), Gérard Langlet
+- 12:1 [At Work and Play with J:](../art10005440/), Gene McDonnell
+- 12:2 [Polynomial Interpolation](../art10006060/), Antje Muller, Tineke van Woudenberg, Alistair Young
+- 12:2 [Matrix Decomposition](../art10010090/), Norman Thomson
+- 12:2 [The Ball Clock Problem](../art10003830/), Roger Hui
+- 12:2 [Multiprecision Arithmetic – Part II](../art10009400/), John Sullivan
+- 12:2 [Computing Clopper-Pearson Confidence Limits by the Illinois Method](../art10010710/), Dietrich Trenkler
+- 12:2 [The Incomplete Elliptic Integrals and APL](../art10004450/), Joseph De Kerf
+- 12:2 [Calculating Probabilities](../art10010100/), Norman Thomson
+- 12:2 [Floating-Point Precision](../v12n2-p111-floating-point-precision/), Joseph De Kerf
+- 12:2 [At Work and Play with J: The Bauer-Mengelberg Problem](../art10005450/), Gene McDonnell
+- 12:3 [Counting Problem](../v12n3-p21-counting-problem/), Tony Goddard
+- 12:3 [Multiprecision Arithmetic – Part III](../art10009410/), John Sullivan
+- 12:3 [3-Dimensional Noughts and Crosses](../art10006490/), Duncan Pearson
+- 12:3 [A Note on Programming Style](../art10003840/), Roger Hui, Kenneth E. Iverson
+- 12:3 [The Incomplete Elliptic Integrals and APL - an Extension](../v12n3-p122-incomplete-elliptic-integrals-extension/), Joseph De Kerf
+- 12:3 [Letter: Fractions as Sequences of Integers](../art10010120/), Norman Thomson
+- 12:3 [At Work and Play with J: Heron’s Rule & Integer-Area Triangles](../art10005460/), Gene McDonnell
+- 12:4 [J-ottings 9: The Power Conjunction](../art10010130/), Norman Thomson
+- 12:4 [Multiprecision Arithmetic Part IV](../art10009420/), John Sullivan
+- 12:4 [Polynomial Multiplication with Circulant Matrices: Insights Using APL](../art10007400/), Lew Robinson
+- 12:4 [Confidence Limits](../art10010140/), Norman Thomson
+- 12:4 [Divided Differences: Reply to Hui & Iverson](../art10010150/), Norman Thomson
+- 12:4 [Linear Recurrences and Matrix Powers](../art10003850/), Roger Hui
+- 12:4 [Roger and the Amazing Technicolor Ballclock](../art10010160/), Norman Thomson
+- 13:1 [J-ottings 10: Interest Calculations](../art10010170/), Norman Thomson
+- 13:1 [Parallel Processing with J](../art10001230/), Gabriel F. Brisson, Clifford A. Reiter
+- 13:1 [Coverage probabilities](../v13n1-p119-coverage-probabilities/), Norman Thomson
+- 13:1 [LaTeX and Vector](../v13n1-p121-latex-and-vector/), Dietrich Trenkler
+- 13:1 [At Play with J: Riding a Unicycle](../art10005480/), Gene McDonnell
+- 13:2 [Sylvester’s Algorithm](../art10006590/), Howard Peelle
+- 13:2 [Calendar Calculations in J](../art10008080/), Keith Smillie
+- 13:2 [Swinging with APL: the Simple Pendulum](../art10004460/), Joseph De Kerf
+- 13:2 [At Play with J: Volutes](../art10005490/), Eugene McDonnell
+- 13:2 [Extended Integers in J](../art10003860/), Roger Hui
+- 13:3 [How to Ride a “BiCypher”](../art10001900/), Ray Cannon
+- 13:3 [J and APL Operators](../art10010220/), Norman Thomson
+- 13:3 [At Play with J: Extended Integers](../art10005500/), Eugene McDonnell
+- 13:4 [The Education Vector](../v13n4-p21-the-education-vector/), Ian Clark
+- 13:4 [Turtlegraphics with APL2](../art10007140/), Hendrik Rama, Martin Barghoorn
+- 13:4 [At Play with J: Stumping the Rocket Scientist](../art10005510/), Eugene McDonnell
+- 14:1 [J-ottings 13](../art10010230/), Norman Thomson
+- 14:1 [Do APL2 and J Come up to Scratch?](../art10010240/), Norman Thomson
+- 14:1 [The UK National Lottery](../art10010910/), Alan Wilson
+- 14:1 [At Play with J: Oh, No, Not Eigenvalues Again!](../art10005520/), Eugene McDonnell
+- 14:1 [The API Problem as a Particular Recurrence Problem](../art10001420/), Andrei Buzin
+- 14:2 [Heron’s Rule and Integer-Area Triangles](../art10004190/), William R. Jones
+- 14:2 [Enumerating and Generating Combinations](../art10010250/), Norman Thomson
+- 14:2 [The Josephus Problem Generalized in J](../art10006640/), Howard A. Peelle
+- 14:2 [APL and Nested Arrays — a Dream for Statistical Computation](../art10009730/), Alan Sykes, Tom Stroud
+- 14:2 [Use of Multivariate Techniques for the Grouping Together of Districts. Application in the City of Granada](../art10003410/), R.A. Cano Guervós, J. Chica Olmo, J.A. Hermoso Gutiérrez
+- 14:2 [Niven Numbers and APL](../art10004470/), Joseph De Kerf
+- 14:2 [A Note on Cholesky Decomposition](../art10006190/), Tapio Nummi
+- 14:3 [J-ottings 15](../art10010270/), Norman Thomson
+- 14:3 [Armstrong Numbers and APL](../art10004480/), Joseph De Kerf
+- 14:4 [Volutes – a Survey of Algorithms](../art10006650/), Howard Peelle
+- 14:4 [Niven Number Computing Speed](../art10002500/), Eddie Clough
+- 14:4 [More on Niven Numbers](../art10003540/), Claude Henriod
+- 14:4 [At Play With J: A Newer Random Link Generator](../art10005530/), Eugene McDonnell
+- 15:1 [APL and the Mountain](../art10010950/), Anne Wilson
+- 15:1 [Technical Correspondence: Random Link Generator](../art10009520/), John Sutton, Eugene McDonnell
+- 15:1 [At Play with J: to Summarise](../art10005540/), Eugene McDonnell
+- 15:2 [Word of Words from Iterated Function Systems](../art10007180/), Benjamin J. Reiter, Clifford A. Reiter, Zachary X. Reiter
+- 15:3 [J-ottings 19: Getting to the Root of the Matter](../art10010320/), Norman Thomson
+- 15:3 [Towers of Hanoi Generalized in J](../art10006660/), Howard A. Peelle
+- 15:3 [Some Basic Functions for Composite Arithmetic](../art10003700/), Neville Holmes
+- 15:3 [From Fibonacci to Horadam](../art10004490/), Joseph De Kerf
+- 15:4 [An Approximation of the N-body Gravitation Problem in J](../art10010660/), Andrew Towers
+- 15:4 [The Investment Models of a Finnish Pension Company](../art10007150/), Antero Ranne
+- 15:4 [Iterated Function Systems](../v15n4-p78-iterated-function-systems/), Norman Thomson
+- 15:4 [A Technical Note on Counting Moves for Generalized Towers of Hanoi](../art10010340/), Norman Thomson
+- 15:4 [Functional Extensions to the Fibonacci Sequence](../art10009460/), John Sullivan
+- 16:1 [Fibonacci for negative n](../v16n1-p110-fibonacci-for-negative-n/), Joseph De Kerf
+- 16:1 [At Play With J: New Big Deal](../art10005580/), Eugene McDonnell
+- 16:1 [Exact Horadam Numbers with a Chebyshevish Accent](../art10007190/), Clifford A. Reiter
+- 16:1 [J/LAPACK Interface Makes Econometric Analysis Fly!](../art10007010/), Richard J. Procter, Richard L.W. Brown
+- 16:2 [J-ottings 22: ... and now something for our very youngest readers](../art10010360/), Norman Thomson
+- 16:2 [Array Based Naïve Bayesian Machine Learning Program: A J Implementation](../art10002150/), Andrew Charman-Williams
+- 16:2 [The Dance of the Quirk](../art10001690/), Sylvia Camacho
+- 16:2 [From Horadam to Atanassov](../art10004500/), Joseph De Kerf
+- 16:3 [J-ottings 23: Just what do they sell at C. and A.?](../art10010370/), Norman Thomson
+- 16:3 [Functional Implementation of Moments Based Region Descriptors in J](../art10002090/), C. Anne Chamley
+- 16:3 [Fast Fourier Transforms, Diffraction Patterns and J](../art10007200/), Cliff Reiter
+- 16:4 [Analysing Blackjack with APL (Finnish Forests Seminar)](../art10002400/), Ian Clark
+- 16:4 [At Play with J: An Open and Shut Case](../art10005600/), Eugene McDonnell
+- 17:1 [J-ottings 25: The I-spy book of J](../art10010390/), Norman Thomson
+- 17:1 [Magic Squares](../art10002410/), Ian Clark
+- 17:1 [At Play With J: Blists in OLEIS](../art10005610/), Eugene McDonnell
+- 17:1 [Bell Numbers and APL](../art10004510/), Joseph De Kerf
+- 17:2 [CD Labels and More](../art10007210/), Cliff Reiter
+- 17:2 [Bell numbers in Vector 17.1](../v17n2-p112-bell-numbers-in-vector-17-1/), Eugene McDonnell
+- 17:2 [At Play with J: Someone Just Moved! Who Was It? or, Apter’s Puzzle](../art10005620/), Eugene McDonnell
+- 17:2 [The Generalized Tribonacci Sequence](../art10004520/), Joseph De Kerf
+- 17:3 [Hyperbolic Symmetry is a Breeze](../art10007220/), Cliff Reiter
+- 17:4 [J-ottings 28: Just say it in J](../art10010420/), Norman Thomson
+- 17:4 [Array-based Logic](../art10002280/), Klaus Klug Christiansen
+- 17:4 [At Play With J: Erdös Numbers and Pierce and Engel Expansions](../art10005650/), Eugene McDonnell
+- 17:4 [J Rational Number Utilities & Verification of Knuth’s Constants](../art10009490/), Gordon Sutcliffe
+- 18:1 [J-ottings 29: Power Steering Extra](../art10010430/), Norman Thomson
+- 18:1 [Inversion of Boolean Matrices](../art10002950/), Michel Dumontier
+- 18:1 [Matrix inversion modulo p; Linear systems modulo p](../art10002960/), Michel Dumontier
+- 18:2 [Can Anyone Tell Me Where I’m Wrong?](../art10001700/), Sylvia Camacho
+- 18:2 [Matrix inversion modulo p](../art10009470/), John Sullivan
+- 18:2 [MUCIPHER: a New Short Cipher that Escapes Cryptanalysis](../art10002970/), Michel Dumontier
+- 18:4 [Playing with the Beast Number with J](../art10002980/), Michel Dumontier
+- 18:4 [At Play with J: Second-order Josephus](../art10005680/), Eugene McDonnell
+- 18:4 [Hypergeometric Functions and CDFs in J](../art10007910/), Ewart Shaw
+- 19:1 [J-ottings 33: How to Tell a Fib in lots of Different Ways](../art10010470/), Norman Thomson
+- 19:1 [\*How to Draw a Straight Line\* by A B Kempe](../art10001610/), Anthony Camacho
+- 19:1 [At Play with J: J Be Nimble, J Be Quick: Nim Addition](../art10005690/), Eugene McDonnell
+- 19:2 [Internal Rate of Return](../art10014350/), Gary A. Bergquist
+- 19:2 [J-ottings 34: Greed – Patterns for the Imminent Collapse of Western Capitalism](../art10010480/), Norman Thomson
+- 19:2 [Inner Product Fractals from Fuzzy Logics](../art10002620/), Angela Coxe
+- 19:3 [Paritons and Cognitons: Towards a New Theory of Information](../art10004770/), Gérard A. Langlet
+- 19:3 [Boolean Hexagonal Automata](../art10002630/), Angela Coxe, Cliff Reiter
+- 19:3 [At Play with J: Beware Scholes](../art10005700/), Eugene McDonnell
+- 19:4 [J-ottings 36: A Partial Solution to a Partial Problem](../art10010500/), Norman Thomson
+- 20:1 [Guest Editorial: Should Vector Teach Mathematical Grammar?](../art10001710/), Sylvia Camacho
+- 20:1 [J-ottings 37: How many obtuse-angled triangles are there?](../art10010510/), Norman Thomson
+- 20:1 [Hungarian Method Cost Assignment](../art10007790/), John Scholes
+- 20:1 [Taming Barrel and Tilt Distortion](../art10007260/), Cliff Reiter
+- 20:1 [Graphical Simulation of Rearview Mirrors](../art10007820/), Brian Schott
+- 20:1 [RE: R and APL](../v20n1-p115-re-r-and-apl/), Mike Day, Alexander Skomorokhov
+- 20:1 [At Play with J: Greed](../art10005720/), Eugene McDonnell
+- 20:1 [New Foundations](../art10007380/), Graeme D. Robertson
+- 20:2 [Towards a General Theory of Formula Inversion](../art10002440/), Ian A. Clark
+- 20:2 [At Play with J: The Magical Matrix](../art10005730/), Eugene McDonnell
+- 20:3 [J-ottings 39: All Verbs are Monadic](../art10010530/), Norman Thomson
+- 20:3 [Bell’s Theorem and Matrix Mechanics](../art10007390/), Graeme Robertson
+- 20:3 [At Play with J: Giddyap](../art10005740/), Eugene McDonnell
+- 20:3 [Elliptic Curves and Factoring (I)](../art10007270/), Cliff Reiter
+- 20:4 [A Note on Graphs](../art10007800/), John Scholes
+- 20:4 [TABULA: a Scientific Calculator for the 21st Century](../art10002450/), Ian Clark
+- 20:4 [Elliptic Curves and Factoring II](../art10007280/), Cliff Reiter
+- 21:1 [J-ottings 41: Shortest Paths and Related Algorithms](../art10010550/), Norman Thomson
+- 21:1 [Erratum: TABULA](../v21n1-p76-erratum-tabula/), Ian Clark
+- 21:1 [Further Surprises Involving a Man and a Goat: The “Monty Hall” Problem Solved ...](../art10005330/), Devon McCormick
+- 21:2 [J-ottings 42: I (continue to) Spy with very little J ...](../art10010560/), Norman Thomson
+- 21:2 [Bayesian Financial Dynamic Linear Modelling in APL](../art10005340/), Devon McCormick
+- 21:2 [How Wrong Was I?](../art10001720/), Sylvia Camacho
+- 21:2 [Technical Correspondence](../art10014270/), Y. Nakano, K. Yamashita, T. Nishikawa
+- 21:2 [Arithmetic Boundary Checking](../art10005220/), Stephen M. Mansour
+- 21:3 [J-ottings 43: A Rippling Good Yarn](../art10010570/), Norman Thomson
+- 21:3 [How to Rig an Election](../art10002460/), Ian Clark
+- 21:3 [Time(r) for the Game of Life](../art10007290/), Cliff Reiter
+- 21:4 [Letter: Thoughts on the Urn Problem](../art10002510/), Eddie Clough
+- 21:4 [Review of “Mathematical Computing in J (Peelle)”](../art10007300/), Cliff Reiter
+- 21:4 [J-ottings 44: So Easy a Child of Ten ...](../art10010580/), Norman Thomson
+- 22:1 [Letter: One thir dex cubed?](../art10014250/), Norman Thomson
+- 22:1 [Fun with Pascal's Triangle by Howard Peelle](../art10005355/), Devon McCormick
+- 22:1 [At Play with J: Belgian Numbers](../art10005780/), Eugene McDonnell
+- 22:1 [Statistical Methods Discovered by the Power of APL](../art10003450/), Peter-Michael Hager
+- 22:2 [Letter: Reply to “Thoughts on the URN Problem”](../art10005360/), Devon McCormick
+- 22:2 [Gérard Langlet: A Man of Distinction](../art10001730/), Sylvia Camacho
+- 22:3 [J-ottings 46: Musical J-ers](../art10010610/), Norman Thomson
+- 22:3 [A Tribute to Ken Iverson](../art10005900/), Donald McIntyre
+- 22:4 [Review of Mathematica 5.2](../art10011340/), Ian Clark
+- 22:4 [J-ottings 48: Perming and combing](../art10011360/), Norman Thomson
+- 22:4 [Integer Apollonian circle packings in J](../art10011370/), Cliff Reiter
+- 22:4 [The supposed descent into chaos of the Logistic Equation](../art10011375/), Sylvia Camacho
+- 23:1 [Can one be fit on a starvation diet?](../art10011540/), Sylvia Camacho
+- 23:1 [Chance Misunderstandings](../art10011640/), Sylvia Camacho
+- 23:1 [3D Cellular Automata and the Game of Life](../art10011650/), Timothy Zirkel
+- 23:1 [Cumulative Normal Distributions, Black-Scholes and Error Functions](../art10011660/), Ralph Selfridge
+- 23:3 [Review: APLX Version 4, from the viewpoint of an experimental physicist](../art10011790/), Beau Webber
+- 23:3 [Functional Calculation 0: Numerical Aperitif](../art10011810/), Neville Holmes
+- 23:3 [A J Simulator for a Meccano Differential Analyser](../art10011870/), Keith Smillie
+- 23:4 [Functional calculation 1: numerical ingredients](../art10012060/), Neville Holmes
+- 23:4 [J-ottings 50; If you think J is complex, try j](../art10012070/), Norman Thomson
+- 23:4 [Partitions of numbers: an efficient algorithm in J](../art10012080/), R.E. Boss
+- 23:4 [About polynomials: Part 1](../art10012090/), Gianluigi Quario
+- 24:1 [Functional calculation 2: The year 1997](../art10500050/), Neville Holmes
+- 24:1 [J-ottings 51: Suffer the little children…](../art10500080/), Norman Thomson
+- 24:1 [Cauchy Curves](../art10500060/), William R. Jones, Cliff Reiter
+- 24:1 [About polynomials: Part 2](../art10500120/), Gianluigi Quario
+- 24:1 [Quick calculation of Kendall’s Rank Correlation Distribution](../art10500140/), Gordon Sutcliffe
+- 24:2 [APLX interface to R statistics](../art10500190/), Simon Marsden
+- 24:2 [Financial math in q, Part 1: Graduation of mortality](../art10500210/), Jan Karman
+- 24:2 [J-ottings 52: All but one](../art10500240/), Norman Thomson
+- 24:2 [Functional calculation 3: Structural Ingredients](../art10500320/), Neville Holmes
+- 24:2 [Backgammon tools in J](../art10500280/), Howard A. Peelle
+- 24:4 [Financial math in q, 2: The price of bonds](../art10500420/), Jan Karman
+- 24:4 [Backgammon tools in J: 2. Wastage](../v24n4-p106-backgammon-tools-in-j-2-wastage/), Howard A. Peelle
+- 24:4 [Functional Calculation 4: The year 1998](../art10500370/), Neville Holmes
+- 25:1 [Financial Math in q, 3: The annuity](../art10500660/), Jan Karman
+- 25:1 [J-ottings 54: j Complex? You bet!](../art10500530/), Norman Thomson
+- 25:1 [Functional Calculation 5: Operations](../art10500630/), Neville Holmes
+- 25:1 [OOStats – A statistics facility for users of Dyalog APL](../art10500580/), Alan Sykes
+- 25:1 [Odd-order magic squares expressed in J](../art10500540/), John C. McInturff
+- 25:1 [What is it about infinity?](../art10500640/), Sylvia Camacho, Graham Parkhouse
+- 25:3 [What is it about infinity](../art10500800/), Norman Thomson
+- 25:3 [What is it about infinity?](../art10500810/), Sylvia Camacho
+- 25:3 [Combination Lists](../art10500820/), Norman Thomson
+- 25:3 [Bicubic Interpolation in J](../art10500830/), Cliff Reiter
+- 25:4 [Bayesian financial dynamic linear modeling in APL](../art10500940/), Devon McCormick
+- 25:4 [The “88 Hats” puzzle](../art10500850/), Roger Hui
+- 25:4 [Backgammon tools in J: Two-sided bearoff probabilities](../art10500790/), Howard A. Peelle
+- 25:4 [Savitzky-Golay interpolation for smoothing values and derivatives](../art10500860/), David Porter, Cliff Reiter
+- 26:1 [2^64](../art10501090/), Roger Hui
+- 26:1 [My favourite APL symbol](../art10501040/), Roger Hui
+- 26:1 [NFL Passer Rating by Brian Becker](../art10501200/), Brian Becker
+- 26:1 [J-ottings 56 Trig Time](../art10500880/), Norman Thomson
+- 26:1 [L-systems in J](../art10501080/), R.E. Boss
+- 26:1 [Backgammon Tools in J: Ace-point Bearoffs](../art10501070/), Howard A. Peelle
+- 26:1 [Fibonacci and golden spirals](../art10501110/), Cliff Reiter
+- 26:2 [Notation as a tool of proof](../art10501240/), Robert Pullman
+- 26:2 [A Tool of Thought](../art10501380/), Dan Baronet
+- 26:2 [J-ottings 57 Heavens above!](../art10501390/), Norman Thompson
+- 26:2 [Squares, neighbours, probability, and J](../art10501300/), John C. McInturff
+- 26:2 [All Integer Partitions: J Programs Compared](../art10501280/), Howard Peelle
+- 26:4 [J-ottings 58 – Internal Rate of Return and related topics](../art10501460/), Norman Thomson
+- 26:4 [Using J for Actuarial Applications Part 1: The Chain-Ladder Method](../art10501580/), Jeremy Smith
+- 26:4 [What makes a good tennis match?](../art10501600/), Matthew Doherty, Paul Loughran
+- 27:1 [Book review — Fun Q: A Functional Introduction to Machine Learning in Q](../art10501870/), Daniel Krizian
+- 27:1 [J-ottings 59 Love Actuarily...](../art10501720/), Norman Thomson
+- 27:1 [Larger than life automata](../art10501760/), Cliff Reiter
+- 27:1 [Taming statistics with limited-domain operators](../art10501700/), Stephen Mansour
+- online [Making images and videos of the Buddhabrot](../art10501820/), Nicolas Delcros
+- online [Reflections on Langlet’s APL Theory of Human Vision](../art10501810/), Stuart Smith
+
+## education { #tag-education }
+
+*teaching and learning with APL*
+
+- 1:3 [Book Review: Learning and Applying APL, by B. Legrand](../v1n3-p39-book-review-legrand/), Anthony Comacho
+- 1:4 [QL/APL – popularising APL](../art10003020/), David Eastwood
+- 2:1 [Booklist](../v2n1-p39-booklist/)
+- 2:1 [APL for the Teacher](../art10003350/), Dick Gray
+- 2:1 [Case Study: DBASE-II at Bedford School](../v2n1-p84-case-study-dbase-ii-at-bedford-school/), Adrian Smith
+- 2:3 [Education Officer’s Report](../v2n3-p11-education-officers-report/), Dick Gray
+- 2:3 [APL Computer for Portsmouth Grammar School](../v2n3-p12-portsmouth-grammar-school/), Romilly Cocking
+- 2:3 [APL Booklist](../v2n3-p31-apl-booklist/)
+- 2:4 [Software Review: MicroSPAN](../v2n4-p41-software-review-microspan/), Anne Wilson, Steve Phillips
+- 3:1 [Editorial: The joys of Spring?](../v3n1-p3-editorial/), David Preedy
+- 3:1 [APL Book List](../v3n1-p37-apl-book-list/)
+- 3:2 [The Education VECTOR](../v3n2-p37-the-education-vector/), Norman Thomson
+- 3:3 [Editorial: “Train up a child …”](../v3n3-p3-editorial-train-up-a-child/), David Preedy
+- 3:3 [APL Course dates](../v3n3-p7-apl-course-dates/)
+- 3:3 [General Correspondence](../v3n3-p9-general-correspondence/), Paul Barnetson, Peter Branson, Simon Barker
+- 3:3 [International APL News – Journal Exchange](../v3n3-p19-international-apl-news-journal-exchange/)
+- 3:3 [The Education VECTOR](../v3n3-p33-the-education-vector/), Norman Thomson
+- 3:3 [Applied Mathematics for Programmers and Mathematics and Programming – Ken Iverson](../v3n3-p36-iverson-mathematics-books-review/), Simon Garland
+- 3:3 [Introduction to APL – Howard Peelle](../v3n3-p38-peelle-introduction-to-apl-review/), Romilly Cocking
+- 3:3 [British APL Association Meeting – I-APL, 17 October 1986](../v3n3-p60-i-apl-meeting/), Anthony Camacho
+- 4:1 [APL Course Diary](../v4n1-p7-apl-course-diary/), Cathy Dargue
+- 4:1 [The Education Vector](../v4n1-p25-the-education-vector/), Norman Thomson
+- 4:2 [The Education Vector](../v4n2-p31-the-education-vector/), Norman Thomson
+- 4:2 [A Report on the Winchester Summer Course on APL](../v4n2-p32-report-on-winchester-summer-course/), Pauline Hawkes
+- 4:3 [Guest Editorial: Computers in Mathematics](../v4n3-p3-editorial-computers-in-mathematics/), Norman Thomson
+- 4:3 [APL Course Diary](../v4n3-p7-apl-course-diary/)
+- 4:3 [General Correspondence](../v4n3-p8-general-correspondence/), Anthony Camacho
+- 4:3 [The (Nested) Education Vector](../v4n3-p18-the-education-vector/), Norman Thomson
+- 4:3 [Book Review: An Introduction to APL for the IBM PC & XT by William H. Murray and Chris H. Pappas](../v4n3-p32-murray-and-pappas-introduction-to-apl/), Anthony Camacho
+- 4:3 [I-APL for the IBM PC](../v4n3-p37-i-apl-for-the-ibm-pc/), Dave Weatherby
+- 4:3 [Teaching Stats in Univ. Coll. Swansea](../art10005240/), Alan Mayer, Alan Sykes
+- 4:3 [I-APL: History & Achievements](../art10001470/), Anthony Camacho
+- 4:3 [A Demonstration of Direct Defn](../art10001480/), Anthony Camacho
+- 4:4 [APL Course Diary](../v4n4-p8-apl-course-diary/)
+- 4:4 [APL2 over JANET](../v4n4-p10-apl2-over-janet/), Paul Barnetson
+- 4:4 [I-APL: Special BAA Meeting](../v4n4-p13-i-apl-special-baa-meeting/), Graham Parkhouse
+- 4:4 [The Education Vector](../v4n4-p23-the-education-vector/), Norman Thomson
+- 4:4 [I-APL: Report of 1st Annual General Meeting](../v4n4-p24-i-apl-agm-report/), Anthony Camacho
+- 4:4 [APL in a Japanese High School](../v4n4-p26-apl-in-a-japanese-high-school/), Makoto Kikkawa
+- 4:4 [Workshop: Secondary School Mathematics using APL](../v4n4-p61-workshop-secondary-school-mathematics/), Adrian Smith
+- 5:1 [Public Letter to P Chapman](../v5n1-p14-public-letter-to-p-chapman/), F.H.D. van Batenburg
+- 5:1 [The Education Vector](../v5n1-p33-the-education-vector/), Norman Thomson
+- 5:1 [Attitudes to APL in Higher Ed’n](../art10003040/), David Eastwood
+- 5:1 [Algorithmics by Harel](../v5n1-p56-algorithmics-by-harel/), Anthony Camacho
+- 5:2 [I-APL and the APL Keyboard](../v5n2-p8-i-apl-and-the-apl-keyboard/), Anthony Camacho
+- 5:2 [The Education VECTOR](../v5n2-p17-the-education-vector/), Alan Sykes
+- 5:2 [A Report on the Second Winchester Summer Course in APL](../v5n2-p18-report-on-the-1988-summer-course/), John Clift
+- 5:2 [A Pilot Course in APL](../v5n2-p20-a-pilot-course-in-apl/), Bruce Dickson
+- 5:2 [APL at Mill Hill School](../v5n2-p20-apl-at-mill-hill-school/), Bruce Dickson
+- 5:2 [I-APL Newsletter No 7, October 1988](../v5n2-p23-the-latest-on-i-apl/), Anthony Camacho
+- 5:2 [Counting in APL](../v5n2-p27-counting-in-apl/), Alan Sykes
+- 5:3 [APL Training Courses](../v5n3-p9-apl-training-courses/)
+- 5:3 [The Education Vector](../v5n3-p17-the-education-vector/), Alan Sykes
+- 5:3 [Humble-pie Corner](../v5n3-p19-humble-pie-corner/)
+- 5:3 [Puzzle Corner](../v5n3-p19-puzzle-corner/), Alan Sykes
+- 5:3 [Report on the Promotion of I-APL at ICME-6 Budapest 27th July - 3rd August 1988](../v5n3-p20-promotion-of-i-apl-at-icme-6/), Neil Bibby, John Durran
+- 5:3 [I-APL News](../v5n3-p22-i-apl-news/), Anthony Camacho
+- 5:3 [Counting in APL - Part Two](../v5n3-p26-counting-in-apl-part-two/), Alan Sykes
+- 5:3 [APL is Easy!/APL2 at a Glance](../v5n3-p51-apl-is-easy-apl2-at-a-glance/), Bill Ross
+- 5:4 [APL Course Diary](../v5n4-p9-apl-course-diary/)
+- 5:4 [Printer Support from QL-APL](../v5n4-p10-printer-support-from-ql-apl/), Alan Angus
+- 5:4 [The Education Vector](../v5n4-p27-the-education-vector/), Alan Sykes
+- 5:4 [Puzzle/Problem Corner](../v5n4-p29-puzzle-problem-corner/), Alan Sykes
+- 5:4 [Letter: I-APL keyboard and beginners](../v5n4-p30-letter-i-apl-keyboard-and-beginners/), Les May
+- 5:4 [I-APL News: The State of the Project](../v5n4-p31-i-apl-news-state-of-the-project/), Anthony Camacho
+- 5:4 [Understanding Randomness Using APL](../v5n4-p34-understanding-randomness-using-apl/), Alan Sykes
+- 5:4 [IBM Personal Computing in Schools](../v5n4-p53-ibm-personal-computing-in-schools/), Anthony Camacho
+- 6:1 [APL Course Diary](../v6n1-p7-apl-course-diary/)
+- 6:1 [The Education Vector](../v6n1-p23-the-education-vector/), Alan Sykes
+- 6:1 [APL Art](../v6n1-p25-apl-art/), Alan Sykes
+- 6:1 [Let a Child Loose in APL!](../v6n1-p27-let-a-child-loose-in-apl/), Richard Smith (when aged 3)
+- 6:1 [The I-APL News](../v6n1-p29-the-i-apl-news/), Anthony Camacho
+- 6:1 [Numbers and Bases](../art10009570/), Alan Sykes
+- 6:2 [The Education Vector](../v6n2-p17-the-education-vector/), Anthony Camacho
+- 6:2 [Review: “APL for the Maths Classroom” by Thomson](../art10005910/), Bill McLean
+- 6:2 [Start Building your own Utilities](../v6n2-p25-start-building-your-own-utilities/), Peter Branson
+- 6:2 [Meeting of the Board of I-APL and other Interested Parties on 6th August 1989 at the New York Hilton](../v6n2-p29-i-apl-board-meeting-new-york/), Sylvia Camacho
+- 6:3 [APL Training Courses for 1990](../v6n3-p7-apl-course-diary/), Adrian Smith
+- 6:3 [I-APL as a commercial enterprise](../v6n3-p10-i-apl-as-a-commercial-enterprise/), Andrew Wiggins
+- 6:3 [The Education VECTOR](../v6n3-p17-the-education-vector/), Alan Sykes
+- 6:3 [Letter to the Editor](../v6n3-p19-letter-to-the-editor/), R Weber
+- 6:3 [Puzzle/Problem Corner](../v6n3-p20-puzzle-problem-corner/), Alan Sykes
+- 6:3 [From Coin-tossing to the Weather](../art10009580/), Alan Sykes
+- 6:3 [I-APL News - December 1989](../v6n3-p31-i-apl-news-december-1989/), Anthony Camacho
+- 6:3 [VCAT: A Response](../v6n3-p100-vcat-a-response/), Norman Thomson
+- 6:4 [APL Course Diary](../v6n4-p7-apl-course-diary/), Adrian Smith
+- 6:4 [The Education VECTOR](../v6n4-p17-the-education-vector/), Alan Sykes
+- 6:4 [Communications](../v6n4-p19-communications/), Alan Sykes
+- 6:4 [The Card Collecting Problem](../v6n4-p22-card-collecting-problem/), Norman Thomson
+- 6:4 [Doing Useful Things with Strings](../art10009590/), Alan Sykes
+- 6:4 [A Selection of Affordable APL Systems](../v6n4-p30-selection-of-affordable-apl-systems/)
+- 6:4 [Yet more VCAT ...](../v6n4-p95-yet-more-vcat/), Peter Branson
+- 6:4 [Problems for APL Buffs (II)](../art10004120/), Zdenek Jizba
+- 7:1 [APL Course Diary](../v7n1-p7-apl-course-diary/), Adrian Smith
+- 7:1 [The Education VECTOR](../v7n1-p17-the-education-vector/), Alan Sykes
+- 7:1 [Communications](../v7n1-p19-communications/), Alan Sykes
+- 7:1 [Function Sampling with I-APL](../art10009260/), Walter Spunde
+- 7:1 [More String Manipulations](../art10009600/), Alan Sykes
+- 7:1 [Book Announcement: APL with a Mathematical Accent](../v7n1-p57-apl-with-a-mathematical-accent/), Norman Thomson
+- 7:1 [J: An Informal Introduction](../art10003990/), Kenneth E. Iverson
+- 7:2 [APL Training Courses for 1990-91](../v7n2-p7-apl-training-courses-1990-91/), Alison Chatterton
+- 7:2 [The Education VECTOR](../v7n2-p17-the-education-vector/), Alan Sykes
+- 7:2 [Puzzle Corner: Chess Board Pattern](../v7n2-p19-puzzle-corner-chess-board-pattern/), Alan Sykes
+- 7:2 [‘DAYOFWEEK’: Education Vector 7.1](../v7n2-p20-dayofweek-education-vector-7-1/), C.E. Williams
+- 7:2 [Reading ASCII files into I-APL](../v7n2-p21-reading-ascii-files-into-i-apl/), J.C. Hines
+- 7:2 [I-APL Constraints](../v7n2-p25-i-apl-constraints/), Walter G Spunde
+- 7:2 [Searching for Strings in Strings](../art10009610/), Alan Sykes
+- 7:2 [Densities Well Suited for Statistics Problems](../art10010670/), Dr Dietrich Trenkler
+- 7:2 [Teaching nested arrays](../v7n2-p133-teaching-nested-arrays/), Dave Piper
+- 7:3 [APL Training Courses 1991](../v7n3-p7-apl-training-courses-1991/), Alison Chatterton
+- 7:3 [The Education Vector](../v7n3-p17-the-education-vector/), Alan Sykes
+- 7:3 [Letters on String Manipulations in APL](../v7n3-p19-letters-on-string-manipulations-in-apl/), Alan Sykes
+- 7:3 [An APL SCRIPT Function](../art10009620/), Alan Sykes
+- 7:3 [A to B or not A to B?](../art10009630/), Alan Sykes
+- 7:4 [Shape, Ravel and Roll](../art10009270/), Walter Spunde
+- 8:1 [The Education Vector](../v8n1-p17-the-education-vector/), Alan Sykes
+- 8:1 [Letter from Julian Vincent](../v8n1-p19-letter-from-julian-vincent/), Julian Vincent
+- 8:1 [Letter from Manfred Storn](../v8n1-p19-letter-from-manfred-storn/), Manfred Storn
+- 8:1 [I-APL News for Education Vector 8.1](../v8n1-p20-i-apl-news-for-education-vector-8-1/), Anthony Camacho
+- 8:1 [Multiple Curve Fitting](../v8n1-p20-multiple-curve-fitting/), C.E. Williams
+- 8:1 [Let’s Integrate – Using APL](../art10009660/), Alan Sykes
+- 8:1 [Labelling](../art10009670/), Alan Sykes
+- 8:1 [Zark Update](../v8n1-p59-zark-update/), Gary A. Bergquist
+- 8:2 [The Education Vector](../v8n2-p17-the-education-vector/), Alan Mayer
+- 8:2 [Labelling (Education Vector, July 1991, p.30)](../v8n2-p20-labelling/), Andy Pole
+- 8:2 [Let's Integrate - Using APL (Education Vector, July 1991, p.22)](../v8n2-p20-lets-integrate-using-apl/), Tony O'Hagan
+- 8:2 [More String Manipulations (Education Vector, July 1990)](../v8n2-p21-more-string-manipulations/), Peter Branson
+- 8:2 [Science Education in California](../art10004150/), Zdenek V. Jizba
+- 8:2 [Local Variables and the State Indicator](../art10005250/), Alan Mayer
+- 8:2 [Sunday 4 August](../v8n2-p61-sunday-4th-aug/), Anthony Camacho, Sylvia Camacho, Lee Ann Estep, Jonathan Barman
+- 8:3 [The Education Vector](../v8n3-p17-the-education-vector/), Alan Mayer
+- 8:3 [Introducing APL to Teachers](../art10004160/), Zdenek V. Jizba
+- 8:3 [Simpson’s rule](../v8n3-p19-simpsons-rule/), Neil Sheldon
+- 8:3 [APL Printing on some Star Printers with I-APL](../art10001510/), Anthony Camacho, Tom Goodman
+- 8:3 [Hooks and Forks and the Teaching of Elementary Arithmetic](../art10005810/), Donald B. McIntyre
+- 8:3 [Horner’s Method](../v8n3-p138-horners-method/), Walter G Spunde
+- 8:4 [APL Course Diary](../v8n4-p6-apl-course-diary/), Gill Smith
+- 8:4 [The Education Vector](../v8n4-p17-the-education-vector/), Alan Mayer
+- 8:4 [APL and the Birthday Problem](../art10009680/), Alan Sykes
+- 8:4 [Review of I-APL for the Macintosh](../v8n4-p23-review-of-i-apl-for-the-macintosh/), Bill McLean
+- 8:4 [How Much Water Under the Bridge?](../art10005260/), Alan Mayer
+- 8:4 [Pass Me Another Diagonal Slice, Please!](../art10005270/), Alan Mayer
+- 8:4 [Simulating Sampling Distributions](../art10010680/), Dietrich Trenkler
+- 8:4 [Iverson’s \*Arithmetic\* reviewed](../art10008000/), Keith Smillie
+- 8:4 [Graph Plotting in I-APL/Mac 1.2](../art10002290/), Ian Clark
+- 9:1 [APL Course Diary](../v9n1-p7-apl-course-diary/), Gill Smith
+- 9:1 [The Education Vector](../v9n1-p23-the-education-vector/), Alan Mayer
+- 9:1 [Workspace Listing in I-APL](../art10002830/), Alain Delmotte
+- 9:2 [The Education Vector](../v9n2-p13-the-education-vector/), Alan Mayer
+- 9:2 [New Email Discussion List](../v9n2-p15-new-email-discussion-list/)
+- 9:2 [Exploring MAGIC](../art10011140/), Dave Ziemann
+- 9:2 [Some Notes on Direct Definition](../art10005280/), Alan Mayer
+- 9:3 [APL Training Courses for 1993](../v9n3-p7-apl-training-courses-for-1993/), Gill Smith
+- 9:3 [The Education Vector](../v9n3-p17-the-education-vector/), Alan Mayer
+- 9:3 [Hero vs Orc – A Battle Sequence in APL](../art10009280/), Walter G. Spunde
+- 9:3 [Teaching Mathematics with APL: Workshop Design](../art10006540/), Howard Peelle
+- 9:4 [APL Training Courses for 1993](../v9n4-p7-apl-training-courses-for-1993/), Gill Smith
+- 9:4 [The Education Vector](../v9n4-p27-the-education-vector/), Alan Mayer
+- 9:4 [A Beginner’s Guide to Low Cost APLs](../art10003720/), Dick Holt
+- 9:4 [Workshop: Learning Maths with APL](../art10006560/), Howard Peelle
+- 9:4 [AN APL Scrabble Bag](../art10005930/), Bill McLean, Ted Emms
+- 9:4 [APL-landing to Kronstadt island (an experience of APL operation)](../art10005160/), Pavel Luksha, Oleg Luksha
+- 10:1 [The Education Vector](../v10n1-p25-the-education-vector/), Alan Mayer
+- 10:1 [Step by Step Analysis of Variance](../art10005290/), Alan Mayer
+- 10:1 [Backtracking, Queens and Permutations](../art10003110/), Ted Emms
+- 10:1 [Cows and Bulls](../art10005300/), Alan Mayer
+- 10:1 [The MAGIC Goes Away – Opening the Boxes](../art10002800/), Mike Day
+- 10:2 [The Education Vector](../v10n2-p17-the-education-vector/), Alan Mayer
+- 10:2 [J-ottings](../art10010000/), Norman Thomson
+- 10:2 [Review: "Introduction to APL\*PLUS/PC" by Maurice Dalois](../art10012400/), Alan Mayer
+- 10:3 [The Education Vector](../v10n3-p17-the-education-vector/), Alan Mayer
+- 10:3 [Editorial Comment](../v10n3-p19-editorial-comment/), Alan Mayer
+- 10:3 [Letter](../v10n3-p19-iverson-letter/), Kenneth E. Iverson
+- 10:3 [Taylor Arithmetic](../art10009290/), Walter Spunde
+- 10:3 [J-ottings 2](../art10010010/), Norman Thomson
+- 10:3 [APLomb: The View through Quad-Shaped Spectacles](../art10002300/), Ian Clark
+- 10:4 [The Education Vector](../v10n4-p17-the-education-vector/), Alan Mayer
+- 10:4 [J: A First Lesson](../art10005860/), Donald McIntyre
+- 10:4 [A Note on Primes](../art10003130/), Ted Emms
+- 10:4 [Review: "Calculus" by Ken Iverson](../art10012800/), Keith Smillie
+- 10:4 [J at Greenock](../v10n4-p44-j-at-greenock/), Norman Thomson
+- 11:1 [Editorial: A Language for the Elite!](../art10001530/), Anthony Camacho
+- 11:1 [The Education Vector](../v11n1-p29-the-education-vector/), Ian Clark
+- 11:1 [Jot-Dot-Floor: Working with Large Integers](../art10002310/), Ian Clark
+- 11:1 [J: A Second Lesson](../art10005870/), Donald McIntyre
+- 11:1 [Review: "APL Notes" by Jim Weigang](../art10012960/), Walter Spunde
+- 11:2 [The Education Vector](../v11n2-p17-the-education-vector/), Ian Clark
+- 11:2 [Jot-Dot-Floor: Domino](../art10002320/), Ian Clark
+- 11:2 [J-ottings 3: Atop and Agenda](../art10010020/), Norman Thomson
+- 11:2 [J: Bibliography](../v11n2-p28-j-bibliography/), Donald B. McIntyre
+- 11:2 [More about Fractional Series](../art10009500/), J.R. Sutton
+- 11:2 [Review: "Les APLs Etendus" by Bernard Legrand](../art10013090/), Adrian Smith
+- 11:2 [Fractals RYIJ](../art10007160/), Clifford A. Reiter
+- 11:2 [Understanding Statistical Theory through Simulation](../art10000340/), David Appleton
+- 11:3 [The Education Vector](../v11n3-p11-the-education-vector/), Ian Clark
+- 11:3 [J-ottings 4](../art10010040/), Norman Thomson
+- 11:3 [The Common Mean and APL](../art10004430/), Joseph De Kerf
+- 11:3 [Word-search Squares in I-APL](../art10005940/), Bill McLean, Ian Clark
+- 11:3 [Jot-Dot-Floor ...or Jot-Dot-Min?](../art10013120/), Ian Clark
+- 11:4 [The Education Vector](../v11n4-p17-the-education-vector/), Ian Clark
+- 11:4 [J-ottings 5: Append Items](../art10010050/), Norman Thomson
+- 11:4 [Fractnomials?](../art10009510/), J.R. Sutton
+- 11:4 [Teaching with an Executable Notation](../art10004010/), Ken Iverson
+- 11:4 [Jot-Dot-Min: an outer-product of rock-bottom APL matters](../art10013250/), Ian Clark
+- 12:1 [The Education Vector](../v12n1-p17-the-education-vector/), Ian Clark
+- 12:1 [Jot-Dot-Min: Stereo Vision](../art10002350/), Ian Clark
+- 12:1 [J-ottings 6: Indexing Arrays in J](../art10010070/), Norman Thomson
+- 12:1 [J – Where Have All the Variables Gone?](../art10009310/), Walter Spunde
+- 12:1 [Teaching with an Executable Notation (Part 2)](../art10004030/), Kenneth E. Iverson
+- 12:1 [A Virtual Classroom](../v12n1-p120-a-virtual-classroom/)
+- 12:2 [The Education Vector](../v12n2-p17-the-education-vector/), Ian Clark
+- 12:2 [J-ottings 7: Control Structures](../art10010080/), Norman Thomson
+- 12:2 [Polynomial Interpolation](../art10006060/), Antje Muller, Tineke van Woudenberg, Alistair Young
+- 12:3 [The Education Vector](../v12n3-p17-the-education-vector/), Ian Clark
+- 12:3 [J-ottings 8: Transcribing from APL to J](../art10010110/), Norman Thomson
+- 12:3 [Towers of Hanoi, Simplified in J](../art10006570/), Howard Peelle
+- 12:3 [Turtle Graphics in J](../art10000940/), David Benn
+- 12:4 [The Education Vector](../v12n4-p17-the-education-vector/), Ian Clark
+- 12:4 [Jot-Dot-Min: Weaving Patterns and Cellular Automata](../art10002370/), Ian Clark
+- 12:4 [J-ottings 9: The Power Conjunction](../art10010130/), Norman Thomson
+- 13:1 [The Education Vector](../v13n1-p17-the-education-vector/), Ian Clark
+- 13:1 [Functional Programming in J (Part 1)](../art10006580/), Howard Peelle
+- 13:1 [J-ottings 10: Interest Calculations](../art10010170/), Norman Thomson
+- 13:2 [Why Isn’t APL Used More Widely](../v13n2-p8-why-isnt-apl-used-more-widely/), R.G. Brown
+- 13:2 [The Education Vector](../v13n2-p25-the-education-vector/), Ian Clark
+- 13:2 [The Hidden Variable Approach?](../art10009320/), Walter Spunde
+- 13:2 [Functional Programming in J (Part 2)](../art10006600/), Howard Peelle
+- 13:2 [J-ottings 11](../art10010190/), Norman Thomson
+- 13:3 [The Education Vector](../v13n3-p21-the-education-vector/), Ian Clark
+- 13:3 [Functional Programming in J (Part 3)](../art10006620/), Howard Peelle
+- 13:3 [J-ottings 12](../art10010210/), Norman Thomson
+- 13:4 [The Education Vector](../v13n4-p21-the-education-vector/), Ian Clark
+- 13:4 [Functional Programming in J (Part 4)](../art10006630/), Howard Peelle
+- 14:1 [J-ottings 13](../art10010230/), Norman Thomson
+- 14:1 [DNA Fingerprinting in APL](../art10002380/), Ian Clark
+- 14:2 [A Little Hook for Understanding](../art10002610/), Nicholas Cox
+- 14:2 [The Josephus Problem Generalized in J](../art10006640/), Howard A. Peelle
+- 14:2 [J-ottings 14](../art10010260/), Norman Thomson
+- 14:2 [The Logical Piano of W. S. Jevons](../art10008090/), Keith Smillie
+- 14:3 [ZARK Newsletter Extracts](../art10007600/), Jon Sandles
+- 14:3 [J-ottings 15](../art10010270/), Norman Thomson
+- 14:4 [Zark Newsletter Extracts](../art10007610/), Jon Sandles
+- 15:1 [Zark Newsletter Extracts](../art10007620/), Jon Sandles
+- 15:2 [Zark News: Utility Corner and Crossword-4](../art10007630/), Gary Bergquist
+- 15:2 [J-ottings 18: Transposition](../art10010310/), Norman Thomson
+- 15:2 [Word of Words from Iterated Function Systems](../art10007180/), Benjamin J. Reiter, Clifford A. Reiter, Zachary X. Reiter
+- 15:3 [Zark News: Utility Corner and Crossword-5](../art10007650/), Gary Bergquist
+- 15:3 [Forty Years On](../art10001680/), Sylvia Camacho
+- 15:4 [Zark News: Utility Corner and Crossword-6](../art10007670/), Gary Bergquist
+- 16:1 [Zark Newsletter Extracts](../v16n1-p42-zark-newsletter-extracts/), Jon Sandles
+- 16:2 [J-ottings 22: ... and now something for our very youngest readers](../art10010360/), Norman Thomson
+- 16:4 [At Play with J: An Open and Shut Case](../art10005600/), Eugene McDonnell
+- 17:4 [J - the Natural Language for Analytical Computing](../art10014060/)
+- 18:2 [Getting Started with A](../art10008930/), Adrian Smith
+- 18:3 [Review of “J: the Natural Language for Analytic Computing”](../art10007240/), Cliff Reiter
+- 18:3 [What, in Computing, is Worth Learning?](../art10001600/), Anthony Camacho
+- 19:3 [J-ottings 35: How to Do Things with Words](../art10010490/), Norman Thomson
+- 19:3 [A Tutorial in J Programming: The Second-Order Josephus Sequence](../art10006670/), Howard A. Peelle
+- 20:1 [Guest Editorial: Should Vector Teach Mathematical Grammar?](../art10001710/), Sylvia Camacho
+- 20:1 [Matrikx Reloaded](../art10003230/), Simon Garland
+- 21:1 [Editorial](../art10009820/), Stephen Taylor
+- 21:4 [Editorial: Discover, Learn, Profit](../art10009870/), Stephen Taylor
+- 21:4 [APL Idioms](../art10000470/), Ajay Askoolum
+- 21:4 [Review of “Mathematical Computing in J (Peelle)”](../art10007300/), Cliff Reiter
+- 22:1 [My Experience at the Dyalog Conference](../art10010650/), Horacio Tovar
+- 22:1 [ARQUE – An insight into its methodology](../art10009720/), Alan Sykes
+- 22:2 [Letter: Sudoku Madness](../art10003710/), Neville Holmes
+- 22:2 [J-ottings 47: RU14 txt msgs? pls 1!:1 on](../art10010600/), Norman Thomson
+- 22:3 [Discovering Array Languages](../art10008110/), Keith Smillie
+- 22:3 [Expository Programming](../art10000980/), Paul Berry
+- 22:4 [Letter: Memories of Ken Iverson and APL](../art10011230/), Paul Barnetson
+- 23:1 [APL – a Glimpse of Heaven](../art10011550/), Bernard Legrand
+- 23:3 [Tacit J and I](../art10011800/), Neville Holmes
+- 23:3 [Functional Calculation 0: Numerical Aperitif](../art10011810/), Neville Holmes
+- 23:3 [Tutorial: User-Defined Classes in APLX Version 4](../art10011820/), Simon Marsden
+- 23:4 [Fire from Heaven (Review: Q for Mortals, by Jeffry Borror)](../art10011980/), Adrian Smith
+- 23:4 [In Session: The ruler’s edge revisited](../art10012030/), Ray Polivka
+- 23:4 [LearnAPL: Apprenticeship Scheme Announced (Advertisement)](../art10012040/), Dyalog & Optima Systems
+- 23:4 [Functional calculation 1: numerical ingredients](../art10012060/), Neville Holmes
+- 24:1 [Functional calculation 2: The year 1997](../art10500050/), Neville Holmes
+- 24:1 [J-ottings 51: Suffer the little children…](../art10500080/), Norman Thomson
+- 24:2 [A newbie’s discovery of APL](../art10500160/), Rebecca Burriesci
+- 24:2 [Functional calculation 3: Structural Ingredients](../art10500320/), Neville Holmes
+- 24:4 [Functional Calculation 4: The year 1998](../art10500370/), Neville Holmes
+- 25:1 [Remembering Donald McIntyre](../art10500600/), Keith Smillie
+- 25:1 [Functional Calculation 5: Operations](../art10500630/), Neville Holmes
+- 25:3 [TryAPL](../v25n3-p12-tryapl/)
+- 25:3 [Introducing “Some Topics in Computing”](../art10500840/), Keith Smillie
+- 25:4 [Three blind mice](../art10500990/), Paul Grosvenor
+- 25:4 [Our first steps into the world APL](../art10500980/), James Greeley, Sam Gutsell, Shaquil Sidiki
+- 26:2 [Squares, neighbours, probability, and J](../art10501300/), John C. McInturff
+- 27:1 [Optima welcomes James Heslip](../art10501680/), James Heslip
+- 27:1 [Taming statistics with limited-domain operators](../art10501700/), Stephen Mansour
+- 27:1 [Writing a utility function](../art10501710/), Dan Baronet
+
+## development practice { #tag-development-practice }
+
+*managing APL development: quality, conventions, documentation, migration, methodology*
+
+- 1:1 [Setting up a Company I.C.](../art10002520/), Romilly Cocking
+- 1:1 [Panel Discussion on Information Centres](../v1n1-p46-panel-discussion-information-centres/), Adrian Smith
+- 1:2 [Software Review — APAT: First Impressions](../v1n2-p44-software-review-apat/), Bernard King
+- 1:3 [A Lifestyle under VM/CMS VSAPL (meeting notes)](../v1n3-p60-lifestyle-under-vm-cms-vsapl/)
+- 1:3 [The Information Centre and Changing Technologies (IPSA 1984 Users’ Meeting notes)](../v1n3-p67-ipsa-1984-users-meeting/), Adrian Smith
+- 1:4 [Information Centre as Strategy](../art10006700/), Fred Perkins
+- 2:4 [Technical Editorial: Utility functions](../v2n4-p102-technical-editorial/), Jonathan Barman, Dave Ziemann
+- 2:4 [Migration to APL2](../art10004970/), Mark Lenihan
+- 3:1 [One Small Step for APL](../art10006020/), David Moffat
+- 3:1 [Plea for naming conventions](../art10002110/), Paul Chapman
+- 3:3 [Technical Editorial: Interpreters for Debuggers](../v3n3-p102-technical-editorial/), David Ziemann
+- 4:1 [Quality Control in Application Development, 20th February 1987 at the Royal Over-Seas League](../v4n1-p54-quality-control-meeting/), Adrian Smith, Anthony Camacho
+- 4:2 [MetaAPL: an APL Preprocessor](../v4n2-p72-metaapl-an-apl-preprocessor/), Glen Tickner, Norval R Oswald
+- 4:2 [Workspace Management](../art10001160/), Peter Branson
+- 4:3 [From Mainframes to Smaller Machines](../art10009210/), Paul Smith
+- 4:4 [The APL Debugger (Uniware)](../v4n4-p50-the-apl-debugger/), Alasdair Richardson
+- 4:4 [Technical Correspondence (Sullivan; Piper; Hayward; Bykerk; Donnelly; Prys-Williams)](../v4n4-p92-technical-correspondence/)
+- 5:1 [Developing Business Systems](../art10002540/), Romilly Cocking
+- 5:1 [Supporting APL in a Large Organisation](../art10004200/), Maurice Jordan
+- 5:2 [Security? What Security?](../v5n2-p85-security-what-security/), John Sullivan
+- 5:3 [Function-point Analysis and APL: January 13th at the Royal Over-Seas League](../v5n3-p79-fpa-meeting-introduction/), Adrian Smith
+- 5:3 [The Benefits of Function-point Analysis](../art10002560/), Romilly Cocking
+- 5:3 [The Use of FPA Techniques within IBM](../v5n3-p80-fpa-within-ibm/), Alan Williams
+- 5:3 [Function-point Analysis at British Airways](../art10004210/), Maurice Jordan
+- 5:3 [How Expensive is APL?](../art10000860/), F.H.D. van Batenburg, J.W. Kijne
+- 5:4 [Editorial: In which Piglet meets a Heffalump](../v5n4-p3-editorial/), Adrian Smith
+- 5:4 [An IBM Bug to watch for, when moving to APL2](../v5n4-p96-ibm-bug-when-moving-to-apl2/), John Warden
+- 5:4 [Setting PF keys and Other Initialization](../v5n4-p97-setting-pf-keys-and-other-initialization/), Nicholas Small
+- 6:2 [Second Generation APLs - Comment on Items in Vector 5.4](../v6n2-p7-second-generation-apls-comment/), N.J. Small
+- 6:2 [Conference Summary](../v6n2-p66-conference-summary/), Peter Merritt
+- 6:2 [APL "RISC Programming Style"](../art10012110/), Gérard Langlet
+- 6:3 [A Vector Construction Kit](../art10008290/), Adrian Smith
+- 6:4 [Editorial: A Network Survival Kit](../v6n4-p3-editorial-network-survival-kit/), Adrian Smith
+- 6:4 [A Design Framework for APL Systems](../art10006830/), David Piper
+- 6:4 [Is Function Ambivalence a Good Thing?](../v6n4-p96-is-function-ambivalence-a-good-thing/), David Piper
+- 7:1 [Editorial: Reliability of APL Systems](../v7n1-p3-reliability-of-apl-systems/), Jonathan Barman
+- 7:1 [The APL Statistics Library Project](../art10006240/), The ASL Team
+- 7:1 [Some Questions of Programming Style for the APL Statistical Library](../art10000310/), David Appleton
+- 7:1 [The Dangers of APL RISC programming ...](../v7n1-p112-dangers-of-apl-risc-programming/), Bob Bykerk
+- 7:2 [Packaged Workspaces in APL2](../art10007950/), Nick Small
+- 7:2 [Packaged Workspaces and their Implications for Application Design](../art10006840/), Dave Piper
+- 7:2 [What’s Wrong with Parentheses?](../art10004400/), Joseph De Kerf
+- 7:3 [A to B or not A to B?](../art10009630/), Alan Sykes
+- 7:3 [Workspace search function](../v7n3-p126-workspace-search-function/), Peter Branson
+- 7:3 [Packaged Workspaces in APL2/370](../v7n3-p127-packaged-workspaces-in-apl2-370/), Nicholas Small
+- 7:4 [The Steam Hammer and the Fly](../art10004640/), Gérard Langlet
+- 8:1 [ASL: The Basic Statistics Volume](../art10000100/), Jake Ansell
+- 8:2 [ASL - where have we got to and where do we go from here?](../v8n2-p49-asl-where-have-we-got-to/), Tony O'Hagan
+- 8:2 [Suggested Standards for a Component File System at a Commercial APL Site](../art10001780/), Ray Cannon
+- 8:2 [ASWI Programming Standards](../art10000870/), FHD v.Batenburg, TRC Bonnema, L v.Geldrop, H v.Loon, B Smoor
+- 8:2 [A Case Story about Moving an APL Application](../art10011040/), Allan Zenth
+- 8:2 [How STSC’s ⎕MF can help in testing APL workspaces](../art10001790/), Ray Cannon
+- 8:3 [ASL Standards](../art10003070/), David Eastwood
+- 8:3 [Panel Design: An APL Programmer’s Toolkit](../art10002650/), David Crossley
+- 8:3 [Arrays with Style](../art10008410/), Adrian Smith
+- 8:4 [Comments on “ASWI Programming Standards”](../v8n4-p7-comments-on-aswi-programming-standards/), Ray Cannon
+- 9:1 [Editorial: Maximising the Re-use of Code](../art10000610/), Jonathan Barman
+- 9:1 [The Hungarian Naming Convention](../v9n1-p9-hungarian-naming-convention/), Ray Cannon
+- 9:1 [Stone-walling in APL](../art10008420/), Adrian Smith
+- 9:1 [The \]HELP Command](../art10001800/), Ray Cannon
+- 9:1 [DOIF Considered Harmful](../art10006870/), Dave Piper
+- 9:3 [Seize the Time](../art10001130/), Dick Bowman
+- 9:3 [APL2 Packages: a Cautionary Tale](../v9n3-p100-apl2-packages/), Nicholas Small
+- 9:3 [ASWI Programming Standards; some Whys.](../art10000880/), F.H.D. van Batenburg
+- 9:4 [The Challenge of the New](../art10006410/), Duncan Pearson
+- 9:4 [More on APL Packages](../v9n4-p122-more-on-apl-packages/), A.J. Brown
+- 10:1 [Coast to Coast – Designing with Objects](../art10008460/), Adrian Smith
+- 10:2 [Migrating Mainframe Applications to APL\*PLUS II](../art10003280/), Allan Gay
+- 10:2 [A GDDM Simulation for APL\*PLUS II](../art10003290/), Allan Gay
+- 10:3 [A VSAM Simulation for APL\*PLUS II](../art10003300/), Allan Gay
+- 10:4 [A Common Approach to the Windows GUI (Dyalog APL/W and APL\*PLUS III)](../art10008510/), Adrian Smith, Duncan Pearson
+- 10:4 [Technical Editorial: in Search of Contexts](../art10008520/), Adrian Smith
+- 10:4 [Defined Operator Simulation for APL\*PLUS II](../art10003310/), Allan Gay
+- 11:2 [Causeway: a Technical Architecture](../art10006450/), Duncan Pearson
+- 11:3 [Namespaces: Just another Means to Multiply your Chaos?](../art10004310/), Kimmo Kekäläinen
+- 11:3 [Causeway: Making Menus](../art10008610/), Adrian Smith
+- 11:3 [J Inscription](../art10006210/), Richard Oates
+- 11:4 [Namespaces and ⎕SE](../v11n4-p119-namespaces-and-se/)
+- 12:1 [Book Review: \*Making APL Readable\*](../art10001550/), Anthony Camacho
+- 12:1 [Portability Workshop](../v12n1-p56-portability-workshop/), Eke van Batenburg, Adrian Smith
+- 12:2 [Is APL a Team Sport?](../art10001040/), Douglas Bohrer
+- 12:3 [Managing Objects in Causeway](../art10007550/), Jon Sandles
+- 12:4 [The JADS/SMS Utility Management System](../art10007560/), Jon Sandles
+- 12:4 [Migration From APL2 to APL/W](../art10009530/), Rex Swain
+- 13:3 [Leaving the Nest](../art10001280/), Robert G. Brown
+- 13:3 [New Trace Facilities in J 3.03](../art10003870/), Roger Hui
+- 13:3 [Using a Defined Adverb to Trace Execution in Tacit Programs in J](../art10000060/), David Alis
+- 13:4 [Controlling APL Software Releases](../art10003400/), Marc Griffiths, Chris Hogan, John Jacob, Phil Last
+- 14:1 [Year 2000 — why the Consternation?](../v14n1-p8-year-2000-why-the-consternation/), Bob Brown
+- 14:2 [Re: Year 2000](../v14n2-p11-re-year-2000/), M.E. Martin
+- 14:2 [Year 2000 — Why the Consternation?](../v14n2-p12-year-2000-why-the-consternation/), Anne Wilson
+- 14:3 [Using APL and J in Conjunction to Improve System Validity](../art10006930/), Donald B. Pittenger
+- 14:4 [APL and J: Working Together, Yet Separately](../art10006940/), Donald B. Pittenger
+- 15:1 [A Response to the Responses in Vector...](../v15n1-p7-response-to-the-responses/), David Piper
+- 15:1 [Utilities for Dyalog Developers](../art10001960/), Ray Cannon
+- 15:3 [Utilities for the Dyalog Session (part 2)](../art10001970/), Ray Cannon
+- 15:4 [Editorial: You have performed an illegal operation](../art10004800/), Stefano Lanzavecchia
+- 15:4 [Challenge: A Namespace-aware Function Tree](../art10013900/), Ray Cannon
+- 15:4 [Utilities for Dyalog APL/W developers: UCMD Take 2](../art10001980/), Ray Cannon
+- 15:4 [Filecheck: Another Utility for the Dyalog Session](../art10003620/), Bob Hoekstra
+- 16:1 [GUI and Closed Systems](../art10001570/), Anthony Camacho
+- 16:1 [Purging Name Pollution in APL+Win](../art10000440/), Ajay Askoolum
+- 16:4 [Editorial 16.4](../art10013470/), Stefano Lanzavecchia
+- 17:1 [ZarkWin: Windows Programming without ⎕WI](../art10000950/), Gary A. Bergquist
+- 17:1 [Taking the \*Migraine\* out of \*Migration\*](../art10003170/), Walter G. Fil
+- 17:1 [Technical Correspondence: Vector Jan 2000: Utility Corner (pp. 27-35)](../v17n1-p106-technical-correspondence/), H.J. Veenendaal
+- 17:2 [APL+Win Application Migration](../art10000450/), Ajay Askoolum
+- 17:4 [The Development and Q/A Process at Microsoft, US](../art10003690/), Kari Höijärvi
+- 17:4 [Side effects in the Zark extracts](../v17n4-p112-side-effects-in-the-zark-extracts/), Jonathan Barman
+- 18:1 [Editorial 18.1: Nightmare Programming– Nightmare Data](../art10013540/), Anthony Camacho
+- 18:2 [Limbering Up: Killing Comments](../v18n2-p43-limbering-up-killing-comments/), Gary A. Bergquist
+- 18:2 [J-ottings 30: Jaesthetics](../art10010440/), Norman Thomson
+- 18:2 [Using Structures between GUI and Relational Databases](../art10003430/), Tomas Gustafsson
+- 18:3 [Killing Comments](../art10014410/), Gary A. Bergquist
+- 18:3 [What, in Computing, is Worth Learning?](../art10001600/), Anthony Camacho
+- 18:4 [Three Principles of Coding Clarity](../art10009750/), Stephen Taylor
+- 19:1 [APL in Commercial Systems Development: a Survey](../art10009760/), Stephen Taylor
+- 19:1 [A Creative Use of ⎕WATCHPOINTS to Investigate Large Heritage ws in APL+Win](../art10002420/), Ian Clark
+- 19:4 [A Place for Us](../art10009780/), Stephen Taylor
+- 19:4 [The Simple Art of Software: XP Techniques in APL](../art10009790/), Stephen Taylor
+- 19:4 [Tools, Part 1. Basics](../art10000800/), Dan Baronet
+- 20:1 [Why APL Programmers Don’t Use Libraries](../art10004590/), Morten Kromberg
+- 20:1 [Tools, Part 2. Basics too.](../art10000810/), Dan Baronet
+- 20:2 [Utility Corner: Numbers to Words](../v20n2-p26-utility-corner-numbers-to-words/), Gary A. Bergquist
+- 20:2 [The \*Take Care\* System](../art10006730/), Peter Pichler
+- 20:2 [A Variable Editor](../art10002700/), David Crossley
+- 20:3 [Getting Through to APL+Win from C#: A Layman’s Tour of .Net](../art10009090/), Adrian Smith
+- 21:1 [Wildheart](../art10004880/), Stefano Lanzavecchia
+- 21:1 [Tools, Part 3: Object Comparison](../art10000820/), Dan Baronet
+- 21:1 [Launching a Workspace in Windows](../art10002720/), David Crossley
+- 21:2 [Hackers’ Corner: Hack My Exe](../art10000510/), Michael Baas
+- 21:3 [Editorial: Please Mr President, don’t forget about the Working Man](../art10009860/), Stephen Taylor
+- 21:4 [CRCOMPARE in J](../art10003010/), Adam Dunne
+- 22:1 [Pair Programming With The Users](../art10009900/), Stephen Taylor
+- 22:2 [In Search of a Cool Smooth at Naples 2005](../art10009190/), Adrian Smith
+- 22:2 [Source Code Management of APL Code](../art10007320/), Richard Renich
+- 23:1 [Building OO applications in Dyalog version 11](../art10011510/), Stephen Taylor
+- 23:1 [Analysing CONTINUE workspaces](../art10011610/), Ray Cannon
+- 23:1 [New Tricks for Old Dogs: making sense of classes and namespaces](../art10011620/), Adrian Smith
+- 23:3 [SALT: A Simple APL Library Toolkit](../art10011850/), Dan Baronet
+- 23:4 [First experiences with Unicode in Dyalog 12](../art10011990/), Adrian Smith
+- 23:4 [Classes as a tool of thought](../art10012010/), Simon Marsden
+- 23:4 [SALT II](../art10012050/), Dan Baronet
+- 24:1 [ISO-9000 certified APL development](../art10500040/), Chris Hogan
+- 24:1 [Spice for beginners](../art10500020/), Daniel Baronet
+- 24:2 [The Snap SALT Command](../art10500250/), Dan Baronet
+- 25:3 [Sharing code – the APLTree project](../art10500730/), Kai Jaeger
+- 25:3 [Generating documentation with ADOC](../art10500770/), Kai Jaeger
+- 25:4 [User commands in Dyalog](../art10500900/), Dan Baronet
+- 25:4 [Public user commands in Dyalog APL](../art10500930/), Dan Baronet
+- 25:4 [Function design](../art10500950/), Kai Jaeger
+- 26:1 [APLUnit - An APL unit test library](../art10501120/), Gianfranco Alongi
+- 26:2 [Searching for the state in which Wonderful Things are inevitable](../art10501360/), Gianfranco Alongi
+- 26:2 [Legacy code, survival strategies and Fire](../art10501420/), Kai Jaeger
+- 27:1 [The doctor and the doc](../art10501850/), Stephen Taylor
+- online [APLX is out, long live APL](../art10501830/), Dan Baronet
+
+## APL in perspective { #tag-APL-in-perspective }
+
+*what APL is for, its place among languages, its history and future*
+
+- 1:1 [EDITORIAL: Back to BASICs?](../v1n1-p3-editorial/), Robert Bittlestone
+- 1:1 [A Graphic Vision of APL](../art10007350/), Graeme Robertson
+- 1:1 [Why APL?](../art10001000/), Robert Bittlestone
+- 1:1 [Steps Towards a Better Basic - part 1](../v1n1-p77-steps-towards-a-better-basic-1/), Anthony Camacho
+- 1:1 [FGL: Fifth Generation Language](../art10001010/), Robert Bittlestone
+- 1:2 [APL vs Packages and 4GLs (meeting notes)](../v1n2-p48-apl-vs-packages-and-4gls/), Adrian Smith
+- 1:2 [Are 4GLs killing APL?](../art10001070/), Desmond Booth
+- 1:2 [Mr Babbage’s Secret](../art10003210/), Ole Franksen
+- 1:2 [Steps Towards a Better Basic - Part 2](../v1n2-p73-steps-towards-a-better-basic-2/), Anthony Camacho
+- 1:3 [Guest Editorial: The Evolution of APL](../v1n3-p3-guest-editorial-the-evolution-of-apl/), Adrian Smith
+- 1:3 [An APL Dialogue](../art10007360/), Graeme Robertson
+- 1:4 [Re-inventing Man](../art10001030/), Robert Bittlestone
+- 1:4 [Steps Towards a Better Basic — Part 3](../v1n4-p95-steps-towards-a-better-basic-3/), Anthony Camacho
+- 1:4 [Technical Editorial: Is APL Always Appropriate?](../v1n4-p105-technical-editorial/), Jonathan Barman, David Ziemann
+- 2:1 [General Correspondence](../v2n1-p5-general-correspondence/), Anthony Camacho, Heinz Reutersberg, Savas Pavlides, Curtis A. Jones
+- 2:1 [Report from APL85 — APL and the Future](../v2n1-p67-report-from-apl85/), John Adams
+- 2:1 [Steps Towards a Better Basic — Part 4 (reprint from Datalink)](../v2n1-p81-steps-towards-a-better-basic-4/), Anthony Camacho
+- 2:1 [Power to APL](../art10003940/), Per Hultin, John Hagger
+- 2:3 [EDITORIAL: APL – USP or RIP?](../v2n3-p3-editorial-apl-usp-or-rip/), David Preedy
+- 2:3 [APL Press Review](../v2n3-p21-apl-press-review/), Steve Lyus
+- 2:3 [Steps toward a better BASIC — A High Grade SORT of Language (reprint from Datalink)](../v2n3-p89-steps-toward-a-better-basic/), Anthony Camacho
+- 3:1 [General Correspondence](../v3n1-p7-general-correspondence/)
+- 3:1 [APL Press Review](../v3n1-p27-apl-press-review/), David Preedy
+- 3:1 [One Small Step for APL](../art10006020/), David Moffat
+- 3:1 [Steps to a better BASIC — A Choice Method of Selection (reprint from Datalink)](../v3n1-p93-steps-to-a-better-basic/), Anthony Camacho
+- 3:2 [General Correspondence](../v3n2-p7-general-correspondence/)
+- 3:2 [The Split in APL](../art10003970/), Ken Iverson
+- 3:2 [Shortened Transcript of Roy Sykes’ Closing Plenary Address at APL 86](../v3n2-p89-roy-sykes-closing-plenary/), Anthony Camacho
+- 3:3 [Comparing Computer Languages](../v3n3-p40-comparing-computer-languages/), Peter Branson
+- 3:3 [APL Debate: What is APL Thinking?](../v3n3-p66-apl-debate-what-is-apl-thinking/), David Preedy
+- 3:3 [Steps To A Better BASIC — Everything AND the kitchen sink (reprint from Datalink)](../v3n3-p95-steps-to-a-better-basic/), Anthony Camacho
+- 3:3 [Future Directions of APL](../art10006320/), Graham Parkhouse
+- 4:1 [Editorial: Professionalism and spreading the word](../v4n1-p3-editorial-professionalism/), Anthony Camacho
+- 4:2 [General Correspondence](../v4n2-p9-general-correspondence/), Dick Bowman, Richard L. Connor, E J Sargeant, Barrie Webster, Henri Brudzewsky, George MacLeod
+- 4:3 [Origins](../art10006330/), Graham Parkhouse
+- 4:4 [Editorial: Keep your Eyes on the Prize](../v4n4-p3-editorial/), Adrian Smith
+- 4:4 [The Education Vector](../v4n4-p23-the-education-vector/), Norman Thomson
+- 4:4 [APL Press Review](../v4n4-p45-apl-press-review/), Anthony Camacho
+- 5:1 [Re: letters published in VECTOR 4.2](../v5n1-p11-re-letters-published-in-vector-4-2/), Mark Cranny
+- 5:1 [The Education Vector](../v5n1-p33-the-education-vector/), Norman Thomson
+- 5:1 [Attitudes to APL in Higher Ed’n](../art10003040/), David Eastwood
+- 5:1 [Algorithmics by Harel](../v5n1-p56-algorithmics-by-harel/), Anthony Camacho
+- 5:2 [Editorial: OOPS and WIMPS and the Way Ahead](../v5n2-p3-editorial/), Adrian Smith
+- 5:2 [Panel Discussion: a Market Niche for APL](../v5n2-p71-panel-the-apl-market-niche/), Peter Donnelly, Brian Drury, Tim Perry, Richard Nabavi
+- 5:3 [Guest editorial: Plus ca change ...](../v5n3-p3-guest-editorial/), David Preedy
+- 5:4 [Letter: 3 million PCs for the Soviet Union](../v5n4-p30-letter-3-million-pcs-for-the-soviet-union/), Dave Piper
+- 6:2 [Editorial: We are not Alone!](../v6n2-p3-editorial/), Adrian Smith
+- 6:3 [Editorial: Is There Room for APL?](../v6n3-p3-editorial/), Adrian Smith
+- 7:1 [Editorial: Reliability of APL Systems](../v7n1-p3-reliability-of-apl-systems/), Jonathan Barman
+- 7:1 [APL91: Conference Announcement](../v7n1-p33-apl91-conference-announcement/), Curtis Jones
+- 7:2 [Russian Magazine Devotes an Issue to APL](../v7n2-p43-apl-makes-the-front-page-in-the-ussr/), Peter Saunders
+- 7:2 [АПЛ in The Soviet Union](../art10007850/), John Searle
+- 7:2 [APL90 Reflections](../v7n2-p95-apl90-reflections/), John Searle
+- 7:3 [Editorial: Solving Problems with APL](../v7n3-p3-editorial/), Jonathan Barman
+- 7:3 [Soviet APL: a Historical Outline](../art10006010/), Alexei I. Miroshnikov
+- 8:2 [Guest Editorial: Wanted: Programmer Support](../v8n2-p3-guest-editorial/), Gregg W Taylor
+- 8:2 [Panel “25 Year Perspective”](../art10001500/), Anthony Camacho
+- 8:2 [Thursday 8 August](../v8n2-p87-thursday-8th-aug/), Sylvia Camacho, Jonathan Barman, Ray Cannon, John Searle, Dave Ziemann
+- 8:2 [Selected Survival Strategies for APL Puddle-dwellers](../v8n2-p93-survival-strategies-for-apl-puddle-dwellers/), Adrian Smith
+- 8:3 [Editorial: J is for January](../v8n3-p3-editorial-j-is-for-january/), Jonathan Barman
+- 8:3 [J Questionnaire](../v8n3-p90-j-questionnaire/), Jonathan Barman
+- 8:4 [Guest Editorial: Now is the Time for APL](../v8n4-p3-guest-editorial-now-is-the-time-for-apl/), Peter Donnelly
+- 8:4 [IBM Systems Journal: APL 25th Anniversary Edition](../v8n4-p72-ibm-systems-journal-apl-edition/), Adrian Smith
+- 8:4 [Byte ‘Classic Languages’ Article on APL](../v8n4-p76-byte-classic-languages-article-on-apl/), Adrian Smith
+- 9:2 [Smalltalk, APL and J: an Exercise in Comparative Programming](../art10011150/), Dave Ziemann
+- 9:3 [Editorial: Commercial APL](../art10000630/), Jonathan Barman
+- 9:3 [Seize the Time](../art10001130/), Dick Bowman
+- 9:4 [Editorial: What You Know Is What You Love](../art10000650/), Jonathan Barman
+- 9:4 [APL Experiences and MicroSoft’s Visual Basic for Windows](../art10000030/), Martyn Adams
+- 10:1 [Editorial: APL in Business](../v10n1-p3-editorial-apl-in-business/), Anthony Camacho
+- 10:1 [A Comment on “Announcing The APL Review”](../v10n1-p10-comment-on-announcing-the-apl-review/), Martin Gfeller
+- 10:2 [APL93: Solving Wicked Problems with APL](../art10004950/), Chris Lee
+- 10:2 [APL93 Postscript: Don't Stop Thinking About Tomorrow](../art10012450/), Adrian Smith
+- 10:4 [APL - a Client-Server Language?](../art10004560/), Morten Kromberg
+- 11:1 [Editorial: A Language for the Elite!](../art10001530/), Anthony Camacho
+- 11:1 [10 Years Ago: Editorial from Vector 1.1](../v11n1-p4-ten-years-ago-editorial/), Robert Bittlestone
+- 11:1 [To Suffer the Slings and Vectors of the BAA](../art10000380/), Ajay Askoolum
+- 11:2 [Editorial: Monsieur Langlet's Enterprise](../art10013030/), Anthony Camacho
+- 11:4 [Editorial:](../art10013240/), Anthony Camacho
+- 11:4 [Here be Dragons](../art10001660/), Sylvia Camacho
+- 11:4 [ASCII Representation of APL Characters](../art10004020/), Kenneth E. Iverson
+- 12:1 [Too Much Diversity in APL?](../v12n1-p7-too-much-diversity-in-apl/), Joseph De Kerf
+- 12:3 [Editorial: The Place of APL](../art10013320/), Anthony Camacho
+- 13:1 [Editorial: Interesting Times](../art10006500/), Duncan Pearson
+- 13:2 [Why Isn’t APL Used More Widely](../v13n2-p8-why-isnt-apl-used-more-widely/), R.G. Brown
+- 13:2 [Arrays, Arrays, wherefor art thou Arrays?](../v13n2-p14-arrays-arrays-wherefor-art-thou-arrays/), Richard J. Procter
+- 13:3 [British J Association?](../v13n3-p12-british-j-association/), Don Mattern
+- 13:4 [Obituary: Memories of Gérard Langlet](../art10013390/), Anthony Camacho
+- 14:1 [The IML Matrix Language: A Belated Introduction](../art10006910/), Donald B. Pittenger
+- 14:1 [APL and J (5): Operators – Inner Product, Each, Commute, Compose](../art10001390/), Chris Burke
+- 14:2 [The Logical Piano of W. S. Jevons](../art10008090/), Keith Smillie
+- 14:2 [How to Win Programming Language Battles … and Maybe the In-House Applications Development War](../art10006920/), Donald B. Pittenger
+- 14:3 [Editorial: What is APL?](../art10000400/), Ajay Askoolum
+- 14:3 [Using APL and J in Conjunction to Improve System Validity](../art10006930/), Donald B. Pittenger
+- 14:4 [Editorial: Giochiamo col mondo](../art10004780/), Stefano Lanzavecchia
+- 14:4 [Editorial: Giochiamo col mondo](../art10013850/), Stefano Lanzavecchia
+- 14:4 [APL and J: Working Together, Yet Separately](../art10006940/), Donald B. Pittenger
+- 15:1 [Editorial: APL98 and the Future of APL](../art10004790/), Stefano Lanzavecchia
+- 15:1 [APL98: A Personal View](../art10002670/), David Crossley
+- 15:2 [Editorial: Dedicated to my Unforgettable Cat](../art10013870/), Stefano Lanzavecchia
+- 15:2 [Measures of Programming Language Efficiency](../v15n2-p7-measures-of-programming-language-efficiency/), Joseph De Kerf
+- 15:3 [Editorial:](../art10013880/), Stefano Lanzavecchia
+- 15:3 [Forty Years On](../art10001680/), Sylvia Camacho
+- 16:1 [APLs for Linux](../art10003630/), Bob Hoekstra
+- 16:2 [Editorial: “Linux, the choice of a GNU generation”](../art10013960/), Stefano Lanzavecchia
+- 16:3 [Editorial 16.2](../art10013440/), Stefano Lanzavecchia
+- 16:4 [Editorial 16.4](../art10013470/), Stefano Lanzavecchia
+- 17:2 [BCS Specialist Groups Congress](../art10001580/), Anthony Camacho
+- 17:3 [Editorial 17.3](../art10013520/), Stefano Lanzavecchia
+- 17:3 [The Cogwheel Brain by Doron Swade](../art10001590/), Anthony Camacho
+- 18:1 [Editorial 18.1: Nightmare Programming– Nightmare Data](../art10013540/), Anthony Camacho
+- 19:1 [Editorial: Vector 19:1](../art10013580/), Stefano Lanzavecchia
+- 19:3 [Trip: One Way from APL to J and K](../art10006180/), David Ness
+- 20:3 [Editorial](../art10004870/), Stefano Lanzavecchia
+- 20:3 [Technical Correspondence](../v20n3-p116-technical-correspondence/), Roger Hui
+- 20:4 [Guest Editorial: Time for a New Name?](../art10009800/), Stephen Taylor
+- 21:1 [Editorial](../art10009820/), Stephen Taylor
+- 21:2 [Editorial](../art10009830/), Stephen Taylor
+- 21:2 [How Wrong Was I?](../art10001720/), Sylvia Camacho
+- 21:3 [Letter to the Editor](../v21n3-p3-letter-to-the-editor/), Devon H. McCormick
+- 21:4 [Functional Programming in Joy and K](../art10000360/), Stevan Apter
+- 22:2 [Gérard Langlet: A Man of Distinction](../art10001730/), Sylvia Camacho
+- 22:3 [Editorial: Kenneth E. Iverson](../art10009920/), Stephen Taylor
+- 22:3 [APL in the New Millenium](../art10004040/), Ken Iverson
+- 22:3 [Discovering Array Languages](../art10008110/), Keith Smillie
+- 22:3 [Obituary: Kenneth E. Iverson](../art10010640/), Toronto Globe and Mail
+- 22:3 [Obituary: Memories of Ken](../art10000970/), Bob Bernecky
+- 22:3 [Obituary: Remembering Ken](../art10000070/), Linda Alvord
+- 22:3 [Obituary: Memories of Ken](../art10005800/), Eugene McDonnell
+- 22:3 [Obituary: Memories of Ken](../art10010840/), Arthur Whitney
+- 22:3 [Expository Programming](../art10000980/), Paul Berry
+- 22:3 [How We Got To APL\\1130](../art10001190/), Larry Breed
+- 22:3 [The Language, the Mind and the Man](../art10001240/), Fred Brooks
+- 22:3 [Ken at Yorktown Heights](../art10001270/), Jim Brown
+- 22:3 [Ken Iverson in Denmark](../art10002270/), Gitte Christensen
+- 22:3 [Hommage à Ken Iverson](../art10002990/), Michel Dumontier
+- 22:3 [Ken Iverson at the End of the World](../art10003580/), Richard Hill
+- 22:3 [A Lifetime of Working with Ken](../art10003920/), Roger Hui
+- 22:3 [A Tribute to Ken Iverson](../art10005900/), Donald McIntyre
+- 22:3 [Kenneth Iverson, APL and J: Some Personal Recollections](../art10008120/), Keith Smillie
+- 22:3 [What’s Wrong with my Programming?](../art10010720/), Joey Tuttle
+- 22:3 [Ken Iverson Quotations and Anecdotes](../art10003930/), Roger Hui, et al.
+- 22:4 [Letter: APL Starmap](../art10011210/), John R. Thorstensen
+- 22:4 [Letter: Memories of Ken Iverson and APL](../art10011230/), Paul Barnetson
+- 22:4 [Letter: Kenecdotes](../art10011240/), Sam Sexton
+- 22:4 [APL/J/K are top of the league](../art10011330/), Graham Parkhouse
+- 23:1 [APL's 40th Birthday in Stuttgart](../art10011500/), Adrian Smith
+- 23:1 [Can one be fit on a starvation diet?](../art10011540/), Sylvia Camacho
+- 23:1 [APL – a Glimpse of Heaven](../art10011550/), Bernard Legrand
+- 23:3 [Editorial: Amateur Hour](../art10011690/), Stephen Taylor
+- 23:3 [Alive and Well](../art10011780/), Morten Kromberg
+- 23:3 [J-ottings 49: Are You Thinking What I'm Thinking?](../art10011830/), Norman Thomson
+- 23:4 [An Autobiographical Essay](../art10012020/), Kenneth Iverson
+- 23:4.1 [First Quarter](../art10013780/), Gitte Christensen
+- 23:4.1 [How we got here](../art10013790/), Stephen Taylor
+- 23:4.1 [Next Quarter](../art10013820/), Gitte Christensen
+- 23:4.1 [Dyadic Systems Prospectus, 1976](../art10013840/), Dyalog
+- 24:2 [Rediscovering APL’s history](../art10500170/), Catherine Lathwell
+- 24:2 [Array languages for Lisp programmers](../art10500180/), Slobodan Blazeski
+- 24:4 [Remembering Eugene McDonnell](../art10500440/), Roger Hui
+- 24:4 [A commentary on the formulator](../art10500510/), Neville Holmes
+- 25:3 [Introducing “Some Topics in Computing”](../art10500840/), Keith Smillie
+- 26:1 [Reflections on a long life](../art10501060/), Sam Sexton
+- 26:1 [A Question of character by Brian Becker](../art10501190/), Brian Becker
+- 26:2 [Impending kOS](../art10501320/), Stephen Taylor
+- 26:2 [One reason that APL is so cool](../art10501270/), Brian Becker
+- 26:2 [A letter from Dijkstra on APL](../art10501260/), Roger Hui
+- 27:1 [The doctor and the doc](../art10501850/), Stephen Taylor
+- online [Reflections on Langlet’s APL Theory of Human Vision](../art10501810/), Stuart Smith
+
+## conference reports { #tag-conference-reports }
+
+*reports from APL conferences and other conferences*
+
+- 1:1 [International APL News](../v1n1-p17-international-apl-news/), Robert Bittlestone
+- 1:2 [International APL News](../v1n2-p12-international-apl-news/), Robert Bittlestone
+- 1:2 [APL84 in Focus (meeting notes)](../v1n2-p52-apl84-in-focus/), Adrian Smith, Dick Bowman
+- 1:3 [International APL News](../v1n3-p14-international-apl-news/), Adrian Smith
+- 1:4 [International APL News — APL86](../v1n4-p18-international-apl-news/), David Ziemann
+- 2:1 [APL85 — A Brief Impression](../v2n1-p64-apl85-brief-impression/), Dick Bowman
+- 2:1 [Report from APL85 — APL and the Future](../v2n1-p67-report-from-apl85/), John Adams
+- 2:1 [APL85 — Second Thoughts on Seattle](../v2n1-p68-second-thoughts-on-seattle/), Dick Gray
+- 2:1 [APL85 Photographic Review (captioned photographs)](../v2n1-p70-apl85-photographic-review/), David Ziemann
+- 2:3 [APL86 Preview](../v2n3-p38-apl86-preview/)
+- 2:3 [OR-85 (Durham): Notes on Major Sessions](../v2n3-p65-or-85-durham/), Adrian Smith
+- 2:4 [APL86 Preview](../v2n4-p43-apl86-preview/)
+- 2:4 [Computer Graphics ’85 (conference review)](../v2n4-p69-computer-graphics-85/), Bruce Hollamby, Katie Williamson
+- 2:4 [Expert Systems ’85 (conference review)](../v2n4-p77-expert-systems-85/), Peter S. Davies
+- 3:2 [Guest Editorial: APL86 – What Next?](../v3n2-p3-guest-editorial-apl86-what-next/), Dick Bowman
+- 3:2 [International APL News](../v3n2-p23-international-apl-news/), David Preedy
+- 3:2 [The Education VECTOR](../v3n2-p37-the-education-vector/), Norman Thomson
+- 3:2 [APL86 Photographic Review (captioned photographs)](../v3n2-p52-apl86-photographic-review/), David Ziemann
+- 3:2 [CORE APL (Opening Plenary by Ken Iverson)](../v3n2-p59-core-apl-opening-plenary/), Adrian Smith
+- 3:2 [APL86 – the product forums](../v3n2-p61-apl86-product-forums/)
+- 3:2 [A.I. at APL86](../v3n2-p65-ai-at-apl86/), Neil Mitchison
+- 3:2 [On the Lighter Moments of APL 86; Ode to APL 86](../v3n2-p67-lighter-moments-of-apl86/), Philip Goacher
+- 3:2 [Papers I Enjoyed at APL86](../v3n2-p69-papers-i-enjoyed-at-apl86/), Roy Sykes, Jr.
+- 3:2 [APL86 Exhibition Report](../v3n2-p71-apl86-exhibition-report/), Martin Malin
+- 3:2 [Pick of the Week](../v3n2-p77-pick-of-the-week/), Adrian Smith
+- 3:2 [APL86 Fun and Games](../v3n2-p80-apl86-fun-and-games/), Aelred Tobin
+- 3:2 [Report on the Plenary Panel Session at APL 86](../v3n2-p81-plenary-panel-session/), Anthony Camacho
+- 3:2 [APL86 Quotes](../v3n2-p86-apl86-quotes/), Dave Ziemann
+- 3:2 [Thoughts on APL design](../v3n2-p87-thoughts-on-apl-design/), Bob Pullman
+- 3:2 [Shortened Transcript of Roy Sykes’ Closing Plenary Address at APL 86](../v3n2-p89-roy-sykes-closing-plenary/), Anthony Camacho
+- 3:2 [APL86 Competition Review](../art10011070/), David Ziemann
+- 3:2 [APL86 Standards Report](../art10011080/), David Ziemann
+- 3:3 [APL Debate: What is APL Thinking?](../v3n3-p66-apl-debate-what-is-apl-thinking/), David Preedy
+- 3:3 [Idioms and Problem Solving in APL2 (talk at APL86)](../v3n3-p77-idioms-and-problem-solving-in-apl2/), Alan Graham, John Sullivan
+- 4:1 [Report on APL87](../v4n1-p17-report-on-apl87/), John Sullivan
+- 4:1 [Some of David Ziemann’s photographs from Dallas](../v4n1-p19-dallas-picture-gallery/), David Ziemann
+- 4:1 [Introductory Notes; Successful Expert Systems, Royal Station Hotel, York, February 17th 1987](../v4n1-p50-successful-expert-systems/), Adrian Smith
+- 4:2 [APL-Ication](../v4n2-p19-apl-ication/)
+- 4:4 [Impressions of Sydney](../v4n4-p56-impressions-of-sydney/), John Sullivan
+- 4:4 [Impressions of APL 88](../v4n4-p58-impressions-of-apl88/), Anthony Camacho
+- 4:4 [Workshop: Secondary School Mathematics using APL](../v4n4-p61-workshop-secondary-school-mathematics/), Adrian Smith
+- 4:4 [APL 88: session reports, plenaries, panel and exhibition](../v4n4-p67-apl88-session-reports/)
+- 5:1 [APL-ication: Latest Details](../v5n1-p6-apl-ication-latest-details/), Philip Goacher
+- 5:2 [Recent Meetings: section page](../v5n2-p55-recent-meetings/)
+- 5:2 [Conference Highlights](../v5n2-p61-conference-highlights/), Adrian Smith
+- 5:2 [Notes on Given Papers](../v5n2-p62-notes-on-given-papers/), Adrian Smith
+- 5:2 [Panel Discussion: a Market Niche for APL](../v5n2-p71-panel-the-apl-market-niche/), Peter Donnelly, Brian Drury, Tim Perry, Richard Nabavi
+- 5:2 [APL\*PLUS II](../v5n2-p74-apl-plus-ii/), James Wheeler
+- 5:2 [IBM's APL2/PC](../v5n2-p76-ibms-apl2-pc/), Adrian Smith
+- 5:2 [Computers in the Boardroom](../v5n2-p77-computers-in-the-boardroom/), David Preedy
+- 5:3 [Report on the Promotion of I-APL at ICME-6 Budapest 27th July - 3rd August 1988](../v5n3-p20-promotion-of-i-apl-at-icme-6/), Neil Bibby, John Durran
+- 5:4 [APL89 and APL90 Information](../v5n4-p12-apl89-and-apl90-information/)
+- 5:4 [An APLer's Guide to Conference Going](../v5n4-p17-a-guide-to-conference-going/), John Searle
+- 6:1 [APL90 Information](../v6n1-p8-apl90-information/)
+- 6:2 [Recent Meetings: APL 89 — Introduction](../v6n2-p59-introduction/), Adrian Smith
+- 6:2 [An APL 89 Roundup](../v6n2-p60-conference-roundup/), Anthony Camacho
+- 6:2 [The Statistics Tutorial Day](../v6n2-p65-statistics-tutorial-day/), Chris Brady
+- 6:2 [Conference Summary](../v6n2-p66-conference-summary/), Peter Merritt
+- 6:2 [Notes on the Papers](../v6n2-p70-notes-on-the-papers/), Maurice Jordan, Chris Brady, Anthony Camacho, John Searle, Sylvia Camacho, Paul Chapman, David Ziemann
+- 6:2 [APL89 - Tutorial Sessions](../v6n2-p101-tutorial-sessions/), Jonathan Martin
+- 6:2 [The Exhibition](../v6n2-p106-the-exhibition/), David Ziemann
+- 6:2 [The Bonfire of the Variables](../v6n2-p108-the-bonfire-of-the-variables/), John Searle
+- 6:3 [APL90: Accepted Papers](../v6n3-p33-apl90-accepted-papers/)
+- 6:3 [Notes on Recent Meetings: Introduction](../v6n3-p57-introduction/), Adrian Smith
+- 6:3 [The APL Statistics Library Conference at Greg-y-nog](../v6n3-p59-the-apl-statistics-library-conference-at-greg-y-nog/), Alan Sykes, Tony O'Hagan
+- 6:4 [APL90: Invitation and Abstracts](../v6n4-p33-apl90-invitation-and-abstracts/)
+- 7:1 [APL91: Conference Announcement](../v7n1-p33-apl91-conference-announcement/), Curtis Jones
+- 7:2 [APL 90 and the Ideal APL Conference](../v7n2-p76-apl-90-and-the-ideal-apl-conference/), Anthony Camacho
+- 7:2 [A Personal View on APL 90](../v7n2-p80-a-personal-view-on-apl-90/), Ray Cannon
+- 7:2 [АПЛ in The Soviet Union](../art10007850/), John Searle
+- 7:2 [Reports on the Presentations](../v7n2-p83-reports-on-the-presentations/), Sylvia Camacho, Anthony Camacho, Ray Cannon
+- 7:2 [APL90 Reflections](../v7n2-p95-apl90-reflections/), John Searle
+- 7:2 [Pictures at an Exhibition](../v7n2-p97-pictures-at-an-exhibition/)
+- 7:3 [Thoughts on APL 1994](../v7n3-p11-thoughts-on-apl-1994/), David Eastwood
+- 7:3 [APL91 Update](../v7n3-p99-apl91-update/), Charles Schulz
+- 8:1 [SovAPL 5th Anniversary Conference “APL Methodology and Application” 23-25 April 1991, Leningrad, USSR](../v8n1-p61-sovapl-5th-anniversary-conference/), Thomas M Olsen, Alain Delmotte
+- 8:2 [ASL at APL91](../v8n2-p35-asl-at-apl91/)
+- 8:2 [Recent Meetings (section introduction)](../v8n2-p55-recent-meetings/)
+- 8:2 [APL 91 Report: Conference Round Up](../v8n2-p56-conference-roundup/), Anthony Camacho, Jonathan Barman, John Searle, Ray Cannon
+- 8:2 [Sunday 4 August](../v8n2-p61-sunday-4th-aug/), Anthony Camacho, Sylvia Camacho, Lee Ann Estep, Jonathan Barman
+- 8:2 [Monday 5 August](../v8n2-p65-monday-5th-aug/), Jonathan Barman, Adrian Smith, Sylvia Camacho, Anthony Camacho, Ray Cannon, John Searle
+- 8:2 [Tuesday 6 August](../v8n2-p70-tuesday-6th-aug/), Anthony Camacho, Sylvia Camacho, Jonathan Barman, Ray Cannon
+- 8:2 [Panel “Is J a Dialect of APL?”](../art10000590/), Jonathan Barman, Anthony Camacho
+- 8:2 [Panel “25 Year Perspective”](../art10001500/), Anthony Camacho
+- 8:2 [Panel “APL as an Entrepreneurial Tool”](../art10000600/), Jonathan Barman
+- 8:2 [Thursday 8 August](../v8n2-p87-thursday-8th-aug/), Sylvia Camacho, Jonathan Barman, Ray Cannon, John Searle, Dave Ziemann
+- 8:2 [Selected Survival Strategies for APL Puddle-dwellers](../v8n2-p93-survival-strategies-for-apl-puddle-dwellers/), Adrian Smith
+- 8:3 [APL91 Final Report](../v8n3-p8-apl91-final-report/), Charles Schultz
+- 8:3 [The 3rd APL Statistics Library Conference Held at Gregynog 30 September to 2 October 1991](../v8n3-p35-asl-conference-gregynog-1991/), Anthony Camacho
+- 8:4 [APL92: Provisional Programme and Abstracts](../v8n4-p49-provisional-programme-and-abstracts/)
+- 8:4 [Report on St Petersburg Visit](../v8n4-p57-notes-on-visit-to-st-petersburg/), Anthony Camacho
+- 9:1 [French Visitors in Napoleon’s Footsteps](../art10002940/), Michel J. Dumontier, Ludmilla Lemagnen
+- 9:2 [APL 92 Reports](../art10000130/), Anthony Camacho
+- 9:2 [APL92 — BEKTOP at St Petersburg](../v9n2-p88-bektop-at-st-petersburg/), Ray Cannon
+- 9:2 [Pictures at an Exhibition](../v9n2-p93-pictures-at-an-exhibition/)
+- 9:2 [Quotable Quotes from APL 92](../v9n2-p94-quotable-quotes-from-apl-92/), John Searle
+- 9:2 [APL92 Caption Contest](../v9n2-p126-apl92-caption-contest/)
+- 9:3 [APL-Club Germany, Schwetzingen, November 6 1992](../art10003090/), David Eastwood
+- 9:4 [APL93: Invitation and Preliminary Program](../v9n4-p8-apl93-invitation/)
+- 9:4 [Abstracts of Accepted Papers](../art10000140/)
+- 10:1 [Meeting: Business Graphics– A Second Look](../art10012290/), George MacLeod
+- 10:2 [Editorial: APL 93 at Toronto](../v10n2-p3-editorial-apl-93-at-toronto/), Anthony Camacho
+- 10:2 [The APL 93 Russian Fund](../v10n2-p7-the-apl-93-russian-fund/), Ben Best
+- 10:2 [Conference Roundup](../art10000150/), Sylvia Camacho
+- 10:2 [APL93: Solving Wicked Problems with APL](../art10004950/), Chris Lee
+- 10:2 [APL93: Using the ISIAPL GUI](../art10003960/), Eric Iverson
+- 10:2 [Workshop — A GUI Standard for APL — Facilitator: David Crossley](../v10n2-p87-workshop-a-gui-standard-for-apl/), Anthony Camacho, Jonathan Barman
+- 10:2 [David Steinbrook and Eugene McDonnell ‘From Trees into Boxes’](../v10n2-p91-from-trees-into-boxes/), Anthony Camacho
+- 10:2 [Robert Bernecky ‘Array Morphology’](../v10n2-p92-array-morphology/), Anthony Camacho
+- 10:2 [Norman Thomson ‘Understanding ANOVA the APL Way’](../v10n2-p93-understanding-anova-the-apl-way/), Sylvia Camacho
+- 10:2 [APL93: APL in Satellite Surveillance](../art10007410/), Jack Rudd
+- 10:2 [APL93 Postscript: Don't Stop Thinking About Tomorrow](../art10012450/), Adrian Smith
+- 10:3 [Conference Prospectus](../v10n3-p6-conference-prospectus/)
+- 10:3 [APL93 Conference Evaluation Survey](../art10003380/), Marc Griffiths
+- 10:3 [Workshop: Dyalog APL Sessions](../art10012510/)
+- 10:3 [Workshop: APL\*PLUS II Sessions](../art10012520/)
+- 10:4 [Preparing for Swansea](../v10n4-p4-preparing-for-swansea/), Adrian Smith
+- 10:4 [Update on APL94](../art10012820/), Alain Delmotte
+- 10:4 [J at Greenock](../v10n4-p44-j-at-greenock/), Norman Thomson
+- 10:4 [Meeting: The Toronto Toolkit](../art10003100/), David Eastwood
+- 11:1 [APL94 Abstracts](../art10000160/)
+- 11:2 [APL95: Call for Participation](../v11n2-p7-apl95-call-for-participation/)
+- 11:2 [Chairman’s Impressions: What you Saw was (more or less) what you Got](../v11n2-p42-chairmans-impressions/), Adrian Smith
+- 11:2 [Opening Plenary](../art10007520/), Jon Sandles
+- 11:2 [Gareth Brentnall’s Logol Workshop](../v11n2-p47-logol-workshop/), Jon Sandles
+- 11:2 [Duncan Pearson’s DDE and DLL Workshop](../v11n2-p48-dde-and-dll-workshop/), Ray Cannon
+- 11:2 [Correspondence](../v11n2-p49-ellis-morgan-correspondence/), Ellis Morgan
+- 11:2 [Croesoe a Cymru and the APL Welsh Hwyrnos](../art10010820/), Diane Whitehouse
+- 11:2 [Conference Reports](../art10013010/)
+- 11:2 [Reflections of Another](../v11n2-p59-reflections/), Ray Cannon
+- 11:2 [APL94: Binary Algebra Workshop](../art10004690/), Gérard Langlet
+- 11:3 [The APL Theory of Human Vision](../art10004710/), Gérard Langlet
+- 11:3 [Germany: Die Programmiersprache APL](../v11n3-p52-die-programmiersprache-apl/), Adrian Smith
+- 11:3 [Helsinki: Causeway Workshop](../art10008600/), Adrian Smith
+- 11:4 [APL 95 Panels and Workshops](../v11n4-p8-apl-95-panels-and-workshops/)
+- 11:4 [APL95 (San Antonio) Abstracts](../art10000180/)
+- 11:4 [The APL95 Software Exchange](../v11n4-p13-apl95-software-exchange/), Dick Holt
+- 12:1 [Editorial:](../art10013260/), Anthony Camacho
+- 12:1 [APL96 Western Europe](../v12n1-p6-apl96-western-europe/)
+- 12:1 [Conference Reports](../art10000190/)
+- 12:1 [Machine Learning Algorithms](../art10007540/), Jon Sandles
+- 12:1 [Business Graphics Workshop](../art10008620/), Adrian Smith
+- 12:1 [Portability Workshop](../v12n1-p56-portability-workshop/), Eke van Batenburg, Adrian Smith
+- 12:2 [APL96 Lancaster](../v12n2-p6-apl96-lancaster/), Adrian Smith
+- 12:2 [British APL Association News](../v12n2-p10-british-apl-association-news/), Sylvia Camacho
+- 12:3 [APL96: Call for Participation](../v12n3-p6-apl96-call-for-participation/)
+- 12:3 [Share-Guide and APL Club Germany](../v12n3-p60-share-guide-and-apl-club-germany/), Adrian Smith
+- 12:3 [Putting a GUI Interface on Legacy Systems](../art10001260/), Jim Brown
+- 12:4 [APL96 Invitation and Abstracts](../art10000200/), Adrian Smith
+- 12:4 [Causeway at the Toronto APL/SIG](../art10003390/), Marc Griffiths
+- 13:1 [IBM GSE and APL Club Germany](../art10008680/), Adrian Smith
+- 13:2 [Editorial](../art10013370/), Duncan Pearson
+- 13:2 [Recent Meetings (section introduction)](../v13n2-p47-recent-meetings/)
+- 13:2 [The First International J User Conference (Toronto, June 24th — 25th 1996)](../art10004050/), Duncan Pearson
+- 13:2 [A Conference Diary](../v13n2-p51-a-conference-diary/), Ray Cannon
+- 13:2 [TCP/IP with Timo Laurmaa](../v13n2-p60-tcp-ip-with-timo-laurmaa/), Jon Sandles
+- 13:2 [ODBC Client-Server with Morten Kromberg](../v13n2-p65-odbc-client-server-with-morten-kromberg/), Bronwen Tuffen
+- 13:2 [Nested Arrays with Phil Benkard](../v13n2-p68-nested-arrays-with-phil-benkard/), Jon Sandles
+- 13:2 [Gui Programming and Multi-dimensional DBs](../v13n2-p70-gui-programming-and-multi-dimensional-dbs/), Marc Griffiths
+- 13:2 [A Consultant’s View](../v13n2-p77-a-consultants-view/), Richard Procter
+- 13:2 [Conference Roundup](../v13n2-p83-conference-roundup/), Adrian Smith
+- 13:3 [«écœuré»](../v13n3-p7-ecoeure/), Gérard Langlet
+- 13:3 [APL2000 at Orlando](../art10008700/), Adrian Smith
+- 13:3 [Danish APL Group at Copenhagen](../art10002260/), Gitte Christensen, Stefano Lanzavecchia
+- 13:4 [A BAA Meeting at Network City](../art10006520/), Duncan Pearson
+- 14:1 [Editorial](../art10013400/), Duncan Pearson
+- 14:2 [Editorial](../art10013410/), Duncan Pearson
+- 14:2 [APL97 at Toronto: Conference Report](../art10000210/), Duncan Pearson, Adrian Smith
+- 14:2 [APL97 at Toronto: Mostly on OpenGL; A Flavour of APL97](../art10006530/), Adrian Smith
+- 14:2 [APL97 Conference Survey Results](../art10003730/), Dick Holt
+- 14:3 [Review: APL97 CD ROM](../art10008750/), Adrian Smith
+- 14:3 [APL97 (Toronto) CD ROM (with Abstracts)](../art10000220/), Adrian Smith
+- 14:3 [APL2000 User Conference Nov 2–5 1997, Sheraton World Resort, Orlando, Florida](../art10001930/), Ray Cannon
+- 14:3 [APL as a Tool of Thought X, Hoboken, NJ, January 31, 1998](../art10007900/), Ed Shaw
+- 15:1 [Editorial: APL98 and the Future of APL](../art10004790/), Stefano Lanzavecchia
+- 15:1 [APL98 Retrospective](../art10002250/), Paolo Di Chio
+- 15:1 [APL98 at Roma: Conference Reports](../art10000230/), Adrian Smith
+- 15:1 [APL98: A Personal View](../art10002670/), David Crossley
+- 15:1 [APL 98 in Rome: Observations](../art10001950/), Ray Cannon
+- 15:1 [APL98 – New Gems from Old Roots](../art10003610/), Bob Hoekstra
+- 15:2 [Meeting: Eric Iverson at the BAA](../art10008810/), Adrian Smith
+- 15:2 [Meeting: BAA Vendors’ Forum](../art10007640/), Jon Sandles
+- 16:1 [APL99 Abstracts and Tutorials](../art10000240/)
+- 16:1 [Meeting: BAA Vendor Forum, May 21st 1999](../art10004810/), Stefano Lanzavecchia
+- 16:2 [APL 2000 User Conference, Orlando, November 14th-17th 1999 — Abstracts](../art10000250/)
+- 16:2 [APL99 (Scranton) Notes and Pictures (by Ray Cannon)](../art10000280/)
+- 16:3 [APL2000 at Orlando](../art10008860/), Adrian Smith
+- 16:3 [A Conference for Winners](../art10005150/), Jim Lucas
+- 16:4 [Finnish Forests Conference Reports](../art10003190/), Adrian Smith
+- 17:1 [Quick Reference Diary](../v17n1-p5-quick-reference-diary/)
+- 17:2 [Editorial 17.2](../art10013510/), Stefano Lanzavecchia
+- 17:2 [BCS Specialist Groups Congress](../art10001580/), Anthony Camacho
+- 17:2 [APL2000 (Berlin) Reports and Pictures](../art10000290/)
+- 17:2 [Some More of the Personalities at APL Berlin 2000](../art10014030/)
+- 17:3 [Report: The VikAPL Experience – October 2000](../art10010730/), FM VikingAPL 2000
+- 17:3 [APL2000 (Orlando) Conference Report: APL 2000 User’s Meeting in Orlando](../art10000260/)
+- 17:4 [Editorial 17.4](../art10013530/), Stefano Lanzavecchia
+- 17:4 [APL2001: Information and Abstracts](../v17n4-p7-apl2001-information-and-abstracts/)
+- 17:4 [Report: Forests in Finland V (report and pictures)](../art10001990/), Ray Cannon
+- 18:1 [My Yale 2001 diary](../art10002000/), Ray Cannon
+- 18:3 [Report: APL2000 User Conference at Naples, Florida](../art10002010/), Ray Cannon
+- 18:4 [Report: Forests in Finland VI (Report and Pictures)](../art10008960/), Adrian Smith
+- 18:4 [Report: APL Germany in Munich](../art10008980/), Adrian Smith
+- 19:2 [Editorial: Vector 19:2](../art10013590/), Stefano Lanzavecchia
+- 19:2 [APL2002 at Madrid](../art10000300/), Anthony Camacho, Ian Clark
+- 19:3 [Ian Clark replies...](../v19n3-p8-ian-clark-replies/), Ian Clark
+- 19:3 [The APL2002 conference report](../v19n3-p8-the-apl2002-conference-report/), Manuel Alfonseca
+- 19:3 [APL2000 (Naples Beach) Conference Report: Notes and Pictures](../art10000270/), Adrian Smith
+- 19:4 [Report: K Watch: Arthur Whitney in London](../art10004170/), Steph Johnson
+- 19:4 [Report: Forests in Finland VII](../art10009010/), Adrian Smith
+- 19:4 [A Place for Us](../art10009780/), Stephen Taylor
+- 20:1 [Report: APL Germany](../art10009040/), Adrian Smith
+- 20:1 [Report: APL at FCRC2003 in San Diego](../art10002430/), Ian Clark
+- 20:2 [Report: Dyalog 2003 Conference](../art10009060/), Adrian Smith
+- 20:3 [Editorial](../art10004870/), Stefano Lanzavecchia
+- 20:3 [Report: APL2000 at Naples Beach in November](../art10009080/), Adrian Smith
+- 20:4 [Report: BAA Anniversary K day](../art10009100/), Adrian Smith
+- 20:4 [The APL Moot](../art10009810/), Stephen Taylor
+- 20:4 [FinnAPL Forest Seminar VIII](../art10004260/), Jouko Kangasniemi
+- 20:4 [APL Germany Spring Meeting](../art10009110/), Adrian Smith
+- 21:1 [APL2000 and Dyalog at Naples Beach](../art10009130/), Adrian Smith
+- 21:1 [APL Germany in Ingolstadt](../art10009140/), Adrian Smith
+- 21:2 [Review: Kx Systems Users’ Meeting](../art10009850/), Stephen Taylor
+- 21:2 [Report: Forests in Finland IX](../art10009150/), Adrian Smith
+- 22:1 [Meeting of NYC JUG on 20050614](../art10013710/), Devon McCormick
+- 22:1 [Report: Meeting of NYC JUG, June 2005](../art10005350/), Devon McCormick
+- 22:1 [Dyalog APL Users Meeting: Elsinore 2005](../art10013720/), Adrian Smith
+- 22:1 [Report: Dyalog APL Users Meeting, Elsinore, October 2005](../art10009170/), Adrian Smith
+- 22:1 [My Experience at the Dyalog Conference](../art10010650/), Horacio Tovar
+- 22:2 [Editorial: Winter in Naples](../art10009910/), Stephen Taylor
+- 22:2 [Report: APL2000 at Naples Beach November 2005](../art10009180/), Adrian Smith
+- 22:2 [APL+Santa Fe previewed at the APL2000 Conference](../art10005080/), Eric Lescasse
+- 22:4 [Meeting: The February 2006 KX Users’ Meeting](../art10011270/), Adrian Smith
+- 22:4 [Meeting: The 11th Annual Forest Seminar](../art10011280/), Adrian Smith
+- 22:4 [Meeting: NYC JUG 20060314](../art10011320/), Devon McCormick
+- 23:1 [APL's 40th Birthday in Stuttgart](../art10011500/), Adrian Smith
+- 23:1 [Kx Systems User Meeting](../art10011530/), Stephen Taylor
+- 23:3 [APL2000 User Conference, 2008](../art10011710/), APL2000
+- 23:3 [Dyalog 2008](../art10011720/), Dyalog Ltd
+- 23:3 [Recent Meetings: The San Quirico Moot, 4-10 June, 2007](../art10011760/), Adrian Smith
+- 23:3 [Minnowbrook, 2007](../art10011770/), Adrian Smith
+- 24:1 [Dyalog 2008 at Lo-skolen](../art10500030/), Adrian Smith
+- 24:1 [GSE and APL-Germany Fall Meeting, Augsburg, November 2008](../art10500010/), Adrian Smith
+- 24:2 [FinnAPL in Tallinn, April 2009](../art10500150/), Adrian Smith
+- 24:4 [Editorial](../art10500570/), Stephen Taylor
+- 24:4 [A personal view of APL2010](../art10500450/), Graeme Robertson
+- 24:4 [Notes from APL2010](../art10500430/), Devon McCormick
+- 24:4 [APL 2010 – Berlin](../art10500380/), Mike Hughes
+- 24:4 [APL2010 – a brief introspection](../art10500350/), Brian Becker
+- 24:4 [Best APL2010 conference presentations](../art10500470/), Vibeke Ulmann
+- 25:1 [A lightweight look at Minnowbrook](../art10500610/), Roy Sykes
+- 25:1 [FinnAPL Spring Meeting 2011](../art10500620/), Adrian Smith
+- 25:3 [Meeting: Iverson College, Cambridge, Aug 2011](../art10500700/), Stephen Taylor
+- 25:4 [BAA Moot 2012](../art10501020/), Phil Last
+- 26:2 [APL2000 User Conference 2014](../art10501430/), APL2000
+- 26:2 [SwedAPL April 2014](../art10501370/), Gilgamesh Athoraya
+- 26:2 [Minnowbrook conference review: September 14–18, 2013](../art10501310/), Steve Mansour
+- 26:4 [SwedAPL 2015](../art10501550/), Sam Gutsell
+- 27:1 [Dyalog '16 - an insider's view](../art10501750/)
+- online [BAA meeting, 20 May 2016: talks](../art10501780/)
+
+## APL community { #tag-APL-community }
+
+*the British APL Association, its meetings, members, editors and software library*
+
+- 1:1 [EDITORIAL: Back to BASICs?](../v1n1-p3-editorial/), Robert Bittlestone
+- 1:1 [Letters to the Editor](../v1n1-p5-letters-to-the-editor/), Richard Bowman, Alan Hawkes, Anthony Camacho
+- 1:1 [Quick-Reference APL Diary](../v1n1-p8-quick-reference-apl-diary/), David Preedy
+- 1:1 [British APL Association News](../v1n1-p9-british-apl-association-news/), Robert Bittlestone
+- 1:1 [1983 Report and Accounts](../v1n1-p15-1983-report-and-accounts/), Jonathan Barman
+- 1:1 [International APL News](../v1n1-p17-international-apl-news/), Robert Bittlestone
+- 1:1 [British Computer Society News](../v1n1-p21-british-computer-society-news/), Philip Goacher
+- 1:1 [News from Sustaining Members](../v1n1-p23-news-from-sustaining-members/), David Preedy
+- 1:1 [APL Product Guide](../v1n1-p25-apl-product-guide/), David Preedy
+- 1:1 [Recent Meetings](../v1n1-p33-recent-meetings/)
+- 1:1 [APL and Graphics](../v1n1-p35-apl-and-graphics/), Adrian Smith
+- 1:1 [Case Studies: an Invitation](../v1n1-p79-case-studies-invitation/), Adrian Smith
+- 1:1 [Technical Editorial](../v1n1-p103-technical-editorial/), Jonathan Barman, David Ziemann
+- 1:2 [Editorial: Time to Adopt the Missionary Position?](../v1n2-p3-editorial/), Robert Bittlestone
+- 1:2 [General Correspondence](../v1n2-p5-general-correspondence/), Simon Witcomb, Andrew Tarr, Alan Hawkes, Philip Goacher, G.N. Lance, L. Llewellyn-Jones
+- 1:2 [Quick-Reference APL Diary](../v1n2-p8-quick-reference-apl-diary/), David Preedy
+- 1:2 [British APL Association News](../v1n2-p9-british-apl-association-news/), Robert Bittlestone
+- 1:2 [International APL News](../v1n2-p12-international-apl-news/), Robert Bittlestone
+- 1:2 [British Computer Society News](../v1n2-p21-british-computer-society-news/), Philip Goacher
+- 1:2 [News from Sustaining Members](../v1n2-p25-news-from-sustaining-members/), David Preedy
+- 1:2 [APL Product Guide](../v1n2-p29-apl-product-guide/), David Preedy
+- 1:2 [Technical Editorial](../v1n2-p99-technical-editorial/), David Ziemann, Jonathan Barman
+- 1:2 [APL ISO Standard Meeting (photographs)](../v1n2-p124-apl-iso-standard-meeting-photographs/)
+- 1:3 [General Correspondence](../v1n3-p5-general-correspondence/), J. Sullivan, John Garland, Bob Pullman
+- 1:3 [Quick-reference APL Diary](../v1n3-p7-quick-reference-apl-diary/), David Preedy
+- 1:3 [Activities Programme 1985](../v1n3-p8-activities-programme-1985/)
+- 1:3 [British APL Association News](../v1n3-p8-british-apl-association-news/), Robert Bittlestone
+- 1:3 [International APL News](../v1n3-p14-international-apl-news/), Adrian Smith
+- 1:3 [British Computer Society News](../v1n3-p21-british-computer-society-news/), Philip Goacher
+- 1:3 [News from Sustaining Members](../v1n3-p22-news-from-sustaining-members/), David Preedy
+- 1:3 [APL Product Guide](../v1n3-p27-apl-product-guide/), David Preedy
+- 1:3 [Introductory Notes (meetings section)](../v1n3-p48-introductory-notes/), Adrian Smith
+- 1:3 [What’s New for 1985? (organiser’s report and selected highlights)](../v1n3-p62-whats-new-for-1985/), Dick Bowman, Adrian Smith
+- 1:3 [Technical Editorial](../v1n3-p114-technical-editorial/), Dave Ziemann, Jonathan Barman
+- 1:4 [Editorial: Your Association Needs You](../v1n4-p3-editorial/), Robert Bittlestone
+- 1:4 [General Correspondence](../v1n4-p5-general-correspondence/), Ole Immanuel Franksen, Dick Bowman
+- 1:4 [British APL Association News](../v1n4-p6-british-apl-association-news/), David Ziemann
+- 1:4 [Free APL Computer](../v1n4-p8-free-apl-computer/), David Ziemann
+- 1:4 [International APL News — APL86](../v1n4-p18-international-apl-news/), David Ziemann
+- 1:4 [British Computer Society News](../v1n4-p31-british-computer-society-news/), Philip Goacher
+- 1:4 [News from Sustaining Members](../v1n4-p33-news-from-sustaining-members/), David Preedy
+- 1:4 [APL Product Guide](../v1n4-p37-apl-product-guide/), David Preedy
+- 1:4 [Introductory Notes (meetings section)](../v1n4-p63-introductory-notes/), Adrian Smith
+- 2:1 [EDITORIAL: The men who run VECTOR](../v2n1-p3-editorial-the-men-who-run-vector/), David Preedy
+- 2:1 [General Correspondence](../v2n1-p5-general-correspondence/), Anthony Camacho, Heinz Reutersberg, Savas Pavlides, Curtis A. Jones
+- 2:1 [British APL Association News](../v2n1-p7-british-apl-association-news/), Anthony Camacho, Philip Goacher
+- 2:1 [International APL News](../v2n1-p15-international-news/), David Preedy
+- 2:1 [APL86 — ‘APL in Action’](../v2n1-p17-apl86-apl-in-action/)
+- 2:1 [Papers for APL 86](../v2n1-p18-papers-for-apl-86/), Anthony Camacho
+- 2:1 [News from Sustaining Members](../v2n1-p19-news-from-sustaining-members/), Steve Lyus
+- 2:1 [APL Product Guide](../v2n1-p24-apl-product-guide/), Steve Lyus
+- 2:1 [Booklist](../v2n1-p39-booklist/)
+- 2:1 [Introductory Notes (meetings section)](../v2n1-p45-introductory-notes/), Adrian Smith
+- 2:1 [APL Statistics User Group (meeting report)](../v2n1-p63-apl-statistics-user-group/)
+- 2:1 [Technical Editorial (with publication standards and introduction to contributed articles)](../v2n1-p92-technical-editorial/), Jonathan Barman, David Ziemann
+- 2:1 [Contents of Volume 1](../v2n1-p126-contents-of-volume-1/)
+- 2:1 [Back numbers of VECTOR](../v2n1-p127-back-numbers-of-vector/)
+- 2:3 [Quick-Reference Diary](../v2n3-p5-quick-reference-diary/), David Preedy
+- 2:3 [General Correspondence](../v2n3-p7-general-correspondence/), Paul Barnetson, Kim Andreasen
+- 2:3 [British APL Association News](../v2n3-p9-british-apl-association-news/), David Preedy
+- 2:3 [Education Officer’s Report](../v2n3-p11-education-officers-report/), Dick Gray
+- 2:3 [APL Computer for Portsmouth Grammar School](../v2n3-p12-portsmouth-grammar-school/), Romilly Cocking
+- 2:3 [News From Sustaining Members](../v2n3-p13-news-from-sustaining-members/), Steve Lyus
+- 2:3 [British Computer Society News](../v2n3-p19-british-computer-society-news/), Dick Bowman
+- 2:3 [APL Press Review](../v2n3-p21-apl-press-review/), Steve Lyus
+- 2:3 [APL Product Guide](../v2n3-p23-apl-product-guide/), Steve Lyus
+- 2:3 [APL Booklist](../v2n3-p31-apl-booklist/)
+- 2:3 [APL86 Preview](../v2n3-p38-apl86-preview/)
+- 2:3 [APL Statistics Users Group, Meeting 5th June 1985 (meeting report)](../v2n3-p63-apl-statistics-users-group/), Jake Ansell
+- 2:4 [Guest Editorial: APL86 – Be there](../v2n4-p3-guest-editorial/), Dick Bowman
+- 2:4 [General Correspondence](../v2n4-p5-general-correspondence/), Curtis Jones
+- 2:4 [Quick-reference diary](../v2n4-p6-quick-reference-diary/), David Preedy
+- 2:4 [British APL Association News](../v2n4-p7-british-apl-association-news/), Dick Bowman, Anthony Camacho
+- 2:4 [News from Sustaining Members](../v2n4-p11-news-from-sustaining-members/), Steve Lyus
+- 2:4 [International APL news](../v2n4-p15-international-apl-news/), David Preedy
+- 2:4 [British Computer Society news](../v2n4-p19-british-computer-society-news/), Philip Goacher
+- 2:4 [APL Product Guide](../v2n4-p31-apl-product-guide/), Steve Lyus
+- 2:4 [APL86 Preview](../v2n4-p43-apl86-preview/)
+- 3:1 [Editorial: The joys of Spring?](../v3n1-p3-editorial/), David Preedy
+- 3:1 [Quick-reference diary](../v3n1-p5-quick-reference-diary/), David Preedy
+- 3:1 [General Correspondence](../v3n1-p7-general-correspondence/)
+- 3:1 [British APL Association News](../v3n1-p13-british-apl-association-news/), David Preedy
+- 3:1 [New Committee](../v3n1-p15-new-committee/)
+- 3:1 [News from sustaining members](../v3n1-p17-news-from-sustaining-members/), David Preedy
+- 3:1 [British Computer Society News](../v3n1-p21-british-computer-society-news/), Philip Goacher
+- 3:1 [International APL news](../v3n1-p23-international-apl-news/), David Preedy
+- 3:1 [APL Press Review](../v3n1-p27-apl-press-review/), David Preedy
+- 3:1 [APL Product Guide](../v3n1-p29-apl-product-guide/), Steve Lyus
+- 3:1 [APL Book List](../v3n1-p37-apl-book-list/)
+- 3:1 [Technical Editorial](../v3n1-p97-technical-editorial/), Jonathan Barman, Dave Ziemann
+- 3:1 [Introduction to Contributed Articles](../v3n1-p107-introduction-to-contributed-articles/), Dave Ziemann
+- 3:1 [VECTOR – contents of back-numbers](../v3n1-p128-contents-of-volumes-1-and-2/)
+- 3:2 [Guest Editorial: APL86 – What Next?](../v3n2-p3-guest-editorial-apl86-what-next/), Dick Bowman
+- 3:2 [Quick Reference APL Diary](../v3n2-p5-quick-reference-apl-diary/), David Preedy
+- 3:2 [General Correspondence](../v3n2-p7-general-correspondence/)
+- 3:2 [British APL Association – 1986 Report and Accounts](../v3n2-p15-report-and-accounts/)
+- 3:2 [News from Sustaining Members](../v3n2-p17-news-from-sustaining-members/), Steve Lyus
+- 3:2 [British Computer Society news](../v3n2-p21-british-computer-society-news/), David Preedy
+- 3:2 [International APL News](../v3n2-p23-international-apl-news/), David Preedy
+- 3:2 [APL Product Guide](../v3n2-p27-apl-product-guide/), Steve Lyus
+- 3:2 [APL Book List](../v3n2-p36-apl-book-list/)
+- 3:2 [Introductory Notes (meetings section)](../v3n2-p44-introductory-notes/), Adrian Smith
+- 3:2 [Technical Editorial: BAA Public Domain Software Library](../v3n2-p93-technical-editorial/), Dave Ziemann, Jonathan Barman
+- 3:2 [Public Domain Interpreter (Proposal)](../art10001460/), Anthony Camacho
+- 3:2 [Public Domain Software Library](../v3n2-p134-public-domain-software-library/)
+- 3:2 [(Keyword Index)](../v3n2-p138-keyword-index/)
+- 3:3 [Editorial: “Train up a child …”](../v3n3-p3-editorial-train-up-a-child/), David Preedy
+- 3:3 [Quick-reference diary](../v3n3-p5-quick-reference-diary/), David Preedy
+- 3:3 [General Correspondence](../v3n3-p9-general-correspondence/), Paul Barnetson, Peter Branson, Simon Barker
+- 3:3 [BAA Committee News](../v3n3-p13-committee-news/), Dick Bowman
+- 3:3 [News from Sustaining members](../v3n3-p14-news-from-sustaining-members/)
+- 3:3 [International APL News – Journal Exchange](../v3n3-p19-international-apl-news-journal-exchange/)
+- 3:3 [QL/APL User Group](../v3n3-p21-ql-apl-user-group/)
+- 3:3 [APL Product Guide](../v3n3-p23-apl-product-guide/), Steve Lyus
+- 3:3 [APL Book list](../v3n3-p32-apl-booklist/)
+- 3:3 [Reviews Section](../v3n3-p35-reviews-section/)
+- 3:3 [British APL Association Meeting – I-APL, 17 October 1986](../v3n3-p60-i-apl-meeting/), Anthony Camacho
+- 3:3 [The British APL Association Public Domain Software Library](../v3n3-p133-public-domain-software-library/)
+- 4:1 [Editorial: Professionalism and spreading the word](../v4n1-p3-editorial-professionalism/), Anthony Camacho
+- 4:1 [Quick-reference diary](../v4n1-p6-quick-reference-diary/), David Preedy
+- 4:1 [Minutes of the AGM of the British APL Association held on 5 June 1987](../v4n1-p9-minutes-of-agm-1987/), Anthony Camacho
+- 4:1 [Call For Papers And Announcement Of The Second South African APL Symposium](../v4n1-p12-second-south-african-apl-symposium/)
+- 4:1 [News from Sustaining Members](../v4n1-p13-news-from-sustaining-members/), Cathy Dargue
+- 4:1 [Some of David Ziemann’s photographs from Dallas](../v4n1-p19-dallas-picture-gallery/), David Ziemann
+- 4:1 [Prize Draw Results](../v4n1-p36-prize-draw-results/), Christine McCree
+- 4:1 [APL Product Guide](../v4n1-p37-apl-product-guide/), Cathy Dargue
+- 4:1 [APL Booklist](../v4n1-p48-apl-booklist/)
+- 4:1 [Membership Survey](../art10005320/), Christine McCree, Dick Bowman
+- 4:1 [Submitting Articles for Vector](../v4n1-p123-submitting-articles-for-vector/), Jonathan Barman, Anthony Camacho
+- 4:2 [Editorial](../v4n2-p3-editorial/), Adrian Smith
+- 4:2 [Quick Reference Diary](../v4n2-p7-quick-reference-diary/)
+- 4:2 [General Correspondence](../v4n2-p9-general-correspondence/), Dick Bowman, Richard L. Connor, E J Sargeant, Barrie Webster, Henri Brudzewsky, George MacLeod
+- 4:2 [APL-Ication](../v4n2-p19-apl-ication/)
+- 4:2 [Membership Projects Scheme](../v4n2-p23-membership-projects-scheme/), David Eastwood
+- 4:2 [News from Sustaining Members](../v4n2-p25-news-from-sustaining-members/), Cathy Dargue
+- 4:2 [The Education Vector](../v4n2-p31-the-education-vector/), Norman Thomson
+- 4:2 [APL Booklist](../v4n2-p36-apl-booklist/)
+- 4:2 [APL Product Guide](../v4n2-p37-apl-product-guide/), Cathy Dargue
+- 4:2 [The British APL Association Software Library: Call for Software; Full Catalogue](../v4n2-p113-baa-software-library/), Dave Ziemann
+- 4:3 [Quick Reference Diary](../v4n3-p5-quick-reference-diary/)
+- 4:3 [General Correspondence](../v4n3-p8-general-correspondence/), Anthony Camacho
+- 4:3 [Details of EGM and Postal Ballot](../v4n3-p10-details-of-egm-and-postal-ballot/), Graham Parkhouse
+- 4:3 [News from Sustaining Members](../v4n3-p11-news-from-sustaining-members/), Cathy Dargue
+- 4:3 [APL Booklist](../v4n3-p20-apl-booklist/)
+- 4:3 [APL Product Guide](../v4n3-p21-apl-product-guide/), Cathy Dargue
+- 4:3 [I-APL: History & Achievements](../art10001470/), Anthony Camacho
+- 4:4 [Editorial: Keep your Eyes on the Prize](../v4n4-p3-editorial/), Adrian Smith
+- 4:4 [Quick Reference Diary](../v4n4-p5-quick-reference-diary/)
+- 4:4 [Call for Contributions](../v4n4-p7-call-for-contributions/), the VECTOR Working Group
+- 4:4 [General Correspondence](../v4n4-p9-general-correspondence/)
+- 4:4 [APL2 over JANET](../v4n4-p10-apl2-over-janet/), Paul Barnetson
+- 4:4 [I-APL: Special BAA Meeting](../v4n4-p13-i-apl-special-baa-meeting/), Graham Parkhouse
+- 4:4 [News from Sustaining Members](../v4n4-p15-news-from-sustaining-members/), Cathy Dargue
+- 4:4 [I-APL: Report of 1st Annual General Meeting](../v4n4-p24-i-apl-agm-report/), Anthony Camacho
+- 4:4 [APL Product Guide](../v4n4-p35-apl-product-guide/), Cathy Dargue
+- 4:4 [APL Press Review](../v4n4-p45-apl-press-review/), Anthony Camacho
+- 4:4 [Full Index to Issues 1.1 to 4.4](../v4n4-p146-full-index/), Gavin Schwarzenbach
+- 5:1 [Suggested Topics for BAA Meetings](../v5n1-p4-topics-for-future-meetings/), Jonathan Martin
+- 5:1 [Quick Reference Diary](../v5n1-p5-quick-reference-diary/), Adrian Smith
+- 5:1 [APL-ication: Latest Details](../v5n1-p6-apl-ication-latest-details/), Philip Goacher
+- 5:1 [General Correspondence](../v5n1-p11-general-correspondence/)
+- 5:1 [Re: letters published in VECTOR 4.2](../v5n1-p11-re-letters-published-in-vector-4-2/), Mark Cranny
+- 5:1 [British APL Association News: Report on the Achievements of the 1987/88 Committee](../v5n1-p19-report-on-the-1987-88-year/), Graham Parkhouse
+- 5:1 [Accounts and Minutes of the 1988 AGM](../v5n1-p21-accounts-and-minutes-of-the-1988-agm/), Graham Parkhouse
+- 5:1 [Finding out about APL](../v5n1-p26-apl-bibliography/), David Eastwood
+- 5:1 [News from Sustaining Members](../v5n1-p28-news-from-sustaining-members/), Cathy Dargue
+- 5:1 [APL Product Guide](../v5n1-p39-apl-product-guide/), Cathy Dargue
+- 5:1 [Recent Meetings: Introduction](../v5n1-p59-recent-meetings/)
+- 5:1 [BAA Technical Meeting, 25th March 1988 at the Royal Over-Seas League](../v5n1-p65-baa-technical-meeting-25th-march-1988/), Adrian Smith
+- 5:2 [Quick Reference Diary](../v5n2-p5-quick-reference-diary/), Jonathan Martin
+- 5:2 [APL Conference on CIX](../v5n2-p7-apl-conference-on-cix/), Craig Lomas
+- 5:2 [General Correspondence](../v5n2-p7-general-correspondence/)
+- 5:2 [Committee Activities](../v5n2-p15-committee-activities/), Graham Parkhouse
+- 5:2 [The Education VECTOR](../v5n2-p17-the-education-vector/), Alan Sykes
+- 5:2 [I-APL Newsletter No 7, October 1988](../v5n2-p23-the-latest-on-i-apl/), Anthony Camacho
+- 5:2 [News from Sustaining Members](../v5n2-p33-news-from-sustaining-members/), Cathy Dargue
+- 5:2 [APL Product Guide](../v5n2-p36-apl-product-guide/), Cathy Dargue
+- 5:2 [“APL as a Tool of Thought V”: Proceedings of the 5th Annual Professional Development Seminar 24/10/1987](../v5n2-p47-apl-as-a-tool-of-thought-v/), Derek Wilson
+- 5:2 [Ziemann: Selected musings at the VECTOR Working Group](../v5n2-p48-ziemann-selected-musings/), David Ziemann
+- 5:2 [Recent Meetings: section page](../v5n2-p55-recent-meetings/)
+- 5:2 [Technical Section (section introduction)](../v5n2-p79-technical-section/)
+- 5:2 [Short Catalogue](../v5n2-p121-short-catalogue/), David Ziemann
+- 5:3 [Guest editorial: Plus ca change ...](../v5n3-p3-guest-editorial/), David Preedy
+- 5:3 [Quick Reference Diary](../v5n3-p7-quick-reference-diary/)
+- 5:3 [General Correspondence](../v5n3-p10-general-correspondence/)
+- 5:3 [The State of the APL Association](../v5n3-p10-state-of-the-apl-association/), Anthony Camacho
+- 5:3 [News from Sustaining Members](../v5n3-p13-news-from-sustaining-members/), Cathy Dargue
+- 5:3 [The Education Vector](../v5n3-p17-the-education-vector/), Alan Sykes
+- 5:3 [British APL Association News](../v5n3-p33-british-apl-association-news/), Graham Parkhouse
+- 5:3 [1989 British Design Award to 'Resolve' from Metapraxis](../v5n3-p35-1989-design-award-to-metapraxis/), David Preedy
+- 5:3 [Membership Questionnaire](../art10006050/), Jill Moss
+- 5:3 [APL Product Guide](../v5n3-p39-apl-product-guide/), Cathy Dargue
+- 5:3 [New Product Announcements](../v5n3-p40-new-product-announcements/)
+- 5:3 [Product Catalogue](../v5n3-p41-product-catalogue/)
+- 5:3 [Recent Meetings: Introduction](../v5n3-p55-recent-meetings/)
+- 5:3 [APL at the Leading Edge: Nov 18th at the Royal Over-Seas League](../v5n3-p56-apl-at-the-leading-edge/), Adrian Smith
+- 5:3 [February 17th: APL: Future Plans](../v5n3-p84-apl-future-plans/), Adrian Smith
+- 5:3 [General Articles (section introduction)](../v5n3-p87-general-articles/)
+- 5:3 [Font for APL.68000](../v5n3-p110-font-for-apl68000/), Iain Hayward
+- 5:4 [Quick Reference Diary](../v5n4-p7-quick-reference-diary/)
+- 5:4 [General Correspondence](../v5n4-p10-general-correspondence/)
+- 5:4 [APL in Statistics Conference](../v5n4-p11-apl-in-statistics-conference/), Alan Sykes
+- 5:4 [APL89 and APL90 Information](../v5n4-p12-apl89-and-apl90-information/)
+- 5:4 [AGM and Election Results](../v5n4-p19-agm-and-election-results/)
+- 5:4 [Incoming Committee Statements](../v5n4-p22-incoming-committee-statements/)
+- 5:4 [News from Sustaining Members](../v5n4-p24-news-from-sustaining-members/), Alison Chatterton
+- 5:4 [I-APL News: The State of the Project](../v5n4-p31-i-apl-news-state-of-the-project/), Anthony Camacho
+- 5:4 [APL Product Guide](../v5n4-p43-apl-product-guide/), Alison Chatterton
+- 5:4 [Recent Meetings: Introduction](../v5n4-p77-recent-meetings/)
+- 5:4 [Technical Section (section introduction)](../v5n4-p93-technical-section/)
+- 5:4 [British APL Association Software Library: New Entries to the List](../v5n4-p123-new-entries/), Alison Chatterton
+- 5:4 [Provisional Contents of VECTOR 6.1](../v5n4-p126-provisional-contents-of-vector-6-1/)
+- 6:1 [Editorial: Join the British APL Association](../v6n1-p3-editorial/), Peter Donnelly
+- 6:1 [Quick Reference Diary](../v6n1-p5-quick-reference-diary/)
+- 6:1 [APL90 Information](../v6n1-p8-apl90-information/)
+- 6:1 [British APL Association News](../v6n1-p13-british-apl-association-news/), Graham Parkhouse
+- 6:1 [The British APL Association Special Achievement Award for 1989](../v6n1-p14-special-achievement-award-to-ba/)
+- 6:1 [News from Sustaining Members](../v6n1-p18-news-from-sustaining-members/), Alison Chatterton
+- 6:1 [The I-APL News](../v6n1-p29-the-i-apl-news/), Anthony Camacho
+- 6:1 [APL Product Guide](../v6n1-p39-apl-product-guide/), Alison Chatterton
+- 6:2 [Quick Reference Diary](../v6n2-p5-quick-reference-diary/)
+- 6:2 [General Correspondence](../v6n2-p7-general-correspondence/)
+- 6:2 [British APL Association News](../v6n2-p11-british-apl-association-news/), Graham Parkhouse
+- 6:2 [News from Sustaining Members](../v6n2-p13-news-from-sustaining-members/), Alison Chatterton
+- 6:2 [Meeting of the Board of I-APL and other Interested Parties on 6th August 1989 at the New York Hilton](../v6n2-p29-i-apl-board-meeting-new-york/), Sylvia Camacho
+- 6:2 [APL Product Guide](../v6n2-p33-apl-product-guide/), Alison Chatterton
+- 6:2 [Recent Meetings: APL 89 — Introduction](../v6n2-p59-introduction/), Adrian Smith
+- 6:2 [An APL 89 Roundup](../v6n2-p60-conference-roundup/), Anthony Camacho
+- 6:2 [Notes on the Papers](../v6n2-p70-notes-on-the-papers/), Maurice Jordan, Chris Brady, Anthony Camacho, John Searle, Sylvia Camacho, Paul Chapman, David Ziemann
+- 6:2 [The Exhibition](../v6n2-p106-the-exhibition/), David Ziemann
+- 6:2 [The Bonfire of the Variables](../v6n2-p108-the-bonfire-of-the-variables/), John Searle
+- 6:2 [British APL Association Prize Draw: Win A Free Trip to APL90 In Denmark!](../v6n2-p110-apl90-competition/), Jill Moss
+- 6:3 [Quick Reference Diary](../v6n3-p5-quick-reference-diary/)
+- 6:3 [Complaint about an advertisement](../v6n3-p9-complaint-about-an-advertisement/), Jill Moss
+- 6:3 [General Correspondence](../v6n3-p9-general-correspondence/)
+- 6:3 [I-APL as a commercial enterprise](../v6n3-p10-i-apl-as-a-commercial-enterprise/), Andrew Wiggins
+- 6:3 [British APL Association News](../v6n3-p11-british-apl-association-news/), Graham Parkhouse
+- 6:3 [News from Sustaining Members](../v6n3-p12-news-from-sustaining-members/), Alison Chatterton
+- 6:3 [The Education VECTOR](../v6n3-p17-the-education-vector/), Alan Sykes
+- 6:3 [Letter to the Editor](../v6n3-p19-letter-to-the-editor/), R Weber
+- 6:3 [I-APL News - December 1989](../v6n3-p31-i-apl-news-december-1989/), Anthony Camacho
+- 6:3 [APL90: Accepted Papers](../v6n3-p33-apl90-accepted-papers/)
+- 6:3 [APL Product Guide](../v6n3-p37-apl-product-guide/), Alison Chatterton
+- 6:3 [Notes on Recent Meetings: Introduction](../v6n3-p57-introduction/), Adrian Smith
+- 6:3 [The APL Statistics Library Conference at Greg-y-nog](../v6n3-p59-the-apl-statistics-library-conference-at-greg-y-nog/), Alan Sykes, Tony O'Hagan
+- 6:3 [Field Trip to British Airways: 27 October 1989](../v6n3-p70-the-bapla-at-british-airways/), Sylvia Camacho
+- 6:4 [Editorial: A Network Survival Kit](../v6n4-p3-editorial-network-survival-kit/), Adrian Smith
+- 6:4 [Quick Reference Diary](../v6n4-p5-quick-reference-diary/)
+- 6:4 [British APL Association News](../v6n4-p9-british-apl-association-news/), Graham Parkhouse
+- 6:4 [News from Sustaining Members](../v6n4-p11-news-from-sustaining-members/), Alison Chatterton
+- 6:4 [The Education VECTOR](../v6n4-p17-the-education-vector/), Alan Sykes
+- 6:4 [APL90: Invitation and Abstracts](../v6n4-p33-apl90-invitation-and-abstracts/)
+- 6:4 [APL Product Guide](../v6n4-p44-apl-product-guide/), Alison Chatterton
+- 6:4 [Recent Meetings: Introduction](../v6n4-p60-recent-meetings-introduction/), Adrian Smith
+- 6:4 [Index to Vol 6](../v6n4-p125-index-to-vol-6/), Adrian Smith
+- 7:1 [Quick Reference Diary](../v7n1-p5-quick-reference-diary/)
+- 7:1 [British APL Association News](../v7n1-p9-british-apl-association-news/), Graham Parkhouse
+- 7:1 [News from Sustaining Members](../v7n1-p12-news-from-sustaining-members/), Alison Chatterton
+- 7:1 [The Education VECTOR](../v7n1-p17-the-education-vector/), Alan Sykes
+- 7:1 [Communications](../v7n1-p19-communications/), Alan Sykes
+- 7:1 [APL91: Conference Announcement](../v7n1-p33-apl91-conference-announcement/), Curtis Jones
+- 7:1 [APL Product Guide](../v7n1-p38-apl-product-guide/), Alison Chatterton
+- 7:1 [Vendor Forum: 20th April 1990](../v7n1-p60-vendor-forum-20th-april-1990/), Adrian Smith
+- 7:1 [The APL Statistics Library Project](../art10006240/), The ASL Team
+- 7:1 [The power operator](../v7n1-p117-power-operator/), John Scholes
+- 7:1 [Submitting Material to Vector](../v7n1-p143-submitting-material-to-vector/)
+- 7:2 [Quick Reference Diary](../v7n2-p5-quick-reference-diary/)
+- 7:2 [1990 Outstanding Achievement Award](../v7n2-p9-outstanding-achievement-award/), David Eastwood
+- 7:2 [News from Sustaining Members](../v7n2-p11-news-from-sustaining-members/), Alison Chatterton
+- 7:2 [The Education VECTOR](../v7n2-p17-the-education-vector/), Alan Sykes
+- 7:2 [APL Product Guide](../v7n2-p33-apl-product-guide/), Alison Chatterton
+- 7:2 [Russian Magazine Devotes an Issue to APL](../v7n2-p43-apl-makes-the-front-page-in-the-ussr/), Peter Saunders
+- 7:2 [Pictures at an Exhibition](../v7n2-p97-pictures-at-an-exhibition/)
+- 7:3 [Editorial: Solving Problems with APL](../v7n3-p3-editorial/), Jonathan Barman
+- 7:3 [Quick Reference Diary](../v7n3-p5-quick-reference-diary/)
+- 7:3 [APL conference on CIX](../v7n3-p8-apl-conference-on-cix/), Pan Pantziarka
+- 7:3 [Projects Report](../v7n3-p9-projects-report/), John Searle
+- 7:3 [Publicity Officer’s Report](../v7n3-p10-publicity-officers-report/), Jonathan Martin
+- 7:3 [Thoughts on APL 1994](../v7n3-p11-thoughts-on-apl-1994/), David Eastwood
+- 7:3 [News from Sustaining Members](../v7n3-p13-news-from-sustaining-members/), Alison Chatterton
+- 7:3 [The Education Vector](../v7n3-p17-the-education-vector/), Alan Sykes
+- 7:3 [The Random Vector](../v7n3-p33-the-random-vector/), David Eastwood
+- 7:3 [ASL News and Status - December 1990](../v7n3-p35-asl-news-and-status-december-1990/), David Eastwood
+- 7:3 [The Genesis of ASL](../art10006250/), Tony O’Hagan
+- 7:3 [Within ASL - Basic Statistics](../v7n3-p38-within-asl-basic-statistics/)
+- 7:3 [APL Product Guide](../v7n3-p50-apl-product-guide/), Alison Chatterton
+- 7:3 [Field Trip to Rowntree Mackintosh](../v7n3-p93-field-trip-to-rowntree-mackintosh/), Sylvia Camacho, Jonathan Martin
+- 7:3 [APL91 Update](../v7n3-p99-apl91-update/), Charles Schulz
+- 7:3 [Soviet APL: a Historical Outline](../art10006010/), Alexei I. Miroshnikov
+- 8:1 [Quick Reference Diary 1991](../v8n1-p5-quick-reference-diary/)
+- 8:1 [SIGAPL is international](../v8n1-p7-sigapl-is-international/), Dick Bowman
+- 8:1 [British APL Association: Summary of Annual Accounts](../v8n1-p8-summary-of-accounts/), Nicholas Small
+- 8:1 [News from Sustaining Members](../v8n1-p11-news-from-sustaining-members/), Alison Chatterton
+- 8:1 [The Education Vector](../v8n1-p17-the-education-vector/), Alan Sykes
+- 8:1 [Letter from Julian Vincent](../v8n1-p19-letter-from-julian-vincent/), Julian Vincent
+- 8:1 [The Random Vector](../v8n1-p33-the-random-vector/), David Eastwood
+- 8:1 [ASL: The Basic Statistics Volume](../art10000100/), Jake Ansell
+- 8:1 [APL Product Guide](../v8n1-p49-apl-product-guide/), Alison Chatterton
+- 8:1 [SovAPL 5th Anniversary Conference “APL Methodology and Application” 23-25 April 1991, Leningrad, USSR](../v8n1-p61-sovapl-5th-anniversary-conference/), Thomas M Olsen, Alain Delmotte
+- 8:2 [Quick Reference Diary](../v8n2-p5-quick-reference-diary/)
+- 8:2 [APL - The Language in Common: APL 92 Program Statement](../v8n2-p7-apl92-program-statement/)
+- 8:2 [News from Sustaining Members](../v8n2-p13-news-from-sustaining-members/), Alison Chatterton
+- 8:2 [The Education Vector](../v8n2-p17-the-education-vector/), Alan Mayer
+- 8:2 [Science Education in California](../art10004150/), Zdenek V. Jizba
+- 8:2 [The Random Vector](../v8n2-p33-the-random-vector/), David Eastwood
+- 8:2 [ASL - where have we got to and where do we go from here?](../v8n2-p49-asl-where-have-we-got-to/), Tony O'Hagan
+- 8:2 [Gregynog 91](../v8n2-p49-gregynog-91/)
+- 8:2 [Recent Meetings (section introduction)](../v8n2-p55-recent-meetings/)
+- 8:2 [Panel “Is J a Dialect of APL?”](../art10000590/), Jonathan Barman, Anthony Camacho
+- 8:2 [Panel “APL as an Entrepreneurial Tool”](../art10000600/), Jonathan Barman
+- 8:2 [General Articles (section introduction)](../v8n2-p95-general-articles/)
+- 8:3 [Quick Reference Diary](../v8n3-p5-quick-reference-diary/)
+- 8:3 [British APL Association Meetings for 1992](../v8n3-p7-baa-meetings-for-1992/)
+- 8:3 [APL91 Final Report](../v8n3-p8-apl91-final-report/), Charles Schultz
+- 8:3 [News from Sustaining Members](../v8n3-p12-news-from-sustaining-members/), Alison Chatterton
+- 8:3 [The Random Vector](../v8n3-p33-the-random-vector/), David Eastwood
+- 8:3 [APL Product Guide](../v8n3-p57-apl-product-guide/), Alison Chatterton
+- 8:4 [Quick Reference Diary](../v8n4-p5-quick-reference-diary/)
+- 8:4 [Minutes of the AGM of the British APL Association at the IEE on 7 June 1991](../v8n4-p9-minutes-of-agm/), Anthony Camacho
+- 8:4 [Note to Members on the Data Protection Act](../v8n4-p10-data-protection-act/)
+- 8:4 [News from Sustaining Members](../v8n4-p11-news-from-sustaining-members/), Gill Smith
+- 8:4 [The Random Vector](../v8n4-p33-the-random-vector/), David Eastwood
+- 8:4 [ASL Status Report](../v8n4-p35-asl-status-report/), David Eastwood
+- 8:4 [APL92: Provisional Programme and Abstracts](../v8n4-p49-provisional-programme-and-abstracts/)
+- 8:4 [Report on St Petersburg Visit](../v8n4-p57-notes-on-visit-to-st-petersburg/), Anthony Camacho
+- 8:4 [APL Product Guide](../v8n4-p61-apl-product-guide/), Gill Smith
+- 8:4 [J (section introduction)](../v8n4-p81-j-section-introduction/)
+- 8:4 [Index to Back Numbers, Vols 1 - 8 inclusive, Alphabetical by Author](../v8n4-p136-author-index-vols-1-8/)
+- 9:1 [Quick Reference Diary](../v9n1-p5-quick-reference-diary/)
+- 9:1 [Committee News & Annual Accounts](../v9n1-p13-committee-news-annual-accounts/), Anthony Camacho
+- 9:1 [BAA Publicity Ideas](../v9n1-p17-baa-publicity-ideas/), Misha Jovanovic
+- 9:1 [News from Sustaining Members](../v9n1-p19-news-from-sustaining-members/), Gill Smith
+- 9:1 [The Education Vector](../v9n1-p23-the-education-vector/), Alan Mayer
+- 9:1 [APL Product Guide](../v9n1-p39-apl-product-guide/), Gill Smith
+- 9:1 [Six Months in the Life of VECTOR](../v9n1-p50-six-months-in-the-life-of-vector/), John Searle
+- 9:1 [French Visitors in Napoleon’s Footsteps](../art10002940/), Michel J. Dumontier, Ludmilla Lemagnen
+- 9:1 [Stone-walling in APL](../art10008420/), Adrian Smith
+- 9:1 [The Random Vector: Editorial](../v9n1-p107-random-vector-editorial/), David Eastwood
+- 9:2 [Quick Reference Diary](../v9n2-p5-quick-reference-diary/)
+- 9:2 [BAA overseas subscription (letter)](../v9n2-p7-baa-overseas-subscription-letter/), David Crossley
+- 9:2 [News from Sustaining Members](../v9n2-p8-news-from-sustaining-members/), Gill Smith
+- 9:2 [The Education Vector](../v9n2-p13-the-education-vector/), Alan Mayer
+- 9:2 [New Email Discussion List](../v9n2-p15-new-email-discussion-list/)
+- 9:2 [The Random Vector](../v9n2-p29-the-random-vector/), David Eastwood
+- 9:2 [ASL - The Future](../v9n2-p31-asl-the-future/), Jake Ansell
+- 9:2 [APL Product Guide](../v9n2-p41-apl-product-guide/), Gill Smith
+- 9:2 [APL 92 Reports](../art10000130/), Anthony Camacho
+- 9:2 [APL92 — BEKTOP at St Petersburg](../v9n2-p88-bektop-at-st-petersburg/), Ray Cannon
+- 9:2 [Pictures at an Exhibition](../v9n2-p93-pictures-at-an-exhibition/)
+- 9:2 [General Articles (section introduction)](../v9n2-p95-general-articles/)
+- 9:2 [Technical Section (section introduction)](../v9n2-p127-technical-section/)
+- 9:3 [Quick Reference Diary](../v9n3-p5-quick-reference-diary/)
+- 9:3 [Note to Members on the Data Protection Act](../v9n3-p9-data-protection-act/), Nicholas Small
+- 9:3 [Projects Officer’s Report](../v9n3-p10-projects-officers-report/), George MacLeod
+- 9:3 [News from Sustaining Members](../v9n3-p12-news-from-sustaining-members/), Gill Smith
+- 9:3 [APL Product Guide](../v9n3-p33-apl-product-guide/), Gill Smith
+- 9:3 [Meeting at Morgan Stanley, 23 October](../art10000640/), Jonathan Barman
+- 9:3 [APL-Club Germany, Schwetzingen, November 6 1992](../art10003090/), David Eastwood
+- 9:4 [Quick Reference Diary](../v9n4-p5-quick-reference-diary/)
+- 9:4 [APL93: Invitation and Preliminary Program](../v9n4-p8-apl93-invitation/)
+- 9:4 [Chairman’s Report](../v9n4-p18-chairmans-report/), David Eastwood
+- 9:4 [“The APL Review”](../v9n4-p20-the-apl-review/), Alan Mayer
+- 9:4 [News from Sustaining Members](../v9n4-p22-news-from-sustaining-members/), Gill Smith
+- 9:4 [APL Product Guide](../v9n4-p43-apl-product-guide/), Gill Smith
+- 9:4 [APL-landing to Kronstadt island (an experience of APL operation)](../art10005160/), Pavel Luksha, Oleg Luksha
+- 9:4 [Roger Hui on “An Implementation of J”](../art10003790/), Roger K.W. Hui
+- 9:4 [Hooking up to the Internet](../art10001140/), Dick Bowman
+- 9:4 [An APL Truetype Font](../art10008450/), Adrian Smith
+- 10:1 [Editorial: APL in Business](../v10n1-p3-editorial-apl-in-business/), Anthony Camacho
+- 10:1 [Quick Reference Diary](../v10n1-p5-quick-reference-diary/)
+- 10:1 [A Comment on “Announcing The APL Review”](../v10n1-p10-comment-on-announcing-the-apl-review/), Martin Gfeller
+- 10:1 [BAA-GUI Workshop: November 26th 1993](../v10n1-p11-baa-gui-workshop/), Duncan Pearson
+- 10:1 [“APL in Business” Conference Prospectus](../v10n1-p12-apl-in-business-conference-prospectus/)
+- 10:1 [British APL Association - Summary of Annual Accounts 1992/93](../v10n1-p14-annual-accounts/), Nicholas Small
+- 10:1 [Minutes of the Annual General Meeting at the IEE on the 11th June 1993](../v10n1-p15-agm-report/), David Eastwood
+- 10:1 [News from Sustaining Members](../v10n1-p19-news-from-sustaining-members/), Gill Smith
+- 10:1 [The Education Vector](../v10n1-p25-the-education-vector/), Alan Mayer
+- 10:1 [APL Product Guide](../v10n1-p41-apl-product-guide/), Gill Smith
+- 10:2 [Editorial: APL 93 at Toronto](../v10n2-p3-editorial-apl-93-at-toronto/), Anthony Camacho
+- 10:2 [Quick Reference Diary](../v10n2-p5-quick-reference-diary/)
+- 10:2 [The APL 93 Russian Fund](../v10n2-p7-the-apl-93-russian-fund/), Ben Best
+- 10:2 [News from Sustaining Members](../v10n2-p13-news-from-sustaining-members/), Gill Smith
+- 10:2 [The Education Vector](../v10n2-p17-the-education-vector/), Alan Mayer
+- 10:2 [APL Product Guide](../v10n2-p33-apl-product-guide/), Gill Smith
+- 10:2 [Conference Roundup](../art10000150/), Sylvia Camacho
+- 10:3 [Editorial](../art10012530/), Anthony Camacho
+- 10:3 [Quick Reference Diary](../v10n3-p5-quick-reference-diary/)
+- 10:3 [Conference Prospectus](../v10n3-p6-conference-prospectus/)
+- 10:3 [News from Sustaining Members](../v10n3-p9-news-from-sustaining-members/), Gill Smith
+- 10:3 [The Education Vector](../v10n3-p17-the-education-vector/), Alan Mayer
+- 10:3 [APL Product Guide — Updates](../v10n3-p33-apl-product-guide-updates/), Gill Smith
+- 10:3 [APL93 Conference Evaluation Survey](../art10003380/), Marc Griffiths
+- 10:4 [Editorial: The First 10 Years](../art10012730/), Anthony Camacho
+- 10:4 [Preparing for Swansea](../v10n4-p4-preparing-for-swansea/), Adrian Smith
+- 10:4 [Quick Reference Diary](../v10n4-p5-quick-reference-diary/)
+- 10:4 [Update on APL94](../art10012820/), Alain Delmotte
+- 10:4 [Obituary: Mike Gregory](../v10n4-p10-obituary-mike-gregory/), John Searle
+- 10:4 [News from Sustaining Members](../v10n4-p11-news-from-sustaining-members/), Gill Smith
+- 10:4 [The Education Vector](../v10n4-p17-the-education-vector/), Alan Mayer
+- 10:4 [APL Product Guide: Updates](../v10n4-p33-apl-product-guide-updates/), Gill Smith
+- 10:4 [Visit To APL Centres in Russia November 1993](../art10005100/), Gary Littlejohn
+- 10:4 [Finding the 10 to the 10th Prime](../art10005400/), Eugene McDonnell
+- 10:4 [Vectype: Preparing APL Code for Publication](../art10008530/), Adrian Smith
+- 11:1 [Quick Reference Diary](../v11n1-p5-quick-reference-diary/)
+- 11:1 [APL94 Abstracts](../art10000160/)
+- 11:1 [EGM Report, AGM Report, Annual Accounts, Regulations](../v11n1-p13-egm-agm-accounts-regulations/)
+- 11:1 [News from Sustaining Members](../v11n1-p21-news-from-sustaining-members/), Gill Smith
+- 11:1 [The Education Vector](../v11n1-p29-the-education-vector/), Ian Clark
+- 11:1 [APL Product Guide](../v11n1-p45-apl-product-guide/), Gill Smith
+- 11:1 [Meeting: Presentation of APL\*PLUS III](../art10010810/), James Wheeler
+- 11:1 [Meeting: AnOOPL– An Object-Oriented Programming Language](../art10012910/), David Piper
+- 11:1 [Meeting: Dyalog APL Namespaces](../art10007730/), John Scholes
+- 11:1 [The BAA Membership Database](../art10007960/), Nicholas Small
+- 11:1 [↑ It or Leave It in Dyalog APL/W](../art10004270/), Jan Karman
+- 11:1 [To Suffer the Slings and Vectors of the BAA](../art10000380/), Ajay Askoolum
+- 11:2 [Quick Reference Diary](../v11n2-p5-quick-reference-diary/)
+- 11:2 [APL95: Call for Participation](../v11n2-p7-apl95-call-for-participation/)
+- 11:2 [News from Sustaining Members](../v11n2-p13-news-from-sustaining-members/), Gill Smith
+- 11:2 [The Education Vector](../v11n2-p17-the-education-vector/), Ian Clark
+- 11:2 [APL Product Guide — Updates](../v11n2-p33-apl-product-guide-updates/), Gill Smith
+- 11:2 [Chairman’s Impressions: What you Saw was (more or less) what you Got](../v11n2-p42-chairmans-impressions/), Adrian Smith
+- 11:2 [Opening Plenary](../art10007520/), Jon Sandles
+- 11:2 [Croesoe a Cymru and the APL Welsh Hwyrnos](../art10010820/), Diane Whitehouse
+- 11:2 [Conference Reports](../art10013010/)
+- 11:2 [Guidelines for Vector authors](../art10008590/), Adrian Smith
+- 11:3 [Quick Reference Diary](../v11n3-p5-quick-reference-diary/)
+- 11:3 [News from Sustaining Members](../v11n3-p7-news-from-sustaining-members/), Gill Smith
+- 11:3 [The Education Vector](../v11n3-p11-the-education-vector/), Ian Clark
+- 11:3 [APL Product Guide — Complete](../v11n3-p27-apl-product-guide-complete/), Gill Smith
+- 11:3 [Technical Section (section introduction)](../v11n3-p97-technical-section/)
+- 11:4 [Quick Reference Diary](../v11n4-p5-quick-reference-diary/)
+- 11:4 [Croeso i Gymru](../v11n4-p7-croeso-i-gymru/), John Sullivan
+- 11:4 [APL 95 Panels and Workshops](../v11n4-p8-apl-95-panels-and-workshops/)
+- 11:4 [The APL95 Software Exchange](../v11n4-p13-apl95-software-exchange/), Dick Holt
+- 11:4 [News from Sustaining Members](../v11n4-p14-news-from-sustaining-members/), Gill Smith
+- 11:4 [The Education Vector](../v11n4-p17-the-education-vector/), Ian Clark
+- 11:4 [APL Product Guide — Complete](../v11n4-p34-apl-product-guide-complete/), Gill Smith
+- 11:4 [APL in a Client-Server Environment BAA Workshop report](../art10007530/), Jon Sandles
+- 11:4 [Submitting Material to Vector](../v11n4-p159-submitting-material-to-vector/)
+- 12:1 [Editorial:](../art10013260/), Anthony Camacho
+- 12:1 [Quick Reference Diary](../v12n1-p5-quick-reference-diary/)
+- 12:1 [APL96 Western Europe](../v12n1-p6-apl96-western-europe/)
+- 12:1 [Minutes of Annual General Meeting, Friday 19 May 1995](../v12n1-p9-minutes-of-agm-1995/), Sylvia Camacho
+- 12:1 [British APL Association Annual Accounts](../v12n1-p11-annual-accounts/), Nicholas Small
+- 12:1 [News from Sustaining Members](../v12n1-p13-news-from-sustaining-members/), Gill Smith
+- 12:1 [The Education Vector](../v12n1-p17-the-education-vector/), Ian Clark
+- 12:1 [APL Product Guide — Updates](../v12n1-p33-apl-product-guide-updates/), Gill Smith
+- 12:1 [Conference Reports](../art10000190/)
+- 12:1 [A Virtual Classroom](../v12n1-p120-a-virtual-classroom/)
+- 12:2 [Editorial: Is There Anybody Out There?](../art10013310/), Anthony Camacho
+- 12:2 [Quick Reference Diary](../v12n2-p5-quick-reference-diary/)
+- 12:2 [APL96 Lancaster](../v12n2-p6-apl96-lancaster/), Adrian Smith
+- 12:2 [British APL Association News](../v12n2-p10-british-apl-association-news/), Sylvia Camacho
+- 12:2 [News from Sustaining Members](../v12n2-p11-news-from-sustaining-members/), Gill Smith
+- 12:2 [The Education Vector](../v12n2-p17-the-education-vector/), Ian Clark
+- 12:2 [APL Product Guide — Full](../v12n2-p33-apl-product-guide-full/), Gill Smith
+- 12:3 [Editorial: The Place of APL](../art10013320/), Anthony Camacho
+- 12:3 [Quick Reference Diary](../v12n3-p5-quick-reference-diary/)
+- 12:3 [APL96: Call for Participation](../v12n3-p6-apl96-call-for-participation/)
+- 12:3 [News from Sustaining Members](../v12n3-p11-news-from-sustaining-members/), Gill Smith
+- 12:3 [The Education Vector](../v12n3-p17-the-education-vector/), Ian Clark
+- 12:3 [APL Product Guide](../v12n3-p33-apl-product-guide/), Gill Smith
+- 12:3 [General Articles (section introduction)](../v12n3-p63-general-articles/)
+- 12:4 [Editorial:](../art10013340/), Anthony Camacho
+- 12:4 [Quick Reference Diary](../v12n4-p5-quick-reference-diary/)
+- 12:4 [APL96 Invitation and Abstracts](../art10000200/), Adrian Smith
+- 12:4 [News from Sustaining Members](../v12n4-p12-news-from-sustaining-members/), Gill Smith
+- 12:4 [The Education Vector](../v12n4-p17-the-education-vector/), Ian Clark
+- 12:4 [APL Product Guide — Updates](../v12n4-p33-apl-product-guide-updates/), Gill Smith
+- 12:4 [Index to Volumes 1 - 12](../v12n4-p131-index-to-volumes-1-12/)
+- 13:1 [Quick Reference Diary](../v13n1-p5-quick-reference-diary/)
+- 13:1 [News from Sustaining Members](../v13n1-p12-news-from-sustaining-members/), Gill Smith
+- 13:1 [The Education Vector](../v13n1-p17-the-education-vector/), Ian Clark
+- 13:1 [APL Product Guide](../v13n1-p33-apl-product-guide/), Gill Smith
+- 13:1 [Eric Iverson at the BAA](../art10008690/), Adrian Smith
+- 13:1 [BAA Vendor Forum](../art10007570/), Jon Sandles
+- 13:1 [LaTeX and Vector](../v13n1-p121-latex-and-vector/), Dietrich Trenkler
+- 13:2 [Quick Reference Diary and Call for Nominations](../v13n2-p5-quick-reference-diary/)
+- 13:2 [The APL Skills Database](../v13n2-p7-apl-skills-database/), Richard Procter
+- 13:2 [Vector on the Web](../art10001880/), Ray Cannon
+- 13:2 [News from Sustaining Members](../v13n2-p20-news-from-sustaining-members/), Gill Smith
+- 13:2 [The Education Vector](../v13n2-p25-the-education-vector/), Ian Clark
+- 13:2 [APL Product Guide - Updates](../v13n2-p41-apl-product-guide-updates/), Gill Smith
+- 13:2 [Recent Meetings (section introduction)](../v13n2-p47-recent-meetings/)
+- 13:2 [A Conference Diary](../v13n2-p51-a-conference-diary/), Ray Cannon
+- 13:2 [A Consultant’s View](../v13n2-p77-a-consultants-view/), Richard Procter
+- 13:2 [Conference Roundup](../v13n2-p83-conference-roundup/), Adrian Smith
+- 13:2 [General Articles (section introduction)](../v13n2-p87-general-articles/)
+- 13:2 [The Last Great Empty-Array Joke](../v13n2-p158-last-great-empty-array-joke/), Adrian Smith
+- 13:3 [Editorial](../art10013380/), Duncan Pearson
+- 13:3 [Quick Reference Diary](../v13n3-p5-quick-reference-diary/)
+- 13:3 [«écœuré»](../v13n3-p7-ecoeure/), Gérard Langlet
+- 13:3 [British J Association?](../v13n3-p12-british-j-association/), Don Mattern
+- 13:3 [Vector on the Internet](../art10001890/), Ray Cannon
+- 13:3 [News from Sustaining Members](../v13n3-p18-news-from-sustaining-members/), Gill Smith
+- 13:3 [The Education Vector](../v13n3-p21-the-education-vector/), Ian Clark
+- 13:3 [APL Product Guide](../v13n3-p37-apl-product-guide/), Gill Smith
+- 13:3 [Danish APL Group at Copenhagen](../art10002260/), Gitte Christensen, Stefano Lanzavecchia
+- 13:4 [Editorial](../v13n4-p3-editorial/), Duncan Pearson
+- 13:4 [Quick Reference Diary](../v13n4-p5-quick-reference-diary/)
+- 13:4 [Strategies for Optimising the API Problem](../art10000960/), Robert Bernecky, Norman Thomson, A J Wilson, Stefano Lanzavecchia
+- 13:4 [A BAA Meeting at Network City](../art10006520/), Duncan Pearson
+- 13:4 [APL Characters on the World Wide Web](../art10001910/), Ray Cannon
+- 13:4 [News from Sustaining Members](../v13n4-p17-news-from-sustaining-members/), Gill Smith
+- 13:4 [APL Product Guide: Fully Revised](../v13n4-p37-apl-product-guide/), Gill Smith
+- 13:4 [APL Web Sites Reviewed](../art10007580/), Jon Sandles
+- 13:4 [Errata](../v13n4-p110-errata/), Norman Thomson
+- 13:4 [Obituary: Memories of Gérard Langlet](../art10013390/), Anthony Camacho
+- 14:1 [Editorial](../art10013400/), Duncan Pearson
+- 14:1 [Quick Reference Diary](../v14n1-p5-quick-reference-diary/)
+- 14:1 [British APL Association News](../v14n1-p11-british-apl-association-news/)
+- 14:1 [AGM and Annual Accounts](../v14n1-p12-agm-and-annual-accounts/), Sylvia Camacho, Nicholas Small
+- 14:1 [News from Sustaining Members](../v14n1-p15-news-from-sustaining-members/), Gill Smith
+- 14:1 [APL Product Guide](../v14n1-p19-apl-product-guide/), Gill Smith
+- 14:2 [Editorial](../art10013410/), Duncan Pearson
+- 14:2 [Quick Reference Diary](../v14n2-p5-quick-reference-diary/)
+- 14:2 [APL98 - Conference Information](../v14n2-p7-apl98-conference-information/)
+- 14:2 [Accounts Correction](../v14n2-p11-accounts-correction/), Nicholas Small
+- 14:2 [British APL Association News](../v14n2-p18-british-apl-association-news/)
+- 14:2 [APL Product Guide](../v14n2-p19-apl-product-guide/), Gill Smith
+- 14:2 [APL97 Conference Survey Results](../art10003730/), Dick Holt
+- 14:2 [How to Win Programming Language Battles … and Maybe the In-House Applications Development War](../art10006920/), Donald B. Pittenger
+- 14:3 [Quick Reference Diary](../v14n3-p7-quick-reference-diary/)
+- 14:3 [APL99 — Call for Participation](../v14n3-p9-apl99-call-for-participation/)
+- 14:3 [News from Sustaining Members](../v14n3-p13-news-from-sustaining-members/)
+- 14:3 [APL Product Guide](../v14n3-p16-apl-product-guide/), Gill Smith
+- 14:4 [Quick Reference Diary](../v14n4-p7-quick-reference-diary/)
+- 14:4 [Correspondence](../art10010280/), Norman Thomson, Eddie Clough, Claude Henriod, Jan Karman, Phil Last, R.G. Selfridge
+- 14:4 [News from Sustaining Members](../v14n4-p17-news-from-sustaining-members/)
+- 14:4 [APL Product Guide](../v14n4-p19-apl-product-guide/), Gill Smith
+- 15:1 [Quick Reference Diary](../v15n1-p5-quick-reference-diary/)
+- 15:1 [Honorary Doctorate for Ken Iverson](../art10003880/), Roger Hui
+- 15:1 [APL98 Retrospective](../art10002250/), Paolo Di Chio
+- 15:1 [British APL Association - Annual General Meeting 1998 (RSS, London)](../art10013910/)
+- 15:1 [British APL Association - Summary of Annual Accounts 1997/98](../art10013920/)
+- 15:1 [News from Sustaining Members](../art10013860/)
+- 15:1 [APL Product Guide](../v15n1-p22-apl-product-guide/), Gill Smith
+- 15:1 [Technical Correspondence: Random Link Generator](../art10009520/), John Sutton, Eugene McDonnell
+- 15:2 [Editorial: Dedicated to my Unforgettable Cat](../art10013870/), Stefano Lanzavecchia
+- 15:2 [Quick Reference Diary](../v15n2-p5-quick-reference-diary/)
+- 15:2 [World APL News](../art10013890/)
+- 15:2 [The Vector Product Guide](../v15n2-p12-apl-product-guide/), Gill Smith
+- 15:2 [Meeting: Eric Iverson at the BAA](../art10008810/), Adrian Smith
+- 15:2 [Meeting: BAA Vendors’ Forum](../art10007640/), Jon Sandles
+- 15:3 [Quick Reference Diary](../v15n3-p5-quick-reference-diary/)
+- 15:3 [The Vector Product Guide](../v15n3-p8-apl-product-guide/), Gill Smith
+- 15:4 [Quick Reference Diary](../v15n4-p5-quick-reference-diary/)
+- 15:4 [Vector’s APL Nested Arrays Idiom Library](../v15n4-p7-nested-array-idiom-library/), Ajay Askoolum
+- 15:4 [News from Sustaining Members](../v15n4-p9-news-from-sustaining-members/)
+- 15:4 [The Vector Product Guide](../v15n4-p11-apl-product-guide/), Gill Smith
+- 16:1 [Guest Editorial: The Walls are Closing In…](../art10008840/), Adrian Smith
+- 16:1 [Quick Reference Diary](../v16n1-p5-quick-reference-diary/)
+- 16:1 [British APL Association - Annual General Meeting 1999 (RSS, London)](../art10013930/)
+- 16:1 [British APL Association News](../v16n1-p12-british-apl-association-news/)
+- 16:1 [British APL Association - Summary of Annual Accounts 1998/99](../art10013940/)
+- 16:1 [APL Keyboards for VECTOR Subscribers!](../v16n1-p17-apl-keyboards-for-vector-subscribers/), Ian Clark
+- 16:1 [APL Product Guide](../v16n1-p25-apl-product-guide/), Gill Smith
+- 16:1 [Comment by Jonathan Barman](../v16n1-p52-comment-by-jonathan-barman/), Jonathan Barman
+- 16:1 [Meeting: BAA Vendor Forum, May 21st 1999](../art10004810/), Stefano Lanzavecchia
+- 16:1 [Technical Section (section introduction)](../v16n1-p107-technical-section/)
+- 16:2 [Quick Reference Diary](../v16n2-p5-quick-reference-diary/)
+- 16:2 [British APL Association News](../v16n2-p13-british-apl-association-news/)
+- 16:2 [News from Sustaining Members](../art10013970/)
+- 16:2 [APL Product Guide](../v16n2-p19-apl-product-guide/), Gill Smith
+- 16:3 [Quick Reference Diary](../v16n3-p5-quick-reference-diary/)
+- 16:3 [News from Sustaining Members](../art10013980/)
+- 16:3 [APL Product Guide](../v16n3-p12-apl-product-guide/), Gill Smith
+- 16:4 [News from Sustaining Members](../art10013990/)
+- 16:4 [Finnish Forests Conference Reports](../art10003190/), Adrian Smith
+- 17:1 [Editorial 17.1](../art10013500/), Stefano Lanzavecchia
+- 17:1 [Quick Reference Diary](../v17n1-p5-quick-reference-diary/)
+- 17:1 [Minutes of the meeting of the Committee of the British APL Association held on 19 May 2000 at the Royal Statistical Society](../art10014010/), Anthony Comacho
+- 17:1 [British APL Association - summary of annual accounts 1999/2000](../art10014020/), Nicholas Small
+- 17:1 [Report: Vendor forum 19th May 2000](../art10005200/), Jonathan Manktelow
+- 17:1 [News from Sustaining Members](../art10014000/)
+- 17:1 [APL Product Guide](../v17n1-p16-apl-product-guide/), Gill Smith
+- 17:1 [After the Lord Mayor’s Show](../art10005980/), George MacLeod
+- 17:2 [Editorial 17.2](../art10013510/), Stefano Lanzavecchia
+- 17:2 [Quick Reference Diary](../v17n2-p5-quick-reference-diary/)
+- 17:2 [News from Sustaining Members](../art10014040/)
+- 17:2 [APL Product Guide](../v17n2-p10-apl-product-guide/), Gill Smith
+- 17:2 [APL2000 (Berlin) Reports and Pictures](../art10000290/)
+- 17:2 [Some More of the Personalities at APL Berlin 2000](../art10014030/)
+- 17:2 [Bell numbers in Vector 17.1](../v17n2-p112-bell-numbers-in-vector-17-1/), Eugene McDonnell
+- 17:3 [Quick Reference Diary](../v17n3-p5-quick-reference-diary/)
+- 17:3 [Notice of Annual General Meeting](../v17n3-p6-notice-of-annual-general-meeting/)
+- 17:3 [News from Sustaining Members](../art10014050/)
+- 17:3 [The Vector Product Guide](../v17n3-p12-apl-product-guide/), Gill Smith
+- 17:3 [Corrections and Clarifications](../v17n3-p27-corrections-and-clarifications/), Jon Sandles, Stephen Jaffe
+- 17:3 [Report: The VikAPL Experience – October 2000](../art10010730/), FM VikingAPL 2000
+- 17:3 [Letter: DNA Analysis in APL – Charles Brenner](../art10005630/), Charles Brenner
+- 17:4 [Editorial 17.4](../art10013530/), Stefano Lanzavecchia
+- 17:4 [Quick Reference Diary](../art10014070/)
+- 17:4 [APL2001: Information and Abstracts](../v17n4-p7-apl2001-information-and-abstracts/)
+- 17:4 [News from Sustaining Members](../art10014080/)
+- 17:4 [The Vector Product Guide](../v17n4-p11-apl-product-guide/), Gill Smith
+- 17:4 [J - the Natural Language for Analytical Computing](../art10014060/)
+- 17:4 [At Play With J: Erdös Numbers and Pierce and Engel Expansions](../art10005650/), Eugene McDonnell
+- 18:1 [Quick Reference Diary](../v18n1-p5-quick-reference-diary/)
+- 18:1 [An article not about APL](../v18n1-p7-an-article-not-about-apl/), Bill Lam
+- 18:1 [Minutes of the Meeting of the Committee of the British APL Association held on 18 May 2001](../v18n1-p8-minutes-of-the-committee-meeting/), Anthony Camacho
+- 18:1 [Minutes of the AGM of the British APL Association held on 18 May 2001](../v18n1-p9-minutes-of-the-agm/), Anthony Camacho
+- 18:1 [Competition Winner – “Spot the Axe”](../v18n1-p13-competition-winner-spot-the-axe/)
+- 18:1 [News from Sustaining Members](../art10014090/), Causeway Graphical Systems Ltd, HMW Computing Ltd, Insight Systems ApS
+- 18:1 [The Vector Product Guide](../v18n1-p16-apl-product-guide/), Gill Smith
+- 18:2 [Correspondence](../art10014420/), Ajay Askoolum, Mike Day
+- 18:2 [APL2002 (APL-LPA 2002) in Madrid: Call for Papers, Tutorials and Workshops](../v18n2-p11-conference-site-and-call-for-papers/)
+- 18:2 [An Implementation of A](../art10008920/), Adrian Smith
+- 18:2 [News from Sustaining Members](../art10014100/), MicroAPL Ltd, APL2000 Inc., Causeway Graphical Systems Ltd
+- 18:2 [The Vector Product Guide](../v18n2-p23-apl-product-guide/), Gill Smith
+- 18:3 [Quick Reference Diary](../v18n3-p5-quick-reference-diary/)
+- 18:3 [British APL Association Annual General Meeting](../v18n3-p7-notice-of-agm-and-call-for-new-committee/)
+- 18:3 [Update on A+](../art10008950/), Adrian Smith
+- 18:3 [News from Sustaining Members](../art10014110/), Dyadic Systems Ltd, MicroAPL Ltd, APL2000 Inc., Causeway Graphical Systems Ltd
+- 18:3 [The Vector Product Guide](../v18n3-p15-apl-product-guide/), Gill Smith
+- 18:3 [Erratum – Function Models](../v18n3-p89-erratum-function-models/)
+- 18:4 [Quick Reference Diary](../v18n4-p7-quick-reference-diary/)
+- 18:4 [APL2002 – Madrid: Accepted Papers](../v18n4-p9-accepted-papers-at-apl2002/)
+- 18:4 [News from Sustaining Members](../art10014120/), MicroAPL Ltd, Causeway Graphical Systems Ltd
+- 18:4 [The Vector Product Guide](../v18n4-p14-apl-product-guide/), Gill Smith
+- 19:1 [Quick Reference Diary](../v19n1-p7-quick-reference-diary/)
+- 19:1 [British APL Association – Summary of Annual Accounts 2001/02](../art10014140/), Nicholas Small
+- 19:1 [Vendor Presentations](../v19n1-p13-vendor-presentations/), Adrian Smith
+- 19:1 [The Vector Product Guide](../v19n1-p14-apl-product-guide/), Gill Smith
+- 19:2 [Quick Reference Diary](../v19n2-p5-quick-reference-diary/)
+- 19:2 [APL2003: Stretching the Mind!](../v19n2-p6-apl2003-information-and-call-for-papers/)
+- 19:2 [News from Sustaining Members](../art10014150/), MicroAPL Ltd, Causeway Graphical Systems Ltd
+- 19:2 [The Vector Product Guide](../v19n2-p12-apl-product-guide/), Gill Smith
+- 19:2 [APL2002 at Madrid](../art10000300/), Anthony Camacho, Ian Clark
+- 19:3 [British APL Association AGM](../v19n3-p5-british-apl-association-agm/), Anthony Camacho
+- 19:3 [Quick Reference Diary](../v19n3-p7-quick-reference-diary/)
+- 19:3 [Ian Clark replies...](../v19n3-p8-ian-clark-replies/), Ian Clark
+- 19:3 [The APL2002 conference report](../v19n3-p8-the-apl2002-conference-report/), Manuel Alfonseca
+- 19:3 [A note from the Vector Working Group](../v19n3-p9-a-note-from-the-vector-working-group/)
+- 19:3 [News from Sustaining Members](../art10014160/), MicroAPL Ltd, HMW Systems, Dyadic Ltd, Insight Systems ApS
+- 19:3 [The Vector Product Guide](../v19n3-p14-apl-product-guide/), Gill Smith
+- 19:3 [APL2000 (Naples Beach) Conference Report: Notes and Pictures](../art10000270/), Adrian Smith
+- 19:4 [June Cutts](../v19n4-p5-june-cutts/), Anthony Camacho
+- 19:4 [Quick Reference Diary](../v19n4-p7-quick-reference-diary/)
+- 19:4 [An APL Library](../art10004850/), Stefano Lanzavecchia
+- 19:4 [APL and the Pocket PC](../v19n4-p14-apl-and-the-pocket-pc/), Philip Bath
+- 19:4 [News from Sustaining Members](../art10014170/), Dyalog Ltd, Causeway Graphical Systems Ltd
+- 19:4 [The Vector Product Guide](../v19n4-p17-apl-product-guide/), Gill Smith
+- 19:4 [Report: Forests in Finland VII](../art10009010/), Adrian Smith
+- 20:1 [Quick Reference Diary](../v20n1-p5-quick-reference-diary/)
+- 20:1 [AGM and Accounts 2002-03](../art10013620/), Anthony Camacho
+- 20:1 [British APL Association – Summary of Annual Accounts 2002/03](../art10014180/), Nicholas Small
+- 20:1 [The Vector Product Guide](../v20n1-p10-apl-product-guide/), Gill Smith
+- 20:1 [BAA AGM Meeting – Vendor Presentation](../art10013630/), Adrian Smith
+- 20:1 [Report: APL Germany](../art10009040/), Adrian Smith
+- 20:1 [Report: APL at FCRC2003 in San Diego](../art10002430/), Ian Clark
+- 20:1 [Why APL Programmers Don’t Use Libraries](../art10004590/), Morten Kromberg
+- 20:2 [Editorial: Quotable Quotes](../art10004860/), Stefano Lanzavecchia
+- 20:2 [Quick Reference Diary](../v20n2-p5-quick-reference-diary/)
+- 20:2 [Internet Update](../art10014190/), Bob Hoekstra
+- 20:2 [News from Sustaining Members](../art10014200/), Dyalog Ltd, Causeway Graphical Systems Ltd, MicroAPL Ltd
+- 20:2 [The Vector Product Guide](../v20n2-p11-apl-product-guide/), Gill Smith
+- 20:2 [Report: Dyalog 2003 Conference](../art10009060/), Adrian Smith
+- 20:3 [Quick Reference Diary](../v20n3-p5-quick-reference-diary/)
+- 20:3 [Thanks for twenty years of Vector](../v20n3-p6-thanks-for-twenty-years-of-vector/), Claude Henriod
+- 20:3 [British APL Association News - Notice of AGM](../v20n3-p7-british-apl-association-news-notice-of-agm/)
+- 20:3 [News from Sustaining Members](../v20n3-p8-news-from-sustaining-members/)
+- 20:3 [The Vector Product Guide](../v20n3-p10-apl-product-guide/), Gill Smith
+- 20:3 [Report: APL2000 at Naples Beach in November](../art10009080/), Adrian Smith
+- 20:3 [Erratum noted by Graeme Robertson](../v20n3-p115-erratum-noted-by-graeme-robertson/), Graeme Robertson
+- 20:4 [Guest Editorial: Time for a New Name?](../art10009800/), Stephen Taylor
+- 20:4 [Quick Reference Diary](../v20n4-p9-quick-reference-diary/)
+- 20:4 [Minutes of the AGM of the British APL Association held at the Royal Statistical Society on 21 May 2004](../v20n4-p10-minutes-of-the-agm/), Anthony Camacho
+- 20:4 [News from Sustaining Members](../v20n4-p13-news-from-sustaining-members/)
+- 20:4 [The Vector Product Guide](../v20n4-p14-apl-product-guide/), Gill Smith
+- 20:4 [Report: BAA Anniversary K day](../art10009100/), Adrian Smith
+- 21:1 [Quick Reference Diary](../v21n1-p6-quick-reference-diary/)
+- 21:1 [The Vector Product Guide](../v21n1-p7-apl-product-guide/), Gill Smith
+- 21:1 [Erratum: TABULA](../v21n1-p76-erratum-tabula/), Ian Clark
+- 21:2 [Editorial](../art10009830/), Stephen Taylor
+- 21:2 [Quick Reference Diary](../v21n2-p5-quick-reference-diary/)
+- 21:2 [Notice of Annual General Meeting](../v21n2-p6-notice-of-annual-general-meeting/)
+- 21:2 [News from Sustaining Members](../art10014220/), Dyalog Ltd
+- 21:2 [News from Sustaining Members](../art10014230/), MicroAPL Ltd
+- 21:2 [News from Sustaining Members](../art10014210/), Causeway Graphical Systems Ltd
+- 21:2 [The Vector Product Guide](../v21n2-p12-apl-product-guide/), Gill Smith
+- 21:2 [Report: Forests in Finland IX](../art10009150/), Adrian Smith
+- 21:3 [Editorial: Please Mr President, don’t forget about the Working Man](../art10009860/), Stephen Taylor
+- 21:3 [Letter to the Editor](../v21n3-p3-letter-to-the-editor/), Devon H. McCormick
+- 21:3 [Quick Reference Diary](../v21n3-p4-quick-reference-diary/)
+- 21:3 [British APL Association – AGM and Summary of Annual Accounts 2004/05](../art10014240/), Anthony Camacho
+- 21:3 [News from Sustaining Members](../v21n3-p8-news-from-sustaining-members/)
+- 21:3 [The Vector Product Guide](../v21n3-p12-apl-product-guide/), Gill Smith
+- 21:4 [Editorial: Discover, Learn, Profit](../art10009870/), Stephen Taylor
+- 21:4 [News from Sustaining Members](../v21n4-p10-news-from-sustaining-members/)
+- 21:4 [The Vector Product Guide](../v21n4-p13-product-guide/), Gill Smith
+- 22:1 [Editorial: The Wind from Denmark](../art10009890/), Stephen Taylor
+- 22:1 [News from Dyalog](../art10013740/), Dyalog
+- 22:1 [MicroAPL News 22:1](../art10013730/), MicroAPL
+- 22:1 [News from Causeway Graphical Systems](../art10013745/), Causeway Graphical Systems Ltd
+- 22:1 [The Vector Product Guide](../v22n1-p8-product-guide/), Gill Smith
+- 22:1 [Meeting of NYC JUG on 20050614](../art10013710/), Devon McCormick
+- 22:1 [Report: Meeting of NYC JUG, June 2005](../art10005350/), Devon McCormick
+- 22:1 [Dyalog APL Users Meeting: Elsinore 2005](../art10013720/), Adrian Smith
+- 22:1 [Report: Dyalog APL Users Meeting, Elsinore, October 2005](../art10009170/), Adrian Smith
+- 22:2 [British APL Association AGM 2006 to be held in the Council Chamber at the Royal Statistical Society starting at 2 pm on Friday 19th May 2006](../v22n2-p19-british-apl-association-agm-2006/)
+- 22:2 [The Vector Product Guide](../v22n2-p20-product-guide/), Gill Smith
+- 22:2 [Report: APL2000 at Naples Beach November 2005](../art10009180/), Adrian Smith
+- 22:3 [Editorial: Kenneth E. Iverson](../art10009920/), Stephen Taylor
+- 22:3 [Obituary: Kenneth E. Iverson](../art10010640/), Toronto Globe and Mail
+- 22:3 [Obituary: Memories of Ken](../art10000970/), Bob Bernecky
+- 22:3 [Obituary: Remembering Ken](../art10000070/), Linda Alvord
+- 22:3 [Obituary: Memories of Ken](../art10005800/), Eugene McDonnell
+- 22:3 [Obituary: Memories of Ken](../art10010840/), Arthur Whitney
+- 22:3 [Ken at Yorktown Heights](../art10001270/), Jim Brown
+- 22:3 [Ken Iverson in Denmark](../art10002270/), Gitte Christensen
+- 22:3 [Hommage à Ken Iverson](../art10002990/), Michel Dumontier
+- 22:3 [Ken Iverson at the End of the World](../art10003580/), Richard Hill
+- 22:3 [Submitting Material to Vector](../v22n3-p143-submitting-material-to-vector/)
+- 22:4 [Editorial: Profiting from Iverson’s work](../art10011300/), Stephen Taylor
+- 22:4 [news from Causeway](../art10011410/), Causeway Graphical Systems
+- 22:4 [news from Dyalog](../art10011400/), Dyalog Ltd
+- 22:4 [news from Kx Systems, Inc.](../art10011390/), Kx Systems
+- 22:4 [news from MicroAPL](../art10011380/), MicroAPL
+- 22:4 [The Vector Product Guide](../v22n4-p18-product-guide/), Gill Smith
+- 22:4 [Meeting: The February 2006 KX Users’ Meeting](../art10011270/), Adrian Smith
+- 22:4 [Meeting: The 11th Annual Forest Seminar](../art10011280/), Adrian Smith
+- 22:4 [Meeting: NYC JUG 20060314](../art10011320/), Devon McCormick
+- 22:4 [Complete Index to Volumes 13-22](../v22n4-p129-complete-index-to-volumes-13-22/), Gill Smith, Adrian Smith
+- 23:1 [Editorial: a lot happening](../art10011420/), Stephen Taylor
+- 23:1 [Dyalog acquires APR from Causeway Graphical Systems](../art10011430/), Dyalog
+- 23:1 [Kx welcomes new customers](../art10011440/), Kx Systems
+- 23:1 [The Cross-Asset Trading Challenge](../art10011470/), Kx Systems
+- 23:1 [BAA Annual General Meeting, 2006](../art10011480/), Anthony Camacho
+- 23:1 [The Elsinore Song Sheet](../art10011490/), Stephen Taylor
+- 23:1 [APL's 40th Birthday in Stuttgart](../art10011500/), Adrian Smith
+- 23:1 [The APL Wiki](../art10011515/), Kai Jaeger
+- 23:1 [BAA Annual General Meeting, 2007](../art10011520/), Anthony Camacho
+- 23:1 [Digitalising the Vector Archive](../art10011670/), Ian Clark
+- 23:3 [Highlights of the APL Year in 2007](../art10011680/), Vector
+- 23:3 [Editorial: Amateur Hour](../art10011690/), Stephen Taylor
+- 23:3 [Quick Reference Diary, 2008](../art10011700/), Vector
+- 23:3 [APL2000 User Conference, 2008](../art10011710/), APL2000
+- 23:3 [Dyalog 2008](../art10011720/), Dyalog Ltd
+- 23:3 [News from Kx](../art10011730/), Kx Systems
+- 23:3 [News from MicroAPL](../art10011740/), >MicroAPL Ltd
+- 23:3 [The Vector Product Guide](../art10011750/), Gill Smith
+- 23:3 [Recent Meetings: The San Quirico Moot, 4-10 June, 2007](../art10011760/), Adrian Smith
+- 23:4 [Editorial: Ch-ch-changes](../art10011890/), Stephen Taylor
+- 23:4 [Quick reference diary](../v23n4-p5-quick-reference-diary/)
+- 23:4 [Changes at the BAA](../art10011900/), Paul Grosvenor
+- 23:4 [Extraordinary General Meeting of the BAA](../art10011910/), Anthony Camacho
+- 23:4 [Regulations of the British APL Association](../art10011920/), Anthony Camacho
+- 23:4 [Annual General Meeting of the BAA](../art10011930/), Anthony Camacho
+- 23:4 [BAA Management Committee Meeting](../art10011940/), Anthony Camacho
+- 23:4 [Sustaining Members’ News](../art10011950/), APL2000
+- 23:4 [Sustaining Members’ News](../art10011960/), Dyalog
+- 23:4 [Sustaining Members’ News](../art10011970/), Kx Systems
+- 23:4 [LearnAPL: Apprenticeship Scheme Announced (Advertisement)](../art10012040/), Dyalog & Optima Systems
+- 23:4.1 [How we got here](../art10013790/), Stephen Taylor
+- 23:4.1 [The Administrator’s Tale](../art10013800/), Karen Shaw
+- 24:1 [Quick reference diary](../v24n1-p2-quick-reference-diary/)
+- 24:1 [Glorious summer](../v24n1-p4-glorious-summer/), Stephen Taylor
+- 24:1 [Industry news](../art10500110/), APL2000 Inc., Dyalog Ltd, Kx Systems Inc., MicroAPL Ltd, Optima Systems Ltd
+- 24:1 [Dyalog 2008 at Lo-skolen](../art10500030/), Adrian Smith
+- 24:1 [GSE and APL-Germany Fall Meeting, Augsburg, November 2008](../art10500010/), Adrian Smith
+- 24:1 [Consultants](../v24n1-p137-consultants/)
+- 24:2 [Quick reference diary](../v24n2-p2-quick-reference-diary/)
+- 24:2 [Editorial](../v24n2-p3-editorial/), Stephen Taylor
+- 24:2 [FinnAPL in Tallinn, April 2009](../art10500150/), Adrian Smith
+- 24:2 [Rediscovering APL’s history](../art10500170/), Catherine Lathwell
+- 24:4 [Quick reference diary](../v24n4-p2-quick-reference-diary/)
+- 24:4 [Editorial](../art10500570/), Stephen Taylor
+- 24:4 [Remembering Eugene McDonnell](../art10500440/), Roger Hui
+- 24:4 [Industry news: Dyalog, Kx Systems, Optima, IBM](../v24n4-p10-industry-news/)
+- 24:4 [APL 2010 – Berlin](../art10500380/), Mike Hughes
+- 24:4 [APL2010 – a brief introspection](../art10500350/), Brian Becker
+- 24:4 [BAA Annual General Meeting 2010](../art10500330/), Anthony Camacho
+- 24:4 [BAA AGM 2010 – Chairman's Report](../art10500360/), Paul Grosvenor
+- 24:4 [The APL Phrasebook Project](../art10500480/), Phil Last
+- 25:1 [Quick reference diary](../v25n1-p2-quick-reference-diary/)
+- 25:1 [Editorial](../v25n1-p3-editorial/), Stephen Taylor
+- 25:1 [Remembering Donald McIntyre](../art10500600/), Keith Smillie
+- 25:1 [Dyalog](../v25n1-p17-dyalog/)
+- 25:1 [FinnAPL Spring Meeting 2011](../art10500620/), Adrian Smith
+- 25:1 [BAA Annual General Meeting 2011](../v25n1-p38-baa-agm-2011/), Peter Merritt
+- 25:1 [BAA accounts and membership](../v25n1-p40-baa-accounts-and-membership/), Nicholas Small
+- 25:1 [BAA AGM 2011 – Chairman’s report](../v25n1-p41-baa-agm-2011-chairmans-report/), Paul Grosvenor
+- 25:3 [Quick reference diary](../v25n3-p2-quick-reference-diary/)
+- 25:3 [Editorial](../v25n3-p3-editorial/), Kai Jaeger
+- 25:3 [APL2000](../v25n3-p5-apl2000/)
+- 25:3 [Dyalog](../v25n3-p7-dyalog/)
+- 25:3 [Meeting: Iverson College, Cambridge, Aug 2011](../art10500700/), Stephen Taylor
+- 25:3 [BAA Chairman’s Report (pre AGM)](../v25n3-p22-baa-chairmans-report-pre-agm/), Paul Grosvenor
+- 25:3 [Sharing code – the APLTree project](../art10500730/), Kai Jaeger
+- 25:4 [Quick reference diary](../v25n4-p2-quick-reference-diary/)
+- 25:4 [Editorial](../art10501030/), John Jacob
+- 25:4 [Dyalog](../v25n4-p5-dyalog/)
+- 25:4 [Optima](../v25n4-p12-optima/)
+- 25:4 [Chairman’s Report October 2012](../art10501000/), Paul Grosvenor
+- 25:4 [BAA AGM Minutes 2012](../art10500920/), Chris Hogan
+- 25:4 [BAA London](../art10500910/), Phil Last
+- 25:4 [BAA Moot 2012](../art10501020/), Phil Last
+- 25:4 [Three blind mice](../art10500990/), Paul Grosvenor
+- 25:4 [Our first steps into the world APL](../art10500980/), James Greeley, Sam Gutsell, Shaquil Sidiki
+- 26:1 [Editorial](../art10501230/), John Jacob
+- 26:1 [Dyalog Ltd industry news](../art10501212/), Morten Kromberg
+- 26:1 [Optima Systems Ltd](../art10501211/), Paul Grosvenor
+- 26:1 [APL2000 Industry News](../art10501221/), APL2000
+- 26:1 [BAA: Chairmans report September 2013](../art10501150/), Paul Grosvenor
+- 26:1 [BAA AGM Minutes](../art10501222/), James Greeley
+- 26:2 [Editorial](../art10501440/), John Jacob
+- 26:2 [BAA: Chairmans report January 2014](../art10501330/), Paul Grosvenor
+- 26:2 [BAA AGM Minutes 2014](../art10501425/), John Jacob
+- 26:2 [Dyalog Ltd - Corporate News](../art10501410/), Morten Kromberg
+- 26:2 [Optima Systems Ltd – Industry News August 2014](../art10501340/), Paul Grosvenor
+- 26:2 [4xtra Alliance - News](../art10501290/), Chris Hogan
+- 26:2 [SwedAPL April 2014](../art10501370/), Gilgamesh Athoraya
+- 26:2 [Minnowbrook conference review: September 14–18, 2013](../art10501310/), Steve Mansour
+- 26:4 [Editorial](../art10501650/), John Jacob
+- 26:4 [Chairman’s Report August 2015](../art10501570/), Paul Grosvenor
+- 26:4 [British APL Association AGM - Friday 29th May 2015](../art10501630/), Chris Hogan
+- 26:4 [Dyalog Ltd industry news](../art10501540/), Morten Kromberg
+- 26:4 [Optima Systems Ltd - Industry News](../art10501660/), Paul Grosvenor
+- 26:4 [APL2000 Update](../art10501670/)
+- 26:4 [4xTra Alliance industry news](../art10501530/), Chris Hogan
+- 26:4 [Kx Systems 2015 News](../art10501620/), Abby Gruen
+- 26:4 [SwedAPL 2015](../art10501550/), Sam Gutsell
+- 27:1 [A Vendor-Agnostic Logo for APL](../art10501880/), Adám Brudzewsky
+- 27:1 [Dyalog '16 - an insider's view](../art10501750/)
+- 27:1 [Minutes of Annual General Meeting 2016](../art10501690/), Stephen Taylor
+- 27:1 [Minutes of the BAA AGM 2017](../art10501770/), Paul Grosvenor
+- 27:1 [Optima welcomes James Heslip](../art10501680/), James Heslip
+- online [APL Germany Autumn Meeting](../art10501790/), Stephen Taylor
+- online [BAA meeting, 20 May 2016: talks](../art10501780/)
+
+## competitions and puzzles { #tag-competitions-and-puzzles }
+
+*Vector’s prize competitions and other puzzles*
+
+- 1:1 [Prize Competition: This is Your Life](../v1n1-p105-prize-competition-this-is-your-life/), David Ziemann
+- 1:2 [Prize Competition: Matrix Numeric Validation](../v1n2-p107-prize-competition-matrix-numeric-validation/), David Ziemann
+- 1:3 [Prize Competition Result: This is your Life](../v1n3-p123-prize-competition-result-this-is-your-life/), David Ziemann
+- 1:3 [Prize Competition: Test your skill](../v1n3-p126-prize-competition-test-your-skill/), Dave Ziemann
+- 1:4 [Prize Competition: Reshaping Rows of a Matrix; Result: Numeric Matrix Validation](../v1n4-p117-prize-competitions/), Jonathan Barman, David Ziemann
+- 2:1 [Prize Competition Result: Test your Skill](../v2n1-p99-prize-competition-result-test-your-skill/), David Ziemann
+- 2:1 [Prize Competition: Wrap Up (with Competition Rules)](../v2n1-p105-prize-competition-wrap-up/), David Ziemann
+- 2:3 [Prize Competition Result: Wrap Up](../v2n3-p101-prize-competition-result-wrap-up/), David Ziemann
+- 2:3 [Competition Update: Test your Skill](../v2n3-p104-competition-update-test-your-skill/), David Ziemann
+- 2:3 [Prize Competition: My other Car’s a Porsche](../v2n3-p105-prize-competition-my-other-cars-a-porsche/), David Ziemann
+- 2:4 [Prize Competition result: “Range Union”](../v2n4-p105-prize-competition-result-range-union/), Jonathan Barman
+- 2:4 [Prize Competition: Watch your step](../v2n4-p109-prize-competition-watch-your-step/), David Ziemann
+- 3:1 [Prize Competition: Get your directories updated](../v3n1-p105-prize-competition-get-your-directories-updated/), Jonathan Barman
+- 3:2 [APL86 Fun and Games](../v3n2-p80-apl86-fun-and-games/), Aelred Tobin
+- 3:2 [Prize Competition Result: My Other Car’s a Porsche](../v3n2-p95-prize-competition-result-porsche/), Dave Ziemann
+- 3:2 [APL86 Competition Review](../art10011070/), David Ziemann
+- 3:2 [Prize Competition: Photo Caption Contest](../v3n2-p108-photo-caption-contest/), Dave Ziemann
+- 3:3 [Competition Result – Watch Your Step](../v3n3-p107-competition-result-watch-your-step/), David Ziemann
+- 4:1 [Caption Competition](../v4n1-p23-photo-caption-competition/)
+- 4:2 [Prize Competition Result: APL86 Photo Caption](../v4n2-p90-photo-caption-competition-result/), Dave Ziemann
+- 4:3 [Sweet Combinations (Result)](../art10010980/), Derek Wilson
+- 4:4 [Prize Competition: Rules; Missionaries and Cannibals](../v4n4-p90-prize-competition-missionaries-and-cannibals/), Anne Wilson
+- 5:2 [Prize Caption Competition](../v5n2-p82-prize-caption-competition/)
+- 5:3 [Puzzle Corner](../v5n3-p19-puzzle-corner/), Alan Sykes
+- 5:4 [Puzzle/Problem Corner](../v5n4-p29-puzzle-problem-corner/), Alan Sykes
+- 5:4 [Prize Caption Competition (Result)](../v5n4-p94-caption-competition/), David Ziemann
+- 6:1 [APL Art](../v6n1-p25-apl-art/), Alan Sykes
+- 6:1 [Puzzle Corner](../v6n1-p25-puzzle-corner/), Alan Sykes
+- 6:2 [British APL Association Prize Draw: Win A Free Trip to APL90 In Denmark!](../v6n2-p110-apl90-competition/), Jill Moss
+- 6:3 [Puzzle/Problem Corner](../v6n3-p20-puzzle-problem-corner/), Alan Sykes
+- 6:3 [Problems for APL Buffs (I)](../art10004110/), Zdenek Jizba
+- 6:4 [Problems for APL Buffs (II)](../art10004120/), Zdenek Jizba
+- 7:2 [Puzzle Corner: Chess Board Pattern](../v7n2-p19-puzzle-corner-chess-board-pattern/), Alan Sykes
+- 7:3 [Problems for APL Buffs (III)](../art10004140/), Zdenek V Jizba
+- 8:2 [Recreation with Transcendental Numbers](../art10004650/), Gérard Langlet
+- 8:2 [Power Reduction](../art10006350/), Graham Parkhouse
+- 9:1 [The MAGIC Puzzle](../art10005920/), Bill McLean
+- 9:2 [Exploring MAGIC](../art10011140/), Dave Ziemann
+- 9:2 [APL92 Caption Contest](../v9n2-p126-apl92-caption-contest/)
+- 9:2 [Three Combinatoric Puzzles](../art10003780/), Roger K.W. Hui
+- 9:3 [Hero vs Orc – A Battle Sequence in APL](../art10009280/), Walter G. Spunde
+- 9:3 [An Example of Intransitivity in Probability](../art10006360/), Graham Parkhouse
+- 9:4 [AN APL Scrabble Bag](../art10005930/), Bill McLean, Ted Emms
+- 10:1 [Backtracking, Queens and Permutations](../art10003110/), Ted Emms
+- 10:1 [Cows and Bulls](../art10005300/), Alan Mayer
+- 10:1 [The MAGIC Goes Away – Opening the Boxes](../art10002800/), Mike Day
+- 10:1 [The Fractal MAGIC Universe](../art10004670/), Gérard Langlet
+- 10:2 [Cows and Bulls: A Solution](../art10003120/), Ted Emms
+- 10:2 [J Solution to Enigma 685](../art10011160/), Dave Ziemann
+- 10:3 [The N-Queens Problem in One Line](../art10007880/), R.G. Selfridge
+- 11:1 [To Be or Not To Be – That Is The Gazodenplatz](../art10005990/), Peter Merritt
+- 11:2 [Cows and Bulls – A Solution](../art10010940/), Anne Wilson
+- 11:3 [Word-search Squares in I-APL](../art10005940/), Bill McLean, Ian Clark
+- 11:3 [The Age of the Vicar (Puzzle)](../art10009690/), Alan Sykes
+- 11:3 [Bodyguard of Lies](../art10006000/), Peter Merritt
+- 11:4 [Puzzle Corner: The Age of the Vicar (solution)](../art10009700/), Alan Sykes
+- 11:4 [Answers to J Problems from Vector 11.3](../art10010060/), Norman Thomson
+- 11:4 [At Work and Play with J: Cribbage 15s](../art10005430/), Eugene McDonnell
+- 12:2 [The Ball Clock Problem](../art10003830/), Roger Hui
+- 12:3 [Counting Problem](../v12n3-p21-counting-problem/), Tony Goddard
+- 12:3 [3-Dimensional Noughts and Crosses](../art10006490/), Duncan Pearson
+- 12:4 [Towers of Hanoi from 15 Years Ago](../v12n4-p32-towers-of-hanoi/), Adrian Smith
+- 12:4 [An Internet Extension to 3D Noughts and Crosses](../art10004940/), Timo Laurmaa
+- 12:4 [At Work and Play with J: Year’s Digits for 1996](../art10005470/), Gene McDonnell
+- 13:1 [Solving Nonogram Puzzles with APL](../art10010900/), Alan J Wilson
+- 13:2 [Perfect Shuffles in J](../art10006610/), Howard Peelle
+- 14:2 [Interesting Problem...](../v14n2-p16-interesting-problem/), Ajay Askoolum
+- 14:3 [ZARK Newsletter Extracts](../art10007600/), Jon Sandles
+- 14:4 [Zark Newsletter Extracts](../art10007610/), Jon Sandles
+- 15:1 [Quick Puzzle](../v15n1-p5-quick-puzzle/), Ajay Askoolum
+- 15:1 [Zark Newsletter Extracts](../art10007620/), Jon Sandles
+- 15:2 [Zark News: Utility Corner and Crossword-4](../art10007630/), Gary Bergquist
+- 15:3 [Zark News: Utility Corner and Crossword-5](../art10007650/), Gary Bergquist
+- 15:3 [Towers of Hanoi Generalized in J](../art10006660/), Howard A. Peelle
+- 15:3 [At Play With J: Crosswords and Life](../art10005560/), Eugene McDonnell
+- 15:4 [Zark News: Utility Corner and Crossword-6](../art10007670/), Gary Bergquist
+- 15:4 [Challenge: A Namespace-aware Function Tree](../art10013900/), Ray Cannon
+- 15:4 [Solution to Crossword from Vector 15.3 and Crossword](../v15n4-p41-crossword-solution-and-crossword/)
+- 15:4 [The Subset Sum Problem](../art10010920/), Alan J Wilson
+- 16:1 [Do I Have to Use Recursion?](../art10013950/), Anne Wilson
+- 16:1 [Solution to Crossword from Vector 15.4 and Crossword](../v16n1-p53-crossword-solution-and-crossword/)
+- 16:2 [Solution to Crossword from Vector 16.1 and Crossword](../v16n2-p38-crossword-solution-and-crossword/)
+- 16:3 [Crossword](../v16n3-p37-crossword/)
+- 16:3 [Puzzle: Funny Cube](../art10004960/), Bernard Legrand
+- 16:3 [At Play With J: We’ll Cross that Bridge when we Come to it](../art10005590/), Eugene McDonnell
+- 17:1 [Zark Newsletter Extracts](../v17n1-p30-zark-newsletter-extracts/), Jon Sandles
+- 17:1 [Crossword](../v17n1-p32-crossword/)
+- 17:1 [Magic Squares](../art10002410/), Ian Clark
+- 17:1 [Introduction to Tree Searching in APL: Using the Tic Tac Toe Game in 3D](../art10000790/), Dan Baronet
+- 17:2 [Crossword](../v17n2-p32-crossword/)
+- 17:2 [The Funny Cube: Some Solutions](../art10004820/), Stefano Lanzavecchia, Adrian Smith
+- 17:2 [Timings for CMIOTA](../art10014130/), Gary Bergquist
+- 17:3 [Crossword](../v17n3-p37-crossword/)
+- 17:3 [At Play With J: Four Cubes Redux](../art10005640/), Eugene McDonnell
+- 17:4 [Zark Newsletter Extracts: Limbering Up: Combinations](../v17n4-p26-zark-newsletter-extracts/), Jon Sandles
+- 17:4 [Solution and New Crossword](../v17n4-p28-crossword/)
+- 17:4 [The Puzzle Corner: the vier-neun puzzle](../art10004830/), Stefano Lanzavecchia
+- 18:1 [Competition Winner – “Spot the Axe”](../v18n1-p13-competition-winner-spot-the-axe/)
+- 18:1 [Crossword](../v18n1-p39-crossword/)
+- 18:1 [At Play With J: Boggle](../art10005660/), Eugene McDonnell
+- 18:2 [Solution and New Crossword](../v18n2-p47-crossword/)
+- 18:3 [Solution and New Crossword](../v18n3-p49-crossword/)
+- 18:3 [At Play with J: The Counterfeit Coin Problem](../art10005670/), Eugene McDonnell
+- 18:4 [New Crossword and Solution for 18.3](../v18n4-p38-crossword/)
+- 18:4 [Playing with the Beast Number with J](../art10002980/), Michel Dumontier
+- 18:4 [At Play with J: Second-order Josephus](../art10005680/), Eugene McDonnell
+- 19:1 [Crossword](../v19n1-p38-crossword/)
+- 19:1 [At Play with J: J Be Nimble, J Be Quick: Nim Addition](../art10005690/), Eugene McDonnell
+- 19:2 [Solution for 19.1 and New Crossword](../v19n2-p35-crossword/)
+- 19:2 [Second-order Josephus](../art10014360/), Howard A. Peelle
+- 19:3 [New Crossword and Solution for 19.2](../v19n3-p37-crossword/)
+- 19:3 [Nim and DFns](../art10014340/), John R. Clark
+- 19:4 [New Crossword and Solution for 19.3](../v19n4-p43-crossword/)
+- 19:4 [At Play with J: Pick a Card, Any Card](../art10005710/), Eugene McDonnell, Richard Smith
+- 20:1 [19.4 Solution, Puzzle, and New Crossword](../v20n1-p35-crossword-and-puzzle/)
+- 20:1 [Hackers’ Corner: Square Me Up](../art10009050/), Adrian Smith
+- 20:2 [New Crossword Puzzle and 20.1 Solution](../v20n2-p34-crossword-and-puzzle/)
+- 20:2 [Solving the “Now I Know” Problem in J](../art10006680/), Howard Peelle
+- 20:3 [New Crossword and 20.2 Solution](../v20n3-p40-crossword/)
+- 20:3 [At Play with J: Giddyap](../art10005740/), Eugene McDonnell
+- 20:4 [The ZARK Crosswords — 20.3 Solution and New Crossword](../v20n4-p29-crossword/)
+- 20:4 [At Play with J: Jacob’s Ladder](../art10005750/), Eugene McDonnell
+- 21:1 [20.4 Solution, Puzzle, and New Crossword](../v21n1-p31-crossword-and-puzzle/)
+- 21:1 [The Tower of Hanoi](../art10003890/), Roger Hui
+- 21:1 [Further Surprises Involving a Man and a Goat: The “Monty Hall” Problem Solved ...](../art10005330/), Devon McCormick
+- 21:1 [ACROSS and DOWN](../art10007830/), Brian Schott
+- 21:1 [At Play with J: The Google Test](../art10005760/), Eugene McDonnell
+- 21:2 [21.1 Solution, Puzzle, and New Crossword](../v21n2-p35-crossword-and-puzzle/)
+- 21:3 [21.3 Solution, Puzzle, and New Crossword](../v21n3-p27-crossword-and-puzzle/)
+- 21:3 [Queens and Knights](../art10003900/), Roger Hui
+- 21:4 [At Play with J: Metlov’s Triumph](../art10005770/), Eugene McDonnell
+- 21:4 [A Sudoku Solver in J](../art10003910/), Roger Hui
+- 21:4 [Sudoku with Dyalog APL](../art10002470/), John Clark
+- 21:4 [Crossword Solution](../v21n4-p116-crossword-solution/)
+- 22:2 [Letter: Sudoku Madness](../art10003710/), Neville Holmes
+- 22:3 [Enigma 1368](../art10013750/), Adrian Smith
+- 22:3 [Enigma 1368 from New Scientist](../art10009200/), Adrian Smith
+- 22:4 [APL/J/K are top of the league](../art10011330/), Graham Parkhouse
+- 23:1 [The Cross-Asset Trading Challenge](../art10011470/), Kx Systems
+- 24:2 [Ten divisions to Easter](../art10500230/), Ray Polivka
+- 24:2 [Coding for a shared world](../art10500260/), A. Reader
+- 25:4 [The “88 Hats” puzzle](../art10500850/), Roger Hui
+
+## humour { #tag-humour }
+
+*spoofs, satire, verse and jokes*
+
+- 1:1 [International APL News](../v1n1-p17-international-apl-news/), Robert Bittlestone
+- 1:1 [Steps Towards a Better Basic - part 1](../v1n1-p77-steps-towards-a-better-basic-1/), Anthony Camacho
+- 1:1 [The Paper They Dared Not Print](../v1n1-p87-paper-they-dared-not-print/), Anonymous APL84 Referees
+- 1:2 [Steps Towards a Better Basic - Part 2](../v1n2-p73-steps-towards-a-better-basic-2/), Anthony Camacho
+- 1:3 [An APL Dialogue](../art10007360/), Graeme Robertson
+- 1:4 [Editorial: Your Association Needs You](../v1n4-p3-editorial/), Robert Bittlestone
+- 1:4 [Steps Towards a Better Basic — Part 3](../v1n4-p95-steps-towards-a-better-basic-3/), Anthony Camacho
+- 2:1 [Steps Towards a Better Basic — Part 4 (reprint from Datalink)](../v2n1-p81-steps-towards-a-better-basic-4/), Anthony Camacho
+- 2:3 [General Correspondence](../v2n3-p7-general-correspondence/), Paul Barnetson, Kim Andreasen
+- 2:3 [Steps toward a better BASIC — A High Grade SORT of Language (reprint from Datalink)](../v2n3-p89-steps-toward-a-better-basic/), Anthony Camacho
+- 2:4 [APL Trivia: Life, the Universe and Everything?; Remarks on “Towards a Better APL”](../v2n4-p115-apl-trivia/), David Ziemann, Claude Henriod
+- 3:1 [Steps to a better BASIC — A Choice Method of Selection (reprint from Datalink)](../v3n1-p93-steps-to-a-better-basic/), Anthony Camacho
+- 3:1 [APL Trivia – Loopy, Quine & Turing](../art10000840/), Mark Bassett
+- 3:2 [On the Lighter Moments of APL 86; Ode to APL 86](../v3n2-p67-lighter-moments-of-apl86/), Philip Goacher
+- 3:2 [APL86 Quotes](../v3n2-p86-apl86-quotes/), Dave Ziemann
+- 3:2 [Prize Competition: Photo Caption Contest](../v3n2-p108-photo-caption-contest/), Dave Ziemann
+- 3:3 [Steps To A Better BASIC — Everything AND the kitchen sink (reprint from Datalink)](../v3n3-p95-steps-to-a-better-basic/), Anthony Camacho
+- 3:3 [APL Trivia – Funny Dates](../art10011090/), David Ziemann
+- 4:1 [Caption Competition](../v4n1-p23-photo-caption-competition/)
+- 4:2 [Prize Competition Result: APL86 Photo Caption](../v4n2-p90-photo-caption-competition-result/), Dave Ziemann
+- 4:4 [Dissembling](../art10003240/), Allan Gay
+- 4:4 [Using quad-NA to Eliminate WS FULL](../art10006800/), David Piper
+- 5:1 [The Education Vector](../v5n1-p33-the-education-vector/), Norman Thomson
+- 5:2 [Ziemann: Selected musings at the VECTOR Working Group](../v5n2-p48-ziemann-selected-musings/), David Ziemann
+- 5:2 [Prize Caption Competition](../v5n2-p82-prize-caption-competition/)
+- 5:2 [Missembling](../art10003260/), Allan Gay
+- 5:4 [An APLer's Guide to Conference Going](../v5n4-p17-a-guide-to-conference-going/), John Searle
+- 5:4 [Prize Caption Competition (Result)](../v5n4-p94-caption-competition/), David Ziemann
+- 6:1 [APL Art](../v6n1-p25-apl-art/), Alan Sykes
+- 6:1 [Let a Child Loose in APL!](../v6n1-p27-let-a-child-loose-in-apl/), Richard Smith (when aged 3)
+- 6:4 [IBM’s APL2.5 for the RS/6000 and Microwriter AgendA](../v6n4-p58-apl25-for-the-microwriter-agenda/), Adrian Smith
+- 6:4 [Goodbye, and thanks for all the Fish!](../v6n4-p126-goodbye-and-thanks-for-all-the-fish/)
+- 7:1 [The INVERSE operator in APL2.5](../v7n1-p117-inverse-operator-in-apl2-5/), I. Phelfritt (née Leigh)
+- 7:1 [Surely There Must Be a Better Way ...](../v7n1-p120-surely-there-must-be-a-better-way/), Adrian Smith
+- 8:3 [Everybody is welcome](../v8n3-p11-everybody-is-welcome/), Phil Last
+- 8:4 [APL Goes Fuzzy](../v8n4-p77-apl-goes-fuzzy/), Oleg Pöhl
+- 9:1 [Six Months in the Life of VECTOR](../v9n1-p50-six-months-in-the-life-of-vector/), John Searle
+- 9:2 [APL92 — BEKTOP at St Petersburg](../v9n2-p88-bektop-at-st-petersburg/), Ray Cannon
+- 9:2 [Quotable Quotes from APL 92](../v9n2-p94-quotable-quotes-from-apl-92/), John Searle
+- 9:2 [APL92 Caption Contest](../v9n2-p126-apl92-caption-contest/)
+- 9:4 [APL — New Release](../v9n4-p80-apl-new-release/), Jon Sandles
+- 11:3 [Nice One, Microsoft!](../v11n3-p142-nice-one-microsoft/), Adrian Smith, Gérard Langlet
+- 11:3 [Jot-Dot-Floor ...or Jot-Dot-Min?](../art10013120/), Ian Clark
+- 11:4 [Croeso i Gymru](../v11n4-p7-croeso-i-gymru/), John Sullivan
+- 11:4 [More on APL 2.5](../v11n4-p120-more-on-apl-2-5/), I Phelphritt (nee Leigh)
+- 11:4 [IBM pre-announces the Pentium … in 1977!](../v11n4-p124-ibm-pre-announces-the-pentium/), Bob Hoekstra
+- 12:3 [Miaou = Cat!](../v12n3-p131-miaou-cat/), Claude Henriod
+- 13:2 [Arrays, Arrays, wherefor art thou Arrays?](../v13n2-p14-arrays-arrays-wherefor-art-thou-arrays/), Richard J. Procter
+- 14:3 [Finding an Elephant](../v14n3-p11-finding-an-elephant/), George MacLeod
+- 15:4 [The Manchester Umbrella Decoded](../art10006960/), Oleg Poehl
+- 16:1 [Microsoft Announce New APL](../v16n1-p39-microsoft-announce-new-apl/)
+- 16:1 [Knowledge, Age and Experience are no Substitute for Good Fortune or How, in the end, Bill wins — you lose](../v16n1-p111-knowledge-age-and-experience/), Peter Donnelly
+- 18:1 [Competition Winner – “Spot the Axe”](../v18n1-p13-competition-winner-spot-the-axe/)
+- 18:3 [J-ottings 31: Symphony in J minor, op.31](../art10010450/), Norman Thomson
+- 18:4 [J-ottings 32: the Stylish Part of Vector](../art10010460/), Norman Thomson
+- 20:2 [Editorial: Quotable Quotes](../art10004860/), Stefano Lanzavecchia
+- 21:1 [Wildheart](../art10004880/), Stefano Lanzavecchia
+- 22:1 [Letter: One thir dex cubed?](../art10014250/), Norman Thomson
+- 22:3 [Ken Iverson Quotations and Anecdotes](../art10003930/), Roger Hui, et al.
+- 22:4 [Letter: Kenecdotes](../art10011240/), Sam Sexton
+- 23:1 [The Elsinore Song Sheet](../art10011490/), Stephen Taylor
+- 24:4 [Bring something beautiful](../art10500390/), Roger Hui
+
+## reviews { #tag-reviews }
+
+*reviews of products and books*
+
+- 1:2 [Book Reviews](../v1n2-p41-book-reviews/), David Preedy, Ole Immanuel Franksen
+- 1:2 [Software Review — APAT: First Impressions](../v1n2-p44-software-review-apat/), Bernard King
+- 1:3 [Book Review: Learning and Applying APL, by B. Legrand](../v1n3-p39-book-review-legrand/), Anthony Comacho
+- 1:3 [Book Reviews - General](../v1n3-p41-book-reviews-general/), Robert Bittlestone
+- 1:3 [Software Review: U-REG (User-friendly Regression)](../v1n3-p45-software-review-ureg/), Teresa Jones
+- 1:4 [Book Reviews](../v1n4-p51-book-reviews/), Robert Bittlestone
+- 1:4 [Software Reviews: IBM PC/APL, APL\*PLUS/PC and PC/AT, M68000.APL on Sage IV](../v1n4-p54-software-review/), Adrian Smith
+- 1:4 [Keyword QL/APL - An (Occasionally) Technical Review](../v1n4-p121-keyword-ql-apl-review/), David Ziemann
+- 2:1 [Product Reviews](../v2n1-p40-product-reviews/), David Preedy
+- 2:3 [Book Reviews](../v2n3-p33-book-reviews/), David Preedy
+- 2:4 [Software Review: MicroSPAN](../v2n4-p41-software-review-microspan/), Anne Wilson, Steve Phillips
+- 3:1 [Book reviews](../v3n1-p39-book-reviews/), Paul Chapman
+- 3:1 [Software Review: AFM](../v3n1-p41-software-review-afm/), Adrian Smith
+- 3:1 [Product Review: PortaAPL for the Macintosh](../v3n1-p45-product-review-portaapl/), Normand R. Montour
+- 3:1 [PCs, Graphics & APL](../v3n1-p51-pc-graphics-cards/), Martyn Adams
+- 3:2 [APL Book List](../v3n2-p36-apl-book-list/)
+- 3:2 [Stop Press: The Amstrad PC1512](../v3n2-p92-stop-press-amstrad-pc1512/), Adrian Smith
+- 3:3 [APL Book list](../v3n3-p32-apl-booklist/)
+- 3:3 [Reviews Section](../v3n3-p35-reviews-section/)
+- 3:3 [Applied Mathematics for Programmers and Mathematics and Programming – Ken Iverson](../v3n3-p36-iverson-mathematics-books-review/), Simon Garland
+- 3:3 [Introduction to APL – Howard Peelle](../v3n3-p38-peelle-introduction-to-apl-review/), Romilly Cocking
+- 3:3 [Comparing Computer Languages](../v3n3-p40-comparing-computer-languages/), Peter Branson
+- 3:3 [APL.68000 for the Atari ST](../v3n3-p47-apl68000-on-the-atari-st/), Paul Chapman
+- 3:3 [STSC APL\*PLUS/PC release 6](../v3n3-p51-apl-plus-pc-release-6/), Martyn Adams
+- 3:3 [APL.68000 for the Apple Macintosh](../v3n3-p54-apl68000-for-the-apple-macintosh/), M.S. Bassett
+- 4:1 [Book Review: APL et GDDM; travail en plein ecran (B Legrand)](../v4n1-p27-apl-et-gddm/), Adrian Smith
+- 4:1 [Hardware Review: The XT-286, ForteGraph, and the IBM Enhanced Keyboard](../v4n1-p31-xt-286-fortegraph-enhanced-keyboard/), Adrian Smith
+- 4:1 [Hardware Review: Hercules-Plus Monochrome Graphics Card](../v4n1-p34-hercules-plus/), Adrian Smith
+- 4:1 [APL Booklist](../v4n1-p48-apl-booklist/)
+- 4:2 [APL Booklist](../v4n2-p36-apl-booklist/)
+- 4:2 [Book Review: APL - Advanced Techniques and Utilities](../v4n2-p49-bergquist-advanced-techniques/), Dick Bowman
+- 4:2 [Hardware Review: the NEC V20 Processor](../v4n2-p51-the-nec-v20-processor/), Adrian Smith
+- 4:2 [Dyalog APL on the IBM 6150](../v4n2-p53-dyalog-apl-on-the-ibm-6150/), Adrian Smith
+- 4:3 [APL Booklist](../v4n3-p20-apl-booklist/)
+- 4:3 [Book Review: An Introduction to APL for the IBM PC & XT by William H. Murray and Chris H. Pappas](../v4n3-p32-murray-and-pappas-introduction-to-apl/), Anthony Camacho
+- 4:3 [I-APL for the IBM PC](../v4n3-p37-i-apl-for-the-ibm-pc/), Dave Weatherby
+- 4:3 [APL\*PLUS/PC Version 7.0](../v4n3-p43-apl-plus-pc-version-7/), Adrian Smith
+- 4:4 [The APL Debugger (Uniware)](../v4n4-p50-the-apl-debugger/), Alasdair Richardson
+- 4:4 [PL/PC “APL for All”](../v4n4-p52-pl-pc-apl-for-all/), N.J. Small
+- 4:4 [Technical Correspondence (Sullivan; Piper; Hayward; Bykerk; Donnelly; Prys-Williams)](../v4n4-p92-technical-correspondence/)
+- 5:1 [Interfacing APL to C](../art10002550/), Romilly Cocking
+- 5:1 [Algorithmics by Harel](../v5n1-p56-algorithmics-by-harel/), Anthony Camacho
+- 5:2 [“APL as a Tool of Thought V”: Proceedings of the 5th Annual Professional Development Seminar 24/10/1987](../v5n2-p47-apl-as-a-tool-of-thought-v/), Derek Wilson
+- 5:2 [Statgraphics](../v5n2-p49-statgraphics/), Gavin Schwarzenbach
+- 5:3 [APL is Easy!/APL2 at a Glance](../v5n3-p51-apl-is-easy-apl2-at-a-glance/), Bill Ross
+- 5:4 [Books Received for Review](../v5n4-p53-books-received-for-review/)
+- 5:4 [IBM Personal Computing in Schools](../v5n4-p53-ibm-personal-computing-in-schools/), Anthony Camacho
+- 5:4 [Second Generation APLs on the PC](../v5n4-p54-second-generation-apls-on-the-pc/), Adrian Smith
+- 5:4 [APL\*PLUS II: STSC’s Second Generation APL System for 80386 Machines](../v5n4-p55-apl-plus-ii-technical/), Peter Cyriax
+- 5:4 [APL\*PLUS II for 80386 PCs](../v5n4-p61-apl-plus-ii-applications/), Ajay Askoolum
+- 5:4 [SAX](../v5n4-p67-sax/), Michael J.A. Berry
+- 6:1 [Reviews Section (introduction)](../v6n1-p49-reviews-section/), Adrian Smith
+- 6:1 [The CIPS APL Toolkit (review)](../art10000560/), Jonathan Barman
+- 6:1 [Experience of Using IBM's APL2/PC](../v6n1-p57-using-ibms-apl2-on-the-pc/), Anthony Camacho
+- 6:1 [Dyalog APL for 386 DOS PC's](../v6n1-p61-impressions-dyalog-apl-for-ms-dos/), Jonathan Martin
+- 6:2 [Review: “APL for the Maths Classroom” by Thomson](../art10005910/), Bill McLean
+- 6:2 [Reviews Section (introduction)](../v6n2-p43-reviews-section/), Adrian Smith
+- 6:2 [Review: IBM’s APL2 on the PC (16-bit)](../art10001120/), Dick Bowman
+- 6:2 [Review: IBM’s APL2 on the PC (32-bit)](../art10007940/), Nicholas Small
+- 6:3 [Is APL\*PLUS Getting Overweight?](../v6n3-p49-is-apl-plus-getting-overweight/), Adrian Smith
+- 6:3 [Reviews of Myriade (APL\*PLUS/PC) & AFM for APL2/PC](../art10008280/), Adrian Smith
+- 6:4 [Reviews Section (introduction)](../v6n4-p53-reviews-section/), Adrian Smith
+- 6:4 [Review: APL\*PLUS/PC Release 9](../art10008300/), Adrian Smith
+- 6:4 [IBM’s APL2.5 for the RS/6000 and Microwriter AgendA](../v6n4-p58-apl25-for-the-microwriter-agenda/), Adrian Smith
+- 7:1 [Reviews Section (introduction)](../v7n1-p47-reviews-section/), Adrian Smith
+- 7:1 [Review: Dyalog APL for MS DOS](../art10008330/), Adrian Smith
+- 7:1 [Powertools/CUA](../art10008340/), Adrian Smith
+- 7:1 [Book Announcement: APL with a Mathematical Accent](../v7n1-p57-apl-with-a-mathematical-accent/), Norman Thomson
+- 7:3 [APL\*PLUS/PC Release 10](../art10000580/), Jonathan Barman
+- 8:1 [Zark Update](../v8n1-p59-zark-update/), Gary A. Bergquist
+- 8:1 [The Art of Amazement](../v8n1-p60-the-art-of-amazement/)
+- 8:1 [Dyalog APL/X](../art10007860/), John Searle
+- 8:1 [APL\*PLUS II Release 3](../art10006370/), Duncan Pearson
+- 8:3 [Book Review: Programming in J](../art10007990/), Keith Smillie
+- 8:4 [Review of I-APL for the Macintosh](../v8n4-p23-review-of-i-apl-for-the-macintosh/), Bill McLean
+- 8:4 [IBM Systems Journal: APL 25th Anniversary Edition](../v8n4-p72-ibm-systems-journal-apl-edition/), Adrian Smith
+- 8:4 [Byte ‘Classic Languages’ Article on APL](../v8n4-p76-byte-classic-languages-article-on-apl/), Adrian Smith
+- 8:4 [Iverson’s \*Arithmetic\* reviewed](../art10008000/), Keith Smillie
+- 9:1 [APL\*PLUS II/386 Version 4](../art10002660/), David Crossley
+- 9:2 [ASLGREG reviewed](../art10007490/), Jon Sandles
+- 9:2 [Comments on the ASLGREG Review](../v9n2-p34-comments-on-aslgreg-review/), Alan Sykes
+- 9:2 [Iverson’s Introduction to J](../art10008020/), Keith Smillie
+- 9:2 [Dyalog APL/W](../art10006400/), Duncan Pearson
+- 9:3 [Windows Programming with APL\*PLUS II](../art10001810/), Ray Cannon
+- 9:4 [A Beginner’s Guide to Low Cost APLs](../art10003720/), Dick Holt
+- 9:4 [APL\*Plus II/386 Version 5.0](../art10006880/), Dave Piper
+- 9:4 [A First Look at the ISI APL/Windows (APLIWIN) Beta Release](../art10003330/), Martin Gfeller
+- 9:4 [ISI APL: Programming for Windows](../art10000660/), Jonathan Barman
+- 9:4 [APL — New Release](../v9n4-p80-apl-new-release/), Jon Sandles
+- 10:1 [Review of APL\*PLUS II v4.0](../v10n1-p9-review-of-apl-plus-ii-v4/), James G Wheeler
+- 10:1 [Review: SHARP APL Reference Manual](../art10000670/), Jonathan Barman
+- 10:1 [Update on APLIWIN](../art10000680/), Jonathan Barman
+- 10:1 [Review: Dyalog APL Version 6.3](../art10000690/), Jonathan Barman
+- 10:2 [Review: GDDME – A First Look](../art10008470/), Adrian Smith
+- 10:2 [Review: Helm – A Company-oriented DSS](../art10007510/), Jon Sandles
+- 10:2 [Review: "Introduction to APL\*PLUS/PC" by Maurice Dalois](../art10012400/), Alan Mayer
+- 10:3 [GDDME by Lingo Allegro — Update](../art10008490/), Adrian Smith
+- 10:4 [Review: "Calculus" by Ken Iverson](../art10012800/), Keith Smillie
+- 11:1 [Review: "APL Notes" by Jim Weigang](../art10012960/), Walter Spunde
+- 11:1 [Review: APL\*PLUS/PC Version 11](../art10010760/), Adam Weber
+- 11:1 [Review: J Release 2](../art10011170/), Dave Ziemann
+- 11:1 [Review: the APL\*PLUS III GUI](../art10006440/), Duncan Pearson
+- 11:1 [Review: APL\*PLUS III Control Structures](../art10008540/), Adrian Smith
+- 11:2 [Review: "Les APLs Etendus" by Bernard Legrand](../art10013090/), Adrian Smith
+- 11:4 [J 2.05 for Windows](../art10011180/), David Ziemann
+- 12:1 [Book Review: \*Making APL Readable\*](../art10001550/), Anthony Camacho
+- 12:2 [Dyalog APL/W for Windows 95 — First Impressions](../art10008640/), Adrian Smith
+- 12:3 [Experiences with the Use of Causeway](../art10004290/), Jan Karman
+- 12:4 [AP119/W - a First Look](../art10004930/), Timo Laurmaa
+- 12:4 [The JADS/SMS Utility Management System](../art10007560/), Jon Sandles
+- 13:1 [J3 - J Grows Up!](../art10000520/), John Baker, Martin Neitzel
+- 13:1 [Dyalog APL/W 7.2 and 8.0](../art10001430/), Bob Byers
+- 13:1 [Fractals, Visualization, and J](../art10002600/), Nicholas Cox
+- 13:4 [APL Web Sites Reviewed](../art10007580/), Jon Sandles
+- 13:4 [Advanced Windows Programming (Lescasse)](../art10000720/), Jonathan Barman
+- 13:4 [\*NewLeaf\* Page Layout Tools](../art10001440/), Bob Byers
+- 14:3 [Review: APL97 CD ROM](../art10008750/), Adrian Smith
+- 14:3 [APL Shareware Review: ComLog Comic Logger](../art10007590/), Jon Sandles
+- 14:3 [Dyalog APL for Motif Version 8.1 Release 2 for Sun Solaris 2.5](../art10003600/), Bob Hoekstra
+- 14:4 [Review: RainPro Publication Graphics](../art10001450/), Robert Byers
+- 15:1 [K-Lite: First Impressions](../art10005140/), Jim Lucas
+- 15:1 [Book Review – It’s APL, but not as we know it](../art10000410/), Ajay Askoolum
+- 15:2 [Dyalog APL/W 8.2: First Impressions](../art10008800/), Adrian Smith
+- 16:3 [My SAX Experience – SHARP APL for Linux, Beta 5.1.0](../art10003640/), Bob Hoekstra
+- 17:1 [Unix APL Power Shootout (Part 2)](../art10003660/), Bob Hoekstra
+- 18:3 [Review of “J: the Natural Language for Analytic Computing”](../art10007240/), Cliff Reiter
+- 19:1 [APLX, the Awakening of the Sleeping Beauty](../art10000910/), Eke van Batenburg
+- 19:1 [Dyalog.NET – First Impressions](../art10002050/), Ray Cannon
+- 19:1 [APL+Win Version 4.0](../art10003750/), Michael Hughes
+- 19:1 [J 5.01 Linux Beta h](../art10007310/), Zach Reiter
+- 19:1 [\*How to Draw a Straight Line\* by A B Kempe](../art10001610/), Anthony Camacho
+- 19:2 [Review: Dyalog APL CE (beta) – first impressions](../art10002060/), Ray Cannon
+- 19:2 [Review: First Experiences with PocketAPL](../art10008990/), Adrian Smith
+- 21:1 [Review: APLX Beta 2.0.1 for Windows](../art10000460/), Ajay Askoolum
+- 21:2 [Review: The Solid Form of Language (Robert Bringhurst)](../art10009840/), Stephen Taylor
+- 21:3 [Review: Built-in Charting in APLX Version3](../art10009160/), Adrian Smith
+- 21:4 [Review of “Mathematical Computing in J (Peelle)”](../art10007300/), Cliff Reiter
+- 22:1 [A First Look at the Causeway APL to C# Translator](../art10003180/), Walter Fil
+- 22:4 [Review of Mathematica 5.2](../art10011340/), Ian Clark
+- 23:1 [Review: System Building with APL+Win, by Ajay Askoolum](../art10011560/), Ian Clark
+- 23:3 [Review: APLX Version 4, from the viewpoint of an experimental physicist](../art10011790/), Beau Webber
+- 23:4 [Fire from Heaven (Review: Q for Mortals, by Jeffry Borror)](../art10011980/), Adrian Smith
+- 24:2 [A newbie’s discovery of APL](../art10500160/), Rebecca Burriesci
+- 24:2 [APL: The next generation](../art10500310/), Ajay Askoolum
+- 26:4 [Q Tips: Fast, Scalable and Maintainable Kdb+](../art10501500/), Yang Guo
+- 27:1 [Book review — Fun Q: A Functional Introduction to Machine Learning in Q](../art10501870/), Daniel Krizian

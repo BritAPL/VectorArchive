@@ -1,0 +1,217 @@
+---
+vid: '10010680'
+title: Simulating Sampling Distributions
+authors:
+- Dietrich Trenkler
+volume: '8'
+issue: '4'
+page: '37'
+transcribed: from page images of VOL.8-NO.4-APRIL-1992.pdf, pages 39–44 (printed 37–42); Claude, 2026-10-08
+review: draft
+tags:
+- mathematics and statistics
+- education
+queries:
+- Byline printed “by Dietrich Trenkler, University of Osnabrück, Germany”. The mathematics, typeset in TeX in the original, is set here in TeX, typeset by MathJax, following the printed layout; the distributions 𝓑(n,p), 𝓔(λ) and 𝓝(0,1) are printed with calligraphic letters. Names printed in the APL font (n, M, k, i in the description of STATISTICS) are left as printed. The three plots are kept as images.
+- The theorem in (ii) is printed with X̄ = ΣXᵢ (without the 1/n), as transcribed.
+- 'Slip transcribed as printed: “continous”.'
+- STATISTICS [5] is printed `R←⍳0 ⋄ ⍴i←1` (the ⍴ presumably a stray), as transcribed.
+status: transcribed
+issue_tab: n4-april-1992
+---
+
+*Transcribed from the printed issue; not yet reviewed. [Read it in the PDF of the issue, page 37](../8/4/VOL.8-NO.4-APRIL-1992.pdf#page=39)*
+{ .transcribed }
+
+*by Dietrich Trenkler, University of Osnabrück, Germany*
+{ .byline }
+
+This paper aims at giving some impressions of the power of an innocent looking *APL*-function called `STATISTICS` which has been written to help in clarifying difficult facts from the realm of theoretical Statistics. I will exemplify its usefulness in the context of two topics covered in most introductory text books such as [1].
+
+## Two Problems
+
+Most students of the Economics department of our university hate Mathematics. So an instructor is well advised not to turn his back to write down a proof.<sup>1</sup> So why not take a simulation approach?
+
+For instance, understanding the concepts of point estimation definitely is a goal but they are best understood by *seeing* them in action. To be specific we ask two questions:
+
+(i) How can we get an idea of the concept of (un)biasedness or efficiency of point-estimators?
+
+(ii) A well-known theorem of Mathematical Statistics states that \(\bar{X} = \sum_{i=1}^{n} X_i\) and \(S^2 = \frac{1}{n}\sum_{i=1}^{n}(X_i - \bar{X})^2\) are independent if and only if the \(X_i\) are normally distributed, [1], p. 243. How can we get conceivable evidence of this fact without clinging to (incomplete) stringent proofs?
+
+<sup>1</sup> For me the word *proof* is tantamount to *turmoil*.
+{ .note }
+
+## The Simulation Approach
+
+All the students have to comprehend is how to generate random numbers from a specified distribution. I favor the table-look-up method for discrete distributions and the inversion method for continous distributions, [2]. Both can be implemented in *APL* quite easily if
+
+- there is a function `UNIFORM` to generate uniformly distributed random numbers from (0,1).
+- there is a function to compute values \(F(x) = P(X \le x)\) of the distribution function of a discrete distribution.
+- there is a function to compute \(F^{-1}(u)\) where \(F(x) = P(X \le x)\) is the distribution function of a continous distribution.
+
+For instance, let `DISTRBINOM` compute \(F(x)\) for a binomial distribution \(\mathcal{B}(n,p)\). Then
+
+```apl
+50 TABLELOOKUP X,[1.1] 20 0.3 DISTRBINOM X←0,⍳20
+```
+
+will generate 50 random numbers from a \(\mathcal{B}(20,0.3)\)-distribution. Here is a listing of `TABLELOOKUP`.
+
+```apl
+∇R←N TABLELOOKUP XP
+[1] R←(⌽XP[;1])[+⌿(⌽XP[;2])∘.≥UNIFORM N]
+∇
+```
+
+On the other hand, let `IEXP` compute \(F^{-1}(u)\) for an exponential distribution \(\mathcal{E}(\lambda)\):
+
+```apl
+∇R←L IEXP U;X;P
+[1] R←-(÷L)×⍟1-U
+∇
+```
+
+Then
+
+```apl
+2 IEXP UNIFORM 100
+```
+
+generates 100 random numbers from an \(\mathcal{E}(2)\)-distribution. `UNIFORM` looks as follows:
+
+```apl
+∇R←AB UNIFORM N
+[1] ⍎(0=⎕NC 'AB')/'AB←0 1'
+[2] R←AB[1]+(-/⌽AB)×(?N⍴¯2+R)÷¯1+R←2*31
+∇
+```
+
+These are the main ingredients to realize the simulation approach for one or several statistics. The argument of the monadic function `STATISTICS` consists of essentially three parts:
+
+- The first part describes how to generate samples of size *n*.
+- The second part determines the number *M* of samples and the sizes *n* thereof.
+- The rest describes the way(s) how to compute *k* statistic(s) from the samples.
+
+```apl
+∇R←STATISTICS par;n;m;i;j;stat;sp;nv;distr;nnv
+[1] par←box par
+[2] distr←par[1;]
+[3] nnv←⍴nv←⍎par[2;]
+[4] m←1↑⍴stat←2 0 ↓par
+[5] R←⍳0 ⋄ ⍴i←1
+[6] M1:n←nv[i] ⋄ sp←⍎distr ⋄ j←1
+[7] M2:R←R,⍎stat[j;] ⋄ →(m≥j←j+1)/M2
+[8] →(nnv≥i←i+1)/M1
+[9] R←((⍴nv),(⍴R)÷⍴nv)⍴R
+∇
+```
+
+Its output is an *(M,k)*-matrix where row *i* is the result of the *k* statistics administered to sample *i*. `box` should be familiar to readers of *VECTOR*. It is modified version of `BOX` taken from [4] to allow for a left argument describing the selector.
+
+```apl
+∇R←S box X;I;J;K;M;REP
+[1] ⍎(2≠⎕NC 'S')/'S←''⋄'''
+[2] I←(X=¯1↑X)/⍳⍴X←X,S
+[3] X[I]←' '
+[4] J←¯1+I-0,¯1↓I
+[5] K←(M←⌈/J)-J
+[6] REP←(⍴X)⍴1
+[7] REP[I]←K
+[8] R←((⍴I),M)⍴REP/X
+∇
+```
+
+## Conducting the Simulations
+
+Let us return to the problems mentioned above.
+
+(i) Assume that a population is distributed according to the density
+
+\begin{equation*}
+f(x) = \begin{cases} \frac{\theta}{x^2}, & \theta \le x, \\ \;0 & \text{else,} \end{cases}
+\end{equation*}
+
+and let \(X_1,\ldots,X_n\) be a random sample from that distribution. It is not hard to see that
+
+- the maximum-likelihood estimator of \(\theta\) is
+
+    \begin{equation*}
+    \hat{\theta}_1 := \min\{X_1,\ldots,X_n\}.
+    \end{equation*}
+
+- an estimator for \(\theta\) based on the method of moments is
+
+    \begin{equation*}
+    \hat{\theta}_2 = \frac{1}{\dfrac{2}{n}\displaystyle\sum_{i=1}^{n}\frac{1}{X_i}}.
+    \end{equation*}
+
+    This estimator is constructed from \(E[1/X] = 1/(2\theta)\).
+
+Now that there are two estimators for \(\theta\) which is the one to be preferred? To get an insight into their distributional properties a simulation seems appropriate. For \(\theta = 1\) note that \(F^{-1}(u) = 1/(1-u)\). Accordingly
+
+```apl
+DIS←'÷1- UNIFORM n ⋄'
+SMPL←'(100⍴5),100⍴20 ⋄'
+STATS←'÷2×MEAN ÷sp ⋄ ⌊/sp'
+ST←STATISTICS DIS,SMPL,STATS
+BOXANDWHISKER (100 2↑ST),100 0↓ST
+```
+
+![Box-and-whisker plots on a scale from 0.5 to 3 of θ̂1 and θ̂2 for n = 5 and n = 20](fig1.png)
+
+**Figure 1:** Comparing the performances of \(\hat{\theta}_1\) and \(\hat{\theta}_2\) for \(n = 5\) and \(n = 20\).
+{ .caption }
+
+Figure 1 displays the result of the comparing box-and-whisker plots. Several aspects of point estimation can now be faced:
+
+- \(\hat{\theta}_2\) is unbiased while \(\hat{\theta}_1\) is not. Of course, since \(E[\hat{\theta}_1] = n/(n-1) > 1\) there is an obvious modification of \(\hat{\theta}_1\) to \(\hat{\theta}_3 = (n-1)\hat{\theta}_1/n\) to yield a second unbiased estimator.
+- \(\hat{\theta}_2\) reveals more variability than \(\hat{\theta}_1\). This is measured from the widths of the boxes. Alternatively one could display box-and-whisker plots of \(\lvert 1 - \hat{\theta}_j\rvert\) or \((1 - \hat{\theta}_j)^2\) by
+
+    ```apl
+    BOXANDWHISKER |1-(100 2↑ST),100 0↓ST
+    BOXANDWHISKER (1-(100 2↑ST),100 0↓ST)*2
+    ```
+
+    to introduce the concepts of mean absolute error and mean square error.
+
+- The performances of both estimators become better by increasing the sample sizes from \(n = 5\) to \(n = 20\).
+
+(ii) Simulating to convey what this theorem says is now straightforward:
+
+![Scatter plot of s² (0.5 to 2) against x̄ (−0.5 to 0.5), with no visible pattern](fig2.png)
+
+**Figure 2:** Scatter plot of \(s^2\) versus \(\bar{x}\) based on 100 samples of size \(n = 10\) from an \(\mathcal{N}(0,1)\)-distribution. Is there any visible relationship between \(s^2\) and \(\bar{x}\)?
+{ .caption }
+
+```apl
+ST ←STATISTICS 'BOXMUL n ⋄ 100⍴10 ⋄ MEAN sp ⋄ S2 sp'
+```
+
+`BOXMUL` uses the well-known algorithm to generate independent random numbers from a standard normal distribution, [2], p. 235. Figure 2 displays a scatter plot of `ST[;2]` versus `ST[;1]`. What happens if we assume that the population is exponentially distributed with \(\lambda = 1\)?
+
+```apl
+ST ←STATISTICS '1 IEXP n ⋄ 100⍴10 ⋄ MEAN sp ⋄ S2 sp'
+```
+
+Figure 3 displays a scatter plot of `ST[;2]` versus `ST[;1]`. This experiment has also been described in [3].
+
+![Scatter plot of s² (0 to 5) against x̄ (about 0.3 to 1.8), with s² rising as x̄ increases](fig3.png)
+
+**Figure 3:** Scatter plot of \(s^2\) versus \(\bar{x}\) based on 100 samples of size \(n = 10\) from an exponential distribution with \(\lambda = 1\). Is assuming independence appropriate?
+{ .caption }
+
+## Concluding Remarks
+
+The versatility of this approach is amazing. Now it takes only a few keystrokes to grasp the meaning of the Central Limit Theorem. Even the ideas of jackknifing or the bootstrap can be learned from simulation experiments. Generalizing `STATISTICS` to cover simulations in the context of regression models should be obvious. With this program questions concerning the robustness or resistance of ordinary least squares estimation can be tackled.
+
+Once again, it is the ease of answering *What if*-questions that glorifies enlistment in the *APL*-navy.
+
+## References
+
+[1] Mood, A.M., Graybill, F. A, Boes, D.C. (1974): *Introduction to the Theory of Statistics*, 3<sup>rd</sup> edition, McGraw-Hill, New York.
+
+[2] Morgan, B.J.T. (1984): *Elements of Simulation*, Chapman and Hall, London and New York.
+
+[3] Naeve, P., Trenkler, D., Wolf, P. (1991): *Making the Teaching of Statistics Roar*, Computational Statistics Quarterly 4, 325-353.
+
+[4] Sykes, A. (1990): *Doing Useful Things with Strings*, *VECTOR* 6(4), 24-29.

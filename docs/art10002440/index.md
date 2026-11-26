@@ -1,0 +1,211 @@
+---
+vid: '10002440'
+title: Towards a General Theory of Formula Inversion
+authors:
+- Ian A. Clark
+volume: '20'
+issue: '2'
+page: '100'
+transcribed: from page images of VOL.20-NO.2.pdf, pages 102–108 (printed 100–106); Claude, 2026-10-10
+review: draft
+tags:
+- mathematics and statistics
+- applications
+queries:
+- 'The formulas are set in TeX, typeset by MathJax, following the printed layout: the numbered equations with their labels “(1):” etc. to the left, and the = signs of (4)/(5), (4a)/(5a), (4b)/(5b) and of Γ and Γ_Δ aligned as printed; derivatives are written with a slash except in (6), where they are built up, as printed. Ellipses are printed on the baseline without a preceding comma (“x₂, … xₙ”), as transcribed; {g₁, g₂, …. gₙ} has four dots, printed so.'
+- 'Kept as printed: the second equation numbered (2), repeating (2); “employs a formula-inversion engine consists of”.'
+status: transcribed
+issue_tab: n2-october-2003
+---
+
+*Transcribed from the printed issue; not yet reviewed. [Read it in the PDF of the issue, page 100](../20/2/VOL.20-NO.2.pdf#page=102)*
+{ .transcribed }
+
+*by Ian A. Clark*
+{ .byline }
+
+## Introduction
+
+Microsoft Excel™ allows a designated cell in a grid to be computed according to a user-provided formula based on other cells, which we may call its *juniors.* If a junior cell is altered by overtyping its value, all computed cells automatically recompute their values to accommodate the change. However if you overtype the value in a given computed cell, Excel does not propagate this change back to the juniors. Instead it discards the cell’s formula and converts the cell to an uncomputed one.
+
+Some grid-based software products, notably CPA (Cognos Management Series Planning Analyst™, formerly: Adaytum Planning™) [1], do preserve the user’s formula, adjusting some or all of the juniors so that the computed result equals the new value in the formula cell. To do so it must compute some sort of ‘inverse function’ to that defined by the formula. We call this process *formula inversion*. The proprietary formula inversion feature of CPA is called ‘break-back’.
+
+In this paper we apply the differential calculus plus some elementary functional analysis to propose a general theory of formula inversion. This permits a simple algorithm (for which we can demonstrate an APL prototype called TABULA) that does not need to analyse, or even look at, the contents of the formula for computing the new juniors. We observe in passing that ‘break-back’ in CPA is based on a fundamentally different algorithm - one that does need to analyse the formula (which it does into individual arithmetic operations). Its derivation owes nothing to the differential calculus. However in many instances the two approaches do give the same answers - which helps establish the plausibility of both. And where they don’t give the same answers, the reasons are interesting.
+
+One well-known method of computing an inverse function from a given forward-transfer function is by the method of *successive-approximation*, aka *Newton-Raphson*, which CPA’s ‘break-back’ does not use. The algorithm we shall develop here broadly follows the standard treatment, see for example [2], but with the apparently novel extension of replacing a multivariate function with a function of a single variable \(t\) by judicious choice of so-called "model" functions.
+
+The algorithm discussed here has been put to work in an eco-calculator, TABULA, which allows the user to set up a net of dependent cells in terms of their formulas. When the value of a given calculated cell is overtyped, the alterands in the net are recomputed to honour the new value, even though only forward-calculation formulas are stored and used.
+
+## Theory
+
+Suppose a given cell in a grid takes the value \(z\). This may either be independent of other cells, being inserted directly by the user (whence the cell is known as a *detail* cell), or it may be calculated from the values: \(\{x_1, x_2, \ldots x_n\}\) of several other cells, called its *juniors* (whence the cell itself is known as a *total* cell). In the most general case we may consider \(z\) to be defined by:
+
+\begin{alignat*}{3}
+&\text{(1):}\qquad && z &&{}= f(x_1, x_2, \ldots x_n)
+\end{alignat*}
+
+where \(f\) is a multivariate function defined by the collection of formulas used to calculate the given total. We say ‘formulas’ (plural) because the definition of \(f\) may be multi-level, the juniors of \(z\) themselves being computed by formulas from yet more juniors.
+
+If \(z\) is overtyped with a new value: \(z'\), a grid exhibiting *formula inversion* adjusts some or all of the junior cell values, the *alterands*, to preserve the above relationship, namely so that:
+
+\begin{alignat*}{3}
+&\text{(1a):}\qquad && z' &&{}= f(x_1', x_2', \ldots x_n')
+\end{alignat*}
+
+An essential feature of any useful formula inversion facility offers the ability to fix or *hold* one or more alterands: \(\{x_1, x_2, \ldots x_n\}\) to prevent them varying when: \(z\) is replaced by: \(z'\). Doing this may of course hinder formula inversion from taking place - as it obviously does if *all* alterands are held.
+
+We offer a precise mathematical meaning for the term: *formula inversion*.
+
+### *Definition 1 (inversion demand)*
+
+Let: \(\Gamma = \{\Delta z, f, \{x_1, x_2, \ldots x_n\}\}\) be an ordered triple consisting of a change to the original value \(z\) of a given total cell, expressed as an increment: \(\Delta z\), a function: \(f\), and a list \(\{x_1, x_2, \ldots x_n\}\) of arguments to \(f\) (being the values of the alterands). The last two items define the original value \(z\) of the total cell by the equation: \(z = f(x_1, x_2, \ldots x_n)\). We call \(\Gamma\) an *inversion demand*, or simply a *demand.*
+
+### *Definition 2 (formula inversion operator, formula inversion)*
+
+Let \(\Xi\) be a mapping \(\Gamma \to \{\Delta x_1, \Delta x_2, \ldots \Delta x_n\}\) of the *demand* \(\Gamma\) onto a set of *increments* \(\{\Delta x_1, \Delta x_2, \ldots \Delta x_n\}\) of \(\{x_1, x_2, \ldots x_n\}\) such that:
+
+\begin{alignat*}{3}
+&\text{(2):}\qquad && z' &&{}= (z + \Delta z) = f\bigl( (x_1 + \Delta x_1), (x_2 + \Delta x_2), \ldots (x_n + \Delta x_n) \bigr)
+\end{alignat*}
+
+where \(z\) is defined by equation (1). We call \(\Xi\) a *formula inversion operator*. The actual *formula inversion* \(\Xi\Gamma\) is the ordered set of increments resulting from applying \(\Xi\) to \(\Gamma\). It follows that
+
+\begin{equation*}
+\Xi\Gamma = \{\Delta x_1, \Delta x_2, \ldots \Delta x_n\}.
+\end{equation*}
+
+In other words, the act of substituting: \(z'\) for: \(z\) causes the grid to replace the alterands \(\{x_1, x_2, \ldots x_n\}\) by a corresponding set \(\{x_1', x_2', \ldots x_n'\}\) given by:
+
+\begin{equation*}
+x_i' = (x_i + \Delta x_i),\quad i = 1, 2, \ldots n.
+\end{equation*}
+
+This model of formula inversion differs from that implicit in the APL code of CPA. The latter computes a *ratio* applied to each of the \(\{x_1, x_2, \ldots x_n\}\) in order to get \(\{x_1', x_2', \ldots x_n'\}\), not a set of *increments*. This is a weaker principle than ours. In particular it does not readily accommodate *held cells* (i.e. those whose values are constrained not to change under formula inversion) nor zero values of \(z\). This is because there is no finite ratio which will change a zero value to a non-zero value, nor any ratio except 1 which will leave a held value unchanged.
+
+*Formula inversion* as defined above, is by no means unique. Quite apart from the freedom to choose one or more alterands to *hold*, one can come up with many different strategies for adjusting the alterands of a given computed cell, all giving substantially different answers. Thus, to take an extremely simple case, let: \(z = f(x_1, x_2) = x_1 / x_2\). If, say, we were to double: \(z\) to get: \(z'\), should we choose a \(\Xi_j\) which doubles \(x_1\), or one that halves \(x_2\), or one that allocates some part of the necessary change to each? We must seek some rational basis for choosing from among the vast ensemble of conceivable formula inversion operators \(\{\Xi_j\}\).
+
+What rational basis can there possibly be to arrive at a generally accepted choice of \(\Xi_j\)? Somehow the alterands \(\{x_1, x_2, \ldots x_n\}\) must all be adjusted ‘in-step’ in some sense. We may formalise this principle by considering each alterand \(x_i, i = 1, 2, \ldots n\), to be a function of some single notional underlying parameter \(t\), thus:
+
+\begin{equation*}
+x_i = g_i(t),\quad i = 1, 2, \ldots n.
+\end{equation*}
+
+Substituting for \(\{x_1, x_2, \ldots x_n\}\) in expression (1) gives:
+
+\begin{equation*}
+z = f\bigl( g_1(t), g_2(t), \ldots g_n(t) \bigr)
+\end{equation*}
+
+which re-expresses \(z\) as a function of a single variable \(t\). This offers a general model of formula inversion. As yet we have made no arbitrary assumptions, since any particular model of formula inversion can be accommodated by a suitable choice of ordered set of functions \(\{g_i\}\).
+
+We note in passing the possibility of offering a whole library of choices of \(\{g_i\}\) to the model-builder or end-user. These might be based upon truncating a convergent polynomial expansion of \(\{g_i\}\), which is one way of expressing a wide range of candidate \(g\)-functions:
+
+\begin{alignat*}{3}
+&\text{(3):}\qquad && g_i(t) &&{}= a_i + b_i\,t + c_i\,t^2 + d_i\,t^3 + \ldots
+\end{alignat*}
+
+where \(a_i, b_i, c_i, d_i \ldots\) are constant terms. However it so happens that just two choices are all we need to consider here:
+
+\begin{alignat*}{3}
+&\text{(4):}\qquad && \hat{g}_i(t) &&{}= a_i \\
+&\text{(5):}\qquad && \breve{g}_i(t) &&{}= a_i + b_i\,t
+\end{alignat*}
+
+which represent truncating the polynomial in expression (3) to 1 and 2 terms respectively. Note that expression (4) is equivalent to specifying that the value of \(x_i\) must be *held* at its present value, viz. \(x_i = a_i\). Thus our general theory accommodates *held cells* in a natural fashion without making a special case, and we can reasonably expect no need for special APL code to handle held cells. It also holds out possibilities for various kinds of ‘sloppy hold’, defined by some special case of equation (3). Such a ‘sloppy hold’ might be chosen to constrain \(x_i\) for some given \(i\) to lie within some given interval, or alternatively to cause \(x_i\) to vary slower than the other alterands.
+
+Differentiating (4) and (5) with respect to \(t\):
+
+\begin{alignat*}{3}
+&\text{(4a):}\qquad && d\hat{g}_i / dt &&{}= 0 \\
+&\text{(5a):}\qquad && d\breve{g}_i / dt &&{}= b_i
+\end{alignat*}
+
+Equation (5a) asserts that the first derivative of \(\breve{g}_i\) is a constant term. We are at liberty to choose to set \(b_i = x_i\), the current value of the alterand \(i\). We discover we may also want to set \(b_i = -x_i\) on occasions, to make \(f\) decrease, not increase, when we increase the given alterand \(i\).
+
+Let us now assume that \(f\) possesses a first total derivative at the given value: \(z\). The first derivative of \(f\) with respect to \(t\) is given by the standard formula:
+
+\begin{equation*}
+df/dt = (\partial f/\partial x_1)(dg_1/dt) + (\partial f/\partial x_2)(dg_2/dt) + \ldots + (\partial f/\partial x_n)(dg_n/dt)
+\end{equation*}
+
+Provided \(df/dt \ne 0\) (an important case we shall treat later) and provided all \(f\)-derivatives of order \(>1\) are small compared with the first derivative (arising as a consequence of applying Taylor’s Theorem to \(f\), which we shall not delve into here) we obtain the following finite-difference approximation:
+
+\begin{alignat*}{3}
+&\text{(6):}\qquad && \Delta f \approx \frac{df}{dt}\Delta t &&\quad=\quad \sum_{i=1}^{n} \frac{\partial f}{\partial x_i} \times \frac{dg_i}{dt}\Delta t
+\end{alignat*}
+
+This gives us the means to estimate \(\Delta t\) given \(\Delta f = (z' - z)\), the difference between the new and the old values of the given total cell. From \(\Delta t\) we can estimate \(\{\Delta x_1, \Delta x_2, \ldots \Delta x_n\}\) and thence \(\{x_1', x_2', \ldots x_n'\}\) from finite-difference equations derived from (4a) and (5a), namely:
+
+\begin{alignat*}{3}
+&\text{(4b):}\qquad && \Delta x_i \approx (d\hat{g}_i / dt)\,\Delta t &&{}= 0 \\
+&\text{(5b):}\qquad && \Delta x_i \approx (d\breve{g}_i / dt)\,\Delta t &&{}= b_i\Delta t
+\end{alignat*}
+
+Then to calculate the ordered set of partial derivatives (\(\partial f/\partial x_i\): \(i = 1, 2, \ldots n\)).
+
+We can estimate these terms one at a time by incrementing each \(x_i, i = 1, 2, \ldots n\). in turn by a small amount \(\Delta x_i\) and finding the matching change in: \(f\), thus:
+
+\begin{equation*}
+\partial f/\partial x_i = \bigl(f(x_1, x_2, \ldots (x_i + \Delta x_i), \ldots x_n) - f(x_1, x_2, \ldots x_i, \ldots x_n)\bigr)/\Delta x_i + \delta
+\end{equation*}
+
+where \(\delta \to 0\) as \(\Delta x_i \to 0\).
+
+What does it mean "a small amount \(\Delta x_i\)"? Here we abandon mathematics for heuristics. An APLer will think to employ `⎕CT`, but this turns out to be rather too small. TABULA effectively uses `1E¯10×1⌈x` where `x` is the initial value of the alterand. In other words a fixed value of `1E¯10` is fine for values greater than one and is not critical, but scientific calculations can entail very small numbers (which financial ones generally don’t) so some scaling is wise in these cases.
+
+Thus we have a way of calculating an approximate result \(\Xi\Gamma \approx \{\Delta x_1, \Delta x_2, \ldots \Delta x_n\}\) of inverting the demand: \(\Gamma = \{\Delta z, f, \{x_1, x_2, \ldots x_n\}\}\) without needing to know the actual formula defining the forward-calculation function \(f\) of \(\Gamma\).
+
+If \(f\) is linear, the approximation is exact, i.e.:
+
+\begin{alignat*}{3}
+&\text{(2):}\qquad && z' &&{}= (z + \Delta z) = f\bigl( (x_1 + \Delta x_1), (x_2 + \Delta x_2), \ldots (x_n + \Delta x_n) \bigr)
+\end{alignat*}
+
+Otherwise, for more general \(f\), the new forward calculation will result in a value \(\check{z}\) which is neither \(z\) nor \(z'\). Hopefully it will be closer to \(z'\), so it is possible to repeat the whole process, this time inverting \(\Gamma_2, \Gamma_3, \ldots\) where at each iteration we replace \(\Delta z\) in \(\Gamma\) by \(\Delta \check{z} = z' - \check{z}\). Typically no more than 4 iterations are necessary on a 32-bit computer with the typically simple sorts of formulas arising in scientific and financial systems before underflow takes place and the equality (2) is sufficiently closely approximated.
+
+## Choosing a Different Formula Inversion Model
+
+Now what if \(df/dt = 0\)? If this happens it means we have failed to come up with a suitable underlying parameter \(t\) which, when varied, causes \(f\) to vary, and so our algorithm fails. Fortunately it is an easy situation to detect before we actually commit ourselves to changing alterands. The remedy is to go back and review our choices of ‘model’ functions \(\{g_1, g_2, \ldots.\, g_n\}\) because it is these that determine the nature of \(t\). In other words we must choose a different formula inversion model for some or all of: \(\{x_1, x_2, \ldots x_n\}\) until we find one for which \(df/dt \ne 0\).
+
+The situation commonly arises with formulas like this:
+
+\begin{gather*}
+f_+(x_1, x_2) = x_1 + x_2 \text{ where: } x_1 = -x_2 \\
+f_-(x_1, x_2) = x_1 - x_2 \text{ where: } x_1 = x_2
+\end{gather*}
+
+These of course both give \(z = 0\), which causes problems for the ratio-based technique of CPA. One might expect CPA to treat \(x_1 - x_2\) simply as \(x_1 + x_2\) with negative \(x_2\), but in actual fact it chooses among separate algorithms and the user has no part in the choice.
+
+Worse is to come. Let \(\Gamma , \Gamma_{\Delta}\) be two slightly differing formula inversion demands, defined by:
+
+\begin{alignat*}{2}
+&\Gamma &&{}= \{\, \Delta z, f_+, \{x_1, (x_2 = -x_1)\} \,\} \\
+&\Gamma_\Delta &&{}= \{\, \Delta z, f_+, \{x_1, (x_2 = \Delta - x_1)\} \,\}
+\end{alignat*}
+
+where \(\Delta\) is some small quantity which we can choose to make vanish. It is not unreasonable to expect: \(\Xi\Gamma_{\Delta} \to \Xi\Gamma\) as \(\Delta \to 0\). This is not the case with the CPA formula inversion operator \(\Xi\) for which \(\Xi\Gamma_{\Delta}\) and \(\Xi\Gamma\) differ enormously, even for small values of \(\Delta\). In fact the \(\{x_i\}\) of \(\Xi\Gamma_{\Delta}\) tend to \(\pm \infty\) as \(\Delta \to 0\), whereas \(\Xi\Gamma\) mimics the behaviour of formula inversion for \(f_-\) not \(f_+\).
+
+Our general theory handles this by suitable choice of either \(b_2 = x_2\) or \(b_2 = -x_2\) in equation (5b). Thus we do not need separate algorithms to handle \(f_+\) and \(f_-\), nor to handle the cases arising with (say\() f_+\):
+
+\begin{align*}
+x_2 &= -x_1 \\
+x_2 &= \Delta - x_1
+\end{align*}
+
+## Which Direction Now?
+
+A theory of formula-inversion based on the differential calculus provides an orderly theoretical framework for discussing the practical problems of formula-inversion problems, hitherto not apparent in commercial offerings like [1]. Specifically, how to invert the simple formula: \(x_1 - x_2\). Recognising that formula inversion needs a choice of model to describe it fully leads not only to a treatment of ‘held’ values simply as an extension of the general case, but a recognition that there are quite different semantics attachable to the operation of subtraction. Accountants have been aware of this since antiquity, but somehow scientists tend to overlook it, thanks to an uncritical acceptance by the scientific professions of one of many possible interpretations of minus numbers. In the immortal words of Cassandra writing in the Daily Mirror in the 1960’s: "show me a minus-egg. Cook it for me. Eat it!"
+
+One needs to ask: is the subtracted quantity of the same nature as the quantity it is subtracted from, or not? Is it a credit item, say, rather than a debit one? An expenditure rather than income? Are you allowed to go into overdraft (and if so by how much)? Does it represent noise rather than information? In arithmetic terms, should \(x_1 - x_2\) be handled as two summed quantities on a scale of \(-\infty\) to \(+\infty\), with the convention of convenience that the sign of \(x_2\) is to be switched before addition? Or is the second quantity on the scale of \((0,\infty)\) only? Or maybe that should be \((1,\infty)\)? To an APLer, is the minus really a summed hi-minus, or the negation operator, or the subtraction operator?
+
+Such considerations remind one that the minus operator (and by analogy: division, if you logarithmically transform the scale) is far from docile, mathematically speaking and may, in the words of Bourbaki, be "abuse of notation" where it occurs. Practically speaking it determines the direction in which \(x_2\) should move in order to achieve formula-inversion of \(x_1 - x_2\), which we determine in our theory by choice of ‘model’ function: \(g_2\).
+
+## Sample Application
+
+By way of an illustration of the use of this algorithm, the innovative scientific calculator TABULA, mentioned above, will be described in a future edition of Vector. This employs a formula-inversion engine consists of 10 or so APL functions using the above principles, written to be portable across different platforms.
+
+## References
+
+[1] *Cognos Management Series, Planning Analyst*, version 7.1. Cognos Incorporated. 2003.
+
+[2] Press, W.H., et al. *Numerical recipes in C++*. Cambridge University Press, ISBN 0-521-75033-4. (Also available in C, Fortran 77 and Fortran 90, and on-line: *http://www.nr.com/storefront.html*)

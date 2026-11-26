@@ -1,0 +1,422 @@
+---
+vid: '10004510'
+title: Bell Numbers and APL
+authors:
+- Joseph De Kerf
+volume: '17'
+issue: '1'
+page: '131'
+transcribed: from page images of VOL.17-NO.1-JULY-2000.pdf, pages 133–144 (printed 131–142); Claude, 2026-10-10
+review: draft
+tags:
+- mathematics and statistics
+- performance
+queries:
+- The author’s postal address, printed at the end, is omitted as private data.
+- 'The formulas are set in TeX, typeset by MathJax, following the printed layout: = signs aligned as printed in the generating function, the recursion formula, Epstein’s series, the table of B₀…B₁₀ (numbers right-aligned), B₂₁/B₂₂, the two formulas for K_c (with their conditions to the left) and the row sum of the Bell triangle. Factorials keep the printed APL prefix form (!n, !(s−1)), and the floor in the K_c formulas keeps the printed ⌊ with no closing bracket.'
+- The function headers are printed with a leading `∇` and no `[0]`; `BELLTR2` is printed without line numbers. Kept as printed.
+status: transcribed
+issue_tab: n1-july-2000
+---
+
+*Transcribed from the printed issue; not yet reviewed. [Read it in the PDF of the issue, page 131](../17/1/VOL.17-NO.1-JULY-2000.pdf#page=133)*
+{ .transcribed }
+
+*by Joseph De Kerf*
+{ .byline }
+
+## Abstract
+
+In 1934 E.T. Bell introduced what he called the exponential numbers. Defined functions for calculating those numbers, as well as for calculating the rows of the so-called Bell triangles, are given. Results of benchmarks, comparing the efficiency in cpu time, are reported. The relation with the Stirling numbers of the second kind is treated in an Appendix.
+
+## Bell Numbers
+
+In 1934 E.T. Bell [1], [2], author of several detective stories under the name John Taine, introduced what he called the exponential numbers \(B_0\), \(B_1\), \(B_2\), … as those defined by the Maclaurin expansion of the generating function \((e{*}e{*}x) \div e\):
+
+\begin{align*}
+e^{e^x} &= e\sum_{n=0}^{\infty} B_n \frac{x^n}{!n} \\[1ex]
+&= e\left( B_0 + B_1\frac{x}{!1} + B_2\frac{x^2}{!2} + B_3\frac{x^3}{!3} + \ldots \right)
+\end{align*}
+
+\begin{alignat*}{3}
+&\text{with}\quad & B_0 &= {} & 1 \\
+&& B_1 &= {} & 1 \\
+&& B_2 &= {} & 2 \\
+&& B_3 &= {} & 5 \\
+&& B_4 &= {} & 15 \\
+&& B_5 &= {} & 52 \\
+&& B_6 &= {} & 203 \\
+&& B_7 &= {} & 877 \\
+&& B_8 &= {} & 4140 \\
+&& B_9 &= {} & 21147 \\
+&& B_{10} &= {} & 115975 \\
+&& \rlap{\ldots\ldots\ldots\ldots\ldots\ldots}
+\end{alignat*}
+
+Bell showed that those numbers may be calculated by binomial expansion of the form \(B_n = (1+B)^{n-1}\) and substituting \(B^i\) by \(B_i\), giving the recursion formula:
+
+\begin{align*}
+B_0 &= 1 \\
+&\mathrel{\phantom{=}}\ldots\ldots\ldots \\
+B_n &= \sum_{i=0}^{n-1} \binom{n-1}{i} B_i
+\end{align*}
+
+Bell also showed that the numbers may be calculated explicitly by the form (\(n > 0\)):
+
+\begin{equation*}
+B_n = \sum_{s=1}^{n} \frac{1}{!(s-1)} \left[ \sum_{r=0}^{s-1} (-1)^r \binom{s-1}{r} (s-r)^{n-1} \right]
+\end{equation*}
+
+Finally, L.F. Epstein [3] showed that the Bell numbers may be defined by the infinite series:
+
+\begin{equation*}
+B_n = \frac{1}{e} \sum_{k=0}^{\infty} \frac{k^n}{!k}
+\end{equation*}
+
+as such extending the domain to real and complex numbers. He also gave several asymptotic formulas, as well as the values of \(B_n\) for \(n = 1(1)20\).
+
+More elaborate tables were published for \(n = 0(1)50\) by H. Gupta [4], and for \(n = 0(1)74\) by J. Levine and R.E. Dalton [5].
+
+Bell numbers are rather unknown, even in the mathematical community. In most books on number theory and numeric analysis they are not mentioned, and this notwithstanding their practical importance. For instance, \(B_n\) specifies the number of rhyming schemes in the stanza of \(n\) lines; the number of pattern sequences for words of \(n\) letters, as used in cryptology; the number of trays \(n\) unlike objects can be placed in 1(1)\(n\) like boxes, allowing blank boxes; and the number of ways a product of \(n\) distinct primes may be factorised. References are given in [5].
+
+The purpose of this paper is to give some defined functions for calculating those Bell numbers, as well as for calculating the rows of the so-called Bell triangle. Results of benchmarks comparing the efficiency in cpu time are reported. The relation with the Stirling set numbers of the second kind is treated in an Appendix.
+
+Accuracy of the software is approximately 15 digits throughout. It should be noticed that, if print precision is set to 15, for \(n \le 21\) the numbers are displayed as integers, while for \(n \ge 22\) the numbers are rounded off and displayed in exponential notation:
+
+\begin{align*}
+B_{21} &= 474869816156751 \\
+B_{22} &= 4.50671573844732\mathrm{E}15
+\end{align*}
+
+Defined functions shown conform to the proposed new standard ISO APL-Extended, prepared by the ISO APL Working Group ISO-IEC/JTC1/SC22/WG3 [8]. Benchmarks have been done on a MicroLine Pentium S-100, with mathematical co-processor, using Dyalog APL/W Version 7.1.2 under Windows 3.11 [9]. Migration Level `⎕ML` was set to 2, the default value being 0. CPU times were measured, using the system function `⎕MONITOR`.
+
+## Defined Functions
+
+APL defined functions *BELL1* and *BELL2*, returning as explicit result the Bell sequence \(B_0\), \(B_1\), …, \(B_n\) and based on the recursion formula
+
+\begin{align*}
+B_0 &= 1 \\
+&\mathrel{\phantom{=}}\ldots\ldots\ldots \\
+B_n &= \sum_{i=0}^{n-1} \binom{n-1}{i} B_i \\[1ex]
+&= \binom{n-1}{0} B_0 + \binom{n-1}{1} B_1 + \ldots + \binom{n-1}{n-1} B_{n-1}
+\end{align*}
+
+are for instance:
+
+```apl
+      ∇Z←BELL1 N
+[1]    →(N=0)/0,Z←,1
+[2]    Z←BELL1 N-1
+[3]    Z←Z,+/Z×(¯1+⍳⍴Z)!¯1+⍴Z
+      ∇
+
+      BELL1 10
+1 1 2 5 15 52 203 877 4140 21147 115975
+
+      ∇Z←BELL2 N
+[1]    →(N=0)/0,Z←,1
+[2]    END:Z←Z,+/Z×(¯1+⍳⍴Z)!¯1+⍴Z
+[3]    →(N≥⍴Z)/END
+      ∇
+
+      BELL2 10
+1 1 2 5 15 52 203 877 4140 21147 115975
+```
+
+*BELL1* uses implicit recursion. *BELL2* uses a programmed recursion loop. The maximum of the domain of the right argument \(N\) is \(N = 218\) as \(B_{218} = 6.10130983387532\mathrm{E}308\) and \(B_{219}\) exceeds the largest number representable 1.79769313486232E308.
+
+Recursion may be avoided by direct calculation of the numbers, for instance through appropriate truncation of the infinite series of Epstein:
+
+\begin{align*}
+B_n &= \frac{1}{e} \sum_{k=0}^{\infty} \frac{k^n}{!k} \\[1ex]
+&= \frac{1}{e} \left( \frac{0^n}{!0} + \frac{1^n}{!1} + \frac{2^n}{!2} + \ldots \right)
+\end{align*}
+
+Successive partial sums may be calculated and compared, the process being ended when two successive partial sums are equal within the accuracy desired (15 digits). However, this needs a loop.
+
+The defined function *BELL3* avoids the use of such a loop by calculating *a priori* the number \(K\) of terms needed to achieve the desired accuracy (15 digits):
+
+```apl
+      ∇Z←BELL3 N;K
+[1]    →(N=0)/0,Z←,1
+[2]    END:K←(21≥⍴Z)×⌊0.48+1.36×⍴Z
+[3]    K←K+(22≤⍴Z)×⌊21.83+(0.407-0.000616×⍴Z)×⍴Z
+[4]    →(N≥⍴Z←Z,⌈(+/(K*⍴Z)÷!K←⍳K)÷*1)/END
+      ∇
+
+      BELL3 10
+1 1 2 5 15 52 203 877 4140 21147 115975
+```
+
+The ceiling of the partial sum is taken such that for \(N = 0\) only 1 term instead of 18 terms is needed, for \(N = 1\) only 1 term instead of 19 terms is needed, for \(N = 2\) only 2 terms instead of 19 terms are needed, etc. Minima \(K_m\) of \(K\) in the function of \(N\) were determined. Using the method of least squares, a straight line was drawn through those minima for the domain \(n \le 21\) and a second degree polynom for the domain \(n \ge 22\).
+
+Finally the parameters were adjusted so that the calculated \(K_c\) is greater than or equal to \(K_m\) and the overhead \(\Delta = K_c - K_m\) is minimised, from 0 to 2 terms maximum:
+
+\begin{alignat*}{2}
+&n \le 21:\qquad & K_c &= \lfloor 1.48+1.36\times N \\
+&n \ge 22:\qquad & K_c &= \lfloor 22.83+(0.407-0.000616\times N)\times N
+\end{alignat*}
+
+Values of \(K_m\) and \(K_c\), as well as the overhead \(\Delta = K_c - K_m\), are listed for \(N = 10(10)160\) in the table below:
+
+| \(N\) | \(K_m\) | \(K_c\) | \(\Delta\) | \(N\) | \(K_m\) | \(K_c\) | \(\Delta\) |
+|---|---|---|---|---|---|---|---|
+| 10 | 15 | 15 | 0 | 90 | 52 | 54 | 2 |
+| 20 | 28 | 28 | 0 | 100 | 56 | 57 | 1 |
+| 30 | 34 | 34 | 0 | 110 | 58 | 60 | 2 |
+| 40 | 36 | 38 | 2 | 120 | 61 | 62 | 1 |
+| 50 | 39 | 41 | 2 | 130 | 63 | 65 | 2 |
+| 60 | 44 | 45 | 1 | 140 | 67 | 67 | 0 |
+| 70 | 46 | 48 | 2 | 150 | 70 | 70 | 0 |
+| 80 | 50 | 51 | 1 | 160 | 71 | 72 | 1 |
+
+Finally, \(K\) is set to \(K_c - 1\), as for \(N > 0\) the first term of the series must not be calculated, this term being 0 (\(0{*}N = 0\) and \(!0 = 1\)).
+
+It should be noticed that the maximum of the domain of the right argument \(N\) is \(N = 165\) instead of \(N = 218\), with \(B_{165} = 1.5641005513217\mathrm{E}217\), as for \(N = 166\) the minimum \(K_m\) is 73 and 72\*166 exceeds the largest number representable 1.79769313486232E308. If \(N > 165\), an error report is generated.
+
+In most applications, the Bell numbers are only requested for a selected set of the sequence \(B_0\), \(B_1\), …, \(B_n\). A modified form *BELL4* of the defined function *BELL3*, that only returns the scalar \(B_N\) is given below:
+
+```apl
+      ∇Z←BELL4 N;K
+[1]    K←(N≤21)×⌊1.48+1.36×N
+[2]    K←K+(N≥22)×⌊22.83+(0.407-0.000616×N)×N
+[3]    Z←⌈(+/(K*N)÷!K←¯1+⍳K)÷*1
+      ∇
+
+      BELL4 0
+1
+
+      BELL4 10
+115975
+
+      BELL4¨ 0,⍳10
+1 1 2 5 15 52 203 877 4140 21147 115975
+```
+
+Of course, just as for *BELL3*, the maximum of the domain of the right argument \(N\) is \(N = 165\), instead of \(N = 218\). If \(N > 165\), an error report is generated.
+
+**Note:** In some implementations, as \(N\) increases, the accuracy of the results decreases from 15 to 14 digits. This is due, in those implementations, to the lack of accuracy of the monadic function factorial !R for higher values of the argument R. The discrepancy may be removed by substituting:
+
+> in *BELL3* the expression `!K←⍳K`<br>
+>   by `×\K←⍳K`
+>
+> in *BELL4* the expression `!K←¯1+⍳K`<br>
+>   by `×\1,1+K←¯1+⍳K`
+
+## Benchmarks
+
+Benchmarks on cpu time have been done for \(N = 40(40)200\). Results are shown below (in ms):
+
+| N | 40 | 80 | 120 | 160 | 200 |
+|---|---|---|---|---|---|
+| `BELL1 N` | 29 | 106 | 270 | 557 | 999 |
+| `BELL2 N` | 25 | 100 | 261 | 545 | 984 |
+| `BELL3 N` | 42 | 102 | 180 | 271 | - |
+| `BELL4 N` | 2.01 | 2.40 | 2.75 | 3.06 | - |
+| `BELL4¨ 0,⍳N` | 42 | 103 | 181 | 272 | - |
+
+As \(N\) increases, *BELL2* is from 16.0% to 1.5% more efficient in cpu time than *BELL1*, the difference becoming negligible for higher values of \(N\). For lower values of \(N\), *BELL3* is about 56% slower than *BELL1* and *BELL2*, but 2.0 times more efficient for \(N = 160\), the breakpoint being at about \(N = 80\). Finally, as expected, the overhead usoing *BELL4* instead of *BELL3* for generating the complete sequence \(B_0\), \(B_1\), …, \(B_n\) is negligible.
+
+## The Bell Triangle
+
+In 1980, J. Shallit [6] defined what he called the Bell Triangle \(T(n,k)\) with \(k = 1(1)n\), as generated by the recursion algorithm:
+
+\begin{alignat*}{2}
+&T(1,1) = 1 \\
+&T(n,1) = T(n-1,n-1) &\qquad& (2 \le n) \\
+&T(n,k) = T(n,k-1) + T(n-1,k-1) && (2 \le k \le n)
+\end{alignat*}
+
+The inconvenience of this algorithm is that, for calculating \(T(n,k)\), the predecessor \(T(n,k-1)\) in its row must be known. This inconvenience may be removed by transforming the algorithmn to the form:
+
+\begin{alignat*}{2}
+&T(1,1) = 1 \\[1ex]
+&T(n,1) = T(n-1,n-1) &\qquad& (2 \le n) \\[1ex]
+&T(n,k) = T(n-1,n-1) + \sum_{r=1}^{k-1} T(n-1,r) && (2 \le k \le n)
+\end{alignat*}
+
+such that the elements of the \(n\)th row \(T(n,k)\) may be calculated from the elements of the previous row only.
+
+The defined function *BELLTR1*, based on the algorithm in its transformed version, returns as explicit result a nested vector of vectors containing the \(N\) first rows of the triangle:
+
+```apl
+      ∇Z←BELLTR1 N
+[1]    →(N=1)/0,Z←1⍴⊂,1
+[2]    Z←BELLTR1 N-1
+[3]    Z←Z,⊂(↑⌽↑⌽Z)+0,+\⊃↑⌽Z
+      ∇
+```
+
+The expression `⊃⍕¨BELLTR1 N` transforms the nested vector of vectors generated by `BELLTR1 N` to a simple character matrix containing the \(N\) rows of the triangle, adjusted to the left, and padded with blanks up to the character length of the last row. The defined function *CENTER* rotates the rows of this character matrix such that those rows are centred. The function *CENTER* has been taken from the book *APL2 in Depth* by N.D. Thomson and R.P. Polivka [7].
+
+```apl
+      ∇Z←CENTER M;R
+[1]    R←+/∧\' '=⌽M
+[2]    Z←(-⌊0.5×R)⌽M
+      ∇
+
+      CENTER ⊃⍕¨BELLTR1 8
+              1
+             1 2
+            2 3 5
+          5 7 10 15
+        15 20 27 37 52
+      52 67 87 114 151 203
+   203 255 322 409 523 674 877
+877 1080 1335 1657 2066 2589 3263 4140
+```
+
+The \(n\)th row contains \(n\) elements. Rows are not symmetric. The left side of the triangle is the Bell sequence \(B_0\), \(B_1\), \(B_2\), …, \(B_0\) included, and the right side of the triangle is the Bell sequence \(B_1\), \(B_2\), \(B_3\), … . This means that the algorithm may be used to generate the Bell sequence:
+
+> \(B_0, B_1, \ldots, B_N\) = `↑¨BELLTR1 N+1`<br>
+> = `1,↑¨⌽¨BELLTR1 N`
+
+and this for up to \(N = 217\) and 218 respectively. Indeed, the 219th row starts with \(B_{218}\) but ends with \(B_{219}\), and this exceeds the largest number representable 1.79769313486232E308. Examples:
+
+```apl
+      ↑¨BELLTR1 10+1
+1 1 2 5 15 52 203 877 4140 21147 115975
+
+      1,↑¨⌽¨BELLTR1 10
+1 1 2 5 15 52 203 877 4140 21147 115975
+```
+
+Shallit reported several properties of the elements of the triangle, for instance that the sum of the elements of the \(n\)th row is \(B_{n+1} - B_n\):
+
+\begin{align*}
+\sum_{k=1}^{n} T(n,k) &= T(n,1) + T(n,2) + \cdots + T(n,n) \\[1ex]
+&= B_{n+1} - B_n
+\end{align*}
+
+Examples:
+
+```apl
+      +/¨BELLTR1 10
+1 3 10 37 151 674 3263 17007 94828 562595
+
+      (2↓BELL3 11)-1↓BELL3 10
+1 3 10 37 151 674 3263 17007 94828 562595
+```
+
+*BELLTR1* uses implicit recursion. A defined function *BELLTR2*, based on the same algorithm, but using a programmed recursion loop, may be:
+
+```apl
+      ∇Z←BELLTR2 N
+       →(N=1)/0,Z←1⍴⊂,1
+       END:Z←Z,⊂(↑⌽↑⌽Z)+0,+\⊃↑⌽Z
+       →(N>⍴Z)/END
+      ∇
+```
+
+## Bell Numbers and the Bell Triangle
+
+The question arises, if generating the Bell sequence by using the defined functions *BELLTR1* or *BELLTR2* may compete in cpu time with the direct calculation from *BELL1*/*BELL2* or *BELL3*. Benchmarks have been done for \(N = 40(40)200\).
+
+Results are shown below (in ms):
+
+| N | 40 | 80 | 120 | 160 | 200 |
+|---|---|---|---|---|---|
+| `↑¨BELLTR1 N+1` | 28 | 62 | 114 | 183 | 269 |
+| `↑¨BELLTR2 N+1` | 20 | 47 | 92 | 154 | 233 |
+| `1,↑¨⌽¨BELLTR1 N` | 28 | 65 | 121 | 195 | 289 |
+| `1,↑¨⌽¨BELLTR2 N` | 20 | 50 | 99 | 166 | 251 |
+
+As \(N\) increases, *BELLTR2* is from 40% to about 15.3% more efficient in cpu time than *BELLTR1*. The second form is about up to 7.6% slower than the first form, but, as already mentioned, it works for up to \(N = 218\) instead of \(N = 217\). Most important, however, is that the cpu times reported are drastically lower than those for *BELL1*/*BELL2* and *BELL3*.
+
+In addition, the process may be considerably accelerated by incorporating the deduction of the Bell numbers from the rows of the Bell triangle in the defined functions themselves, such as is done in the defined functions *BELLA* and *BELLB*:
+
+```apl
+      ∇Z←BELLA N
+[1]    →(N≤1)/0,Z←(1+N⌊1)⍴R←1
+[2]    Z←BELLA N-1
+[3]    Z←Z,¯1↑R←(¯1↑R)+0,+\R
+      ∇
+
+      BELLA 10
+1 1 2 5 15 52 203 877 4140 21147 115975
+
+      ∇Z←BELLB N;R
+[1]    →(N≤1)/0,Z←(1+N⌊1)⍴R←1
+[2]    END:Z←Z,¯1↑R←(¯1↑R)+0,+\R
+[3]    →(N≥⍴Z)/END
+      ∇
+
+      BELLB 10
+1 1 2 5 15 52 203 877 4140 21147 115975
+```
+
+Both functions cover the domain \(N = 0(1)218\). *BELLA* uses implicit recursion. *BELLB* uses a programmed recursion loop. Benchmarks have been done for \(N = 40(40)200\). Results are shown below (in ms):
+
+| N | 40 | 80 | 120 | 160 | 200 |
+|---|---|---|---|---|---|
+| `BELLA N` | 18 | 39 | 62 | 89 | 118 |
+| `BELLB N` | 13 | 28 | 46 | 67 | 91 |
+
+As \(N\) increases, *BELLB* is from 38.5% to 29.7% more efficient in cpu time than *BELLA*. As \(N\) increases, *BELLB* is from 3.2% to 4.0% more efficient in cpu time than *BELL3* and from 2.1 to 10.9 times more efficient than *BELL1* and *BELL2*. Apparently, this substantial improvement is mainly due to the fact the algorithm only uses addition. It is doubtful if an algorithm that performs considerably better can be found.
+
+## References
+
+1. E.T. Bell: *Exponential Numbers;* American Monthly, Vol.41, 1934, pp. 411–419
+2. E.T.Bell: *The Iterated Exponential Integers;* Annals of Mathematics, Vol.39, 1938, pp. 539–557
+3. L.F. Epstein: *A Function Related to the Series e\*e\*x;* Journal of Mathematics and Physics, Vol.18, 1939, pp. 153–173
+4. H. Gupta: *Tables of Distribution;* East Punjab University Research Bulletin, Vol.2, 1950, p.44
+5. J. Levine & R.E. Dalton: *Minimum periods, Modulo p, of First-Order Bell Exponential integers;* Mathematics of Computation, Vol.14, No.80, October 1962, pp. 416–423
+6. J. Shallit: *A Triangle for the Bell Numbers;* A collection of Manuscripts Related to the Fibonacci Sequence; 18th Anniversary Volume; The Fibonacci Association, Santa Clara, California, 1980, pp. 69–71
+7. N.D. Thomsson & R.P. Polivka: *APL2 in Depth;* Springer-Veriag, New York 1995
+8. ISO Document CD13571: *Programmming Language APL – Extended;* Committee Draft prepared by the APL Working Group ISO-IEC/JTC1/SC-22/WG3 Version 1; International Organization for Standardization ISO, Geneva, August 1993
+9. *Dyalog APL/W Reference Manual – Version 7;* Dyadic Systems Ltd. 1994
+
+## Appendix
+
+As mentioned in the paper, Bell showed that for \(n > 0\) the exponential numbers may be calculated by the form:
+
+\begin{equation*}
+B_n = \sum_{s=1}^{n} \frac{1}{!(s-1)} \left[ \sum_{r=0}^{s-1} (-1)^r \binom{s-1}{r} (s-r)^{n-1} \right]
+\end{equation*}
+
+In fact, the form is the sum of the Stirling set numbers or Stirling numbers of the second kind \(S(n,s)\):
+
+\begin{equation*}
+B_n = \sum_{s=1}^{n} S(n,s)
+\end{equation*}
+
+\begin{equation*}
+\text{with } S(n,s) = \frac{1}{!(s-1)} \left[ \sum_{r=0}^{s-1} (-1)^r \binom{s-1}{r} (s-r)^{n-1} \right]
+\end{equation*}
+
+A defined function *BELLS*, based on this algorithm, returning as explicit result the Bell number \(B_n\), may be:
+
+```apl
+      ∇Z←BELLS N;R;S
+[1]    →(+/N=0 1)/0,Z←S←1
+[2]    END:R←¯1+⍳S←S+1
+[3]    Z←Z+(-/(R!S-1)×(S-R)*N-1)÷!S-1
+[4]    →(S<N)/END
+      ∇
+
+      BELLS 0
+1
+
+      BELLS 10
+115975
+
+      BELLS¨0,⍳10
+1 1 2 5 15 52 203 877 4140 21147 115975
+```
+
+The maximum of the domain of the right argument \(N\) is \(N = 137\), with \(B_{137} = 1.36593938472514\mathrm{E}172\), as for \(N = 138\) the alternate sum, before having been divided by !S-1, exceeds the largest number represenable 1.79769313486232E308. Benchmarks have been done for \(N = 40(40)129\). Results are shown below (in ms):
+
+| N | 40 | 80 | 120 |
+|---|---|---|---|
+| `BELLS N` | 34 | 127 | 311 |
+| `BELLS¨0,⍳N` | 551 | 3536 | 11967 |
+
+As \(N\) increases, *BELLS* is from 17 to 113 times slower than *BELL4*. The algorithm is only of theoretical importance, but it is totally unsuited to the calculation of the Bell numbers.
+
+**Note:** The algorithm treated in the Appendix may also be formulated as:
+
+\begin{equation*}
+B_n = \sum_{s=1}^{n} \sum_{r=0}^{s-1} \frac{(-1)^r (s-r)^{n-1}}{(!r)(!s-r-1)}
+\end{equation*}
+
+It looks simpler, but a defined function based on this form is even slower than *BELLS*, by 24% to 33%.

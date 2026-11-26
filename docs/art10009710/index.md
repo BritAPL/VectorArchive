@@ -1,0 +1,281 @@
+---
+vid: '10009710'
+title: Probabilities for Elementary Distributions
+authors:
+- Alan Sykes
+volume: '12'
+issue: '1'
+page: '86'
+transcribed: from page images of VOL.12-NO.1-JULY-1995.pdf, pages 88–94 (printed 86–92); Claude, 2026-10-09
+review: draft
+tags:
+- mathematics and statistics
+- programming techniques
+queries:
+- Printed heading “Calculating Probabilities for Elementary Distributions”, by Alan M Sykes, followed by the author’s e-mail address, which is left out here. Within The Random Vector.
+- POIS line [5] and POISCDF line [5] read `(0=1 N)`, with a gap where `1↑N` is presumably meant. Printed so.
+- The formulas are set in TeX, typeset by MathJax, following the printed layout, with the equation numbers at the right as printed. In (1) the numerator is printed “n(n−1)..(n−r+1)”, with two points, here an ellipsis.
+- The final section is headed “6. Conclusion”, though no other section is numbered. Printed so.
+- 'The printed results were checked in Python (log-gamma for the factorials): the binomial coefficients 10 45 120 210 252, the hypergeometric .01765040387, the Poisson rows for μ = 5, 1 and 2, 1000 POIS 1000 (0.01261461135), the POISCDF table and 1000 POISCDF 1000 (0.5084093672), and the binomial 0.64 0.32 0.04 and 0.25 0.5 0.25. All agree.'
+status: transcribed
+issue_tab: n1-july-1995
+---
+
+*Transcribed from the printed issue; not yet reviewed. [Read it in the PDF of the issue, page 86](../12/1/VOL.12-NO.1-JULY-1995.pdf#page=88)*
+{ .transcribed }
+
+*by Alan M Sykes*
+{ .byline }
+
+## Introduction
+
+Recently I wanted to calculate a probability from a Poisson distribution having a large mean, preferably without approximating it using a Normal distribution. It prompted me to revise my ideas on how to calculate simple combinatorial quantities and associated probabilities, where use of standard APL primitives such as `!` and `*` soon let you down. For example the APL syntax `r!n` for the number of ways of choosing \(r\) objects from \(n\) objects is given by the formula:
+
+\begin{equation*}
+\binom{n}{r} = \frac{n(n-1)\ldots(n-r+1)}{1.2.\ldots.r} \tag{1}
+\end{equation*}
+
+and it is obvious that if `r=1`, no matter how large the value \(n\) is, the required value is \(n\) itself. However if you try `1!n` for values of `n>32768`, domain error results. Similarly calculating a Poisson probability \(p_n\) given by the formula
+
+\begin{equation*}
+p_n = e^{-\mu}\,\frac{\mu^n}{n!} \tag{2}
+\end{equation*}
+
+say with \(n = \mu\) will fail if \(\mu > 143\) if you use the conventional APL approach. Try for example:
+
+```apl
+      (*-144)×(144*144)÷!144
+```
+
+Just how should you go about calculating such probabilities, if you wish your routines to be as widely applicable as possible? Answering this question exploits the recursive nature of some of these objects.
+
+## Calculating \(\dbinom{n}{r}\)
+
+The first thing to note is the recursive nature of the formula for \(\dbinom{n}{r}\). For instance,
+
+\begin{equation*}
+\binom{10}{4} = \frac{10}{4}\binom{9}{3}
+\end{equation*}
+
+and so the APL expression
+
+```apl
+      ×\(10-0,⍳8)÷⍳9
+10 45 120 210 252 210 120 45 10
+```
+
+gives all the values required except those for `r=0` and `r=10`. This is wasteful however, in that, for example, values for `r>5` equal their symmetric counterparts for `r<5`. Nevertheless you can get the idea that if you need to calculate the combinatorial coefficients for `n=1000` *and* `r=50, 100, 200`, you may as well generate them for all values of `r` up to `200` using `×\` and then pick out those you particularly wanted!
+
+The second thing to note is that very often combinatorial coefficients occur as a multiplicative factor in a larger formula and so if you really want to strive for wide applicability, it is best to be able to calculate the logarithm of \(\dbinom{n}{r}\) and exponentiate as appropriate. (For example, formula (2) for the Poisson distribution, where for large \(\mu\), the exponential power is small, the power of \(\mu\) term is large and the factorial term is large. Similar problems can occur with the hypergeometric distribution to be considered later which involves the three combinatorial terms
+
+\begin{equation*}
+\frac{\dbinom{n}{r}\dbinom{N-m}{m-r}}{\dbinom{N}{m}} \tag{3}
+\end{equation*}
+
+and similarly for the better known Binomial distribution whose formula is given by:
+
+\begin{equation*}
+p_r = \binom{n}{r} p^r(1-p)^{n-r} \tag{4}
+\end{equation*}
+
+In such situations you have to contend with the possibility that individual terms will be beyond the range of the computer, whilst the overall result is not — hence the need for taking logarithms.)
+
+The first function considered therefore calculates \(\log_e\dbinom{n}{r}\) with \(n\) a fixed positive integer, and \(r\) a general array of integers in the range 0 to \(n\). The basic idea is illustrated by calculating \(\dbinom{n}{r}\) for \(n = 10\) and \(r = 1,2,3,4,5\) using the code:
+
+```apl
+      *+\(⍟10-0,⍳4)-⍟⍳5
+10 45 120 210 252
+```
+
+The function listing is as follows:
+
+```apl
+    ∇ RES←N LNNCR R;TR;T;TEMP;TL;TU;IT;D
+[1]   ⍝ calculates log of N Comb R, with N a scalar,
+       R an array
+[2]   D←⍴R ⋄ R←,R
+[3]   RES←(⍴R)⍴0 ⋄ ⍎(0=⍴TR←((R≠0)∧R≠N)/R)/'→END'
+[4]   T←⌈/TR⌊N-TR
+[5]   TEMP←+\(⍟N-IT-1)-⍟IT←⍳T
+[6]   TL←(TR≤N-TR)/TR ⋄ RES[(R∊TL)/⍳⍴R]←TEMP[IT⍳TL]
+[7]   TU←(TR>N-TR)/TR ⋄ RES[(R∊TU)/⍳⍴R]←TEMP[IT⍳N-TU]
+[8]  END:RES←D⍴RES
+    ∇
+```
+
+Interestingly enough, despite the use of logarithms and exponentials, this is a factor **four** times faster than `r!n` for integer `r` and `n` as can be seen from the following piece of code (Dyalog APL/W Version 7.0 on a 486DX):
+
+```apl
+      Q←⎕AI[2]⋄Z←*1000 LNNCR 0,⍳1000⋄Q←Q,⎕AI[2]⋄
+      Z←(0,⍳1000)!1000⋄Q←Q,⎕AI[2]
+      Q[2]-Q[1]
+110
+      Q[3]-Q[2]
+440
+```
+
+so it seems that we have only lost out on generality (`r!n` works for non-integer `r,n` and also for more than one `n` value) and temporary use of memory. (The program can be extended to cope with more than one \(n\) value but it is tricky — any volunteers?)
+
+## The Hypergeometric Distribution
+
+Understanding this distribution is of course now obligatory for anybody who wishes to work out the odds on winning the jackpot in the National Lottery! If \(n\) numbers are chosen from the numbers `1` to \(N\) without replacement, then a further \(m\) numbers are chosen from the same numbers `1` to \(N\) without replacement, what is the probability that `r` of the \(m\) numbers were also in the sample of size \(n\)? The answer is given by formula 3 above. This is easily programmed using *LNNCR*, and the code is as follows:
+
+```apl
+    ∇ RES←r HYPERGEOM N_n_m;N;m;n
+[1]   ⍝ calculates hypergeometric probs for single integers N n m
+[2]   ⍝ and an array of integers r
+[3]   N n m←N_n_m
+[4]   RES←*(n LNNCR r)+((N-n)LNNCR m-r)-N LNNCR m
+    ∇
+```
+
+This copes quite happily with some very large integer arguments. The probability of winning a ‘tenner’ (the probability of having 3 numbers of the 6 chosen) is then calculated by:
+
+```apl
+      3 HYPERGEOM 49 6 6
+.01765040387
+```
+
+## Calculating Poisson Probabilities
+
+Similar tricks can be played to calculate Poisson probabilities given by formula (2). Again, if you assume the mean parameter is fixed but you may require more than one probability, then you might as well (memory space willing) calculate the lot up to the maximum \(n\) value required. Again the formula is recursive, and again, taking logarithms is important to achieve wide applicability. Taking logarithms of formula (2) gives a term of the form \(n\log_e \mu\): a nice trick is to calculate this by just adding a \(\log_e \mu\) term to the \(\log_e n!\) vector which has \(n\) terms and letting the `+\` do the rest (which if you think about it means that the calculation of the powers has been subsumed into the calculation of the factorial term!)
+
+So, for example, if \(\mu = 5\) and we require all the probabilities for \(n = 0,1,2,\ldots 10\), then this is achieved by:
+
+```apl
+      8 4⍕*(-MU)+0,+\(⍟MU)-⍟⍳10
+0.0067  0.0337  0.0842  0.1404  0.1755  0.1755  0.1462
+0.1044  0.0653  0.0363  0.0181
+```
+
+which you can check by comparison with a more direct interpretation of (2) in APL:
+
+```apl
+      8 4⍕(*-MU)×(MU*0,⍳10)÷!0,⍳10
+0.0067  0.0337  0.0842  0.1404  0.1755  0.1755  0.1462
+0.1044  0.0653  0.0363  0.0181
+```
+
+The complete function is as follows:
+
+```apl
+    ∇ R←N POIS MU;DN;DM;D;M;I
+[1]   ⍝ calculates Poisson probabilities for array of integers N
+[2]   ⍝ and array of mean values MU
+[3]   DN←⍴N ⋄ DM←⍴MU
+[4]   N←,N ⋄ D←⍴MU←,MU
+[5]   ⍎((0=1 N)∧1=⍴N)/'R←*-MU⋄→0'
+[6]   ⍎(1=⍴N)/'R←*(-MU)++/(⍟MU)∘.-⍟⍳N⋄→END'
+[7]   I←0,⍳M←⌈/N
+[8]   R←*(((M+1),D)⍴-MU)+⍉0,+\(⍟MU)∘.-⍟⍳M
+[9]   R←R[I⍳N;]
+[10] END:R←(DN,DM)⍴R
+    ∇
+```
+
+Here (because it is easy to), we have allowed the arrays *N* and *MU* to be anything you want. Here are a few examples:
+
+```apl
+      8 3⍕0 1 2 3 4 5 POIS 1
+0.368   0.368   0.184   0.061   0.015   0.003
+      8 3⍕0 1 2 3 4 5 POIS 1 2
+0.368   0.135
+0.368   0.271
+0.184   0.271
+0.061   0.180
+0.015   0.090
+0.003   0.036
+      1000 POIS 1000
+0.01261461135
+```
+
+It is worth modifying the code of *POIS* ever so slightly to get a *POISCDF* function that accumulates the probabilities — this too works well for very large examples:
+
+```apl
+    ∇ R←N POISCDF MU;DN;DM;D;M;I
+[1]   ⍝ calculates the Poisson probabilities ≤ N
+[2]   ⍝ for integer array values N and mean array MU
+[3]   DN←⍴N ⋄ DM←⍴MU
+[4]   N←,N ⋄ D←⍴MU←,MU
+[5]   ⍎((0=1 N)∧1=⍴N)/'R←*-MU⋄→END'
+[6]   I←0,⍳M←⌈/N
+[7]   R←+\[1]*(((M+1),D)⍴-MU)+⍉0,+\(⍟MU)∘.-⍟⍳M
+[8]   R←R[I⍳N;]
+[9]  END:R←(DN,DM)⍴R
+    ∇
+
+      8 4⍕100 120 140  POISCDF 100 120
+0.5266  0.0347
+0.9773  0.5243
+0.9999  0.9669
+      1000 POISCDF 1000
+0.5084093672
+```
+
+## Calculating Binomial Probabilities
+
+For the final discrete distribution dealt with in this paper, we turn to the Binomial distribution where the probabilities of \(r\) successes out of \(n\) trials (where each trial has a success probability \(p\)) is given by formula (4) for values of \(r=0,1,2,..n\).
+
+If all these probabilities are required, then the same kind of technique as used for the Poisson distribution exploiting the recurrent nature of the formula can be employed. To see how, consider the \(n=2\) case, and think of the vector of probabilities required as a product of a scalar (\(n!\)), a vector of three values involving powers of \(p\) divided by factorials and a vector of three values of powers of \((1-p)\) divided by factorials:
+
+\begin{equation*}
+n!\left\{1 \quad \frac{p}{1} \quad \frac{p.p}{1.2}\right\} \left\{\frac{(1-p)(1-p)}{2.1} \quad \frac{(1-p)}{1} \quad 1\right\}
+\end{equation*}
+
+If in addition you play safe and use logarithms to convert all the products to sums you end up with an APL expression like:
+
+```apl
+      P←0.2
+      R←0 1 2
+      N←2
+      *(+/⍟⍳N)+(0,+\(⍟P)-⍟⍳N)+(⌽0,+\(⍟1-P)-⍟⍳N)
+0.64 0.32 0.04
+```
+
+which we can check by translating the formula (4) directly into APL:
+
+```apl
+      (R!N)×(P*R)×(1-P)*N-R
+0.64 0.32 0.04
+```
+
+This is worth having as an *ALLBINPROB* function:
+
+```apl
+    ∇ R←ALLBINPROB N_P;N;P;T
+[1]   ⍝ calculates all binomial probabilities for scalar N P
+[2]   N P←N_P ⋄ T←⍟⍳N
+[3]   R←*(+/T)+(⌽0,+\(⍟1-P)-T)+0,+\(⍟P)-T
+    ∇
+
+      ALLBINPROB 2 .2
+0.64 0.32 0.04
+      +/ALLBINPROB 1000 .3
+1
+```
+
+If you don’t want all the probabilities, and you do want to cope with very large \(n\) values and/or very small \(p\) values, then *LNNCR* can be used in the obvious way:
+
+```apl
+    ∇ RES←R BIN N_P;D;N;P
+[1]   ⍝ calculates specified Binomial probabilities for scalar
+[2]   ⍝ N and P
+[3]   D←⍴R ⋄ R←,R ⋄ N P←N_P
+[4]   RES←D⍴*(N LNNCR R)+(R×⍟P)+(N-R)×⍟1-P
+    ∇
+      0 1 2 BIN 2 .5
+0.25 0.5 0.25
+      +/(0,⍳1000) BIN 1000 .5
+1
+```
+
+A brief examination of speed for these routines calculating all the Binomial probabilities for \(n=1000\) seems to suggest that *ALLBINPROB* is **seven** times faster than *BIN*, which in turn is about **seven** times faster than the conventional APL calculation!
+
+## 6. Conclusion
+
+Basically, avoid the use of shriek (`!`) if its arguments are integers! Perhaps this is a message for the *ISOAPL* standards people as well as APL programmers?
+
+Alan M. Sykes<br>
+European Business Management School<br>
+University of Wales<br>
+Swansea SA2 8PP

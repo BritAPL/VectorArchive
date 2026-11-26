@@ -1,0 +1,130 @@
+---
+vid: '10006190'
+title: A Note on Cholesky Decomposition
+authors:
+- Tapio Nummi
+volume: '14'
+issue: '2'
+page: '125'
+transcribed: from page images of VOL.14-NO.2-OCTOBER-1997.pdf, pages 127–128 (printed 125–126); Claude, 2026-10-09
+review: draft
+tags:
+- mathematics and statistics
+- programming techniques
+queries:
+- 'The formulas are set in TeX, typeset by MathJax, following the printed layout: the two formulas for rᵢᵢ and rᵢⱼ side by side with “and” between, and the matrices R and B in large parentheses.'
+- 'CHOLESKY as transcribed was modelled in Python: for C it gives 1 2 3 / 0 4 5 / 0 0 6, as printed.'
+- The second-row expression is printed `R[2;]←¯3↑B[1;]÷B[1;1]*0.5`, whose ¯3↑ also serves for the third row; and the first-row expression is printed `R[1;)←…` with a parenthesis. Printed so.
+status: transcribed
+issue_tab: n2-october-1997
+---
+
+*Transcribed from the printed issue; not yet reviewed. [Read it in the PDF of the issue, page 125](../14/2/VOL.14-NO.2-OCTOBER-1997.pdf#page=127)*
+{ .transcribed }
+
+*by Tapio Nummi*
+{ .byline }
+
+The aim of this note is to show how to make the Cholesky decomposition effectively by using array operations provided by APL. The Cholesky decomposition for a positive definite matrix \(\mathbf{A}\) can be written as
+
+\begin{equation*}
+\mathbf{A} = \mathbf{R}'\mathbf{R}
+\end{equation*}
+
+where \(\mathbf{R}\) is an upper triangular matrix. The algorithm is given by
+
+\begin{equation*}
+r_{1j} = a_{1j} \,/\, \sqrt{a_{11}}
+\end{equation*}
+
+if \(j = 1, 2, \ldots, n\). If \(i = 2, \ldots, n\)
+
+\begin{equation*}
+r_{ii} = \sqrt{a_{ii} - \sum_{k=1}^{i-1} r_{ki}^2}
+\qquad\qquad\text{and}\qquad\qquad
+r_{ij} = \left( a_{ij} - \sum_{k=1}^{i-1} r_{ki} r_{kj} \right) \Big/ \, r_{ii}
+\end{equation*}
+
+when \(j = i + 1, \ldots, n\).
+
+As an example we consider the Cholesky decomposition for a definite \(3 \times 3\) matrix \(\mathbf{A}\). This yields
+
+\begin{equation*}
+\mathbf{R} = \begin{pmatrix}
+a_{11} \,/\, \sqrt{a_{11}} & a_{12} \,/\, \sqrt{a_{11}} & a_{13} \,/\, \sqrt{a_{11}} \\[4ex]
+0 & \dfrac{a_{22} - r_{12} r_{12}}{\sqrt{a_{22} - r_{12}^2}} & \dfrac{a_{23} - r_{12} r_{13}}{\sqrt{a_{22} - r_{12}^2}} \\[4ex]
+0 & 0 & \dfrac{a_{33} - (r_{13}^2 + r_{23}^2)}{\sqrt{a_{33} - (r_{13}^2 + r_{23}^2)}}
+\end{pmatrix}
+\end{equation*}
+
+By using APL the first row of \(\mathbf{R}\) is
+
+```apl
+R[1;)←A[1;]÷A[1;1]*0.5
+```
+
+For the second row we need
+
+```apl
+B←1 1↓A-R[1;]∘.×R[1;]
+```
+
+which gives
+
+\begin{equation*}
+\mathbf{B} = \begin{pmatrix}
+a_{22} - r_{12}^2 & \qquad a_{23} - r_{12} r_{13} \\[3ex]
+a_{32} - r_{13} r_{12} & \qquad a_{33} - r_{13}^2
+\end{pmatrix}
+\end{equation*}
+
+Then the second row of \(\mathbf{R}\) is
+
+```apl
+R[2;]←¯3↑B[1;]÷B[1;1]*0.5
+```
+
+For the third row we make new \(\mathbf{B}\)
+
+```apl
+B←1 1↓B-(1↓R[2;])∘.×1↓R[2;]
+```
+
+Then by using
+
+\begin{equation*}
+\mathbf{B} = \bigl(a_{33} - r_{13}^2 - r_{23}^2\bigr)
+\end{equation*}
+
+we easily compute the third row as
+
+```apl
+R[3;]←¯3↑B[1;]÷B[1;1]*0.5
+```
+
+As an APL function
+
+```apl
+    ∇R←CHOLESKY A;B;I;V;N
+[1]   R←(⍴B←A)⍴~I←1 ⋄ N←1↑⍴A
+[2]  L:R[I;]←(-N)↑V←B[1;]÷B[1;1]*0.5
+[3]   B←1 1↓B-V∘.×V
+[4]   →(N≥I←I+1)/L
+    ∇
+```
+
+The function consists of only one loop and the APL code to iterate is rather minimal. Therefore this function is effective also for large positive definite matrices.
+
+```apl
+      +C←(3,3)⍴1 2 3 2 20 26 3 26 70
+
+1  2  3
+2 20 26
+3 26 70
+
+      CHOLESKY C
+
+1 2 3
+0 4 5
+0 0 6
+```

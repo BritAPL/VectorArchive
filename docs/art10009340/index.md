@@ -1,0 +1,96 @@
+---
+vid: '10009340'
+title: Fast Fibbing
+authors:
+- John Sullivan
+volume: '3'
+issue: '1'
+page: '113'
+transcribed: from page images of VOL.3-NO.1-JULY-1986.pdf, pages 115–116 (printed 113–114; art10002110 follows on p.115); Claude, 2026-10-05
+review: draft
+tags:
+- programming techniques
+- mathematics and statistics
+queries:
+- ‘Steps towards a better APL’ in Vector 2:2 pp.92–3 is in an issue we have no scan of (#62).
+- 'Checked: FIB2 as printed gives 1 1 2 3 5 8 13 21 34 55 for N=10. “expand (1 ±5)ⁿ” is printed so (for (1 ± √5)ⁿ).'
+- The formulas are set in TeX, typeset by MathJax, following the printed layout, with built-up fractions as printed. The print sets the variables (u, x, n, A, B) in upright roman type; here they are italic, as is conventional.
+status: transcribed
+issue_tab: n1-july-1986
+---
+
+*Transcribed from the printed issue; not yet reviewed. [Read it in the PDF of the issue, page 113](../3/1/VOL.3-NO.1-JULY-1986.pdf#page=115)*
+{ .transcribed }
+
+by John Sullivan
+{ .byline }
+
+I was most amused to read the outrageous leg-pull ‘Steps towards a better APL’ in VECTOR Vol.2 No.2. Not all of it is humorous, however, as there is an important point hidden behind all of the coding, and I feel it is a point that ought to be brought to everybody’s attention, especially the amateur programmers who use Basic.
+
+The problem behind the program on pp 92-3 is simply stated: Write a program to print the first n terms of the Fibonacci series.
+
+So off we go to the terminal and without more ado we write something like this:
+
+```apl
+    ∇ R←FIB1 N
+[1]   R← 1 1
+[2]   →(N>⍴R←R,+/¯2↑R)/⎕LC
+    ∇
+```
+
+(which works OK unless N < 3 in which case you get the first three terms which is not what you asked for).
+
+But, and it is a big but, we can do better than that. You will notice the branch arrow and the reference to ⎕LC, which announces to everybody in 120-point type that ‘MY PROGRAM CONTAINS A LOOP’! This can be eliminated by a different approach i.e. that of analysing the problem.
+
+The Fibonacci series is an example of the recurrence relation:
+
+\begin{equation*}
+u_{r+1} = u_r + u_{r-1}
+\end{equation*}
+
+with the initial conditions \(u_1 = 1\), \(u_2 = 1\). To solve the recurrence relation we solve the auxiliary equation \(x^2 = x + 1\), or \(x^2 - x - 1 = 0\), which has roots \(\tfrac{1}{2}(1 \pm \sqrt{5})\), so the general solution is:-
+
+\begin{equation*}
+u_n = A \left( \frac{1 + \sqrt{5}}{2} \right)^{\!n} + B \left( \frac{1 - \sqrt{5}}{2} \right)^{\!n}
+\end{equation*}
+
+and \(A\) and \(B\) are found from the initial conditions to be \(1/\sqrt{5}\) and \(-1/\sqrt{5}\) respectively. Thus the formula for the nth term in the Fibonacci series is:
+
+\begin{equation*}
+u_n = \frac{1}{\sqrt{5}} \left( \frac{1 + \sqrt{5}}{2} \right)^{\!n} - \frac{1}{\sqrt{5}} \left( \frac{1 - \sqrt{5}}{2} \right)^{\!n}
+\end{equation*}
+
+or in APL:
+
+```apl
+R←(÷R)×((.5×1+R)*N) - (.5×1-R←5*.5)*N
+```
+
+You may well ask how we get a series of integers from a formula using an irrational number (\(\sqrt{5}\)). That’s easy – all the \(\sqrt{5}\)’s cancel out leaving only integer values: try it for yourself with a few simple values, say \(n = 2\) or 3 and expand \((1 \pm 5)^n\) by the binomial theorem. Don’t use your calculator or you will hit APL’s problem: sooner or later you will end up with a non-integer ending in .999 . . . or .000 . . . , which is caused by the way computers store decimal numbers in binary storage. This problem is easily overcome: the theory says that these numbers should be integers so we force them to be so by coding
+
+```apl
+R←⌊.5 + (÷R)×((.5×1+R)*N) - (.5×1-R←5*.5)*N
+```
+
+Now we can write our Fibonacci function Mark 2:
+
+```apl
+    ∇ R←FIB2 N
+[1]   R←⌊0.5+(÷R)×((0.5×1+R)*N)-(0.5×1-R←5*0.5)*N←⍳N
+    ∇
+```
+
+Look! – No loops!
+
+I executed each function a hundred times on an IBM 3084 running APL2 release 1.0 under MVS/XA and the following average timings were recorded.
+
+| N = | 75 | 10 |
+| --- | ---: | ---: |
+| FIB1 | 23.5 milliseconds | 1.6 milliseconds |
+| FIB2 | 2.6 milliseconds | 0.8 milliseconds |
+
+The amazing result from this is that the application of a little mathematical theory has speeded up the execution of this trivial function by a factor of as much as 9. So the hidden point referred to in my first paragraph is, if you haven’t guessed it already,
+
+> Always do the systems analysis **before** you write the program.
+
+*Editor: The speed of John’s excellent algorithm depends a lot on the APL interpreter used. The average timings for n = 75 and n = 10 running under APL\*PLUS PC release 5.0 on an Olivetti M21 were 0.85 and 0.08 seconds for FIB1 and a surprising 3.32 and 0.20 seconds for FIB2. A floating point co-processor was not used.*

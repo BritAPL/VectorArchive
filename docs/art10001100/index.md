@@ -1,0 +1,35 @@
+---
+vid: '10001100'
+title: Coming out of the Closet
+authors:
+- Dick Bowman
+volume: '3'
+issue: '4'
+page: '97'
+status: not online
+issue_tab: n4-april-1987
+---
+
+Dick Bowman
+{ .byline }
+
+The text of this article is not yet online.
+
+[Read it in the PDF of the issue, page 97](../3/4/VOL.3-NO.4-APRIL-1987.pdf#page=99)
+
+<details class="ocr">
+<summary>Unedited OCR text, machine-read from the scan: it contains errors, and its APL is wrong. Shown for searching; read the PDF.</summary>
+<p>VECTOR Vol.3 No.4</p>
+<p>Comingoutofthe closet: taking the Message to the People by Dick Bowman</p>
+<p>In recent months the B.A.A. Committee has increasingly been thinking about the waythe APL community meetsits own needs for communication about APL and the perception of APLwhich is held in therest of the computing industry. Our conclusion is that there sa gulf; we now wanttosee if there are ways in which we can help bridge the gap. Asis our wont, we want to dothis ina way whichinvolvesa lot ofother people in doingthe hard work butbearwith us because wealso offer rewards. The wayweseeit is as follows. The APL community is doingan absolutely splendid job of talking to itself; journals like Quote-Quad and some of the other national group publications areessential readingfor the practising APLer, and we have an excellent annual conference which bursts at the seams with material we can use. But if you're not already within the APL community, you don t know aboutthis activity, and even if you did know it s unlikely that you wouldfind it compulsively attractive. What therest ofthe world knows about APL is culled from the general computingpress and the various conferences and seminars which take place. Thepressis voicing opinionslike APL is a languagethat looked promising in the 70 s but never really made it , or it has short introductory pieces from people who havejust found out about APL (and often seem to have grasped the wrong endofthe stick). APL is very rarely mentioned at major computing events; we hear rumours about people submitting papers describing APL- based work which get rejected purely because APL isn t one ofthe officially-approved languages.</p>
+<p>One thing which APL doeshave goingforit is that mostof the computing world knowsof us; they may have weird notions, but atleast we have some awareness(evenifit s the wrong sort). We have notoriety, let s change it into respect. The current view of the B.A.A. Committeeis that we should encourage people to try to present papers ateventsoutside the APL circle and to write articles for the non-APLpress; the people whoare really using APL effectively should share their experiences and knowledge. What we ve doneso far is to create a starter list of events and publications which we think would be improved by contributions from the APL world. This is only a starter list and wewill be overjoyed by anyonepointing outthevirtuesofthe ten zillion places we haven t included. Asit stands we have (in no implied order):</p>
+<p>Events Siggraph Annual Conference (ACM) OR Society Annual Conference BCS Human-Computer Interaction Group Conference (annually, September) BCS Expert Systems Group Conference (annually, December) Royal Statistical Society events BCSSoftware Engineering Group Conference (annually, September)</p>
+<p>97</p>
+<p>VECTOR Val.3 No.4</p>
+<p>BCSMedical Group events BCS Computer Education Group events BCS Computers in Education Group events Independent Schools Microelectronics Centre Publications BCS Expert Systems Group Journal Computing BCS ComputerBulletin Computer Weekly BCSSoftware Engineering Group Journal Datalink Mass-market personal computing magazines Practical Computing ORSociety Journal Byte BCS Computers in Education Group Journal BCS Human-Computer Interaction Group Journal BCS Medical Group Journal Data Processing</p>
+<p>Note how the British ComputerSociety figuresin both lists; we are a Specialist Group and oneofthe benefits thatthis brings is that we have somewhateasier accessto a vast range of computinginterests, events and publications. We want to exploit our advantages. Topics Obviously suitable materialfor one placeis not necessarily attractive to others; some events or publications may haverestrictions which do not apply to others; and some routes may already be heavily over-subscribed. Thegeneral themes which we, innocently, think are mostsensible to expoundonarebiased heavily toward applications the why and how ofusing APL effectively; the benefits to an organisation of doing certain things in APL; how to choose whether APL is a suitable vehicle. Essentially it seems good to emphasise novelty (give them a new viewpoint on things they believed they knewall about) andlaceit with a little controversy (evenifonly in thetitle). What we think needs emphasisis the effectiveness of APL as a problem-solving tool, and the factthat it is a tool whichis relied on as a means ofdelivery in many organisations. APL is already in place,it s not a solution looking for a problem. g. Remember that just because YOUarethe person doingit, something need notbeborin You almostcertainly have things to say and to write about which are worthy of a public airing. The B.A.A. is more than happyto offer pre-publication counselling; if you have an idea which you think could go further and you wantto discuss ways of advancingit, then contact any of the B.A.A. Committee.</p>
+<p>98</p>
+<p>VECTOR Vol.3 No.4</p>
+<p>Wearealso interested in collecting information after the event reviewing howit went on the night. Evenif the unthinkable happens and yourefforts are rejected, we would like to know why. It helps us understand the world s perception ofAPL, andother peopleto avoid making the same mistakes. Sticks The mainstream computing worldis capable oftotally ignorin g us; somefactions within that world might even seethis as a positive strategy. If we want APL to grow and beused in those places where it can most effectively earn its keep, thenitis our responsibility to keep the languagein the public eye. If we don t doit ourselves then no-onee lse will doit for us; do youreally want to spend your remaining days writing RPG-II ? Carrots (Offered not to donkeys, but as some form of Incentive.) Every year the B.A.A. is going to look at the coverage of APL in non-APL activities and publications; when wefind things that are really excellent in termsof advancingthe cause, we're going to acknowledgetheoriginators. So, not only can you look forward to fame and fortune (sorry, we don t give those away), we mightalso give you a trophy. We're negotiating even now (more newsnext time). But(and it s a serious proviso), we're not just handingoutprizes to anybody ifall your papers andarticles are dogs then wereserve the option not to award any prizes(this is the B.A.A., not Cruft s). And the usualdisclaimerof course applies evenif they could read and write, the B.A.A. Committee members are disqualified from gettinga prize either whilein office or for work doneduringtheir periodof office. (Editor: Presumably these are very special carrots - they help other peopleto see in the dark!)</p>
+<p>99</p>
+</details>

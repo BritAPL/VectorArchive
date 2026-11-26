@@ -1,0 +1,296 @@
+---
+vid: '10005270'
+title: Pass Me Another Diagonal Slice, Please!
+authors:
+- Alan Mayer
+volume: '8'
+issue: '4'
+page: '26'
+transcribed: from page images of VOL.8-NO.4-APRIL-1992.pdf, pages 28–34 (printed 26–32); Claude, 2026-10-08
+review: draft
+tags:
+- education
+- language design
+queries:
+- The subscript formulas are set in TeX, typeset by MathJax, following the printed layout (the two equations for RES1 and RES2 aligned at = as printed); the APL minimum and maximum ⌊ ⌈ are set as binary operators, and the APL names in italic as printed. The formula printed “Rᵢⱼ = Mᵢⱼ + Vᵢ” (where the text says Vⱼ) is transcribed as printed.
+- The upper and lower bounds are said to be for “the first row of M” (Q is meant); printed so.
+- In the display of 2 1 3⍉Y a stray mark after the first 5 (`5. 6 7 8`) is taken as a print blemish and dropped.
+status: transcribed
+issue_tab: n4-april-1992
+---
+
+*Transcribed from the printed issue; not yet reviewed. [Read it in the PDF of the issue, page 26](../8/4/VOL.8-NO.4-APRIL-1992.pdf#page=28)*
+{ .transcribed }
+
+*by Alan Mayer*
+{ .byline }
+
+The three primitives `⌽`, `⊖` and `⍉` are well-known as powerful tools, particularly in the field of matrix algebra. In its monadic form `⌽` will reverse the order of the elements of a vector, or the rows of a matrix, and in its dyadic form it makes rotation of elements easy. `⊖` redirects the operations of `⌽` so that they act down the columns of a matrix rather than along the rows (strictly speaking we should refer here to the first and last axes of a multi-dimensional matrix, but let’s keep things simple for as long as we can!). Finally, the monadic form of `⍉` is straightforward enough - it gives us the transpose of a matrix. But what about its dyadic form?
+
+First the rules: the left argument of `⍉` must be a vector whose length is equal to the rank (the number of dimensions) of the right argument. The rank of an object *X* can be found using `⍴⍴X`. The elements of this vector must have values taken from \(1,2,3,\ldots,r\) where \(r\) is the rank in question. We seem to be getting into deep water already, so let’s start with a few examples…
+
+## Two Dimensional Matrices
+
+For an ordinary matrix of rank 2, there are only a few options:
+
+```apl
+      X←2 4⍴⍳8
+      X
+1 2 3 4
+5 6 7 8
+      1 2⍉X
+1 2 3 4
+5 6 7 8
+```
+
+This particular form of dyadic transpose clearly has no effect whatsoever on the elements of *X*.
+
+```apl
+      2 1⍉X
+1 5
+2 6
+3 7
+4 8
+```
+
+Here the effect is exactly the same as that of the monadic form `⍉X`:
+
+```apl
+      1 1⍉X
+1 6
+```
+
+Finally, a result which may be of some use - this can be used to extract the elements of the main diagonal (i.e. starting at the top left corner and working down through the matrix diagonally).
+
+Perhaps it will be instructive to look at what happens to each individual element of the matrix in these transpositions.
+
+| | | |
+|---|---|---|
+| `1 2 ⍉ X` | is equivalent to \(R_{ij} = X_{ij}\) | (identity) |
+| `2 1 ⍉ X` | is equivalent to \(R_{ij} = X_{ji}\) | (transpose) |
+| `1 1 ⍉ X` | is equivalent to \(R_{ij} = X_{ii}\) | (diagonal) |
+
+In other words, each element of *R* (the result) can be obtained by giving the relevant values to *i* and *j*. Note the correspondence between the left argument of the APL expression and the subscripts of *X*: `(1 2)`~`(ij)` `(2 1)`~`(ji)` `(1 1)`~`(ii)`. This is the key to understanding the use of dyadic transpose with matrices of rank 3 or more.
+
+## Three Dimensional Matrices
+
+As an example, consider the matrix *Y*:
+
+```apl
+      Y←2 3 4⍴⍳24
+      Y
+ 1  2  3  4
+ 5  6  7  8
+ 9 10 11 12
+
+13 14 15 16
+17 18 19 20
+21 22 23 24
+```
+
+*Y* is a matrix of 2 levels, 3 rows and 4 columns. Although it is displayed as two separate matrices, it is best to imagine it as a three-dimensional object with the first level on top of the second level, so that, for example, 3 has 15 directly below it. *Y* has rank 3 (see `⍴⍴Y`), and so the dyadic transpose can be made up of the numbers 1, 2 and 3. For example:
+
+```apl
+      2 1 3⍉Y
+ 1  2  3  4
+13 14 15 16
+
+ 5  6  7  8
+17 18 19 20
+
+ 9 10 11 12
+21 22 23 24
+```
+
+This can be seen as an interchange of levels and rows. The first level of the result is made up of the first rows of *Y*, and similarly for the second and third levels.
+
+We can also say "`2 1 3⍉Y` is equivalent to \(R_{ijk} = Y_{jik}\)". To investigate other transpositions, try:
+
+> `3 2 1⍉Y` (Interchange level and columns: \(R_{ijk} = Y_{kji}\))<br>
+> `1 3 2⍉Y` (Interchange rows and columns: \(R_{ijk} = Y_{ikj}\))
+
+If we confine the left argument to the numbers 1 and 2 only, we get a selection of elements usually called a "diagonal slice":
+
+```apl
+      1 1 2⍉Y
+ 1  2  3  4
+17 18 19 20
+```
+
+The result is a matrix of rank 2, made up of the first row of level 1 of *Y* and the second row of level 2 of *Y*. Remembering the three-dimensional nature of *Y*, this can be seen as the result of taking a slice out of *Y* by cutting through it diagonally. The transposition can also be represented by \(R_{ij} = Y_{iij}\).
+
+Other diagonal slices are:
+
+```apl
+      1 2 1⍉Y
+ 1  5  9      (1st column 1st level)
+14 18 22      (2nd column 2nd level)
+
+      1 2 2⍉Y
+ 1  6 11      (main diagonal, 1st level)
+13 18 23      (main diagonal, 2nd level)
+```
+
+## Applications with the Outer Product
+
+Suppose we want to add a vector *V* to each row of a matrix *M*. For example:
+
+```apl
+      M ← 3 4 ⍴⍳12
+      M
+1  2  3  4
+5  6  7  8
+9 10 11 12
+      V ← 7 9 1 2
+```
+
+The result we are looking for is a matrix:
+
+```apl
+ 8 11  4  6
+12 15  8 10
+16 19 12 14
+```
+
+Calling the result *R*, where do we get the component \(R_{ij}\)? Clearly we must start with the original value \(M_{ij}\) and add the relevant component of *V*. For the jth column, the relevant value is \(V_j\). So, in subscript notation we want:
+
+\begin{equation*}
+R_{ij} = M_{ij} + V_i
+\end{equation*}
+
+For example, to get the 8 in the 2nd row, 3rd column of the result, we take the 2nd row and 3rd column of *M* (7) and add the 3rd component of *V* (1). What, you may ask, has this to do with dyadic transpose?
+
+First we consider the outer product:
+
+```apl
+      P ← M∘.+V
+      P
+ 8 10  2  3
+ 9 11  3  4
+10 12  4  5
+11 13  5  6
+
+12 14  6  7
+13 15  7  8
+14 16  8  9
+15 17  9 10
+
+16 18 10 11
+17 19 11 12
+18 20 12 13
+19 21 13 14
+```
+
+In subscript notation this is \(P_{ijk} = M_{ij} + V_k\), the right hand side of which is not very different from the formula for *R* above. In fact *R* is obtained by setting \(j\) equal to \(k\). Looking at the effect this has on the left hand side of the equation, we get the result \(P_{ijj}\). This is the diagonal slice obtained using `1 2 2 ⍉ P`. In other words, the whole result can be obtained using:
+
+```apl
+      R ← 1 2 2 ⍉ M∘.+V
+      R
+ 8 11  4  6
+12 15  8 10
+16 19 12 14
+```
+
+Of course, there are lots of easier ways to add a vector to every row of a matrix, so we shall now consider a slightly more complex problem which has a similar solution. Suppose we have a matrix *Q* and two vectors *UPPER* and *LOWER*, specifying upper and lower bounds for each of the rows of *Q*. We want to replace the values in *Q*, which fall outside the specified bounds, by the relevant bound value. For example:
+
+```apl
+      Q←4 4⍴1 5 12 2 4 3 8 5 7 1 6 9 3 4 1 6
+      Q
+1 5 12 2
+4 3  8 5
+7 1  6 9
+3 4  1 6
+
+      UPPER←9 7 8 5
+      LOWER←3 4 6 2
+```
+
+The upper and lower bounds specified for the first row of *M* are 9 and 3 respectively, so entries 1 and 2 must be replaced by 3 and entry 12 by 9, and so on. The required result is:
+
+```apl
+3 5 9 3
+4 4 7 5
+7 6 6 8
+3 4 2 5
+```
+
+We shall apply the upper bounds first. For each entry in *Q* we require the minimum (`⌊`) of the entry and the relevant value in *UPPER*. When dealing with \(Q_{ij}\), the relevant value in *UPPER* is the ith component, \(\mathit{UPPER}_i\). In other words, \(\mathit{RES1}_{ij} = Q_{ij} \mathbin{\lfloor} \mathit{UPPER}_i\). As in the previous example we start with an outer product:
+
+```apl
+PROD←Q∘.⌊UPPER
+```
+
+In index notation, this has the formula \(\mathit{PROD}_{ijk} = Q_{ij} \mathbin{\lfloor} \mathit{UPPER}_k\). To produce the required diagonal slice, we need \(\mathit{PROD}_{iji}\), which is obtained by:
+
+```apl
+      RES1←1 2 1⍉PROD
+      RES1
+1 5 9 2
+4 3 7 5
+7 1 6 8
+3 4 1 5
+```
+
+Here, all the values which exceeded the relevant upper bound values have been replaced. Now we need to do a similar exercise on the lower bounds. The maximum (`⌈`) between the existing value and the relevant lower bound is given by \(\mathit{RES2}_{ij} = \mathit{LOWER}_i \mathbin{\lceil} \mathit{RES1}_{ij}\). Consider the outer product:
+
+```apl
+PROD2←LOWER ∘.⌈ RES1
+```
+
+This has the formula \(\mathit{PROD2}_{ijk} = \mathit{LOWER}_i \mathbin{\lceil} \mathit{RES1}_{jk}\). So, in APL:
+
+```apl
+      RES2←1 1 2⍉PROD2
+      RES2
+3 5 9 3
+4 4 7 5
+7 6 6 8
+3 4 2 5
+```
+
+In one line, therefore, the complete result may be obtained using:
+
+```apl
+      1 1 2⍉LOWER∘.⌈1 2 1⍉Q∘.⌊UPPER
+3 5 9 3
+4 4 7 5
+7 6 6 8
+3 4 2 5
+```
+
+Finally, if you really want to show off, you can tackle this problem in four dimensions. Note the form of our two subscript equations:
+
+\begin{align*}
+\mathit{RES1}_{ij} &= Q_{ij} \mathbin{\lfloor} \mathit{UPPER}_i \\
+\mathit{RES2}_{ij} &= \mathit{LOWER}_i \mathbin{\lceil} \mathit{RES1}_{ij}
+\end{align*}
+
+These may be combined in one equation:
+
+\begin{equation*}
+\mathit{RES2}_{ij} = \mathit{LOWER}_i \mathbin{\lceil} Q_{ij} \mathbin{\lfloor} \mathit{UPPER}_i
+\end{equation*}
+
+This suggests that we should look at the four-dimensional matrix produced by the double outer product:
+
+```apl
+MAT4D←LOWER ∘.⌈ Q ∘.⌊ UPPER
+```
+
+The "slice" required (can you slice a four dimensional object?) is indicated by the subscript in the right hand side of the equation:
+
+```apl
+      1 1 2 1⍉MAT4D
+3 5 9 3
+4 4 7 5
+7 6 6 8
+3 4 2 5
+```
+
+So an alternative one-line solution is:
+
+```apl
+1 1 2 1⍉LOWER∘.⌈Q∘.⌊UPPER
+```
+
+You will note that I have carefully refrained from displaying *MAT4D*. The standard advice to climbers is "Don’t look down! - You know what’s below you, you don’t have to see it." The most frightening thing about n-dimensional matrices is their appearance. Let’s leave that side of things to our APL interpreters - that’s what they are there for.

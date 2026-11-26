@@ -1,0 +1,116 @@
+---
+vid: '10004430'
+title: The Common Mean and APL
+authors:
+- Joseph De Kerf
+volume: '11'
+issue: '3'
+page: '21'
+transcribed: from page images of VOL.11-NO.3-JANUARY-1995.pdf, pages 23–25 (printed 21–23); Claude, 2026-10-09
+review: draft
+tags:
+- mathematics and statistics
+- education
+queries:
+- 'Within The Education Vector. The formulas are set in TeX, typeset by MathJax, following the printed layout: = signs aligned as printed in the three definitions, the three values and the closing g, c, a (with “Finally, we have:” set to the left as printed). The recurrence for y is printed yᵢ₊₁ = (xᵢyᵢ)/2, with the plus sign missing; printed so. The note’s “1√2” (1/√2 meant, as the APL shows) is printed so.'
+- 'CMEAN was run in Dyalog APL (as a dfn): 1 CMEAN 99 gives 25.99812139 and 1 CMEAN ÷2*0.5 gives 0.8472130848, as printed; the harmonic, geometric and arithmetic means of 1 and 99 also match.'
+status: transcribed
+issue_tab: n3-january-1995
+---
+
+*Transcribed from the printed issue; not yet reviewed. [Read it in the PDF of the issue, page 21](../11/3/VOL.11-NO.3-JANUARY-1995.pdf#page=23)*
+{ .transcribed }
+
+*by Joseph De Kerf*
+{ .byline }
+
+The classical definitions of the mean of two non-negative real numbers are the harmonic mean \(h(x,y)\), the geometric mean \(g(x,y)\) and the arithmetic mean \(a(x,y)\):
+
+\begin{align*}
+h(x,y) &= 2xy/(x+y) \\
+g(x,y) &= \sqrt{xy} \\
+a(x,y) &= (x+y)/2
+\end{align*}
+
+with \(\min(x,y) \le h(x,y) \le g(x,y) \le a(x,y) \le \max(x,y)\). For example, let \(x=1\) and \(y=99\). We obtain respectively:
+
+\begin{align*}
+h(x,y) &= \hphantom{0}1.98000000 \\
+g(x,y) &= \hphantom{0}9.94987437 \\
+a(x,y) &= 50.00000000
+\end{align*}
+
+As we see, there may be a serious gap between the geometric mean \(g(x,y)\) and the arithmetic mean \(a(x,y)\). This gap may be filled by the concept of *common mean* [1] — a not very familiar concept from the literature. For convenience, let \(x_0\) be the smaller of two non-negative real numbers \(x_0\) and \(y_0\). The geometric mean \(x_1\) and arithmetic mean \(y_1\) are:
+
+\begin{equation*}
+x_1 = \sqrt{x_0 y_0} \quad\text{and}\quad y_1 = (x_0+y_0)/2
+\end{equation*}
+
+If this procedure of forming alternatively geometric and arithmetic means is repeated indefinitely:
+
+\begin{equation*}
+x_{i+1} = \sqrt{x_i y_i} \quad\text{and}\quad y_{i+1} = (x_i y_i)/2 \quad\text{with } i = 1,2,3\ldots
+\end{equation*}
+
+one obtains:
+
+\begin{equation*}
+x_0 \le x_1 \le x_2 \le \ldots \le x_i \le \ldots \le y_i \le \ldots \le y_2 \le y_1 \le y_0
+\end{equation*}
+
+\(x_i\) and \(y_i\) converging to the same value. We define this as the common mean \(c(x_0,y_0)\) of the numbers \(x_0\) and \(y_0\).
+
+For the example \(x=1\) and \(y=99\) for instance, with an accuracy of 10 digits, we get successively:
+
+| | | |
+|--:|:-:|--:|
+| 9.94987437 | and | 50.00000000 |
+| 22.30456721 | and | 29.97493719 |
+| 25.85687532 | and | 26.13975220 |
+| 25.99792902 | and | 25.99831376 |
+| 25.99812139 | and | 25.99812139 |
+
+such that \(c(x,y) = 25.99812139\).
+
+\begin{alignat*}{2}
+&\text{Finally, we have:}\qquad & g(x,y) &= \hphantom{0}9.94987437 \\
+&& c(x,y) &= 25.99812139 \\
+&& a(x,y) &= 50.00000000
+\end{alignat*}
+
+with \(9.94987437 < 25.99812139 < 50.00000000\).
+
+In fact the order in which \(x\) and \(y\) are treated and the order in which the sequences of geometric and arithmetic means are calculated is not relevant and \(c(x,y) = c(y,x)\) (commutativity). In addition \(c(x,x) = x\) (idempotency). Finally, \(c(x,y) = 0\) if and only if \(x = 0\) or \(y = 0\) (or both).
+
+Programming the algorithm for calculating the common mean can be somewhat complicated in most programming languages. In APL however, it is very simple. A function to do the job is:
+
+```apl
+    ∇ R←X CMEAN Y
+[1]    R←X,Y
+[2]   LAB:R←(0.5×+/R),(×/R)*0.5
+[3]    →(≠/R)/LAB
+[4]    R←0.5×+/R
+    ∇
+```
+
+which for the chosen example gives:
+
+```apl
+    1 CMEAN 99
+25.99812139
+```
+
+Accuracy is determined by the current, i.e. the default value of comparison tolerance `⎕CT`. It may be changed by defining the comparison tolerance as a global or local variable.
+
+Note: a special case is the common mean of the numbers 1 and \(1\sqrt{2}\):
+
+```apl
+      1 CMEAN ÷ 2*0.5
+0.8472130848
+```
+
+which is known in the literature as the "ubiquitous constant U" since it turns up all over the place. Finally, the common mean is very useful in the design of simple and efficient algorithms for calculating the complete elliptic integrals of the first kind \(K(p)\) and of the second kind \(E(p)\). More details may be found in [1].
+
+## Reference
+
+[1] J Spanier and K B Oldham: *An Atlas of Functions*. Hemisphere Publishing Corporation, New York. New York 1987.

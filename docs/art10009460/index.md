@@ -1,0 +1,122 @@
+---
+vid: '10009460'
+title: Functional Extensions to the Fibonacci Sequence
+authors:
+- John Sullivan
+volume: '15'
+issue: '4'
+page: '123'
+transcribed: from page images of VOL.15-NO.4-APRIL-1999.pdf, pages 125–128 (printed 123–126); Claude, 2026-10-10
+review: draft
+tags:
+- mathematics and statistics
+- graphics
+queries:
+- 'The formulas are set in TeX, typeset by MathJax, following the printed layout: the two recurrences with a brace as printed, the golden-section fraction displayed, the in-line fractions ½ and 1/√5 built up small as printed.'
+- 'In two formulae the exponents did not print: F<sub>n</sub> = (1/√5)(a<sup>n</sup> − (−a)<sup>−n</sup>) and f(x) = (1/√5)(a<sup>x</sup> − a<sup>−x</sup> cos πx) are reconstructed from the surrounding text; please check.'
+- The index titles it “Functional Extensions to the Fibonacci Series”; the printed heading has “Sequence”, kept.
+- The three graphs are kept as images. The FIB1 and FIB2 results agree with the Fibonacci numbers for −4 to 4 as defined in the text; the code was not run.
+status: transcribed
+issue_tab: n4-april-1999
+---
+
+*Transcribed from the printed issue; not yet reviewed. [Read it in the PDF of the issue, page 123](../15/4/VOL.15-NO.4-APRIL-1999.pdf#page=125)*
+{ .transcribed }
+
+*by John Sullivan*
+{ .byline }
+
+Joseph De Kerf returns to the subject of Fibonacci’s sequence in Vol.15 No.3[1]. In his article he gives a function for the calculation of the terms of the Fibonacci sequence which only uses the first term of the golden section formula and rounds off:
+
+```apl
+    ∇ F←FIB1 N;R
+[1]   F←⌊0.5+(÷R)×(0.5×1+R←5×0.5)*N
+    ∇
+```
+
+The Fibonacci sequence, like others defined by recurrence relations, is normally defined for positive integers only
+
+\begin{equation*}
+F_n = \begin{cases} 1 & \text{if } n = 1 \text{ or } 2 \\ F_{n-2} + F_{n-1} & \text{if } n > 2 \end{cases}
+\end{equation*}
+
+or for non-negative integers
+
+\begin{equation*}
+F_n = \begin{cases} n & \text{if } n = 0 \text{ or } 1 \\ F_{n-2} + F_{n-1} & \text{if } n > 1 \end{cases}
+\end{equation*}
+
+depending on whose textbook you read, but I prefer to define it as the second way with "if \(n > 1\)" replaced by "otherwise", which, of course, allows negative values. The values for negative \(n\) are the same in absolute value as those for positive \(n\), but the signs alternate. In order to generate values for negative \(n\) as well as positive \(n\) you will need both terms of the golden section formula:
+
+```apl
+    ∇ F←FIB2 N;R
+[1]   F←⌊0.5+(÷R)×((0.5×1+R)*N)-(0.5×1-R←5*0.5)*N
+    ∇
+```
+
+We can see the difference between these two functions as follows:
+
+```apl
+      FIB1 ¯4 ¯3 ¯2 ¯1 0 1 2 3 4
+0 0 0 0 0 1 1 2 3
+      FIB2 ¯4 ¯3 ¯2 ¯1 0 1 2 3 4
+¯3 2 ¯1 1 0 1 1 2 3
+```
+
+## What Now?
+
+Having extended the "normal" domain of the Fibonacci sequence to the negative integers, the most natural follow-up question is "Can we extend the Fibonacci sequence to the real or complex numbers?" and, unsurprisingly, the answer is "yes". What we are after is a function \(f(x)\) with \(x \in \mathbb{R}\) or \(x \in \mathbb{C}\), such that \(f(x)\) takes the Fibonacci values when \(x\) is a real integer, and \(f(x) = f(x-2) + f(x-1)\) for all \(x\). There are one or two mathematical considerations to be overcome in converting the golden section formula into a function of a continuous variable, but the process is straightforward. The main points are as follows.
+
+### A real function
+
+Before we can turn integer \(n\) into real \(x\), we need to get rid of the negative term in the \(n\)th term formula. We can do the following:
+
+\begin{equation*}
+\frac{1-\sqrt{5}}{2} = \frac{(1-\sqrt{5})(1+\sqrt{5})}{2(1+\sqrt{5})} = \frac{-4}{2(1+\sqrt{5})} = -\frac{2}{(1+\sqrt{5})}
+\end{equation*}
+
+so, if we let \(a = \tfrac{1}{2}(1+\sqrt{5})\) we obtain \(F_n = \tfrac{1}{\sqrt{5}}\bigl(a^n - (-a)^{-n}\bigr)\).
+
+Since \(n\) is an integer, \((-a)^{-n} = (-1)^n a^{-n}\), and we note that \((-1)^n\) has the same values as \(\cos n\pi\) for all \(n\). Now we can replace integer \(n\) with real \(x\), define \(a^x = e^{x\log a}\), and obtain a continuous real function: \(f(x) = \tfrac{1}{\sqrt{5}}\bigl(a^x - a^{-x}\cos\pi x\bigr)\).
+
+The real-valued Fibonacci function in APL is very easy:
+
+```apl
+    ∇ z←Fibfn x;s
+[1]   z←0.5×1+s←5*0.5
+[2]   z←((z*x)-(2○○x)×z*-x)÷s
+    ∇
+```
+
+### The complex case
+
+The complex case is a bit easier, because we can use the golden section formula direct. In order to write an APL function for the complex case, we need a suite of appropriate complex arithmetic functions. I decided to amend a suite published by Prof. A Hawkes [2], rather than write my own. The complex Fibonacci function looks like this:
+
+```apl
+    ∇ z←FibfnC x;s;ns
+[1]   x←COMPLEX x
+[2]   z←COMPLEX 0.5×1+s←5*0.5
+[3]   z←((z EXP x)-(-z)EXP-x)DIV COMPLEX s
+    ∇
+```
+
+## What do they look like?
+
+Here is a graph of the real function. Note that the curve to the left of the origin is a quite interesting variant on the damped sine wave, as the following extract showing \(f(x)\) against \(x\) between \(x = \pm 6\) shows.
+
+![Graph of f(x) for x from −6 to 6: to the left of the origin, oscillations growing to peaks near 5 at −5 and −3 at −4; to the right, a gently wavy curve rising to about 8 at 6](real.jpg)
+
+For the complex function we can plot the imaginary part against the real part for real \(x\) between \(\pm 6\):
+
+![Imaginary part plotted against real part: a spiral winding in towards the origin, with a tail running out along the positive real axis](complex.jpg)
+
+As it is a bit difficult to see what is going on when \(x = 1\), here is an enlargement of the part where \(0 \le x \le 3\)
+
+![Enlargement of the curve near the origin: a loop below the axis from 0 to 1, a small loop above near 0.95, and an arc below the axis from 1 to 2](enlarged.jpg)
+
+## References and Acknowledgements
+
+1. J. De Kerf, *From Fibonacci to Horadam*, *Vector*, Vol.15 No.3, p.122.
+2. Alan G. Hawkes, *Complex Numbers in APL*, *Vector*, Vol.1, No.1, pp.107–120.
+
+All the graphs were drawn with *Rain* publication graphics for APL, available from Causeway Graphical Systems Ltd.

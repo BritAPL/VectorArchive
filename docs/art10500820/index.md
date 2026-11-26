@@ -1,0 +1,312 @@
+---
+vid: '10500820'
+title: Combination Lists
+prefix: J-ottings 55
+authors:
+- Norman Thomson
+byline: by Norman Thomson
+volume: '25'
+issue: '3'
+page: '105'
+online: '2012-03-24'
+editor: Kai Jaeger
+description: Thomson creates lists of combinations with the help of J.
+source: content/printed/253/jot55.htm
+converter: vecrescue 0.1.0
+issue_tab: n23-march-2012
+tags:
+- programming techniques
+- mathematics and statistics
+---
+
+by Norman Thomson
+{ .byline }
+
+I enjoyed R.E.Boss’s article on lists of combinations [\[1\]](#ref1) because, like him, I have been fascinated both by their patterns and by algorithms which generate them. In both APL and J systematic permutation lists are easier to generate than those for combinations. In J the former are available directly through the primitive `A.` so that
+
+```
+   A. 1 2 0
+3
+```
+
+says that `1 2 0` is permutation `3` (in index origin 0) of `i.3` in lexical order, a process which is reversed by dyadic `A.`:
+
+```
+   3 A. 0 1 2
+1 2 0
+```
+
+A full list of such permutations is given by e.g.
+
+```
+   (i.@! A. i.)3
+0 1 2
+0 2 1
+1 0 2
+1 2 0
+2 0 1
+2 1 0
+```
+
+Analogously with monadic `A.`, any combination of `r` integers from `i.n`  can be put into one-to-one correspondence with the counting integers by adding appropriate values of `kCr`, where the `k`’s are the integers in the combination and `r=1,2,..` , e.g. for the combination `1 3 4, 1C1 + 3C2 + 4C3 = 8` . Unlike permutations, the value of n need not appear in a combination, and so its number is independent of `n`. The following verb gives unique combination numbers:
+
+```
+   ctoi=:monad : '+/(>:i.#y)!y'  NB. combination to integer
+   ctoi 1 3 4
+8
+```
+
+A challenge is to produce itoc such that `8 itoc 3` is `1 3 4`.
+
+The emphasis in [\[1\]](#ref1) is on the pragmatic matter of how to generate combinations more efficiently using lines such as `[:(,.&.><@:\.)/ >:@-~ [\i.@]` . This on deconstruction shows that orderly lists of combinations are a little closer to primitives in J than might at first sight be imagined. The key is the combination of box, stitch, infix and suffix, for which a preliminary note on the “fix” family of adverbs is in order, namely prefix (`\` monadic), suffix (`\.` monadic), infix (`\` dyadic) and outfix (`\.` dyadic). These have the general effect of making objects larger either by increasing rank as in
+
+```
+   (,\i.5);(,\.i.5)             NB. ravel prefix;suffix
+┌─────────┬─────────┐
+│0 0 0 0 0│0 1 2 3 4│
+│0 1 0 0 0│1 2 3 4 0│
+│0 1 2 0 0│2 3 4 0 0│
+│0 1 2 3 0│3 4 0 0 0│
+│0 1 2 3 4│4 0 0 0 0│
+└─────────┴─────────┘
+```
+
+or by repetition with amendment:
+
+```
+    <\.i.5                              NB. box suffix
+┌─────────┬───────┬─────┬───┬─┐
+│0 1 2 3 4│1 2 3 4│2 3 4│3 4│4│
+└─────────┴───────┴─────┴───┴─┘
+```
+
+The dyadic form infix delivers overlapping x-lists and outfix delivers the result of progressively removing them:
+
+```
+   (2,\i.5);(2,\.i.5)
+┌───┬─────┐
+│0 1│2 3 4│
+│1 2│0 3 4│
+│2 3│0 1 4│
+│3 4│0 1 2│
+└───┴─────┘
+```
+
+An informal rule is that without dots (that is prefix and infix) things proceed from the left, with dots they do so from the right.
+
+## Combinations
+
+A deconstruction of comb2 in [\[1\]](#ref1) for the orderly listing of combinations begins with
+
+```
+   |:3 ,\i. 6           NB. dyadic infix
+0 1 2 3
+1 2 3 4
+2 3 4 5
+```
+
+Apply box-ravel suffix to the final row above:
+
+```
+    <@,\.2 3 4 5
+┌───────┬─────┬───┬─┐
+│2 3 4 5│3 4 5│4 5│5│
+└───────┴─────┴───┴─┘
+```
+
+and then stitch the numbers in the penultimate row on an item by item basis:
+
+```
+   Each=.&.>
+   1 2 3 4 ,.Each<@,\.2 3 4 5
+┌───┬───┬───┬───┐
+│1 2│2 3│3 4│4 5│
+│1 3│2 4│3 5│   │
+│1 4│2 5│   │   │
+│1 5│   │   │   │
+└───┴───┴───┴───┘
+```
+
+Call this form of stitching `Stitch` with an upper case `S` to distinguish it from the name of the primitive `stitch`:
+
+```
+   Stitch=.,.Each <@;\.
+```
+
+so that the preceding display is obtained as
+
+```
+   1 2 3 4 Stitch 2 3 4 5
+```
+
+By applying this successively to the columns of `3 ,\i.6`, everything is in place to generalize this to a verb for generating combinations of `x` from `y` . (The name `comb2` is chosen because this is the technique described by that name in [\[1\]](#ref1).)
+
+```
+   comb2=:dyad : 'z=.Stitch/|:x,\i.y'
+   3 comb2 6
+┌─────┬─────┬─────┬─────┐
+│0 1 2│1 2 3│2 3 4│3 4 5│
+│0 1 3│1 2 4│2 3 5│     │
+│0 1 4│1 2 5│2 4 5│     │
+│0 1 5│1 3 4│     │     │
+│0 2 3│1 3 5│     │     │
+│0 2 4│1 4 5│     │     │
+│0 2 5│     │     │     │
+│0 3 4│     │     │     │
+│0 3 5│     │     │     │
+│0 4 5│     │     │     │
+└─────┴─────┴─────┴─────┘
+```
+
+A final `;`  (raze) could be used to transform the above into normal unboxed lists – retaining the boxes both helps appreciation of the structure, and also reduces the number of print lines required.
+
+The integer representations of the combination list `3 comb2 6` in the order given above are
+
+```
+   ;ctoi each<"1 ;3 comb2 6
+0 1 4 10 2 5 11 7 13 16 3 6 12 8 14 17 9 15 18 19
+```
+
+which shows that combinations generated by `comb2` are not in their ‘natural’ order.
+
+The boxed result of `comb2` suggests that reduction could equally well have been applied from the right rather than the left by repeated use of the primitive verb reverse:
+
+```
+   comb=.dyad : 'z=.|."1 Each Stitch/|.|."1 |: x ,\ i. y'
+   3 comb 6
+┌─────┬─────┬─────┬─────┐
+│3 4 5│2 3 4│1 2 3│0 1 2│
+│2 4 5│1 3 4│0 2 3│     │
+│1 4 5│0 3 4│0 1 3│     │
+│0 4 5│1 2 4│     │     │
+│2 3 5│0 2 4│     │     │
+│1 3 5│0 1 4│     │     │
+│0 3 5│     │     │     │
+│1 2 5│     │     │     │
+│0 2 5│     │     │     │
+│0 1 5│     │     │     │
+└─────┴─────┴─────┴─────┘
+```
+
+As a bonus `comb` delivers the combination list in reverse counting order:
+
+```
+    ;ctoi each<"1 ;3 comb 6
+19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 0
+```
+
+## Relationship to the Pascal Triangle
+
+The number of boxes in `r comb n` is one more than `d=.n-r` and the numbers of combinations in the various boxes are directly derivable from the Pascal Triangle whose first few numbers are:
+
+```
+   !/~i.10
+1 1 1 1 1  1  1  1  1   1
+0 1 2 3 4  5  6  7  8   9
+0 0 1 3 6 10 15 21 28  36
+0 0 0 1 4 10 20 35 56  84
+0 0 0 0 1  5 15 35 70 126
+0 0 0 0 0  1  6 21 56 126
+0 0 0 0 0  0  1  7 28  84
+0 0 0 0 0  0  0  1  8  36
+0 0 0 0 0  0  0  0  1   9
+0 0 0 0 0  0  0  0  0   1
+```
+
+`3 comb2 6` and `3 comb 6` both consist of 20 combinations displayed in 4 boxes, the numbers in which are obtained from the right as the first four non-zero items in row 2 counting in origin 0. More generally `r comb n` has `d+1` boxes in which the numbers of combinations are given by the first `d+1` non-zero integers in `row r-1`. For example for `6 comb 9` read a total of 84 combinations from the Pascal triangle, then go one up along the diagonal and read 1+6+21+56 along the row.
+
+When `r` is large relative to `n` it is more efficient to use complementary combinations as suggested by the symmetry of the Pascal triangle, for example
+
+```
+   time=.6!:2
+   time Each '2 comb 55';'53 comb2 55'
+┌───────────┬─────────┐
+│0.000388038│0.0130343│
+└───────────┴─────────┘
+   time '(<i.55)-."1 Each 2 comb 55'
+0.00245115
+```
+
+## Defining an itoc verb
+
+This challenge stated earlier requires the delivery of a unique combination, given an `r` and an integer `i`. If `n` is also given `i` must be in the range `0 .. nCr -1`. To do this, first find the largest `k` such that `kCr` does not exceed `i` . Subtract `kCr` from `i` and carry on repeating this process for `(i- kCr)` and `(r – 1)`. For example, to find combination number 8 of `3 comb n`, `5C3 = 10` which exceeds 8, but `4C3 = 4` does not, so select 4 as rightmost element. `8 – 4 = 4` which exceeds `3C2`, so catenate 3 to the left of 4. `4 – 3 = 1` which is less than `2C1` but equals `1C1`, so that the final digit is 1 and the required combination is 1 3 4. Here is this process expressed in J:
+
+```
+   lgstk=.4 :0
+i=.<:y                  NB. increase k up to lgst y!k <x
+while. x>: y!>:i do. i=.>:i end.
+)
+   itoc=.4 :0
+x=.x-y!r=.x lgstk y
+while. y>1 do.
+   y=.<:y               NB. decrement y
+   r=.(x lgstk y),r     NB. catenate new value to left of r
+   x=.x-y!{.r   end. r  NB. reduce x for next iteration
+)
+   8 itoc 3
+1 3 4
+```
+
+## Another iterative algorithm
+
+`comb` and `comb2` are not the only methods for constructing combination lists. For example [\[1\]](#ref1) starts by describing another such algorithm, and without worrying too much about the J details, tracing the iterative steps can be used to illustrate how alternative techniques reach the same goal by different routes.
+
+```
+   trace=.monad : 'y(1!:2)2'
+   combi=.4 : 0                 NB. d is n-r for any given nCr
+k=. i.>:d=.y-x                  NB. k is a list of integers
+z=.(d$<i.0 0),<i.1 0            NB. initially z is d+1 empty boxes
+for_j. i.x do.                  NB. loop thru items of i.x
+trace z=. k Stitch >:Each z  end.
+)
+   3 combi 6
+┌─┬─┬─┬─┐
+│0│1│2│3│
+└─┴─┴─┴─┘
+┌───┬───┬───┬───┐
+│0 1│1 2│2 3│3 4│
+│0 2│1 3│2 4│   │
+│0 3│1 4│   │   │
+│0 4│   │   │   │
+└───┴───┴───┴───┘
+┌─────┬─────┬─────┬─────┐
+│0 1 2│1 2 3│2 3 4│3 4 5│
+│0 1 3│1 2 4│2 3 5│     │
+│0 1 4│1 2 5│2 4 5│     │
+│0 1 5│1 3 4│     │     │
+│0 2 3│1 3 5│     │     │
+│0 2 4│1 4 5│     │     │
+│0 2 5│     │     │     │
+│0 3 4│     │     │     │
+│0 3 5│     │     │     │
+│0 4 5│     │     │     │
+└─────┴─────┴─────┴─────┘
+┌─────┬─────┬─────┬─────┐
+│0 1 2│1 2 3│2 3 4│3 4 5│
+│0 1 3│1 2 4│2 3 5│     │
+│0 1 4│1 2 5│2 4 5│     │
+│0 1 5│1 3 4│     │     │
+│0 2 3│1 3 5│     │     │
+│0 2 4│1 4 5│     │     │
+│0 2 5│     │     │     │
+│0 3 4│     │     │     │
+│0 3 5│     │     │     │
+│0 4 5│     │     │     │
+└─────┴─────┴─────┴─────┘
+```
+
+Other methods are described in [\[2\]](#ref2). The relative efficiencies of algorithms are parameter dependent. These can be tested informally by e.g.
+
+```
+   time Each '9 comb 23';'9 comb2 23';'9 combi 23'
+┌────────┬────────┬────────┐
+│0.251543│0.173648│0.199808│
+└────────┴────────┴────────┘
+
+(n.b.  combi had the trace removed for fair comparison)
+```
+
+## References
+
+1. <a id="ref1"></a> R.E.Boss, Vector Vol.24 Nos. 2 &3, pp. 75-88 Generating Combinations in J efficiently.
+2. <a id="ref2"></a> Norman Thomson , Vector Vol. 22 No.4, pp. 99-105, J-ottings 48, Perming and Combing.

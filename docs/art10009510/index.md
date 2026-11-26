@@ -1,0 +1,76 @@
+---
+vid: '10009510'
+title: Fractnomials?
+authors:
+- J.R. Sutton
+volume: '11'
+issue: '4'
+page: '30'
+transcribed: from page images of VOL.11-NO.4-APRIL-1995.pdf, pages 32–33 (printed 30–31); Claude, 2026-10-09
+review: draft
+tags:
+- mathematics and statistics
+- education
+queries:
+- Within The Education Vector. The author’s home address at the end is left out.
+- The formulas are set in TeX, typeset by MathJax, following the printed layout.
+- “(because of the factor (N−N) in equation (1) when n = (N−1)” has no closing parenthesis; printed so.
+status: transcribed
+issue_tab: n4-april-1995
+---
+
+*Transcribed from the printed issue; not yet reviewed. [Read it in the PDF of the issue, page 30](../11/4/VOL.11-NO.4-APRIL-1995.pdf#page=32)*
+{ .transcribed }
+
+*by J.R. Sutton*
+{ .byline }
+
+The polynomial
+
+\begin{equation*}
+\sum_{n=0}^{N-1} c_n X^n
+\end{equation*}
+
+with coefficients
+
+\begin{equation*}
+c_n = 1 \quad\text{for all } n
+\end{equation*}
+
+is the sum
+
+\begin{equation*}
+\textstyle\sum X^n = \bigl(X^N - 1\bigr)/(X-1)
+\end{equation*}
+
+which was discussed previously (Clark, Education Vector 11.1 *pp.* 31–55) and Sutton, Education Vector 11.2 *pp.* 30–31) for both integral and fractional \(N\). A polynomial of fractional degree should perhaps be called a *fractnomial.*
+
+With the coefficients
+
+\begin{equation*}
+c_n = \frac{(-)^n\,\Gamma(N)}{\Gamma(N-n)(n!)^2}
+\end{equation*}
+
+which satisfy
+
+\begin{equation*}
+\frac{c_{n+1}}{c_n} = -\frac{(N-1-n)}{(n+1)^2} \tag{1}
+\end{equation*}
+
+with \(c_0 = 1\), the polynomials are the Laguerre polynomials \(L_N(X)\) which satisfy the recurrence relation:
+
+\begin{equation*}
+L_{N+1}(X) = \frac{2N+1-X}{N+1} L_N(X) - \frac{N}{N+1} L_{N-1}(X)
+\end{equation*}
+
+and the differential equation:
+
+\begin{equation*}
+XL_N''(X) - (X-1)L_N'(X) + NL_N(X) = 0
+\end{equation*}
+
+This differential equation can be integrated numerically for fractional (and negative) as well as integer \(N\). So the Laguerre polynomials for fractional \(N\) can be defined as the solutions to the differential equation for fractional \(N\).
+
+But is this really a "fractnomial"? The polynomials for integer \(N\) can be regarded as infinite series in which almost all the coefficients are zero (because of the factor \((N-N)\) in equation (1) when \(n = (N-1)\). In the case of non-integer \(N\) none of the coefficients are exactly zero.
+
+J.R. Sutton

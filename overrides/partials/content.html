@@ -1,0 +1,22 @@
+{#- Article header: series prefix above the title, then where it was printed.
+    Based on Zensical's partials/content.html, but the title is always shown:
+    the converter never writes a Markdown title, and a raw block kept from a
+    malformed source may contain an h1. -#}
+{% include "partials/actions.html" %}
+{% set m = page.meta or {} %}
+{% if m.prefix %}<p class="prefix">{{ m.prefix }}</p>{% endif %}
+<h1 id="__skip">{{ page.title | d(config.site_name, true)}}</h1>
+{% if m.vid or m.unindexed %}
+  <p class="printed">
+    {%- if m.volume %}<a href="../{{ m.volume }}/{% if m.issue_tab %}#{{ m.issue_tab }}{% endif %}">Vector {{ m.volume }}:{{ m.issue }}</a>{% if m.page %}, page {{ m.page }}{% elif m.online %}, online {{ m.online }}{% endif %}
+    {%- else %}Published online{% if m.online %} {{ m.online }}{% endif %}{% endif -%}
+  </p>
+{% endif %}
+{% if m.tags %}
+  <p class="subject-tags">{% for t in m.tags %}<a class="md-tag" href="../tags/#tag-{{ t | replace(' ', '-') }}">{{ t }}</a> {% endfor %}</p>
+{% endif %}
+{% if m.status == "transcribed" %}<div class="transcribed-text">{{ page.content }}</div>{% else %}{{ page.content }}{% endif %}
+{% include "partials/tags.html" %}
+{% include "partials/source-file.html" %}
+{% include "partials/feedback.html" %}
+{% include "partials/comments.html" %}

@@ -1,0 +1,42 @@
+---
+title: Project status
+---
+
+*Updated 12 October 2026, after the Second Pass: every line of every Contents page now has its text, or says where it is.*
+
+## What this is
+
+A development build of the recovered *Vector* archive: every issue’s contents, every surviving article, and the old article addresses (`/art10000000`) kept working. The full index and the volume pages list every item on each issue’s printed Contents page, linked to the best text we have.
+
+## Done
+
+- **Every issue’s Contents page** (all but 2:2, of which no copy has been found) transcribed from the scans: the full index and the volume pages list everything printed, about 2,540 items, against the 1,500 in the editors’ index.
+- **The text published online**: 624 articles converted from it (328 in Volumes 1–21; 296 in Volumes 22–26 and online only), using the restored archive at archive.vector.org.uk where it holds a newer copy. Where several articles share one web page (letters, members’ news), each shows only its own part; where the editors’ index lists an article twice, the second address leads to the first.
+- **The First Pass through Volumes 1–9** (1984–1993), from the scanned issues:
+    - every article in the editors’ index that survives in a scan transcribed from the page images: 327 of the 367 (three more records — one article indexed twice — were online as text; one, Mandelbrot Sets, is indexed in 7:3 but was held over to 7:4; the other 37 are in 2:2, of which no copy has been found, and 3:4 and 7:4, of which only machine-read text survives). One, XPL, could not be transcribed and awaits a human transcriber. Where an article prints code with its results, the code has been run in Dyalog APL as a check on the transcription, and any misreadings it revealed corrected and noted; other doubts are recorded for review;
+    - in Volumes 1–4, the pieces the index omitted from the meetings, general and technical sections also transcribed (150 pieces), and published;
+    - everything else on the Contents pages linked to its page in the issue PDF.
+- **The First Pass through Volumes 10–21** (1993–2005): from Volume 10 onward most indexed articles were published online and are converted from that text; the indexed articles that were not online (12 in Volume 10, 39 in Volume 11, 60 in Volume 12, 64 in Volume 13, 56 in Volume 14, 34 in Volume 15, 21 in Volume 16, 28 in Volume 17, 36 in Volume 18, 40 in Volume 19, 38 in Volume 20, 24 in Volume 21) have been transcribed from the scans, with the same checks; one article in Volume 12 and one in Volume 21 are left for transcription by hand, and the four in 16:4 survive only as machine-read text.
+- **The First Pass through Volumes 22–23** (2005–2008): the 25 indexed articles never published online (2 in 22:1, 1 in 22:2, 2 in 22:4, 3 in 23:3, 15 in 23:4, 2 in the Dyalog at 25 supplement) transcribed: 23:4 and the supplement from the typeset issues’ sources, the rest from the scans. The only scan of 22:2 lacks four pages of APL+SantaFe previewed, and 23:4’s Contents and PDF now follow the printed issue.
+- **Every other issue**: its articles listed from its Contents page and linked to the issue PDF (with its machine-read text) where we have one; articles with their own scan link to that too.
+- **Mathematics** in the transcribed articles is typeset in conventional notation (TeX, rendered by MathJax served from this site), following the printed layout, = signs aligned where the print aligns them: 81 articles, each formula re-read from the scan.
+- **Subject tags** for every article with text, transcribed or converted, from a vocabulary of 20 subjects; see [Tags](../tags/). Articles linked only to the PDF, and section introductions, are not tagged.
+- **Index corrections**: the editors’ index was compiled by hand; where it disagrees with the printed Contents pages (pages, issue, authors, titles), the Contents pages have been followed. 79 records were corrected; each correction is listed in the build report.
+- **The Second Pass** (decided 11 October 2026): the pieces the editors’ index left out, transcribed from the scans and each put on its issue’s line in the full index:
+    - pieces printed inside a listed section but missing from both the index and the Contents page (letters, reports, columns, errata): 237, found from the First Pass’s notes and by a sweep of Volumes 5–21;
+    - every remaining line of the Contents pages: 650 more, among them editorials, the Quick Reference and course diaries, BAA, BCS and sustaining members’ news, the Education Vector and Random Vector introductions, conference programmes and reports, reviews, crosswords and the APL Product Guides. Volumes 22–25 were transcribed from the typeset issues. Lines whose text is already held, or that are only a heading over listed pieces, say so;
+    - short pieces printed with no line on any Contents page, mostly section introductions: 47, linked from their sections’ headings or given lines of their own;
+    - not transcribed: the indexes to advertisers and the order, subscription and registration forms;
+    - **contact details**: where a person rather than a company is the contact (BAA officers and editors, letter-writers, user-group secretaries, consultants trading on their own), the street address, telephone number and personal e-mail are left out, and a note says so; companies’ and institutions’ addresses are kept.
+- **Complete scans of 3:4, 7:4 and 16:4**, whose earlier copies were truncated, found on vector.org.uk (2026-11-19): their 31 indexed articles now link to the scan, with its machine-read text.
+- **WordPress content** (2016–2022): the vector.org.uk database has been catalogued; 11 articles and a page of talks it holds are not in the editors’ index. The [talks at the BAA meeting of 20 May 2016](../art10501780/) and the 11 articles are online, converted from the posts (some APL characters and two figures that WordPress lost are noted on their pages).
+- **Volume 27** (2016–2022): its one issue, [27:1](../27/), was never printed; the editor's call for articles, the old site's storage and WordPress's *Latest Issue* menu all name it. Its 15 pieces (10 from the old site, 5 from WordPress) are listed there in order of publication online. Six other WordPress pieces remain on the home page under *In press, never printed*.
+
+## Remaining
+
+- **Review**: every transcription is a draft until a reviewer checks it against the scan; see the [review checklist](https://github.com/5jt/vector-rescue/blob/main/plans/pdf-review-checklist.md).
+- **Missing sources**: no scan has been found of 2:2 ([help find one](https://github.com/5jt/vector-rescue/issues/62)).
+- **3:4, 7:4 and 16:4**: their articles are to be transcribed from the complete scans, and their Contents checked against them.
+- **Hand transcription**: three pieces the automatic transcription could not complete (XPL in 1:2, an article each in 12:1 and 21:2) and one Second Pass piece (12:2 p.113).
+
+The quality of each article’s text is shown in the [full index](../full-index/).

@@ -1,0 +1,86 @@
+---
+vid: '10009500'
+title: More about Fractional Series
+authors:
+- J.R. Sutton
+volume: '11'
+issue: '2'
+page: '30'
+transcribed: from page images of VOL.11-NO.2-OCTOBER-1994.pdf, pages 32–33 (printed 30–31); Claude, 2026-10-09
+review: draft
+tags:
+- mathematics and statistics
+- education
+queries:
+- Within The Education Vector. The graph is kept as an image. The author’s home address at the end is left out.
+- The displayed formulas are set in TeX, typeset by MathJax, following the printed layout, with the letters, upright in print, here italic as is conventional; the equation number 1 is printed without parentheses. In equation 1 the numerator is printed “(Xⁿ − 1)”, with a lower-case n, where (Xᴺ − 1) is meant (the text and table use N); kept as printed.
+- The table of sums for X=4 was recomputed in Python from (X*N−1)÷(X−1) and matches.
+status: transcribed
+issue_tab: n2-october-1994
+---
+
+*Transcribed from the printed issue; not yet reviewed. [Read it in the PDF of the issue, page 30](../11/2/VOL.11-NO.2-OCTOBER-1994.pdf#page=32)*
+{ .transcribed }
+
+*by J.R. Sutton*
+{ .byline }
+
+In Jot-Dot-Floor (Education Vector 11.1, pp. 31–35) the author refers to the series:
+
+\begin{equation*}
+\sum_{n=0}^{N-1} X^n = \bigl(X^n - 1\bigr)\big/(X-1) \tag*{1}
+\end{equation*}
+
+and asks why it doesn’t work for fractional N. Start with the case X=1:
+
+\begin{equation*}
+\textstyle\sum 1^n = 0/0
+\end{equation*}
+
+but the RHS can be evaluated by taking the limit X=1+delta as delta approaches zero. So
+
+\begin{equation*}
+1 + 1 + 1 + \ldots = N
+\end{equation*}
+
+which is just the count of the terms in the sum. It looks reasonable that a fractional number of terms will count to the fraction. (Much as N=0 counts the empty series.)
+
+In the general case the RHS of equation 1 can be evaluated just as easily for fractional (or irrational or transcendental) N as for integers so, whatever the fractional series means, we can define its sum as whatever the RHS evaluates to. For example with X=4 and N=2.5 the sum is 31/3. Staying with X=4 and various N we have:
+
+| N | Sum | N | Sum |
+|--:|--:|--:|--:|
+| 1 | 1 | 1.5 | 2.333.. |
+| 2 | 5 | 2.5 | 10.333.. |
+| 3 | 21 | 3.5 | 42.333.. |
+| 4 | 85 | 4.5 | 170.333.. |
+
+Negative values of N are not a problem. For N=−1
+
+\begin{equation*}
+\bigl(X^{-1} - 1\bigr)\big/(X-1)
+\end{equation*}
+
+evaluates to −1/X and for the general case of negative integer N to
+
+\begin{equation*}
+-\frac{1}{X} - \frac{1}{X^2} - \frac{1}{X^3} \ldots
+\end{equation*}
+
+This can be understood as follows. To go from N=2 to N=1 take away the term with n=1. To go from N=0 to N=−1 take away the term with n=−1. Fractional negative N just combines this concept for negative N with that for fractional N.
+
+The graph shows the sum for X=2 and a continuous range of N from −3 to 2.6 as an example. The shape of the curve is, of course, exponential.
+
+```apl
+      )load rain
+      xx← ¯3+0.1×0,⍳56
+
+chset ('style' 'boxed,xyplot,nomark,grid')
+chset ('yint' 0)('xint' 0)('xcap' 'N')('ycap' 'Sum for X=2')
+chset ('nib' 'medium')
+chplot  xx,[1.5] ¯1+2*xx
+View chclose
+```
+
+![Graph of Sum for X=2 against N from −3 to 3: a curve rising from about −0.9 at N=−3 through 0 at N=0 to about 5 at N=2.6](graph.png)
+
+Dr J R Sutton

@@ -1,0 +1,33 @@
+---
+vid: '10004870'
+title: Editorial
+authors:
+- Stefano Lanzavecchia
+byline: by Stefano Lanzavecchia
+volume: '20'
+issue: '3'
+page: '3'
+source: trad/v203/ed203.htm
+converter: vecrescue 0.1.0
+issue_tab: n3-january-2004
+tags:
+- APL in perspective
+- conference reports
+---
+
+*by Stefano Lanzavecchia*
+{ .byline }
+
+*“I’m wasted on cross-country. We Dwarves are natural sprinters. Very dangerous over short distances.”*  The Two Towers – Peter Jackson’s Film Version
+
+Many computer related meetings are hosted world-wide over the span of a year. We have recently reported on the first Dyalog User Group meeting, a welcome addition to the list and while the excitement had yet to subside, two more conferences took place, almost at the same time, in two different locations of the United States: the APL2000 User Group conference and Microsoft’s renowned Professional Developer’s Conference (though everybody knows it simply as the PDC) 2003. In this issue our readers will find Adrian Smith’s notes on the former and will be delighted by the presence of a lot of interesting content showing, in particular, that the APL community is more and more opening to the outside world, trying to integrate a lot of useful concepts, some relatively new (Web Services), some old and well-established (regular expressions). But while APL used to lead the pack back in the days when the technology it used was so advanced to be hardly understood by those who struggled with long and boring Fortran source sheets, nowadays it seems that APL and APLers have pampered themselves for too long in their happy corner and have failed to notice that the corner was shrinking and the others were making progress while they stood still.
+
+A critic mind will probably argue that there has been very little that can be defined revolutionary or even only new in the last twenty years of software and programming languages development. I have no reason to disagree and I’d rather let the wise lead me, but I don’t think that the “been there, done that” approach is a useful one. Maybe APLers were so advanced back then that they could fruitfully use regular expressions before the other software developers could even get a compiled program to work. But they were also so advanced that they had the time to forget how useful regular expressions are and so advanced that today half of the APL community is hardly aware of their existence. Surely there is something wrong here. We have all written our own little remote procedure call library, so why should we bother with Web Services and SOAP? Yes, indeed: what good is there in a cross-platform standard, when all we are interested in is our own little garden? Don’t misunderstand me: I am not very fond of SOAP (yes, I do shower regularly) but its advocates have many good points there.
+
+Maybe the world of computing is not going in the direction we would have chosen, but that is not a good reason to ignore all of what the others are doing. Some of it might turn to be quite useful. And this takes me to the PDC 2003: the Microsofties showed some skills in building a lot of expectation for what they were going to reveal and I don’t think anybody was really disappointed when the veil was lifted. Instead of re-running an old consolidated show, they boldly stepped in and presented ideas for technological platforms in their early stages of development. While the new release of .NET may be shipped in the late 2004, the new flagship operating system, codenamed Longhorn, will not see the light for at least another 2 to 3 years. Of course, a developers’ conference cannot be run only on PowerPoint presentations and all the attendees were given developer’s previews of the various bits presented, to whet their appetites, but also to give them the possibility to prepare for what is going to happen, eventually. I don’t think it’s a good idea to get into the technical details but let me say that, once again, I am not so blinded by my enthusiasm for new technologies to fail to notice that most of them are just old ideas, refitted to live in our modern times. Yet, I don’t see anything bad in this: if the idea is a good one and if so far it had been neglected, because of the lack of computing power (read: raw hardware performance), good algorithms or simply public exposure, I will welcome any time its revival in new clothes.
+
+I am looking forward to the Longhorn wave because I can see where it’s going and I like the look of it, but let me tell you about some recent development experiences of mine. In a couple of very small projects I decided to try my still improving .NET skills on the field. Even if .NET is a multilanguage platform, I had no doubts when it came to make choices: the best development tool available, namely the Microsoft Visual Studio.NET, and C# as its flagship language. The problems I had to solve were mostly scalar-oriented so I didn’t feel too bad about forsaking APL for once. What I lost in conciseness, I gained a hundred-fold in completeness of the libraries I had at my disposal, in the advanced features of the source code editor (first in the list, a very well-thought auto-complete mechanism called IntelliSense), in the excellent debugging facilities, which almost made me forget I was working with a compiler and not an interpreter. I repeat: the tasks I solved were extremely simple, but I didn’t fail to notice that the productivity boost over an APL solution of the same kind of quality was due to the vast amount of code I could borrow from public repositories in addition to the already extensive .NET framework, coupled with the quality of the development environment, cleared geared towards a pleasant developer’s experience. Here’s a list of the noteworthy features of my experiment: slick GUI, auto-update of the code from a central repository, reading of tabular Excel spreadsheets without having Excel installed, disconnected cache of the data kept in a ZIP file without having any external ZIP manager installed, installation done copying all the files in a folder and nothing more, less than one week of overall development time for the first three releases, distributed seamlessly to the users via the auto-update mechanism. If not being able to do the same thing with my favourite APL interpreter means that I am not a good APL developer, then I am afraid I’ll have to publicly declare that I am not a good APL developer. Still, I think that the conclusion that can be drawn from my experience remains valid: there is room for improvement in the APL world. Amazingly enough, the path traced by the recent User Group meetings is the right one. Let’s stride forward.
+
+***
+
+## Editorial:

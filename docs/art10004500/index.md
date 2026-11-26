@@ -1,0 +1,300 @@
+---
+vid: '10004500'
+title: From Horadam to Atanassov
+authors:
+- Joseph De Kerf
+volume: '16'
+issue: '2'
+page: '135'
+transcribed: from page images of VOL.16-NO.2-OCTOBER-1999.pdf, pages 137–144 (printed 135–142); Claude, 2026-10-10
+review: draft
+tags:
+- mathematics and statistics
+- performance
+queries:
+- Printed heading “From Horadam to Atanassov”; the index and the Contents page have “Atanosov”, and the text spells the name “Antanassov” throughout. Kept as printed.
+- The author’s postal address, printed at the end, is omitted as private data.
+- In ATA3 [3] and ATA4 [5] the small arrows are read as `↓` (`¯1↓F`, `1↓F`, `1↓⍳N-1`), which the formulae require; in ATA1/ATA2 as `↑` (`¯2↑Z`). Please check.
+- 'The formulas are set in TeX, typeset by MathJax, following the printed layout: = signs aligned as printed in the definitions of H, T, F and log|T|, the computed log|T| values and the auxiliary-equation solution (with “with” set to the left as printed); the conditions (n > 2) in a column at the right as printed.'
+- In the Appendix the calls are printed without the left argument `P` (`R1←¯5↑ ATA1 1002`); kept as printed.
+- 'Kept as printed: “Banchmarks”, “Results ... are compared with the exact solutions as returned by ATA4 in the accompanying Appendix”, `QdMONITOR` (for ⎕MONITOR).'
+status: transcribed
+issue_tab: n2-october-1999
+---
+
+*Transcribed from the printed issue; not yet reviewed. [Read it in the PDF of the issue, page 135](../16/2/VOL.16-NO.2-OCTOBER-1999.pdf#page=137)*
+{ .transcribed }
+
+*by Joseph De Kerf*
+{ .byline }
+
+## Abstract
+
+In a previous paper, the generalization of the Fibonacci sequence to what we called the Horadam sequences was investigated. In this paper we treat the so-called generalization introduced by Atanassov, in fact not a generalization but a new concept as the recursive formula is multiplicative instead of linear. APL defined functions for generating these sequences are given. Benchmarks confirm that explicit calculation is much more efficient in CPU time than the calculation based on recursion.
+
+## Horadam Sequences
+
+In a previous paper [1] the generalization of the Fibonacci sequence to what we called Horadam sequences [2]:
+
+\begin{alignat*}{2}
+H_1 &= p \\
+H_2 &= q \\
+\rlap{\ldots}\hphantom{H_n}& \\
+H_n &= rH_{n-2} + sH_{n-1} &\qquad& (n > 2)
+\end{alignat*}
+
+was investigated. APL defined functions for calculating those sequences, by applying the recursion formula (*HOR1* and *HOR2*) or by explicit calculation from the auxiliary calculation (*HOR3*) were given. Benchmarks confirmed explicit calculation from the auxiliary calculation is more efficient in CPU time than the calculation based on recursion. In this paper we investigate the so-called generalization, introduced by K.T. Antanassov [3].
+
+## Antanassov Sequences
+
+Antanassov sequences may be defined by the recursion formula:
+
+\begin{alignat*}{2}
+T_1 &= p \\
+T_2 &= q \\
+\rlap{\ldots\ldots\ldots\ldots}\hphantom{T_n}& \\
+T_n &= T_{n-2} \times T_{n-1} &\qquad& (n > 2) \\
+&= p^{F_{n-2}} \times q^{F_{n-1}}
+\end{alignat*}
+
+\begin{alignat*}{3}
+&\text{with}\quad & F_1 &= 1 \\
+&& F_2 &= 1 \\
+&& \rlap{\ldots\ldots\ldots\ldots}\hphantom{F_n}& \\
+&& F_n &= F_{n-2} + F_{n-1} &\qquad& (n > 2)
+\end{alignat*}
+
+the sequence \(F_1\ldots F_n\) being the Fibonacci sequence, but the domain of the parameters being the set of real numbers.
+
+In fact, the Antanassov sequence is not a generalization of the Fibonacci or Horadam sequences: the recursion formula for the Fibonacci and Horadam sequences is linear, while the recursion formula for the Antanassov sequence is multiplicative.
+
+Even for small values of \(p\) and \(q\), the absolute value of \(T_n\) may increase very rapidly. With \(p = 2\) and \(q = 3\) for instance, we get for \(n = 1(1)15\):
+
+```text
+ n               Tn
+ 1                2
+ 2                3
+ 3                6
+ 4               18
+ 5              108
+ 6             1944
+ 7           209952
+ 8        408146688
+ 9   8.569121344E13
+10   3.497458496E22
+11   2.997014624E36
+12   1.048193426E59
+13   3.141451027E95
+14  3.292848314E154
+15  1.034432172E250
+```
+
+such that for \(n=16\), the value of \(T_n\) would be 3.406228233E404, generating a domain error report when the implementation conforms to the ANSI/IEEE Standard 754-1985 [4].
+
+This may be intercepted by calculating the logarithm of the absolute value of \(T_n\) instead of the value of \(T_n\) itself:
+
+\begin{alignat*}{2}
+\log\lvert T_1\rvert &= \log\lvert p\rvert \\
+\log\lvert T_2\rvert &= \log\lvert q\rvert \\
+\rlap{\ldots\ldots\ldots\ldots\ldots}\hphantom{\log\lvert T_n\rvert}& \\
+\log\lvert T_n\rvert &= \log\lvert T_{n-2}\rvert + \log\lvert T_{n-1}\rvert &\qquad& (n > 2) \\
+&= F_{n-2}\log\lvert p\rvert + F_{n-1}\log\lvert q\rvert
+\end{alignat*}
+
+giving a Horadam sequence \(H_n\) with parameters \(\log\lvert p\rvert\), \(\log\lvert q\rvert\), \(r = 1\) and \(s = 1\). With \(p = 2\) and \(q = 3\) for instance, taking the common logarithm, we get:
+
+\begin{align*}
+\log\lvert T_1\rvert &= 0.3010299957 \\
+\log\lvert T_2\rvert &= 0.4771212547 \\
+\log\lvert T_3\rvert &= 0.7781512504 \\
+\rlap{\ldots\ldots\ldots\ldots\ldots}\hphantom{\log\lvert T_1\rvert}& \\
+\log\lvert T_{1000}\rvert &= 1.78152198\mathrm{E}208
+\end{align*}
+
+The auxiliary equation of \(H_n = \log\lvert T_n\rvert = \log\lvert T_{n-2}\rvert + \log\lvert T_{n-1}\rvert\), is \(h^2 - h - 1 = 0\), such that [5]:
+
+\begin{alignat*}{2}
+H_n = \log\lvert T_n\rvert = ca^{n-1} + db^{n-1} &\qquad\text{with}\quad & \Delta &= \sqrt{5} \\
+&& a &= (1 + \Delta)/2 \\
+&& b &= (1 - \Delta)/2 \\
+&& c &= (\log\lvert q\rvert - b.\log\lvert p\rvert)/\Delta \\
+&& d &= (a.\log\lvert p\rvert - \log\lvert q\rvert)/\Delta
+\end{alignat*}
+
+If \(c = 0\), as \(\lvert b\rvert < 1\), the sequence \(H_n = \log\lvert T_n\rvert\) converges to 0. The calculated value of \(c\) however, may be slightly different from 0 and, as \(\lvert a\rvert > 1\), the calculated sequence of \(H_n = \log\lvert T_n\rvert\) converges to \(\pm\infty\). Correction may be done by setting \(c = 0\) when \(\log\lvert q\rvert = b.\log\lvert p\rvert\). If \(d = 0\), no correction is needed as \(\lvert b\rvert < 1\).
+
+Examples:
+
+\begin{alignat*}{3}
+p &= 10 &\qquad q &= 10^b &\qquad& (c = 0) \\
+p &= 10^a &\qquad q &= 0.1 &\qquad& (c = 0)
+\end{alignat*}
+
+## Defined Functions
+
+APL defined functions for calculating the sequence \(\log\lvert T_1\rvert\ldots\log\lvert T_n\rvert\) based on implicit recursion (*ATA1*), programming a recursive loop (*ATA2*), the linear transformation formula \(\log\lvert T_n\rvert = F_{n-2}\log\lvert p\rvert + F_{n-1}\log\lvert q\rvert\) (*ATA3*), and the explicit calculation from the auxiliary equation of \(\log\lvert T_n\rvert = \log\lvert T_{n-2}\rvert + \log\lvert T_{n-1}\rvert\) (*ATA4*) are given below. In line 3 of *ATA4*, `C` is set to 0 when `P[2]=P[1]×B` (`P` containing the logarithms of the absolute values of the parameters \(p\) and \(q\)).
+
+```apl
+[0]   Z←P ATA1 N
+[1]   →(N≤2)/0,Z←(2⌊N)⍴10⍟|P
+[2]   Z←P ATA1 N-1
+[3]   Z←Z,+/¯2↑Z
+
+[0]   Z←P ATA2 N
+[1]   →(N≤2)/0,Z←(2⌊N)⍴10⍟|P
+[2]  END:→(N>⍴Z←Z,+/¯2↑Z)/END
+
+[0]   Z←P ATA3 N;F;R
+[1]   →(N≤2)/0,Z←(2⌊N)⍴P←10⍟|P
+[2]   F←⌊0.5+(÷R)×(0.5×1+R←5*0.5)*⍳N-1
+[3]   Z←Z,(P[1]×¯1↓F)+P[2]×1↓F
+
+[0]   Z←P ATA4 N;A;B;C;D;∆
+[1]   →(N≤2)/0,Z←(2⌊N)⍴P←10⍟|P
+[2]   B←1-A←0.5×1+∆←5*0.5
+[3]   C←(P[2]≠P[1]×B)×(P[2]-P[1]×B)÷∆
+[4]   D←((P[1]×A)-P[2])÷∆
+[5]   Z←Z,(C×A*N)+D×B*N←1↓⍳N-1
+```
+
+Common logarithms are used. The left argument is a two-element vector containing the parameters \(p\) and \(q\). If `P[1]=0` (\(p = 0\)) and/or `P[2]=0` (\(q = 0\)), an error report is generated. The right argument `N` is the non-negative integer scalar or one-element vector specifying the number of terms of the sequence requested. The explicit result `Z` is a vector containing those terms. If `N` is 0, the empty numeric vector is returned. If `N` is a negative integer or not an integer, an error report is generated. Results are not rounded off as in general the logarithms of the absolute values of \(p\) and \(q\) are not integers (even if the domain of \(p\) and \(q\) is restricted to the set of integers).
+
+Finally, if the value of \(\log\lvert T_n\rvert\) is requested for only one specific value of \(n\), when applying recursion, the entire sequence \(\log\lvert T_1\rvert\ldots\log\lvert T_n\rvert\) must be calculated. When applying explicit calculation from the auxiliary calculation however, \(\log\lvert T_n\rvert\) must only be calculated for that specific value of \(n\). A modified form *ATA5* of the defined function *ATA4*, that only calculates \(\log\lvert T_n\rvert\) for a given non-negative scalar or one-element vector is given below.
+
+```apl
+[0]   Z←P ATA5 N;A;B;C;D;∆
+[1]   →(N≤2)/0,Z←(P←10⍟|P)[2⌊N]
+[2]   B←1-A←0.5×1+∆←5*0.5
+[3]   C←(P[2]≠P[1]×B)×(P[2]-P[1]×B)÷∆
+[4]   D←((P[1]×A)-P[2])÷∆
+[5]   Z←(C×A*N-1)+D×B*N-1
+```
+
+Examples:
+
+```apl
+      2 3 ATA1 3
+0.3010299957 0.4771212547 0.7781512504
+
+      2 3 ATA2 3
+0.3010299957 0.4771212547 0.7781512504
+
+      2 3 ATA3 3
+0.3010299957 0.4771212547 0.7781512504
+
+      2 3 ATA4 3
+0.3010299957 0.4771212547 0.7781512504
+
+      2 3 ATA5 3
+0.7781512504
+
+      2 3 ATA5 1000
+1.78152198E208
+```
+
+**Note:** Applying recursion (*ATA1* and *ATA2*) as well as linear transformation of the Fibonacci sequence (*ATA3*), gives erroneous results for the special case described above (\(c = 0\)). Results for the examples are compared with the exact solutions as returned by *ATA4* in the accompanying Appendix. It would be a challenge to incorporate the corrections needed such as is done in the defined functions *ATA4* and *ATA5* (if possible!).
+
+## Benchmarks
+
+Banchmarks have been done for N = 250(250)1000 in order to compare the effectiveness in CPU time for the functions defined. Results are given below (in ms):
+
+| *N* | 250 | 500 | 750 | 1000 |
+|---|---|---|---|---|
+| *ATA1* | 100.0 | 220.0 | 362.7 | 532.9 |
+| *ATA2* | 52.2 | 121.7 | 211.6 | 317.7 |
+| *ATA3* | 3.91 | 5.96 | 8.18 | 10.47 |
+| *ATA4* | 3.64 | 5.93 | 8.36 | 10.85 |
+| *ATA5* | 1.54 | 1.54 | 1.54 | 1.54 |
+
+Depending on N, the CPU times are from 48% to 40% lower for *ATA2* than for *ATA1*. The CPU times for *ATA3* and *ATA4* are approximately equal and depending on N, the efficiency factor in CPU time versus *ATA2* is from 14 to 30. Depending on N, the efficiency factor in CPU time of *ATA5* versus *ATA2* is from 34 to 206. Figures conform *grosso modo* to those reported for the defined functions for calculating the Horadam sequence. Of course, those figures depend on the hardware and software used.
+
+Functions defined conform to the standard ISO APL [6]. Programming, debugging, illustrations and benchmarks have been done on a MicroLine Pentium S-100, with mathematical co-processor, using Dyalog APL/W Version 7.1.2, under Windows 3.11 [7]. Comparison Tolerance was set to 1E¯13, the default value being 1E¯14. Benchmarks have been done using the system function *QdMONITOR*.
+
+## The Signum Function
+
+Calculating \(\log\lvert T_n\rvert\) instead of \(T_n\), the signum of \(T_n\) remains unknown. Signum of \(T_n\) depends on the signum of the parameters \(p\) and \(q\). An overview of possible combinations is given below:
+
+```text
+ p  q | signum sequence
+------+------------------------------------
+ 0  0 |  0   0   0   0   0   0   0   0  ...
+ 0  + |  0   1   0   0   0   0   0   0  ...
+ 0  - |  0  ¯1   0   0   0   0   0   0  ...
+ +  0 |  1   0   0   0   0   0   0   0  ...
+ -  0 | ¯1   0   0   0   0   0   0   0  ...
+------+------------------------------------
+ +  + |  1   1   1   1   1   1   1   1  ...
+ -  - | ¯1  ¯1   1  ¯1  ¯1   1  ¯1  ¯1  ...
+------+------------------------------------
+ +  - |  1  ¯1  ¯1   1  ¯1  ¯1   1  ¯1  ...
+ -  + | ¯1   1  ¯1  ¯1   1  ¯1  ¯1   1  ...
+```
+
+If the signum of \(p\) and/or the signum of \(q\) is 0, the subsequent signums are 0. If neither the signum of \(p\) nor the signum of \(q\) is 0, the signum sequence is periodic, the period being the three-element vector containing in that order, the signum of \(p\), the signum of \(q\), and the signum of \(pq\).
+
+APL defined functions returning the corresponding sequence of signums of the sequence \(T_1\ldots T_n\) (*SIGNUM1*) and the signum of the \(n\)th term \(T_n\) (*SIGNUM2*) are for instance:
+
+```apl
+[0]   Z←P SIGNUM1 N
+[1]   →(N≤2)/0,Z←(2⌊N)⍴P←×P
+[2]   →(0=×/P)/0,Z←P,(N-2)⍴0
+[3]   Z←N⍴P,×/P
+
+[0]   Z←P SIGNUM2 N
+[1]   →(N≤2)/0,Z←(P←×P)[2⌊N]
+[2]   →(0=×/P)/0,Z←0
+[3]   Z←(1 2 0=3|N)/P,×/P
+```
+
+Benchmarks have been done for `N=250(250)1000`, for \(pq = 0\) and for \(pq \ne 0\) respectively. Results are (in ms):
+
+| *N* | 250 | 500 | 750 | 1000 |
+|---|---|---|---|---|
+| *SIGNUM1* (\(pq = 0\)) | 1.23 | 1.40 | 1.57 | 1.75 |
+| *SIGNUM1* (\(pq \ne 0\)) | 1.09 | 1.12 | 1.15 | 1.18 |
+| *SIGNUM2* (\(pq = 0\)) | 0.96 | 0.96 | 0.96 | 0.96 |
+| *SIGNUM2* (\(pq \ne 0\)) | 1.08 | 1.08 | 1.08 | 1.08 |
+
+The difference in CPU time for *SIGNUM1* and *SIGNUM2* is rather small. So, in practice, it is more simple to implement *SIGNUM1* as *SIGNUM* and, if only the signum for the nth term is requested, to use the expression `¯1↑P SIGNUM N`.
+
+## References
+
+1. J. De Kerf: *From Fibonacci to Horadam*. Vector Vol.15. No.3 January 1999, pp 122–130
+2. A.F. Horadam: *Basic Properties of a Certain Generalized Sequence of Numbers*. The Fibonacci Quarterly, Vol.3 No.3 August 1985, pp 161–176
+3. K.T. Antanassov: Remark on a New Direction for a Generalization of the Fibonacci Sequence. The Fibonacci Quarterly, Vol.33 No.3, June–July 1995, pp 249–250
+4. ANSI/IEEE Standard 754–1985. *IEEE Standard for Binary Floating-Point Arithmetic.* Institute of Electrical and Electronics Engineers IEEE, New York 1985
+5. A. Brousseau: *Linear Recursion and Fibonacci Sequences.* The Fibonacci Association, San Jose State College, San Jose, California, 1971
+6. International Standard ISO 8485: 1989 (E), First Edition; 1989-11-01; *Programming Languages – APL.* International Organization for Standardization ISO, Geneva, Switzerland, 1989
+7. *Dyalog APL/W Reference Manual –Version 7.* Dyadic Systems Ltd., Basingstoke, 1994
+
+## Appendix
+
+Results for the special cases described in the text, returned by *ATA1*/*ATA2*/*ATA3*, are compared with the exact solutions returned by *ATA4*.
+
+```apl
+      P←10 (10*0.5×1-5*0.5)
+      R1←¯5↑ ATA1 1002
+      R2←¯5↑ ATA2 1002
+      R3←¯5↑ ATA3 1002
+      R4←¯5↑ ATA4 1002
+      (¯5↑⍳1002),R1,R2,R3,[1.5]R4
+ 998 ¯5.573927286E191 ¯5.573927286E191 ¯1.140610154E192 ¯4.358355692E¯209
+ 999 ¯9.018803800E191 ¯9.018803800E191 ¯1.140610154E192  2.693611953E¯209
+1000 ¯1.459273109E192 ¯1.459273109E192 ¯2.281220309E192 ¯1.664743739E¯209
+1001 ¯2.361153489E192 ¯2.361153489E192 ¯4.562440618E192  1.028868213E¯209
+1002 ¯3.820426597E192 ¯3.820426597E192  9.124881235E192 ¯6.358755258E¯210
+
+      P←(10*0.5×1+5*0.5) 0.1
+      R1←¯5↑ ATA1 1002
+      R2←¯5↑ ATA2 1002
+      R3←¯5↑ ATA3 1002
+      R4←¯5↑ ATA4 1002
+      (¯5↑⍳1002),R1,R2,R3,[1.5]R4
+ 998 2.622901190E192 2.622901190E192 2.281220309E192 ¯7.051967644E¯209
+ 999 4.243943274E192 4.243943274E192 4.562440618E192  4.358355692E¯209
+1000 6.866844464E192 6.866844464E192 4.562440618E192 ¯2.693611953E¯209
+1001 1.111078774E193 1.111078774E193 9.124881235E192  1.664743739E¯209
+1002 1.797763220E193 1.797763220E193 4.562440618E193 ¯1.028868213E¯209
+```
+
+Results returned by *ATA1*/*ATA2*/*ATA3* converge to \(\pm\infty\) and are erroneous. Results returned by *ATA4* converge to 0 and are correct.

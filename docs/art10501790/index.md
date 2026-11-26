@@ -1,0 +1,26 @@
+---
+vid: '10501790'
+title: APL Germany Autumn Meeting
+authors:
+- Stephen Taylor
+online: '2018-10-14'
+in_press: true
+added: WordPress post 170 (category In Press), from the database dump of 2026-11-17 (#316)
+transcribed: converted from the HTML of vector.org.uk WordPress post 170, images from vector.org.uk; Claude, 2026-11-19
+review: draft
+tags:
+- APL community
+queries:
+- A two-line notice, posted in category In Press; the meeting’s date is not given.
+status: transcribed
+---
+
+*From the vector.org.uk WordPress site; not yet reviewed.*
+{ .transcribed }
+
+Stephen Taylor
+{ .byline }
+
+![APL Germany logo](APL_Germany_Logo1.jpg)
+
+The autumn meeting of GSE Guide Share and APL Germany will be at Prinzenstraße 2, 42697 Solingen, Germany. Details at [apl-germany.de](http://apl-germany.de/news).

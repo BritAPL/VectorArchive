@@ -1,0 +1,215 @@
+---
+vid: '10004450'
+title: The Incomplete Elliptic Integrals and APL
+authors:
+- Joseph De Kerf
+volume: '12'
+issue: '2'
+page: '95'
+transcribed: from page images of VOL.12-NO.2-OCTOBER-1995.pdf, pages 97–102 (printed 95–100); Claude, 2026-10-09
+review: draft
+tags:
+- mathematics and statistics
+queries:
+- 'The formulas are set in TeX, typeset by MathJax, following the printed layout: = signs aligned where the print aligns them (the pairs on p.95, the recurrence for ϕᵢ₊₁, the two forms of E(ϕ;p), S and T), with “and” and “or” set to the left as printed. π is printed as a capital Π throughout (Π/2, Π/6, Π/4 …), here π; the multiplication point in “2.c(1,q)” is kept as printed.'
+- 'The tables were checked against the incomplete elliptic integrals F(φ|p²) and E(φ|p²) computed with mpmath at 20 digits: every printed digit agrees.'
+- “the final evaluation of E(e;p) in line 9” is printed so. The closing (home) address is left out.
+status: transcribed
+issue_tab: n2-october-1995
+---
+
+*Transcribed from the printed issue; not yet reviewed. [Read it in the PDF of the issue, page 95](../12/2/VOL.12-NO.2-OCTOBER-1995.pdf#page=97)*
+{ .transcribed }
+
+*by Joseph De Kerf*
+{ .byline }
+
+In a previous note [1], it was shown how the *common mean* concept [2] may be used to calculate the complete elliptic integrals of the first and second kind [3, 4], illustrated by user-defined functions in APL. In this third note of the series, it is shown how the concept may be used to calculate the incomplete elliptic integrals of the first and second kind [3, 4]. APL user-defined functions are given.
+
+The incomplete elliptic integrals of the first kind \(K(\phi;p)\) and of the second kind \(E(\phi;p)\) may be defined as:
+
+\begin{gather*}
+K(\phi;p) = \int_0^{\phi} \frac{d\theta}{\sqrt{1-p^2\sin^2\theta}} \\[2ex]
+E(\phi;p) = \int_0^{\phi} \sqrt{1-p^2\sin^2\theta}\;\; d\theta
+\end{gather*}
+
+with \(p^2 \le 1\) or \(-1 \le p \le 1\). Both incomplete elliptic integrals are even functions of \(p\):
+
+\begin{equation*}
+K(\phi;-p) = K(\phi;p) \quad\text{and}\quad E(\phi;-p) = E(\phi;p)
+\end{equation*}
+
+In addition:
+
+\begin{equation*}
+\begin{aligned}
+K(-\phi;p) &= -K(\phi;p) \\
+E(-\phi;p) &= -E(\phi;p)
+\end{aligned}
+\qquad\text{and, as special cases}\qquad
+\begin{aligned}
+K(\pi/2;p) &= K(p) \\
+E(\pi/2;p) &= E(p)
+\end{aligned}
+\end{equation*}
+
+the complete elliptic integrals of the first and second kind respectively.
+
+The incomplete elliptic integrals may be calculated for instance by numerical integration or series expansion [3, 4]. Once again however, much easier to program — and this is especially true in APL — are the algorithms based on the common mean concept [3, 4].
+
+Indeed, the incomplete elliptic integrals of the first kind \(K(\phi;p)\) may be calculated by application of the relation:
+
+\begin{equation*}
+K(\phi;p) = \frac{\phi_\infty}{c(1,q)}
+\end{equation*}
+
+where \(c(1,q)\) is the common mean of 1 and \(q = \sqrt{1-p^2}\)
+
+\begin{alignat*}{2}
+&\text{and}\quad & \phi_0 &= \phi \\[1ex]
+&& \phi_{i+1} &= \phi_i - \frac{1}{2^{i+1}} \arctan\!\left( \frac{(x_i - y_i)\tan(2^i\phi_i)}{x_i + y_i\tan^2(2^i\phi_i)} \right) \\[1ex]
+&& &= \phi_i - \frac{1}{2^{i+1}} \arctan\!\left( \frac{(x_i - y_i)\sin(2^{i+1}\phi_i)}{2\bigl(x_i\cos^2(2^i\phi_i) + y_i\sin^2(2^i\phi_i)\bigr)} \right)
+\end{alignat*}
+
+the \(x_i\)’s and \(y_i\)’s being the successive arithmetic and geometric means respectively, while calculating the common mean \(c(1,q)\). The sequence \(\phi_i\) converges toward \(\phi_\infty\) as rapidly as the \(x_i\)’s and \(y_i\)’s toward their common mean \(c(1,q)\).
+
+A user-defined function *IEI1*, for \(-\pi/2 \le \phi \le \pi/2\), based on this procedure, with as left argument \(\phi\) and as right argument \(p\), may be:
+
+```apl
+      ∇IEI1[⎕]∇
+    ∇R←F IEI1 P;I;A;B
+[1]   →((1≠|P)∨(○÷2)=|F)/LAB1
+[2]   →0,R←⍟3○0.5×F+○0.5
+[3]   LAB1:R←(2+I←¯1),(1-P*2)*0.5
+[4]   LAB2:A←(-/R)×1○F×2*1+I←I+1
+[5]   B←2×+/R×(2 1○F×2*I)*2
+[6]   F←F-(¯3○A÷B)÷2*I+1
+[7]   →(≠/R←(0.5×+/R),(×/R)*0.5)/LAB2
+[8]   R←F÷0.5×+/R
+    ∇
+```
+
+which for \(\phi = \pi/6\) and \(\phi = \pi/3\), \(p = 0.0(0.1)1.0\), and comparison tolerance `1E¯15` gives respectively:
+
+```apl
+      R1←(○÷6)IEI1¨P←0,0.1×⍳10
+      R2←(○÷3)IEI1¨P
+      3 1 20 15 20 15⍕P,R1,[1.5]R2
+0.0     0.523598775598299    1.047197551196598
+0.1     0.523825500165390    1.048738631962169
+0.2     0.524508805294440    1.053430587029900
+0.3     0.525658228737263    1.061489706726052
+0.4     0.527290159175087    1.073313629047138
+0.5     0.529428627051906    1.089550670051885
+0.6     0.532106525784461    1.111233322932336
+0.7     0.535367402759971    1.140044752769332
+0.8     0.539268044090846    1.178902299538824
+0.9     0.543882214161571    1.233446325452344
+1.0     0.549306144334055    1.316957896924817
+```
+
+For \(\phi = \pi/2\), \(p = 0.0(0.1)0.9\) and comparison tolerance `1E¯15` the user-defined function *IEI1* gives:
+
+```apl
+      R←(○÷2)IEI1¨P←0,0.1×⍳9
+      3 1 20 15⍕P,[1.5]R
+0.0     1.570796326794897
+0.1     1.574745561517356
+0.2     1.586867847454166
+0.3     1.608048619930513
+0.4     1.639999865864511
+0.5     1.685750354812596
+0.6     1.750753802915752
+0.7     1.845693998374723
+0.8     1.995302777664729
+0.9     2.280549138422770
+```
+
+while for \(\phi = \pm\pi/2\) and \(p = \pm 1\), as the integral is infinite (\(\infty\)), a domain error is reported and the user-defined function is suspended. Eventually, the error report may be trapped and an appropriate response may be programmed.
+
+As for \(\phi = \pi/2\) the elliptic integral of the first kind \(K(\phi;p)\) is the complete elliptic integral of the first kind \(K(p)\), the results are the same as those reported for CEI1 in (1).
+
+It should be noted that for \(\phi \ne \pm\pi/2\) and \(p = \pm 1\), both the limit of \(\phi_i\) and the common mean of \(c(1,q)\) are zero, and the procedure fails. However, the integral may be evaluated analytically and as such, in lines 1 and 2 of the user-defined function *IEI1*, the result R is explicitly set to its value \(\ln\tan(\phi/2 + \pi/4)\). This cannot be done in one line because then, for \(\phi = -\pi/2\) a domain error would be reported, whether \(p = \pm 1\) or not. During the loop, in lines 4 and 5, the local variables A and B are introduced to improve readability, while the overhead is rather small.
+
+The incomplete elliptic integral of the second kind \(E(\phi;p)\) may be calculated by application of the relation:
+
+\begin{alignat*}{2}
+&& E(\phi;p) &= \frac{\phi_\infty}{2.c(1,q)} \left( 2 - \sum_{i=0}^{\infty} 2^i\bigl(x_i^2 - y_i^2\bigr) \right) + \frac{1}{2} \sum_{i=0}^{\infty} (x_i - y_i)\sin\bigl(2^{i+1}\phi_{i+1}\bigr) \\[2ex]
+&\text{or}\quad & E(\phi;p) &= \frac{\phi_\infty}{2.c(1,q)}(2-S) + \frac{T}{2}
+\end{alignat*}
+
+\begin{alignat*}{2}
+&\text{and}\quad & S &= \sum_{i=0}^{\infty} 2^i\bigl(x_i^2 - y_i^2\bigr) \\
+&& T &= \sum_{i=0}^{\infty} (x_i - y_i)\sin\bigl(2^{i+1}\phi_{i+1}\bigr)
+\end{alignat*}
+
+where \(c = (1,q)\), the \(\phi_i\)’s, and the \(x_i\)’s and \(y_i\)’s are defined as for \(K = (\phi;p)\).
+
+A user-defined function *IEI2*, for \(-\pi/2 \le \phi \le \pi/2\), based on this procedure, with as left argument \(\phi\) and as right argument \(p\), may be:
+
+```apl
+      ∇IEI2[⎕]∇
+    ∇R←F IEI2 P;I;S;T;A;B
+[1]   →(1=|P)/0,R←1○F
+[2]   R←(1+S←T←1+I←¯1),(1-P*2)*0.5
+[3]   LAB:A←(-/R)×1○F×2*1+I←I+1
+[4]   B←2×+/R×(2 1○F×2*I)*2
+[5]   F←F-(¯3○A÷B)÷2*I+1
+[6]   S←S+(-/R*2)×2*I
+[7]   T←T+(-/R)×1○F×2*I+1
+[8]   →(≠/R←(0.5×+/R),(×/R)*0.5)/LAB
+[9]   R←(T÷2)+(2-S)×F÷+/R
+    ∇
+```
+
+which for \(\phi = \pi/6, \pi/3, \pi/2\), \(p = 0.0(0.1)1.0\), and comparison tolerance `1E¯15` gives respectively:
+
+```apl
+      R1←(○÷6)IEI2¨ P←0,0.1×⍳10
+      R2←(○÷3)IEI2¨ P
+      R3←(○÷2)IEI2¨ P
+      3 1 19 15 19 15 19 15⍕P,R1,R2,[1.5]R3
+0.0   0.523598775598299  1.047197551196598  1.570796326794897
+0.1   0.523372224005088  1.045660219705633  1.566861942021668
+0.2   0.522691528560574  1.041025536968957  1.554968546242529
+0.3   0.521553538774118  1.033223451406541  1.534833464923249
+0.4   0.519952906838045  1.022130132787699  1.505941612360040
+0.5   0.517881934859938  1.007555555144472  1.467462209339427
+0.6   0.515330345384322  0.989221593549378  1.418083394448724
+0.7   0.512284956933147  0.966723133094528  1.355661135571956
+0.8   0.508729236545024  0.939454803724951  1.276349943169906
+0.9   0.504642686598563  0.906456986263154  1.171697052781614
+1.0   0.500000000000000  0.866025403784439  1.000000000000000
+```
+
+As for \(\phi = \pi/2\) the elliptic integral of the second kind \(E = (\phi;p)\) is the complete elliptic integral of the second kind \(E(p)\), the results are the same as those reported for *CEI2* in [1].
+
+It should be noticed that for \(p = \pm 1\), both the limit of \(\phi_i\) and the common mean \(c = (1,q)\) are zero, and the procedure fails. However, the integral may be evaluated analytically and as such, in line 1 of the user-defined function *IEI2*, the result R is explicitly set to its value \(\sin(\phi)\). During the loop, in lines 3 and 4, the local variables A and B are introduced to improve readability, while the overhead is rather small. The local variables S and T however, cannot be omitted, as their values are needed in the final evaluation of \(E(e;p)\) in line 9.
+
+For both user-defined functions, the relative accuracy of the common means calculated is at least the current value of the comparison tolerance, for the results shown `1E¯15`. In practice, however, this relative accuracy is slightly better, as the exact value of this common mean lies between the two iterations calculated and the result is set to the arithmetic mean of the final values of those iterations.
+
+**Note:** the number of iterations needed and the cpu time depend on the current value of the comparison tolerance and on \(p\), but don’t depend on \(\phi\). Results of a benchmark for `1E¯15` and \(p = 0.1(0.2)0.9\) are shown below and compared with those for *CEI1* and *CEI2*. The cpu times are in milliseconds.
+
+| P | 0.1 | 0.3 | 0.5 | 0.7 | 0.9 |
+|---|---|---|---|---|---|
+| number of iterations | 3 | 3 | 4 | 4 | 5 |
+| CEI1 P | 112 | 112 | 138 | 138 | 164 |
+| (○÷2) IEI1 P | 347 | 347 | 441 | 441 | 536 |
+| CEI2 P | 209 | 209 | 256 | 256 | 303 |
+| (○÷2) IEI2 P | 478 | 478 | 612 | 612 | 746 |
+
+Of course, the user-defined functions *IEI1* and *IEI2* are considerably slower than *CEI1* and *CEI2* respectively. This means that, when the user in an application only needs the complete elliptic integrals, it is much more efficient to refer to the user-defined functions *CEI1* and *CEI2*.
+
+The calculations and the benchmark were done on a MicroVAX 2000, with VAX APL Version 3.1, under VMS Version 4.7 [5]. The default value for the comparison tolerance in VAX APL is `1E¯15`. The number of iterations has been measured by globalizing the counter I. The cpu times have been measured with the system function `⎕MONITOR`.
+
+## References
+
+[1] J. De Kerf, *The Complete Elliptic Integrals and APL*, Vector 12.1, pp 102–105, 1995
+
+[2] J. De Kerf, *The Common Mean and APL*, Vector 11.3, pp 21–23, 1995
+
+[3] M. Abramowitz and I.A. Stegun (Eds), *Handbook of Mathematical Functions*, Applied Mathematics Series no. 55. National Bureau of Standards, Washington D.C., 1964 (and subsequent revisions)
+
+[4] J. Spanier and K. B. Oldham, *An Atlas of Functions*, Hemisphere Publishing Corporation, New York, 1987
+
+[5] *VAX APL Reference Manual – Vols 1 and 2 (Software Version V.3.0)*, Publication Numbers: AI-P142D-TE and AI-GV09B-TE. Digital Equipment Corporation, Maynard, Mass., June 1987

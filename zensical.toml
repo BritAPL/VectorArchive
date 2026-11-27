@@ -2,7 +2,7 @@
 [project]
 site_name = "Vector archive"
 site_description = "Rescued articles from Vector, the journal of the British APL Association"
-site_url = "https://veced.github.io/VectorArchive/"
+site_url = "https://britapl.github.io/VectorArchive/"
 docs_dir = "docs"
 site_dir = "site"
 use_directory_urls = true
